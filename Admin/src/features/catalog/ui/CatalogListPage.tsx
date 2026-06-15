@@ -3,6 +3,7 @@ import { toast } from 'sonner';
 import { Clapperboard, Layers, ListTree, Pencil, Plus, Trash2 } from 'lucide-react';
 import { PageHeader } from '@/components/PageHeader';
 import { EmptyState } from '@/components/EmptyState';
+import { ConfirmDialog } from '@/components/ConfirmDialog';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
@@ -29,6 +30,7 @@ export function CatalogListPage() {
   const [editing, setEditing] = useState<AudiovisualRow | null>(null);
   const [episodic, setEpisodic] = useState<AudiovisualRow | null>(null);
   const [auxOpen, setAuxOpen] = useState(false);
+  const [toDelete, setToDelete] = useState<AudiovisualRow | null>(null);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -41,11 +43,12 @@ export function CatalogListPage() {
     );
   }, [data, query]);
 
-  async function onDelete(row: AudiovisualRow) {
-    if (!confirm(`¿Eliminar "${row.name}"? Esta acción no se puede deshacer.`)) return;
+  async function confirmDelete() {
+    if (!toDelete) return;
     try {
-      await del.mutateAsync(row.id);
+      await del.mutateAsync(toDelete.id);
       toast.success('Audiovisual eliminado.');
+      setToDelete(null);
     } catch (err) {
       toast.error(err instanceof Error ? err.message : 'No se pudo eliminar.');
     }
@@ -152,7 +155,7 @@ export function CatalogListPage() {
                       <Button
                         variant="ghost"
                         size="icon"
-                        onClick={() => onDelete(a)}
+                        onClick={() => setToDelete(a)}
                         aria-label="Eliminar"
                       >
                         <Trash2 className="h-4 w-4 text-destructive" />
@@ -173,6 +176,24 @@ export function CatalogListPage() {
         audiovisual={episodic}
       />
       <AuxCatalogsDialog open={auxOpen} onOpenChange={setAuxOpen} />
+
+      <ConfirmDialog
+        open={toDelete !== null}
+        onOpenChange={(o) => !o && setToDelete(null)}
+        title="Eliminar audiovisual"
+        description={
+          toDelete ? (
+            <>
+              ¿Seguro que quieres eliminar <strong>{toDelete.name}</strong>? Esta acción no se
+              puede deshacer.
+            </>
+          ) : null
+        }
+        confirmLabel="Eliminar"
+        destructive
+        loading={del.isPending}
+        onConfirm={confirmDelete}
+      />
     </div>
   );
 }
