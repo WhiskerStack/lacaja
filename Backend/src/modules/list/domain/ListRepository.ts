@@ -1,4 +1,4 @@
-import { List } from '@daher/domain';
+import { List } from '@dahem/domain';
 
 /** Puerto del repositorio de "Mi lista" persistida del usuario (modelo de datos LIST). */
 export abstract class ListRepository {

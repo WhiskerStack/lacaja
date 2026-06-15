@@ -30,7 +30,7 @@ async function bootstrap(): Promise<void> {
 
   const port = Number(process.env.PORT ?? 3000);
   await app.listen(port);
-  app.get(Logger).log(`Daher backend escuchando en http://localhost:${port}`);
+  app.get(Logger).log(`Dahem backend escuchando en http://localhost:${port}`);
 }
 
 void bootstrap();

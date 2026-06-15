@@ -4,7 +4,7 @@ import preact from '@astrojs/preact';
 import tailwind from '@astrojs/tailwind';
 import AstroPWA from '@vite-pwa/astro';
 
-const SITE = process.env.SITE ?? 'https://daher.example';
+const SITE = process.env.SITE ?? 'https://dahem.example';
 
 // https://astro.build/config
 export default defineConfig({
@@ -25,14 +25,14 @@ export default defineConfig({
             // HTML de páginas → stale-while-revalidate
             urlPattern: ({ request }) => request.mode === 'navigate',
             handler: 'StaleWhileRevalidate',
-            options: { cacheName: 'daher-html' },
+            options: { cacheName: 'dahem-html' },
           },
           {
             // Imágenes de posters → cache-first (no re-descargar nunca)
             urlPattern: ({ request }) => request.destination === 'image',
             handler: 'CacheFirst',
             options: {
-              cacheName: 'daher-images',
+              cacheName: 'dahem-images',
               expiration: { maxEntries: 500, maxAgeSeconds: 60 * 60 * 24 * 90 },
             },
           },
@@ -40,7 +40,7 @@ export default defineConfig({
             // Índices de búsqueda → stale-while-revalidate (hash en nombre invalida)
             urlPattern: /\/(search|library)-index.*\.json$/,
             handler: 'StaleWhileRevalidate',
-            options: { cacheName: 'daher-search-index' },
+            options: { cacheName: 'dahem-search-index' },
           },
           {
             // API NestJS → network-only (nunca cachear escrituras ni búsquedas live)
@@ -50,8 +50,8 @@ export default defineConfig({
         ],
       },
       manifest: {
-        name: 'Daher — Catálogo audiovisual',
-        short_name: 'Daher',
+        name: 'Dahem — Catálogo audiovisual',
+        short_name: 'Dahem',
         description: 'Catálogo de consulta de audiovisuales. Arma tu lista y envíala al negocio.',
         lang: 'es',
         start_url: '/',
@@ -79,7 +79,7 @@ export default defineConfig({
   vite: {
     define: {
       // Expuesto a islas para el fallback de búsqueda y los enlaces de envío.
-      __DAHER_BUILD__: JSON.stringify(new Date().toISOString()),
+      __DAHEM_BUILD__: JSON.stringify(new Date().toISOString()),
     },
   },
 });

@@ -2,7 +2,7 @@
 // a la API NestJS y timeout duro. Recibe sus dependencias por constructor (arquitectura §6.1):
 // el modo se carga de forma asíncrona con loadIndex() porque el índice MiniSearch llega por red.
 import MiniSearch from 'minisearch';
-import { isCode } from '@daher/domain';
+import { isCode } from '@dahem/domain';
 import type { SearchHit, SearchIndexFile, SearchMode } from '../types';
 
 /** normalize NFD: quita acentos en índice y query (especificaciones §4.6). */

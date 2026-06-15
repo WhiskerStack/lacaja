@@ -1,6 +1,6 @@
-# @daher/admin — Panel de administración
+# @dahem/admin — Panel de administración
 
-Panel interno del vendedor de Daher. SPA en React + Vite que gestiona el
+Panel interno del vendedor de Dahem. SPA en React + Vite que gestiona el
 catálogo, los envíos por web, las solicitudes, las tarifas y las cuentas de
 administrador, y dispara la publicación del landing. No es público: vive detrás
 de login. Consume el backend NestJS.
@@ -12,14 +12,14 @@ de login. Consume el backend NestJS.
 - **awilix** (IoC, modo CLASSIC) para cablear servicios por constructor.
 - **shadcn/ui** (Tailwind + Radix), componentes copiados a `src/components/ui/`.
 - **sonner** para toasts. **lucide-react** para iconos.
-- **@daher/domain** como única fuente de verdad de las reglas de negocio.
+- **@dahem/domain** como única fuente de verdad de las reglas de negocio.
 
 ## Arquitectura (vertical slicing)
 
 Cada sección del panel es un slice autocontenido en `src/features/<slice>/`:
 
 ```
-domain/    reglas de negocio (reutiliza @daher/domain). Sin React/HTTP.
+domain/    reglas de negocio (reutiliza @dahem/domain). Sin React/HTTP.
 api/       llamadas HTTP a NestJS. Solo I/O; devuelve DTOs.
 logic/     servicios que orquestan dominio + api. Hidratan en la frontera.
 ui/        páginas y componentes React. Solo presentación.

@@ -1,5 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import type { RequestStatus } from '@daher/domain';
+import type { RequestStatus } from '@dahem/domain';
 import { useService } from '@/app/providers';
 import type { RequestsService } from './logic/RequestsService';
 import type { RequestRow } from './types';

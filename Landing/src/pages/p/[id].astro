@@ -16,7 +16,7 @@ const item = getById(id);
 if (!item) return Astro.redirect('/404');
 const suggestions = getSuggestions(item);
 ---
-<Base title={`${item.name} — Daher`} description={item.description}>
+<Base title={`${item.name} — Dahem`} description={item.description}>
   <DetailHero
     item={item}
     add={{ code: item.code, level: 'audiovisual', targetId: item.id, name: item.name, sizeGb: item.totalSizeGb }}

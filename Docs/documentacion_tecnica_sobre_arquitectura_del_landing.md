@@ -1,7 +1,7 @@
-# Daher — Convenciones de arquitectura del frontend
+# Dahem — Convenciones de arquitectura del frontend
 
 > Cómo se organiza el código del landing (Astro + Preact). Define la estructura de carpetas, la regla de dependencias y el patrón de modularidad sin contenedor IoC.
-> Complementa a `resumen_tecnico_stack_daher.md` (tecnologías), `documentacion_del_dominio_y_el_modelo_de_datos.md` (entidades y DTOs) y `guia_tecnica_de_frontend_I.md` (arquitectura de rendering).
+> Complementa a `resumen_tecnico_stack_dahem.md` (tecnologías), `documentacion_del_dominio_y_el_modelo_de_datos.md` (entidades y DTOs) y `guia_tecnica_de_frontend_I.md` (arquitectura de rendering).
 > Convención de código: igual que el modelo de datos, identificadores en inglés (`Audiovisual`, `level`, `sizeGb`); texto explicativo en español.
 
 **Última actualización:** 2026-06-02
@@ -351,7 +351,7 @@ const { audiovisual } = Astro.props;               // viaja como DTO plano
 </Layout>
 ```
 
-La estructura de URLs concreta (`/p/[id]`, `/s/[id]/[season]/...`) vive en `daher_urls.md`. `pages/` la implementa; los slices no saben de rutas.
+La estructura de URLs concreta (`/p/[id]`, `/s/[id]/[season]/...`) vive en `dahem_urls.md`. `pages/` la implementa; los slices no saben de rutas.
 
 ---
 
@@ -416,14 +416,14 @@ Un único archivo construye las instancias reales y las exporta. Es el único lu
 import Dexie, { type Table } from 'dexie';
 import type { ListItemDTO } from '../features/my-list/domain/ListItem';
 
-export class DaherDB extends Dexie {
+export class DahemDB extends Dexie {
   listItems!: Table<ListItemDTO>;
   constructor() {
-    super('daher');
+    super('dahem');
     this.version(1).stores({ listItems: 'code' });   // code como PK (DEXIE_LIST_ITEM)
   }
 }
-export const db = new DaherDB();
+export const db = new DahemDB();
 ```
 
 ```typescript
@@ -450,12 +450,12 @@ Si mañana Dexie se reemplaza por otra cosa, se toca `app/container.ts` y `app/d
 
 ## 7. Por qué no un contenedor IoC
 
-- El grafo de dependencias de Daher es pequeño (un puñado de servicios). El cableado manual es más legible, no menos.
+- El grafo de dependencias de Dahem es pequeño (un puñado de servicios). El cableado manual es más legible, no menos.
 - Los contenedores serios (InversifyJS, tsyringe) dependen de decoradores + `reflect-metadata`, que pesa y complica el build. Contradice el presupuesto de <100KB de JS (entorno Cuba).
 - Awilix es para Node, no para el bundle del navegador.
 - Si algún día `container.ts` se vuelve inmanejable por tamaño, ahí se reconsidera. Mientras tanto, un contenedor sería complejidad sin pagador.
 
-(El backend NestJS es otra historia: ya trae su propio DI por decoradores y ahí sí se usa. Ver `daher_backend.md`. El panel admin es React + Vite, stack aparte; ver su documento técnico.)
+(El backend NestJS es otra historia: ya trae su propio DI por decoradores y ahí sí se usa. Ver `dahem_backend.md`. El panel admin es React + Vite, stack aparte; ver su documento técnico.)
 
 ---
 

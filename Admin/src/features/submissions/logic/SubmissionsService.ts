@@ -1,4 +1,4 @@
-import { WebSubmission } from '@daher/domain';
+import { WebSubmission } from '@dahem/domain';
 import type { SubmissionsApi } from '../api/SubmissionsApi';
 import type { SubmissionRow } from '../types';
 

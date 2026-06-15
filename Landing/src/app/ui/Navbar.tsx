@@ -23,7 +23,7 @@ export default function Navbar() {
     <header class="navbar bg-base-200/80 backdrop-blur sticky top-0 z-50 border-b border-base-300">
       <div class="navbar-start">
         <a href="/" class="btn btn-ghost text-xl font-bold gap-2">
-          <span class="text-primary">●</span> Daher
+          <span class="text-primary">●</span> Dahem
         </a>
       </div>
 

@@ -1,4 +1,4 @@
-import type { ContentRequestDTO, RequestStatus } from '@daher/domain';
+import type { ContentRequestDTO, RequestStatus } from '@dahem/domain';
 
 /** Fila de solicitud con datos de contacto del solicitante (para el aviso). */
 export interface RequestRow extends ContentRequestDTO {

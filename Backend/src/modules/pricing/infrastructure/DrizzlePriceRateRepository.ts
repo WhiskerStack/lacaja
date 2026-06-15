@@ -1,4 +1,4 @@
-import { PriceRate, type PriceKey } from '@daher/domain';
+import { PriceRate, type PriceKey } from '@dahem/domain';
 import { Inject, Injectable } from '@nestjs/common';
 import { DRIZZLE } from '../../../shared/database/database.tokens';
 import type { Database } from '../../../shared/database/database.types';

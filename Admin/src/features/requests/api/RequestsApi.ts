@@ -1,6 +1,6 @@
 import type { HttpClient } from '@/app/http';
 import type { RequestRow } from '../types';
-import type { RequestStatus } from '@daher/domain';
+import type { RequestStatus } from '@dahem/domain';
 
 /** Llamadas HTTP de solicitudes a NestJS. Solo I/O. */
 export class RequestsApi {

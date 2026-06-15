@@ -9,7 +9,7 @@ const { youtubeIds } = Astro.props;
 {youtubeIds.length > 0 && (
   <section class="my-8">
     <h2 class="text-lg sm:text-xl font-bold mb-3">Trailers</h2>
-    <div class="daher-rail">
+    <div class="dahem-rail">
       {youtubeIds.map((id) => (
         <div class="w-72 sm:w-96 rounded-box overflow-hidden">
           <lite-youtube videoid={id} playlabel="Reproducir tráiler"></lite-youtube>

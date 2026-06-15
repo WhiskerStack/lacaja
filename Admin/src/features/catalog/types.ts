@@ -1,4 +1,4 @@
-import type { AudiovisualDTO, AudiovisualType } from '@daher/domain';
+import type { AudiovisualDTO, AudiovisualType } from '@dahem/domain';
 
 /** Fila del catálogo tal como la devuelve NestJS (DTO + campos derivados). */
 export interface AudiovisualRow extends AudiovisualDTO {

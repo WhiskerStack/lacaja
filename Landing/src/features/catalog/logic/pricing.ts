@@ -1,6 +1,6 @@
-// Pricing: tarifa por unidad agregada (funcional §8). DEFAULT_RATE de @daher/domain para
+// Pricing: tarifa por unidad agregada (funcional §8). DEFAULT_RATE de @dahem/domain para
 // build/offline; fetchRate() intenta /pricing en runtime contra la API (especificaciones §8.3).
-import { Audiovisual, DEFAULT_RATE, rateFromRates, type PriceRateDTO, type Rate } from '@daher/domain';
+import { Audiovisual, DEFAULT_RATE, rateFromRates, type PriceRateDTO, type Rate } from '@dahem/domain';
 
 /** Precio de un audiovisual según su flag de estreno y la tarifa. */
 export function priceFor(isPremiere: boolean, rate: Rate = DEFAULT_RATE): number {

@@ -1,4 +1,4 @@
-import { WebSubmission } from '@daher/domain';
+import { WebSubmission } from '@dahem/domain';
 import { Criteria } from '../../../shared/criteria/Criteria';
 
 /** Puerto del repositorio de envíos por web (modelo de datos WEB_SUBMISSION). */

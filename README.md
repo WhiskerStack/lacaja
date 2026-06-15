@@ -1,4 +1,4 @@
-# Daher
+# Dahem
 
 Catálogo audiovisual de consulta para un negocio **presencial** en Cuba (películas, series, novelas, shows, animes). La web no vende ni reproduce contenido: muestra el inventario, deja al usuario armar una lista (GB + precio + espacio disponible) y enviarla al vendedor por una de cuatro vías. El negocio identifica al cliente en el encuentro presencial y le copia lo solicitado.
 
@@ -7,11 +7,11 @@ Catálogo audiovisual de consulta para un negocio **presencial** en Cuba (pelíc
 ## Monorepo (pnpm workspaces)
 
 ```
-Daher/
-  packages/domain/   @daher/domain — clases de dominio compartidas (una sola fuente de verdad de las reglas)
-  Backend/           @daher/backend — NestJS + Drizzle + Postgres (frontera de escritura + generador del SSG)
-  Landing/           @daher/landing — Astro SSG + islas Preact (catálogo público de solo lectura)
-  Admin/             @daher/admin — React + Vite + shadcn/ui (panel del vendedor)
+Dahem/
+  packages/domain/   @dahem/domain — clases de dominio compartidas (una sola fuente de verdad de las reglas)
+  Backend/           @dahem/backend — NestJS + Drizzle + Postgres (frontera de escritura + generador del SSG)
+  Landing/           @dahem/landing — Astro SSG + islas Preact (catálogo público de solo lectura)
+  Admin/             @dahem/admin — React + Vite + shadcn/ui (panel del vendedor)
   Docs/              especificaciones del proyecto (fuente de verdad funcional y técnica)
 ```
 
@@ -37,11 +37,11 @@ La regla mental: **lectura siempre desde SSG, escritura siempre contra el backen
 
 ```bash
 pnpm install
-pnpm build:domain        # compila @daher/domain (dual ESM/CJS), lo consumen las 3 apps
+pnpm build:domain        # compila @dahem/domain (dual ESM/CJS), lo consumen las 3 apps
 
 # Backend
 cp Backend/.env.example Backend/.env   # configura DATABASE_URL, JWT_SECRET
-pnpm --filter @daher/backend db:push   # aplica el esquema Drizzle
+pnpm --filter @dahem/backend db:push   # aplica el esquema Drizzle
 pnpm dev:backend                       # http://localhost:3000
 
 # Landing
@@ -53,7 +53,7 @@ pnpm dev:admin                         # http://localhost:5173
 
 ## Dominio compartido
 
-`@daher/domain` contiene las clases con sus reglas adentro (`Audiovisual.code()`, `List.fitsIn()`,
+`@dahem/domain` contiene las clases con sus reglas adentro (`Audiovisual.code()`, `List.fitsIn()`,
 `User.validate()`, snapshots de envío, tarifas). Las tres apps **hidratan en la frontera**
 (`fromJSON`/`toJSON`) y delegan las reglas al dominio, nunca las reimplementan.
 

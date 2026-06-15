@@ -1,4 +1,4 @@
-import type { ListItemDTO } from '@daher/domain';
+import type { ListItemDTO } from '@dahem/domain';
 
 export type SubmissionChannel = 'web' | 'whatsapp' | 'txt' | 'clipboard';
 

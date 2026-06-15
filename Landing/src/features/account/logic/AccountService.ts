@@ -1,7 +1,7 @@
 // AccountService: orquesta auth contra NestJS (especificaciones §2.2). Las reglas de validación
-// del usuario viven en User (@daher/domain). F1: el backend puede no existir; degrada con un
+// del usuario viven en User (@dahem/domain). F1: el backend puede no existir; degrada con un
 // modo local (sesión "optimista") para no bloquear el flujo del MVP.
-import { User, type UserDTO } from '@daher/domain';
+import { User, type UserDTO } from '@dahem/domain';
 import type { AuthResult, LoginInput, RegisterInput } from '../types';
 
 export class AccountService {

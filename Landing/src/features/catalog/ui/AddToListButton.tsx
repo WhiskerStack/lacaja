@@ -6,7 +6,7 @@ import { listService } from '../../../app/container';
 import { refreshList, useList } from '../../my-list/ui/useList';
 import { priceFor } from '../logic/pricing';
 import { pushToast } from '../../../app/stores/toast';
-import type { ItemLevel } from '@daher/domain';
+import type { ItemLevel } from '@dahem/domain';
 
 interface Props {
   code: string;

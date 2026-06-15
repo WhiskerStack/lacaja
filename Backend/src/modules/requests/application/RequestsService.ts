@@ -1,4 +1,4 @@
-import { ContentRequest, type RequestStatus } from '@daher/domain';
+import { ContentRequest, type RequestStatus } from '@dahem/domain';
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { Criteria, type CriteriaFilter } from '../../../shared/criteria/Criteria';
 import { ContentRequestRepository } from '../domain/ContentRequestRepository';

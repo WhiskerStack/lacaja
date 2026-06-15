@@ -1,4 +1,4 @@
-import { User } from '@daher/domain';
+import { User } from '@dahem/domain';
 import { Inject, Injectable } from '@nestjs/common';
 import { eq, or } from 'drizzle-orm';
 import { DRIZZLE } from '../../../shared/database/database.tokens';

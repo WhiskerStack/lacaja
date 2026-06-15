@@ -78,7 +78,7 @@ export function AppLayout() {
       <aside className="hidden w-60 shrink-0 flex-col border-r bg-background md:flex">
         <div className="flex h-14 items-center gap-2 border-b px-4">
           <Clapperboard className="h-5 w-5 text-primary" />
-          <span className="font-semibold">Daher admin</span>
+          <span className="font-semibold">Dahem admin</span>
         </div>
         {sidebar}
       </aside>
@@ -90,7 +90,7 @@ export function AppLayout() {
           <aside className="absolute left-0 top-0 flex h-full w-60 flex-col border-r bg-background">
             <div className="flex h-14 items-center gap-2 border-b px-4">
               <Clapperboard className="h-5 w-5 text-primary" />
-              <span className="font-semibold">Daher admin</span>
+              <span className="font-semibold">Dahem admin</span>
             </div>
             {sidebar}
           </aside>

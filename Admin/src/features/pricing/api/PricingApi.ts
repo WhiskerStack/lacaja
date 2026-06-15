@@ -1,5 +1,5 @@
 import type { HttpClient } from '@/app/http';
-import type { PriceRateDTO } from '@daher/domain';
+import type { PriceRateDTO } from '@dahem/domain';
 import type { PricingInput } from '../types';
 
 /** Llamadas HTTP de tarifas a NestJS. Solo I/O. */

@@ -1,4 +1,4 @@
-import { Audiovisual } from '@daher/domain';
+import { Audiovisual } from '@dahem/domain';
 import { Criteria } from '../../../shared/criteria/Criteria';
 
 /**

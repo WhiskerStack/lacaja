@@ -1,6 +1,6 @@
-# Daher — Guía arquitectónica para el frontend
+# Dahem — Guía arquitectónica para el frontend
 
-> Documento de referencia para construir la web del catálogo de Daher. Complementa al documento funcional (`documentacion_no_tecnica_de_la_landing_page.md`). Este archivo describe **qué arquitectura usar y por qué**, no la implementación funcional (eso ya está en el otro doc).
+> Documento de referencia para construir la web del catálogo de Dahem. Complementa al documento funcional (`documentacion_no_tecnica_de_la_landing_page.md`). Este archivo describe **qué arquitectura usar y por qué**, no la implementación funcional (eso ya está en el otro doc).
 
 ---
 
@@ -431,7 +431,7 @@ Objetivo: app navegable de extremo a extremo, sin offline.
 ### 11.3. Estructura de directorios sugerida
 
 ```
-/var/www/daher/
+/var/www/dahem/
   current -> builds/2026-05-15-1423/    # symlink al build activo
   builds/
     2026-05-15-1423/                     # último build

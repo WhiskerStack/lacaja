@@ -13,7 +13,7 @@ export class Submission {
   /** Mensaje de texto plano, legible para el vendedor (WhatsApp, TXT, portapapeles). */
   toText(): string {
     const lines: string[] = [];
-    lines.push('🎬 Pedido Daher');
+    lines.push('🎬 Pedido Dahem');
     if (this.data.customerName) lines.push(`Cliente: ${this.data.customerName}`);
     lines.push('');
     lines.push('Lista solicitada:');
@@ -29,7 +29,7 @@ export class Submission {
   /** Nombre de archivo sugerido para la exportación a TXT. */
   fileName(): string {
     const stamp = new Date().toISOString().slice(0, 10);
-    return `pedido-daher-${stamp}.txt`;
+    return `pedido-dahem-${stamp}.txt`;
   }
 
   /** URL de wa.me con el mensaje pre-formateado (funcional §7.4.2). */

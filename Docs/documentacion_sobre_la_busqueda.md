@@ -1,4 +1,4 @@
-# Estrategia de búsqueda — Daher
+# Estrategia de búsqueda — Dahem
 
 > Informe técnico que define cómo se implementará el buscador del catálogo, qué se descarta y por qué, y cuáles son los criterios para migrar en el futuro.
 
@@ -225,7 +225,7 @@ Cada vez que insertas/actualizas/borras un audiovisual, escribes en ambos. Simpl
 Usar logical replication de Postgres para detectar cambios y propagarlos a Meili (vía Debezium, o un consumidor custom). Robusto pero requiere infraestructura adicional.
 
 **Opción C — Job de reindexado periódico.**
-Cada N minutos, un cron lee los audiovisuales modificados y los upsertea en Meili. Menos en tiempo real, mucho más simple. Para Daher es probablemente suficiente — el catálogo cambia poco y un retraso de 5–10 minutos en que una película nueva aparezca en el buscador no es crítico.
+Cada N minutos, un cron lee los audiovisuales modificados y los upsertea en Meili. Menos en tiempo real, mucho más simple. Para Dahem es probablemente suficiente — el catálogo cambia poco y un retraso de 5–10 minutos en que una película nueva aparezca en el buscador no es crítico.
 
 Recomendación cuando migres: **Opción C**. Es la más simple y la que mejor encaja con la cadencia real de cambios en el catálogo.
 
@@ -248,9 +248,9 @@ Sumado: una pieza de infraestructura nueva (embedder server), costo recurrente, 
 
 ### 5.2. El caso de uso no lo justifica
 
-El argumento real no es el costo computacional — Daher podría asumirlo. El argumento es que **el caso de uso no lo necesita**.
+El argumento real no es el costo computacional — Dahem podría asumirlo. El argumento es que **el caso de uso no lo necesita**.
 
-Las queries reales esperables en Daher se distribuyen así, aproximadamente:
+Las queries reales esperables en Dahem se distribuyen así, aproximadamente:
 
 - ~70% — el usuario sabe el título y lo teclea (con o sin typo). *Lo resuelve FTS+trgm perfecto.*
 - ~20% — el usuario busca por código. *Lo resuelve match exacto.*

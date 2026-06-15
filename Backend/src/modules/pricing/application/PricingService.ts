@@ -1,4 +1,4 @@
-import { PriceRate, type Rate, rateFromRates } from '@daher/domain';
+import { PriceRate, type Rate, rateFromRates } from '@dahem/domain';
 import { Injectable } from '@nestjs/common';
 import { PriceRateRepository } from '../domain/PriceRateRepository';
 

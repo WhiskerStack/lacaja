@@ -1,5 +1,5 @@
 import type { HttpClient } from '@/app/http';
-import type { AdminUserDTO } from '@daher/domain';
+import type { AdminUserDTO } from '@dahem/domain';
 import type { CreateAdminInput } from '../types';
 
 /** Llamadas HTTP de cuentas admin a NestJS. Solo I/O. */

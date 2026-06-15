@@ -1,4 +1,4 @@
-import { Audiovisual, audiovisualCode } from '@daher/domain';
+import { Audiovisual, audiovisualCode } from '@dahem/domain';
 import { Inject, Injectable } from '@nestjs/common';
 import { eq, sql } from 'drizzle-orm';
 import { Criteria } from '../../../shared/criteria/Criteria';

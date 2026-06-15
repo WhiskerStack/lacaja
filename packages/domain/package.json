@@ -1,7 +1,7 @@
 {
-  "name": "@daher/domain",
+  "name": "@dahem/domain",
   "version": "0.1.0",
-  "description": "Clases de dominio compartidas de Daher (Audiovisual, List, Submission, etc.). Una sola fuente de verdad de las reglas de negocio para landing, admin y backend.",
+  "description": "Clases de dominio compartidas de Dahem (Audiovisual, List, Submission, etc.). Una sola fuente de verdad de las reglas de negocio para landing, admin y backend.",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",

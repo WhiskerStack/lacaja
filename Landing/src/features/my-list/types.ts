@@ -1,5 +1,5 @@
-// Tipos del slice my-list. El DTO del ítem lo provee @daher/domain (ListItemDTO).
-import type { ListItemDTO } from '@daher/domain';
+// Tipos del slice my-list. El DTO del ítem lo provee @dahem/domain (ListItemDTO).
+import type { ListItemDTO } from '@dahem/domain';
 
 export type { ListItemDTO };
 

@@ -1,7 +1,7 @@
-# Daher — Stack técnico del panel admin
+# Dahem — Stack técnico del panel admin
 
 > Documento técnico. Tecnologías del panel de administración. Es una aplicación **separada** del catálogo público (landing).
-> Complementa a `documentacion_no_tecnica_del_panel_admin.md` (funcional) y `daher_backend.md`.
+> Complementa a `documentacion_no_tecnica_del_panel_admin.md` (funcional) y `dahem_backend.md`.
 
 **Última actualización:** 2026-06-02
 
@@ -53,13 +53,13 @@ Trae ya resueltos: light/dark mode, responsive, accesibilidad, sidebar, búsqued
 | **Lucide + Tabler Icons** | Iconos | ✅ | Lucide general; Tabler solo para marcas. |
 | **Clerk** | Auth (viene en la plantilla) | ❌ Descartado | Se quita. Auth propia contra NestJS en su lugar (§3). |
 | **Auth propia** (NestJS + `ADMIN_USER`) | Login y sesión del panel | ✅ | Usuario/contraseña, `password_hash` en `ADMIN_USER`, sesión por token. Sin dependencia SaaS. |
-| **awilix** | Contenedor IoC | ✅ | Cablea servicios por constructor. Modo CLASSIC/PROXY, **sin** `reflect-metadata` (no añade peso de decoradores). Aquí sí —a diferencia del landing— porque no hay presupuesto de JS. Ver §3b y `daher_arquitectura_admin.md`. |
+| **awilix** | Contenedor IoC | ✅ | Cablea servicios por constructor. Modo CLASSIC/PROXY, **sin** `reflect-metadata` (no añade peso de decoradores). Aquí sí —a diferencia del landing— porque no hay presupuesto de JS. Ver §3b y `dahem_arquitectura_admin.md`. |
 
 ---
 
 ## 3. Autenticación: auth propia (Clerk descartado)
 
-La plantilla trae **Clerk** (servicio gestionado de identidad). **Se descarta.** Para Daher choca con lo ya definido:
+La plantilla trae **Clerk** (servicio gestionado de identidad). **Se descarta.** Para Dahem choca con lo ya definido:
 
 - El documento funcional del admin define auth **propia**: bootstrap del primer usuario, creación de usuarios desde dentro, rol único, contra la tabla `ADMIN_USER` del modelo de datos.
 - Clerk es un servicio externo (depende de su nube, su pricing, conectividad). Para un panel interno de 2-3 personas en Cuba, sumar una dependencia SaaS de identidad es desproporcionado y añade un punto de fallo de red.
@@ -86,9 +86,9 @@ Por qué aquí sí y en el landing no:
 - El grafo de servicios del admin es mayor (cada slice tiene api + service), y una SPA tiene un punto de arranque único donde registrar el contenedor.
 - Es coherente con el backend NestJS, que ya usa DI por contenedor.
 
-> **Advertencia de build.** El modo CLASSIC resuelve por **nombre de parámetro** del constructor, y la minificación de producción de Vite puede renombrarlos, rompiendo la resolución. Mitigaciones: usar modo PROXY (constructor por desestructuración), o configurar el minificador para preservar nombres de parámetros, o registrar con claves explícitas. Decidir al configurar el build. Detalle y ejemplos en `daher_arquitectura_admin.md` §6.
+> **Advertencia de build.** El modo CLASSIC resuelve por **nombre de parámetro** del constructor, y la minificación de producción de Vite puede renombrarlos, rompiendo la resolución. Mitigaciones: usar modo PROXY (constructor por desestructuración), o configurar el minificador para preservar nombres de parámetros, o registrar con claves explícitas. Decidir al configurar el build. Detalle y ejemplos en `dahem_arquitectura_admin.md` §6.
 
-El detalle de estructura de carpetas, capas y registro del contenedor vive en `daher_arquitectura_admin.md`.
+El detalle de estructura de carpetas, capas y registro del contenedor vive en `dahem_arquitectura_admin.md`.
 
 ---
 
@@ -96,7 +96,7 @@ El detalle de estructura de carpetas, capas y registro del contenedor vive en `d
 
 El panel admin es solo el frontend de administración. Escribe y lee contra el backend ya definido:
 
-- **Backend:** NestJS (ver `daher_backend.md`). El panel consume sus endpoints para CRUD de catálogo, envíos, solicitudes, tarifas y usuarios.
+- **Backend:** NestJS (ver `dahem_backend.md`). El panel consume sus endpoints para CRUD de catálogo, envíos, solicitudes, tarifas y usuarios.
 - **Publicar:** el botón "Publicar" del panel dispara `POST /admin/publish`, que regenera el SSG del landing.
 - **Base de datos:** el panel no toca la BD directamente; todo pasa por la API de NestJS.
 
@@ -128,7 +128,7 @@ El panel **no comparte código de UI con el landing** (distinto framework). Lo q
 ## 7. Documentos relacionados
 
 - **Funcional del panel admin:** `documentacion_no_tecnica_del_panel_admin.md`.
-- **Arquitectura del panel admin (slices, awilix, capas):** `daher_arquitectura_admin.md`.
-- **Backend:** `daher_backend.md`.
+- **Arquitectura del panel admin (slices, awilix, capas):** `dahem_arquitectura_admin.md`.
+- **Backend:** `dahem_backend.md`.
 - **Modelo de datos (`ADMIN_USER`):** `documentacion_del_dominio_y_el_modelo_de_datos.md`.
-- **Stack del landing (contraste):** `resumen_tecnico_stack_daher.md`.
+- **Stack del landing (contraste):** `resumen_tecnico_stack_dahem.md`.

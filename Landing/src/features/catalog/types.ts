@@ -1,6 +1,6 @@
-// DTOs del slice catalog. Extienden el AudiovisualDTO plano de @daher/domain con los
+// DTOs del slice catalog. Extienden el AudiovisualDTO plano de @dahem/domain con los
 // metadatos desnormalizados que el landing necesita para mostrar (modelo de datos §5).
-import type { AudiovisualDTO, AudiovisualType } from '@daher/domain';
+import type { AudiovisualDTO, AudiovisualType } from '@dahem/domain';
 
 export type { AudiovisualType };
 

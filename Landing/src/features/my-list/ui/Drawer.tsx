@@ -8,7 +8,7 @@ import { listService } from '../../../app/container';
 import { pushToast } from '../../../app/stores/toast';
 import { openSubmissionModal } from '../../submission/store';
 import { formatCup, formatGb } from '../../../shared/format';
-import type { ListItemDTO } from '@daher/domain';
+import type { ListItemDTO } from '@dahem/domain';
 
 export default function Drawer() {
   const open = useStore($drawerOpen);
@@ -59,7 +59,7 @@ export default function Drawer() {
 
           {/* Items */}
           <div class="flex-1 overflow-y-auto p-3 space-y-2">
-            {list === null && <div class="daher-skeleton h-20" />}
+            {list === null && <div class="dahem-skeleton h-20" />}
             {list && list.items.length === 0 && (
               <p class="text-sm opacity-70 text-center py-8">Tu lista está vacía. Explora el catálogo y agrega lo que quieras ver.</p>
             )}

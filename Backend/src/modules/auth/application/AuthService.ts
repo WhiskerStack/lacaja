@@ -1,4 +1,4 @@
-import { AdminUser, User } from '@daher/domain';
+import { AdminUser, User } from '@dahem/domain';
 import {
   BadRequestException,
   ConflictException,

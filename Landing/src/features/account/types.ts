@@ -1,4 +1,4 @@
-import type { UserDTO } from '@daher/domain';
+import type { UserDTO } from '@dahem/domain';
 
 export type AuthMode = 'login' | 'register';
 

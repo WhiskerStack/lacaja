@@ -1,4 +1,4 @@
-import { SubmissionItem, WebSubmission } from '@daher/domain';
+import { SubmissionItem, WebSubmission } from '@dahem/domain';
 import { Inject, Injectable } from '@nestjs/common';
 import { eq, inArray } from 'drizzle-orm';
 import { Criteria } from '../../../shared/criteria/Criteria';

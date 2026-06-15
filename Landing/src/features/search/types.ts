@@ -1,5 +1,5 @@
 // Tipos del slice search.
-import type { AudiovisualType } from '@daher/domain';
+import type { AudiovisualType } from '@dahem/domain';
 
 /** Tres estados de la búsqueda (especificaciones §4.1). */
 export type SearchMode = 'loading' | 'local' | 'api';

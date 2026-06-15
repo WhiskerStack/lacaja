@@ -1,14 +1,14 @@
-# Daher — Backend (documentación funcional)
+# Dahem — Backend (documentación funcional)
 
 > Documento no técnico que describe qué hace el backend y por qué, sin entrar en cómo está construido.
-> El "cómo" (stack, endpoints, despliegue) vive en `daher_backend.md` y los documentos técnicos.
+> El "cómo" (stack, endpoints, despliegue) vive en `dahem_backend.md` y los documentos técnicos.
 > Fuente: `documentacion_no_tecnica_de_la_landing_page.md`, `documentacion_no_tecnica_del_panel_admin.md`, `documentacion_del_dominio_y_el_modelo_de_datos.md`.
 
 ---
 
 ## 1. Qué es el backend, en una frase
 
-Es el **cerebro invisible** de Daher: la parte que nadie ve pero que guarda toda la información, aplica las reglas del negocio y conecta las dos caras visibles del sistema — la web pública (landing) y el panel del vendedor (admin).
+Es el **cerebro invisible** de Dahem: la parte que nadie ve pero que guarda toda la información, aplica las reglas del negocio y conecta las dos caras visibles del sistema — la web pública (landing) y el panel del vendedor (admin).
 
 Ni el cliente ni el vendedor interactúan con él directamente. El cliente usa la web; el vendedor usa el panel; ambos, por detrás, hablan con el backend.
 
@@ -118,4 +118,4 @@ El backend es la trastienda: invisible desde la calle, pero sin ella no hay tien
 - **Web pública / landing (funcional):** `documentacion_no_tecnica_de_la_landing_page.md`.
 - **Panel admin (funcional):** `documentacion_no_tecnica_del_panel_admin.md`.
 - **Dominio y modelo de datos:** `documentacion_del_dominio_y_el_modelo_de_datos.md`.
-- **Backend (técnico):** `daher_backend.md`.
+- **Backend (técnico):** `dahem_backend.md`.

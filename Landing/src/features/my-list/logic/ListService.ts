@@ -1,8 +1,8 @@
 // ListService: orquesta Dexie ↔ dominio (arquitectura §3, §6.1). No contiene reglas:
-// reconstruye una List de @daher/domain y le pide los totales. Recibe sus dependencias
+// reconstruye una List de @dahem/domain y le pide los totales. Recibe sus dependencias
 // por constructor (la tabla de items y la de meta) para ser testeable con fakes.
 import type { Table } from 'dexie';
-import { List, ListItem, type ListItemDTO } from '@daher/domain';
+import { List, ListItem, type ListItemDTO } from '@dahem/domain';
 import type { AddToListInput, ListSnapshot } from '../types';
 
 interface MetaRow {

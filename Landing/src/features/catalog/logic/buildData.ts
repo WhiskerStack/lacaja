@@ -1,7 +1,7 @@
 // CatalogService de build-time: lee el JSON de muestra y produce los DTOs aplanados
 // que consumen getStaticPaths y las páginas (arquitectura §5). No hace I/O de red:
 // el SSG construye standalone desde src/data/catalog.sample.json.
-import { audiovisualCode } from '@daher/domain';
+import { audiovisualCode } from '@dahem/domain';
 import type {
   CatalogCardDTO,
   CatalogItemDTO,

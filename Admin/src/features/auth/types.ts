@@ -1,4 +1,4 @@
-import type { AdminUserDTO } from '@daher/domain';
+import type { AdminUserDTO } from '@dahem/domain';
 
 export interface LoginCredentials {
   username: string;

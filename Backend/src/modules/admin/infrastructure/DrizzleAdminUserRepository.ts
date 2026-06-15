@@ -1,4 +1,4 @@
-import { AdminUser } from '@daher/domain';
+import { AdminUser } from '@dahem/domain';
 import { Inject, Injectable } from '@nestjs/common';
 import { eq, sql } from 'drizzle-orm';
 import { DRIZZLE } from '../../../shared/database/database.tokens';

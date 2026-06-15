@@ -13,7 +13,7 @@ const { title, cards, width = 200 } = Astro.props;
 {cards.length > 0 && (
   <section class="my-6">
     <h2 class="text-lg sm:text-xl font-bold mb-3 px-1">{title}</h2>
-    <div class="daher-rail px-1">
+    <div class="dahem-rail px-1">
       {cards.map((card) => <PosterCard card={card} width={width} />)}
     </div>
   </section>

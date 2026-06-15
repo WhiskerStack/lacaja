@@ -19,5 +19,5 @@ export function whatsappLink(phone: string | undefined, message: string): string
 /** Mensaje sugerido para avisar de que una solicitud ya está disponible. */
 export function availableMessage(name: string, searchText: string): string {
   const who = name.trim() ? `${name.trim()}, ` : '';
-  return `Hola ${who}ya tenemos disponible "${searchText}" que solicitaste en Daher. ¡Pásate cuando quieras!`;
+  return `Hola ${who}ya tenemos disponible "${searchText}" que solicitaste en Dahem. ¡Pásate cuando quieras!`;
 }

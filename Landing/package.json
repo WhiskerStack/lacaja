@@ -1,8 +1,8 @@
 {
-  "name": "@daher/landing",
+  "name": "@dahem/landing",
   "version": "0.1.0",
   "private": true,
-  "description": "Landing público de Daher: catálogo audiovisual de consulta (Astro SSG + islas Preact).",
+  "description": "Landing público de Dahem: catálogo audiovisual de consulta (Astro SSG + islas Preact).",
   "type": "module",
   "scripts": {
     "prebuild": "node scripts/build-search-index.mjs",
@@ -14,7 +14,7 @@
     "lint": "astro check"
   },
   "dependencies": {
-    "@daher/domain": "workspace:*",
+    "@dahem/domain": "workspace:*",
     "@nanostores/persistent": "^0.10.2",
     "@nanostores/preact": "^0.5.2",
     "@preact/signals": "^2.0.1",

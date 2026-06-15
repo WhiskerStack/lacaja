@@ -1,4 +1,4 @@
-import { rateFromRates, type Rate } from '@daher/domain';
+import { rateFromRates, type Rate } from '@dahem/domain';
 import type { PricingApi } from '../api/PricingApi';
 import type { PricingInput } from '../types';
 

@@ -10,7 +10,7 @@ importers:
 
   Admin:
     dependencies:
-      '@daher/domain':
+      '@dahem/domain':
         specifier: workspace:*
         version: link:../packages/domain
       '@radix-ui/react-dialog':
@@ -95,7 +95,7 @@ importers:
 
   Backend:
     dependencies:
-      '@daher/domain':
+      '@dahem/domain':
         specifier: workspace:*
         version: link:../packages/domain
       '@nestjs/common':
@@ -195,7 +195,7 @@ importers:
 
   Landing:
     dependencies:
-      '@daher/domain':
+      '@dahem/domain':
         specifier: workspace:*
         version: link:../packages/domain
       '@nanostores/persistent':

@@ -1,7 +1,7 @@
-# Daher — Stack técnico del backend
+# Dahem — Stack técnico del backend
 
 > Documento técnico. Tecnologías del backend. Es el servicio que da soporte tanto al landing como al panel admin.
-> Complementa a `documentacion_no_tecnica_del_backend.md` (funcional), `daher_backend.md` y `documentacion_del_dominio_y_el_modelo_de_datos.md`.
+> Complementa a `documentacion_no_tecnica_del_backend.md` (funcional), `dahem_backend.md` y `documentacion_del_dominio_y_el_modelo_de_datos.md`.
 
 **Última actualización:** 2026-06-10
 
@@ -178,5 +178,5 @@ Pendiente operativo, no tecnológico:
 - **Backend (funcional):** `documentacion_no_tecnica_del_backend.md`.
 - **Arquitectura del backend:** `documentacion_tecnica_sobre_arquitectura_del_backend.md` (Repository + Criteria, patrón Criteria explicado en detalle).
 - **Modelo de datos:** `documentacion_del_dominio_y_el_modelo_de_datos.md`.
-- **Stack del landing:** `resumen_tecnico_stack_daher.md`.
+- **Stack del landing:** `resumen_tecnico_stack_dahem.md`.
 - **Stack del panel admin:** `documentacion_tecnica_panel_admin.md`.

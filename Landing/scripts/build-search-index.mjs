@@ -59,6 +59,6 @@ function buildIndices() {
 
 const { count } = buildIndices();
 // eslint-disable-next-line no-console
-console.log(`[daher] Índices de búsqueda generados (${count} items) → public/search-index.json, public/library-index.json`);
+console.log(`[dahem] Índices de búsqueda generados (${count} items) → public/search-index.json, public/library-index.json`);
 
 export { buildIndices };

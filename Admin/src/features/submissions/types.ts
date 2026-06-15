@@ -1,4 +1,4 @@
-import type { WebSubmissionDTO } from '@daher/domain';
+import type { WebSubmissionDTO } from '@dahem/domain';
 
 /**
  * Fila de envío como la devuelve NestJS. Extiende el DTO de dominio con datos

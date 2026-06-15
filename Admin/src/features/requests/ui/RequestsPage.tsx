@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { toast } from 'sonner';
 import { ListChecks, MessageCircle } from 'lucide-react';
-import type { RequestStatus } from '@daher/domain';
+import type { RequestStatus } from '@dahem/domain';
 import { PageHeader } from '@/components/PageHeader';
 import { EmptyState } from '@/components/EmptyState';
 import { Button } from '@/components/ui/button';

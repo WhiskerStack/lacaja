@@ -48,7 +48,7 @@ export function DashboardPage() {
     <div>
       <PageHeader
         title={`Hola, ${admin?.displayName ?? 'admin'}`}
-        description="Resumen del panel de Daher."
+        description="Resumen del panel de Dahem."
       />
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">

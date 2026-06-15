@@ -1,4 +1,4 @@
-import { Audiovisual, type AudiovisualDTO } from '@daher/domain';
+import { Audiovisual, type AudiovisualDTO } from '@dahem/domain';
 import { describe, expect, it } from 'vitest';
 import { Criteria } from '../../shared/criteria/Criteria';
 import { CollectionFilter } from '../../shared/criteria/CollectionFilter';

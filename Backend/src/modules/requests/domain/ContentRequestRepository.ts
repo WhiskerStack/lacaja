@@ -1,4 +1,4 @@
-import { ContentRequest } from '@daher/domain';
+import { ContentRequest } from '@dahem/domain';
 import { Criteria } from '../../../shared/criteria/Criteria';
 
 /** Puerto del repositorio de solicitudes de contenido (modelo de datos REQUEST). */

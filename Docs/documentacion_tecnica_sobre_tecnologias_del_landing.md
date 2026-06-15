@@ -1,4 +1,4 @@
-# Daher — Resumen técnico del stack
+# Dahem — Resumen técnico del stack
 
 > Inventario vivo de las tecnologías del proyecto. Fuente: `guia_tecnica_de_frontend_I.md` y `documentacion_no_tecnica_de_la_landing_page.md`.
 > Mantener este archivo al día: cada vez que se confirme, descarte o agregue una tecnología, actualizar la tabla correspondiente y la fecha de abajo.
@@ -133,7 +133,7 @@ La columna **Fase** referencia el orden de implementación de la guía técnica 
 | shadcn/ui (port a Preact) | — | ❌ Descartado | — | No existe port oficial a Preact. Vía `preact/compat` arrastra Radix (peso + bugs sutiles) y contradice el presupuesto de <100KB JS. daisyUI cubre la necesidad sin atar a framework. |
 | Franken UI / Basecoat UI | — | 🟡 Evaluados | — | Alternativas agnósticas con estética shadcn. Descartadas a favor de daisyUI (más maduro y adoptado); Franken además arrastra UIkit. Quedan como respaldo si daisyUI no cubre algún componente. |
 
-> **Conciliación Atomic Design ↔ vertical slicing.** El proyecto se organiza por slices verticales (ver `daher_arquitectura_frontend.md`), lo que es transversalmente opuesto a agrupar por nivel atómico. Regla adoptada: Atomic Design rige **dentro de `shared/ui/`** para los componentes reutilizables sin dominio (Button, Input, Card, Modal base, etc.); los componentes que llevan lógica de negocio viven en `features/<slice>/ui/` y *componen* esos átomos/moléculas. Así no se rompe el screaming architecture: la raíz sigue gritando el negocio, y Atomic Design queda acotado a la capa compartida.
+> **Conciliación Atomic Design ↔ vertical slicing.** El proyecto se organiza por slices verticales (ver `dahem_arquitectura_frontend.md`), lo que es transversalmente opuesto a agrupar por nivel atómico. Regla adoptada: Atomic Design rige **dentro de `shared/ui/`** para los componentes reutilizables sin dominio (Button, Input, Card, Modal base, etc.); los componentes que llevan lógica de negocio viven en `features/<slice>/ui/` y *componen* esos átomos/moléculas. Así no se rompe el screaming architecture: la raíz sigue gritando el negocio, y Atomic Design queda acotado a la capa compartida.
 
 
 > Inspiración visual del documento funcional: **EPIX PLAY**. Paletas, tipografías y tokens concretos van en un documento de diseño aparte (pendiente). daisyUI define la base de componentes; el tema visual se ajusta sobre sus variables CSS.

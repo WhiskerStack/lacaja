@@ -1,7 +1,7 @@
-# Daher — Dominio y modelo de datos
+# Dahem — Dominio y modelo de datos
 
 > Documento técnico. Describe el dominio del negocio, el modelo entidad-relación del backend y cómo ese modelo se aplana en el cliente.
-> Fuente: `documentacion_no_tecnica_de_la_landing_page.md`. Complementa a `daher_arquitectura_frontend.md` (clases de dominio) y `daher_backend.md`.
+> Fuente: `documentacion_no_tecnica_de_la_landing_page.md`. Complementa a `dahem_arquitectura_frontend.md` (clases de dominio) y `dahem_backend.md`.
 > Convención: nombres de tablas, entidades y campos en inglés; texto explicativo en español.
 
 **Última actualización:** 2026-06-02
@@ -10,7 +10,7 @@
 
 ## 0. Advertencia de lectura: dos planos distintos
 
-Daher es **SSG con catálogo de solo lectura en el cliente**. Eso parte el modelo de datos en dos planos que NO deben confundirse:
+Dahem es **SSG con catálogo de solo lectura en el cliente**. Eso parte el modelo de datos en dos planos que NO deben confundirse:
 
 1. **Plano backend / admin** (§3) — base de datos normalizada donde el vendedor escribe el catálogo. Aquí viven las tablas, las FKs y las relaciones N:M. Es el diagrama entidad-relación "de verdad".
 2. **Plano cliente** (§5) — lo que llega al navegador. El catálogo se sirve **desnormalizado** como JSON estático. En el cliente solo hay **una** estructura con escritura real: *Mi lista*, en Dexie/IndexedDB.
@@ -211,7 +211,7 @@ Formato de código: guiones como separador (`S1122`, `S1122-3`, `S1122-3-10`), c
 
 ## 4. Diagrama de dominio (clases)
 
-Cómo se ve el dominio como clases en el frontend (`daher_arquitectura_frontend.md`), independiente de las tablas:
+Cómo se ve el dominio como clases en el frontend (`dahem_arquitectura_frontend.md`), independiente de las tablas:
 
 ```mermaid
 classDiagram

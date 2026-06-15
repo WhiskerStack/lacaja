@@ -1,6 +1,6 @@
 import { useEffect, useState, type FormEvent } from 'react';
 import { toast } from 'sonner';
-import type { AudiovisualType } from '@daher/domain';
+import type { AudiovisualType } from '@dahem/domain';
 import {
   Dialog,
   DialogContent,

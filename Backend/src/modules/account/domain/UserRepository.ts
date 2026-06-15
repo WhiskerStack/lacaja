@@ -1,4 +1,4 @@
-import { User } from '@daher/domain';
+import { User } from '@dahem/domain';
 
 /** Registro persistido del cliente, con su hash de credencial (opcional). */
 export interface UserRecord {

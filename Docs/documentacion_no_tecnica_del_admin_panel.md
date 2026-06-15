@@ -1,4 +1,4 @@
-# Daher — Panel admin (documentación funcional)
+# Dahem — Panel admin (documentación funcional)
 
 > Documento no técnico que describe el panel de administración del vendedor. Aplicación aparte del catálogo público.
 > Fuente: `documentacion_no_tecnica_de_la_landing_page.md` y `documentacion_del_dominio_y_el_modelo_de_datos.md`.
@@ -7,7 +7,7 @@
 
 ## 1. Qué es y para quién
 
-El panel admin es la herramienta interna del negocio Daher. **No es público**: vive en una URL separada del catálogo y requiere iniciar sesión. Lo usan el vendedor y, a lo sumo, 2 o 3 personas de confianza.
+El panel admin es la herramienta interna del negocio Dahem. **No es público**: vive en una URL separada del catálogo y requiere iniciar sesión. Lo usan el vendedor y, a lo sumo, 2 o 3 personas de confianza.
 
 Tiene cuatro trabajos:
 
@@ -149,7 +149,7 @@ Cuando un usuario busca algo que no está y usa el enlace "Solicítala y estará
 2. Si decide conseguir el contenido, lo agrega al catálogo (§4) y marca la solicitud como **disponible**.
 3. Avisa al usuario **por WhatsApp** (el panel facilita el contacto; el mensaje se manda por WhatsApp como en el resto del negocio) y marca como **avisado**.
 
-> El aviso por WhatsApp es manual o semiasistido: el panel muestra el contacto y puede preparar el mensaje, pero el canal sigue siendo WhatsApp, coherente con el resto de Daher.
+> El aviso por WhatsApp es manual o semiasistido: el panel muestra el contacto y puede preparar el mensaje, pero el canal sigue siendo WhatsApp, coherente con el resto de Dahem.
 
 ---
 

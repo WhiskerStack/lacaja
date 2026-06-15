@@ -1,4 +1,4 @@
-# Daher — Convenciones de arquitectura del backend
+# Dahem — Convenciones de arquitectura del backend
 
 > Cómo se organiza el código del backend (NestJS + Drizzle + Postgres). Estructura de carpetas, regla de dependencias, modularidad con el contenedor IoC propio de Nest, y los patrones **Repository** y **Criteria** para el acceso a datos.
 > Complementa a `documentacion_tecnica_sobre_tecnologias_del_backend.md` (stack), `documentacion_no_tecnica_del_backend.md` (funcional) y `documentacion_del_dominio_y_el_modelo_de_datos.md` (entidades y DTOs).
@@ -453,7 +453,7 @@ export class CatalogController {
 
 > **Por qué el servicio y no el controller.** El controller es transporte; armar el `Criteria` ahí mete política de consulta (qué campo filtra, defaults, orden, paginación, scoping) en la capa equivocada, y deja la consulta sin reutilizar para otras entradas (cron, llamadas internas). La excepción tolerable es un endpoint de **paso directo sin ninguna regla**: ahí armar el `Criteria` en el controller es pragmático. En cuanto aparece lógica de negocio o más de una consulta, sube al servicio. Ante la duda, default al servicio.
 >
-> Nota de acoplamiento: el servicio recibe aquí el DTO HTTP directamente por simplicidad. La versión "pura" define `SearchCatalogParams` (interfaz plana en `application/`) y el controller mapea el DTO → params, para que la aplicación no dependa del transporte. Para la escala de Daher, pasar el DTO validado es aceptable.
+> Nota de acoplamiento: el servicio recibe aquí el DTO HTTP directamente por simplicidad. La versión "pura" define `SearchCatalogParams` (interfaz plana en `application/`) y el controller mapea el DTO → params, para que la aplicación no dependa del transporte. Para la escala de Dahem, pasar el DTO validado es aceptable.
 >
 > **Seguridad:** dónde se construya el `Criteria` no cambia la mitigación de inyección/sobreexposición — esa vive en `resolveColumn` del transformer (el allowlist, §5.3) y protege venga el `field` de donde venga. Esta decisión es de capas y reúso, no de seguridad.
 
@@ -584,7 +584,7 @@ Poner las reglas en clases de dominio sin I/O y el acceso a datos detrás de un 
 
 El `domain/` del backend es **el mismo negocio** que el del landing y el admin (`Audiovisual` genera el mismo código, `List` calcula los mismos totales). La diferencia es la frontera de serialización (BD aquí, SSG en el landing, API en el admin) y que el backend, además, **valida y persiste**. Tres opciones, en orden de preferencia (misma decisión abierta que en los otros documentos):
 
-1. **Paquete compartido** (`@daher/domain`) consumido por los tres. Una sola fuente de verdad de las reglas. Recomendado si el monorepo lo permite. Los puertos de repositorio y los criterios *del lado servidor* pueden quedar fuera del paquete (son específicos del backend) o entrar como subpaquete.
+1. **Paquete compartido** (`@dahem/domain`) consumido por los tres. Una sola fuente de verdad de las reglas. Recomendado si el monorepo lo permite. Los puertos de repositorio y los criterios *del lado servidor* pueden quedar fuera del paquete (son específicos del backend) o entrar como subpaquete.
 2. **Copia sincronizada** de las clases. Simple pero divergente.
 3. **Nada compartido.** Solo si los dominios empiezan a separarse de verdad.
 

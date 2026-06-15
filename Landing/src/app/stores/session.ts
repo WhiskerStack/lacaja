@@ -1,7 +1,7 @@
 // Store global de sesión (arquitectura §2: stores verdaderamente globales en app/stores/).
 // Guarda un DTO plano de usuario, no una instancia (arquitectura §3b.2).
 import { persistentAtom } from '@nanostores/persistent';
-import type { UserDTO } from '@daher/domain';
+import type { UserDTO } from '@dahem/domain';
 
 export interface SessionState {
   user: UserDTO | null;
@@ -10,7 +10,7 @@ export interface SessionState {
 
 /** Sesión persistida en localStorage (sobrevive recargas). null = anónimo. */
 export const $session = persistentAtom<SessionState>(
-  'daher:session',
+  'dahem:session',
   { user: null, token: null },
   {
     encode: JSON.stringify,

@@ -8,7 +8,7 @@ import {
   serial,
   text,
 } from 'drizzle-orm/pg-core';
-import type { AudiovisualType } from '@daher/domain';
+import type { AudiovisualType } from '@dahem/domain';
 
 // Catálogos de filtrado (modelo de datos §3): género, región, idioma.
 export const genres = pgTable('genre', {

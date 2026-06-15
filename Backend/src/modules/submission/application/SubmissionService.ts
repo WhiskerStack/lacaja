@@ -3,7 +3,7 @@ import {
   SubmissionItem,
   WebSubmission,
   type Rate,
-} from '@daher/domain';
+} from '@dahem/domain';
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { Criteria, type CriteriaFilter } from '../../../shared/criteria/Criteria';
 import { PricingService } from '../../pricing/application/PricingService';

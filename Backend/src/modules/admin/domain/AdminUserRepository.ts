@@ -1,4 +1,4 @@
-import { AdminUser } from '@daher/domain';
+import { AdminUser } from '@dahem/domain';
 
 /** Registro persistido del operador del panel, con su hash (el dominio AdminUser no lo lleva). */
 export interface AdminUserRecord {

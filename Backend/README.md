@@ -1,6 +1,6 @@
-# @daher/backend
+# @dahem/backend
 
-Backend de **Daher** (NestJS + Drizzle + Postgres). Es la frontera de escritura, la fuente
+Backend de **Dahem** (NestJS + Drizzle + Postgres). Es la frontera de escritura, la fuente
 de verdad del catálogo y el generador del SSG del landing. Da servicio al landing público
 (cuentas, envíos por web, solicitudes, búsqueda fallback) y al panel admin (todo el CRUD).
 
@@ -45,7 +45,7 @@ repositorio es una **clase abstracta** (token de DI) y se ata a su adapter Drizz
 Copia `.env.example` a `.env` y ajústalo:
 
 ```
-DATABASE_URL=postgres://postgres:postgres@localhost:5432/daher
+DATABASE_URL=postgres://postgres:postgres@localhost:5432/dahem
 JWT_SECRET=<secreto largo y aleatorio>
 JWT_EXPIRES_IN=7d
 PORT=3000
@@ -59,11 +59,11 @@ BUILD_COMMAND=...   # comando que regenera el SSG (placeholder por defecto)
 ## Migraciones y datos
 
 ```bash
-pnpm --filter @daher/backend db:generate   # genera SQL de migración desde el esquema Drizzle
-pnpm --filter @daher/backend db:migrate     # aplica las migraciones
+pnpm --filter @dahem/backend db:generate   # genera SQL de migración desde el esquema Drizzle
+pnpm --filter @dahem/backend db:migrate     # aplica las migraciones
 # Paso de búsqueda (manual, ver más abajo):
 psql "$DATABASE_URL" -f Backend/drizzle/0001_search.sql
-pnpm --filter @daher/backend seed           # datos de demostración
+pnpm --filter @dahem/backend seed           # datos de demostración
 ```
 
 Alternativa rápida en desarrollo: `db:push` empuja el esquema sin generar archivos de migración.
@@ -90,10 +90,10 @@ Crea: `CREATE EXTENSION pg_trgm`, columnas auxiliares `genres_text`/`cast_text`,
 ## Ejecutar
 
 ```bash
-pnpm --filter @daher/backend start:dev   # nest start -b swc --watch
-pnpm --filter @daher/backend build       # nest build -b swc
-pnpm --filter @daher/backend test        # vitest run
-pnpm --filter @daher/backend lint        # tsc --noEmit
+pnpm --filter @dahem/backend start:dev   # nest start -b swc --watch
+pnpm --filter @dahem/backend build       # nest build -b swc
+pnpm --filter @dahem/backend test        # vitest run
+pnpm --filter @dahem/backend lint        # tsc --noEmit
 ```
 
 ## Endpoints
@@ -140,5 +140,5 @@ Endpoints de auth con rate limit reforzado (login/registro/bootstrap/publish).
   Meilisearch cambiando sólo el binding (búsqueda §4.2).
 - **List**: el merge de "Mi lista" lo resuelve el cliente; el backend persiste el conjunto
   de ítems (PUT reemplaza).
-- **Dominio compartido**: se reutiliza `@daher/domain` (Audiovisual, List, WebSubmission,
+- **Dominio compartido**: se reutiliza `@dahem/domain` (Audiovisual, List, WebSubmission,
   PriceRate, User, AdminUser, …) como única fuente de verdad de las reglas.

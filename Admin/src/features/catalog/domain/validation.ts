@@ -1,4 +1,4 @@
-import { Audiovisual } from '@daher/domain';
+import { Audiovisual } from '@dahem/domain';
 import type { AudiovisualInput } from '../types';
 
 /**

@@ -1,5 +1,5 @@
-// @daher/domain — clases de dominio compartidas por landing, admin y backend.
-// Una sola fuente de verdad de las reglas de negocio de Daher.
+// @dahem/domain — clases de dominio compartidas por landing, admin y backend.
+// Una sola fuente de verdad de las reglas de negocio de Dahem.
 
 export * from './types';
 export * from './codes';

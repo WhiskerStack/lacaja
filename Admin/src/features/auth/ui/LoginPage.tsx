@@ -37,7 +37,7 @@ export function LoginPage() {
           <div className="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-primary-foreground">
             <Clapperboard className="h-6 w-6" />
           </div>
-          <CardTitle className="text-xl">Daher · Panel admin</CardTitle>
+          <CardTitle className="text-xl">Dahem · Panel admin</CardTitle>
           <CardDescription>Inicia sesión para gestionar el catálogo.</CardDescription>
         </CardHeader>
         <CardContent>

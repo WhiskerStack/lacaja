@@ -1,8 +1,8 @@
-import { AdminUser } from '@daher/domain';
+import { AdminUser } from '@dahem/domain';
 import type { AuthApi } from '../api/AuthApi';
 import type { BootstrapData, LoginCredentials, Session } from '../types';
 
-const STORAGE_KEY = 'daher.admin.session';
+const STORAGE_KEY = 'dahem.admin.session';
 
 /**
  * Servicio de sesión: guarda el token (localStorage), lo expone para el cliente

@@ -18,7 +18,7 @@ export default {
     // Tema oscuro cinematográfico por defecto (inspiración EPIX PLAY) + tema claro alterno.
     themes: [
       {
-        daherdark: {
+        dahemdark: {
           'color-scheme': 'dark',
           primary: '#e11d48', // rojo cinematográfico
           'primary-content': '#ffffff',
@@ -39,7 +39,7 @@ export default {
         },
       },
       {
-        daherlight: {
+        dahemlight: {
           'color-scheme': 'light',
           primary: '#e11d48',
           'primary-content': '#ffffff',
@@ -58,7 +58,7 @@ export default {
         },
       },
     ],
-    darkTheme: 'daherdark',
+    darkTheme: 'dahemdark',
     logs: false,
   },
 };

@@ -1,4 +1,4 @@
-# Daher — Documentación funcional
+# Dahem — Documentación funcional
 
 > Documento no técnico que describe el producto. Se usa como contexto para IA al generar el proyecto base.
 
@@ -6,7 +6,7 @@
 
 ## 1. Resumen del negocio
 
-Daher vende contenido audiovisual de forma **presencial** en Cuba (películas, series, novelas, shows, animes — en adelante "audiovisuales").
+Dahem vende contenido audiovisual de forma **presencial** en Cuba (películas, series, novelas, shows, animes — en adelante "audiovisuales").
 
 Esta web **no vende ni reproduce contenido**. Es un catálogo de consulta. Su función es:
 

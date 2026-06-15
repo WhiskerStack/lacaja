@@ -19,11 +19,11 @@ body {
 }
 
 /* Carrusel lateral con scroll-snap (Home recomendados, sugerencias, trailers). */
-.daher-rail {
+.dahem-rail {
   @apply flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory;
   scrollbar-width: thin;
 }
-.daher-rail > * {
+.dahem-rail > * {
   @apply snap-start shrink-0;
 }
 
@@ -42,6 +42,6 @@ body {
 }
 
 /* Evita el flash del contenido antes de hidratar islas above-the-fold. */
-.daher-skeleton {
+.dahem-skeleton {
   @apply animate-pulse bg-base-300 rounded;
 }

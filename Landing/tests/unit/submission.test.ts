@@ -16,7 +16,7 @@ const data: SubmissionData = {
 describe('Submission', () => {
   it('genera un mensaje legible con códigos, totales y cliente', () => {
     const text = new Submission(data).toText();
-    expect(text).toContain('Pedido Daher');
+    expect(text).toContain('Pedido Dahem');
     expect(text).toContain('Cliente: Ana Pérez');
     expect(text).toContain('P0023');
     expect(text).toContain('El Gigante de Hierro');
@@ -28,7 +28,7 @@ describe('Submission', () => {
   it('construye una URL de wa.me con el número y el mensaje codificado', () => {
     const url = new Submission(data).whatsappUrl('+53 5000-0000');
     expect(url.startsWith('https://wa.me/5350000000?text=')).toBe(true);
-    expect(decodeURIComponent(url)).toContain('Pedido Daher');
+    expect(decodeURIComponent(url)).toContain('Pedido Dahem');
   });
 
   it('reporta lista vacía', () => {

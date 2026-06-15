@@ -9,7 +9,7 @@ interface ThemeContextValue {
 }
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
-const STORAGE_KEY = 'daher.admin.theme';
+const STORAGE_KEY = 'dahem.admin.theme';
 
 function initialTheme(): Theme {
   if (typeof window === 'undefined') return 'light';

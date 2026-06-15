@@ -1,4 +1,4 @@
-import { isCode } from '@daher/domain';
+import { isCode } from '@dahem/domain';
 import { Injectable } from '@nestjs/common';
 import {
   SearchProvider,

@@ -1,4 +1,4 @@
-import { AdminUser } from '@daher/domain';
+import { AdminUser } from '@dahem/domain';
 import type { UsersApi } from '../api/UsersApi';
 import type { CreateAdminInput } from '../types';
 

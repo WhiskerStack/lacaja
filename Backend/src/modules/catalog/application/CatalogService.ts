@@ -1,4 +1,4 @@
-import { Audiovisual, type AudiovisualType } from '@daher/domain';
+import { Audiovisual, type AudiovisualType } from '@dahem/domain';
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { Criteria, type CriteriaFilter } from '../../../shared/criteria/Criteria';
 import { AudiovisualRepository } from '../domain/AudiovisualRepository';

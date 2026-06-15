@@ -1,4 +1,4 @@
-import { ContentRequest, type RequestStatus } from '@daher/domain';
+import { ContentRequest, type RequestStatus } from '@dahem/domain';
 import { Inject, Injectable } from '@nestjs/common';
 import { eq } from 'drizzle-orm';
 import { Criteria } from '../../../shared/criteria/Criteria';

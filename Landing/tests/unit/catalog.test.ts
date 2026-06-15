@@ -1,6 +1,6 @@
-// Tests de la generación de códigos por nivel y totales de lista vía @daher/domain.
+// Tests de la generación de códigos por nivel y totales de lista vía @dahem/domain.
 import { describe, it, expect } from 'vitest';
-import { List, ListItem, Audiovisual, DEFAULT_RATE } from '@daher/domain';
+import { List, ListItem, Audiovisual, DEFAULT_RATE } from '@dahem/domain';
 import { getById, getEpisodic } from '../../src/features/catalog/logic/buildData';
 import { priceFor } from '../../src/features/catalog/logic/pricing';
 

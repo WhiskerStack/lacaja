@@ -1,4 +1,4 @@
-# Daher — Convenciones de arquitectura del panel admin
+# Dahem — Convenciones de arquitectura del panel admin
 
 > Cómo se organiza el código del panel admin (React + Vite + TanStack Router). Estructura de carpetas, regla de dependencias y modularidad con contenedor IoC (awilix).
 > Complementa a `documentacion_tecnica_panel_admin.md` (stack), `documentacion_no_tecnica_del_panel_admin.md` (funcional) y `documentacion_del_dominio_y_el_modelo_de_datos.md` (entidades y DTOs).
@@ -371,7 +371,7 @@ awilix facilita el testing precisamente porque las dependencias entran por const
 
 El `domain/` del admin y el del landing son **el mismo negocio**. Tres opciones, en orden de preferencia:
 
-1. **Paquete compartido** (`@daher/domain`) consumido por ambos. Una sola fuente de verdad de las reglas (código de audiovisual, totales, validación). Recomendado si el monorepo lo permite.
+1. **Paquete compartido** (`@dahem/domain`) consumido por ambos. Una sola fuente de verdad de las reglas (código de audiovisual, totales, validación). Recomendado si el monorepo lo permite.
 2. **Copia sincronizada** de las clases entre repos. Simple pero corre el riesgo de divergir.
 3. **Nada compartido** (cada app su copia). Solo si los dominios empiezan a separarse de verdad.
 

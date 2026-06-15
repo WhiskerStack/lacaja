@@ -1,4 +1,4 @@
-import { Audiovisual } from '@daher/domain';
+import { Audiovisual } from '@dahem/domain';
 import { Controller, Get, Param, ParseIntPipe, Query } from '@nestjs/common';
 import { CatalogService } from '../application/CatalogService';
 import { Public } from '../../auth/http/decorators';

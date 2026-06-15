@@ -1,11 +1,11 @@
-# @daher/landing
+# @dahem/landing
 
-Landing público de **Daher**: catálogo audiovisual de consulta. Web estática (Astro SSG) con
+Landing público de **Dahem**: catálogo audiovisual de consulta. Web estática (Astro SSG) con
 islas interactivas en Preact. **No vende ni reproduce contenido**: muestra el inventario, deja
 armar una lista y enviarla al negocio por cuatro vías.
 
-Forma parte del monorepo pnpm de Daher y reutiliza las reglas de negocio del paquete
-compartido `@daher/domain` (clases `Audiovisual`, `EpisodicContainer`, `Season`, `Episode`,
+Forma parte del monorepo pnpm de Dahem y reutiliza las reglas de negocio del paquete
+compartido `@dahem/domain` (clases `Audiovisual`, `EpisodicContainer`, `Season`, `Episode`,
 `List`, `ListItem`, `User`, códigos, `DEFAULT_RATE`).
 
 ## Stack
@@ -21,7 +21,7 @@ Vertical slicing + screaming architecture (ver `Docs/documentacion_tecnica_sobre
 ```
 src/
   features/
-    catalog/    { domain via @daher/domain, ui/, logic/, types.ts }   Home, Biblioteca, detalle
+    catalog/    { domain via @dahem/domain, ui/, logic/, types.ts }   Home, Biblioteca, detalle
     search/     { ui/, logic/SearchService, store.ts, types.ts }       buscador 3-state loading|local|api
     my-list/    { ui/, logic/ListService, store.ts, types.ts }         drawer, totales, Dexie
     submission/ { domain/Submission, ui/, logic/, types.ts }           4 vías de envío
