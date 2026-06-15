@@ -1,0 +1,64 @@
+---
+// Hero del detalle (funcional §6.2.2): foto de fondo + nombre, género, duración, rating, peso,
+// descripción (con "...más" expandible) y el botón "Agregar a Mi lista" (isla).
+import { Image } from 'astro:assets';
+import AddToListButton from './AddToListButton.tsx';
+import { formatDuration, formatGb, formatRating, truncate } from '../../../shared/format';
+import { TYPE_LABEL } from '../types';
+import type { CatalogItemDTO } from '../types';
+
+interface Props {
+  item: CatalogItemDTO;
+  /** Nivel a agregar (audiovisual/season/episode) con su código y peso. */
+  add: { code: string; level: 'audiovisual' | 'season' | 'episode'; targetId: number; name: string; sizeGb: number };
+  /** Subtítulo opcional para temporada/capítulo. */
+  context?: string;
+}
+const { item, add, context } = Astro.props;
+const limit = 240;
+const long = item.description.length > limit;
+---
+<section class="relative w-screen left-1/2 -translate-x-1/2 min-h-[70vh] flex items-end">
+  <Image
+    src={item.imageUrl}
+    alt={item.name}
+    width={1200}
+    height={1800}
+    loading="eager"
+    class="absolute inset-0 w-full h-full object-cover"
+  />
+  <div class="absolute inset-0 bg-gradient-to-t from-base-100 via-base-100/80 to-base-100/20"></div>
+
+  <div class="relative max-w-content mx-auto w-full p-6 sm:p-10">
+    {context && <p class="text-sm text-secondary font-semibold mb-1">{context}</p>}
+    <h1 class="text-3xl sm:text-5xl font-extrabold mb-3">{item.name}</h1>
+
+    <div class="flex flex-wrap gap-2 items-center text-sm mb-4">
+      <span class="badge badge-primary">★ {formatRating(item.rating)}</span>
+      <span class="opacity-90">{TYPE_LABEL[item.type]}</span>
+      <span class="opacity-90">· {item.genre}</span>
+      <span class="opacity-90">· {item.year}</span>
+      {item.durationMin ? <span class="opacity-90">· {formatDuration(item.durationMin)}</span> : null}
+      <span class="opacity-90">· {formatGb(add.sizeGb || item.totalSizeGb)}</span>
+      {item.isPremiere && <span class="badge badge-secondary">Estreno</span>}
+    </div>
+
+    <details class="max-w-2xl mb-5">
+      <summary class="cursor-pointer list-none opacity-90">
+        {long ? truncate(item.description, limit) : item.description}
+        {long && <span class="text-primary ml-1">…más</span>}
+      </summary>
+      {long && <p class="mt-2 opacity-90">{item.description}</p>}
+    </details>
+
+    <AddToListButton
+      client:visible
+      code={add.code}
+      level={add.level}
+      targetId={add.targetId}
+      name={add.name}
+      sizeGb={add.sizeGb}
+      isPremiere={item.isPremiere}
+    />
+  </div>
+</section>

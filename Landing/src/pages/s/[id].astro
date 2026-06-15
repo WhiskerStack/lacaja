@@ -1,0 +1,30 @@
+---
+// Detalle de episódico (vista global) /s/[id] (funcional §6.3). Agregar genera código de serie
+// completa (S1122). Reemplaza "Capítulos" por navegación a temporadas/capítulos.
+import Base from '../../layouts/Base.astro';
+import DetailHero from '../../features/catalog/ui/DetailHero.astro';
+import EpisodicNav from '../../features/catalog/ui/EpisodicNav.astro';
+import Trailers from '../../features/catalog/ui/Trailers.astro';
+import Cast from '../../features/catalog/ui/Cast.astro';
+import Rail from '../../features/catalog/ui/Rail.astro';
+import { getEpisodic, getById, getSuggestions } from '../../features/catalog/logic/buildData';
+
+export function getStaticPaths() {
+  return getEpisodic().map((e) => ({ params: { id: String(e.id) }, props: { id: e.id } }));
+}
+
+const { id } = Astro.props as { id: number };
+const item = getById(id);
+if (!item) return Astro.redirect('/404');
+const suggestions = getSuggestions(item);
+---
+<Base title={`${item.name} — Daher`} description={item.description}>
+  <DetailHero
+    item={item}
+    add={{ code: item.code, level: 'audiovisual', targetId: item.id, name: item.name, sizeGb: item.totalSizeGb }}
+  />
+  <EpisodicNav item={item} />
+  <Trailers youtubeIds={item.trailers} />
+  <Cast cast={item.cast} />
+  <Rail title="Sugerencias" cards={suggestions} />
+</Base>

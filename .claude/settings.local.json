@@ -13,7 +13,20 @@
       "Bash(pnpm --filter @daher/domain build)",
       "Bash(pnpm --filter @daher/domain test)",
       "Bash(git add *)",
-      "Bash(git -c user.name=neounanue -c user.email=jose.unanue@hotmail.com commit -q -m 'chore: monorepo foundation + @daher/domain shared package *)"
+      "Bash(git -c user.name=neounanue -c user.email=jose.unanue@hotmail.com commit -q -m 'chore: monorepo foundation + @daher/domain shared package *)",
+      "Bash(node scripts/build-search-index.mjs)",
+      "Bash(node -e \"const s='Canción'.toLowerCase\\(\\).normalize\\('NFD'\\).replace\\(/[̀-ͯ]/g,''\\); console.log\\(s\\);\")",
+      "Bash(node -e ' *)",
+      "Bash(pnpm approve-builds *)",
+      "Bash(echo \"exit=$?\")",
+      "Bash(gh api *)",
+      "Bash(npx tsc *)",
+      "Bash(node -e \"import\\('@vite-pwa/astro'\\).then\\(m=>console.log\\('default:',typeof m.default,'keys:',Object.keys\\(m\\)\\)\\)\")",
+      "Bash(npx astro *)",
+      "Bash(npx vitest *)",
+      "Bash(node *)",
+      "Bash(echo \"total: $\\(npx tsc --noEmit 2>&1)",
+      "Bash(pnpm -r test)"
     ]
   }
 }

@@ -1,0 +1,35 @@
+---
+// Detalle de temporada /s/[id]/[temporada] (funcional §6.3.1). Agregar genera código S1122-3.
+import Base from '../../../layouts/Base.astro';
+import DetailHero from '../../../features/catalog/ui/DetailHero.astro';
+import EpisodicNav from '../../../features/catalog/ui/EpisodicNav.astro';
+import { getEpisodic, getById } from '../../../features/catalog/logic/buildData';
+
+export function getStaticPaths() {
+  return getEpisodic().flatMap((e) =>
+    (e.seasons ?? []).map((s) => ({
+      params: { id: String(e.id), temporada: String(s.number) },
+      props: { id: e.id, season: s.number },
+    })),
+  );
+}
+
+const { id, season } = Astro.props as { id: number; season: number };
+const item = getById(id);
+const seasonView = item?.seasons?.find((s) => s.number === season);
+if (!item || !seasonView) return Astro.redirect('/404');
+---
+<Base title={`${item.name} · Temporada ${season} — Daher`} description={item.description}>
+  <DetailHero
+    item={item}
+    context={`Temporada ${season}`}
+    add={{
+      code: seasonView.code,
+      level: 'season',
+      targetId: seasonView.id,
+      name: `${item.name} · T${season}`,
+      sizeGb: seasonView.sizeGb,
+    }}
+  />
+  <EpisodicNav item={item} activeSeason={season} />
+</Base>

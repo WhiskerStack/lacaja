@@ -1,0 +1,43 @@
+---
+// Home (funcional §6.1): carátula full-width + filas de recomendados por clasificación/género.
+import Base from '../layouts/Base.astro';
+import HeroCarousel from '../features/catalog/ui/HeroCarousel.tsx';
+import Rail from '../features/catalog/ui/Rail.astro';
+import {
+  getPremiereHighlights,
+  getPremieres,
+  getTopRated,
+  getCards,
+} from '../features/catalog/logic/buildData';
+import { TYPE_LABEL_PLURAL } from '../features/catalog/types';
+import type { AudiovisualType } from '../features/catalog/types';
+
+const highlights = getPremiereHighlights(5);
+const estrenos = getPremieres();
+const topRated = getTopRated();
+const allCards = getCards();
+
+// Filas "mejor votadas" por género para algunos géneros con contenido.
+const genreRows = ['Ciencia ficción', 'Drama', 'Animación', 'Acción']
+  .map((g) => ({ g, cards: topRated.filter((c) => c.genre === g) }))
+  .filter((r) => r.cards.length > 0);
+
+const TYPES: AudiovisualType[] = ['movie', 'series', 'anime'];
+---
+<Base>
+  <HeroCarousel client:load items={highlights} />
+
+  <div class="mt-6">
+    <Rail title="Estrenos" cards={estrenos} />
+    <Rail title="Mejor votadas" cards={topRated.slice(0, 12)} />
+
+    {TYPES.map((t) => (
+      <Rail
+        title={TYPE_LABEL_PLURAL[t]}
+        cards={allCards.filter((c) => c.type === t).sort((a, b) => b.rating - a.rating)}
+      />
+    ))}
+
+    {genreRows.map((r) => <Rail title={`Mejor votadas · ${r.g}`} cards={r.cards} />)}
+  </div>
+</Base>

@@ -1,0 +1,31 @@
+---
+// Tarjeta de póster estática (cero JS): usada en carruseles y filas de recomendados.
+// Usa astro:assets <Image> para optimizar la imagen remota (especificaciones §7).
+import { Image } from 'astro:assets';
+import { detailUrl } from '../../../shared/urls';
+import { formatRating } from '../../../shared/format';
+import type { CatalogCardDTO } from '../types';
+
+interface Props {
+  card: CatalogCardDTO;
+  width?: number;
+}
+const { card, width = 200 } = Astro.props;
+const height = Math.round((width * 3) / 2);
+---
+<a href={detailUrl(card)} class="block w-36 sm:w-44 group">
+  <div class="aspect-[2/3] rounded-box overflow-hidden bg-base-300 relative">
+    <Image
+      src={card.imageUrl}
+      alt={card.name}
+      width={width}
+      height={height}
+      loading="lazy"
+      class="object-cover w-full h-full group-hover:scale-105 transition-transform"
+    />
+    <span class="absolute top-1 right-1 badge badge-sm badge-neutral">★ {formatRating(card.rating)}</span>
+    {card.isPremiere && <span class="absolute top-1 left-1 badge badge-sm badge-secondary">Estreno</span>}
+  </div>
+  <p class="text-sm mt-1 truncate">{card.name}</p>
+  <p class="text-xs opacity-60">{card.year}</p>
+</a>

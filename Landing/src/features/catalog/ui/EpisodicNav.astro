@@ -1,0 +1,49 @@
+---
+// Navegación rápida a temporadas y capítulos (funcional §6.3.2): reemplaza la sección "Capítulos".
+import { seasonUrl, episodeUrl } from '../../../shared/urls';
+import { formatGb } from '../../../shared/format';
+import type { CatalogItemDTO } from '../types';
+
+interface Props {
+  item: CatalogItemDTO;
+  /** Temporada actualmente abierta (si la vista es de temporada/capítulo). */
+  activeSeason?: number;
+  activeEpisode?: number;
+}
+const { item, activeSeason, activeEpisode } = Astro.props;
+const seasons = item.seasons ?? [];
+---
+{seasons.length > 0 && (
+  <section class="my-8">
+    <h2 class="text-lg sm:text-xl font-bold mb-3">Temporadas y capítulos</h2>
+    <div class="flex flex-wrap gap-2 mb-4">
+      {seasons.map((s) => (
+        <a
+          href={seasonUrl(item.id, s.number)}
+          class={`btn btn-sm ${activeSeason === s.number ? 'btn-primary' : 'btn-outline'}`}
+        >
+          Temporada {s.number}
+          <span class="badge badge-xs ml-1">{formatGb(s.sizeGb)}</span>
+        </a>
+      ))}
+    </div>
+
+    {activeSeason && (
+      <div class="grid sm:grid-cols-2 gap-2">
+        {seasons
+          .find((s) => s.number === activeSeason)
+          ?.episodes.map((ep) => (
+            <a
+              href={episodeUrl(item.id, activeSeason, ep.number)}
+              class={`flex items-center justify-between rounded-box px-3 py-2 ${
+                activeEpisode === ep.number ? 'bg-primary text-primary-content' : 'bg-base-200 hover:bg-base-300'
+              }`}
+            >
+              <span>Capítulo {ep.number}</span>
+              <span class="text-xs font-mono opacity-80">{ep.code} · {formatGb(ep.sizeGb)}</span>
+            </a>
+          ))}
+      </div>
+    )}
+  </section>
+)}

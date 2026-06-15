@@ -1,0 +1,16 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
+    "allowImportingTsExtensions": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable", "WebWorker"],
+    "types": ["astro/client", "@vite-pwa/astro/client", "vitest/globals"],
+    "baseUrl": ".",
+    "noEmit": true,
+    "declaration": false,
+    "sourceMap": false
+  },
+  "include": ["src", "scripts", "tests", "astro.config.mjs", "tailwind.config.mjs"],
+  "exclude": ["dist", ".astro", "node_modules"]
+}

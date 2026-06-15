@@ -1,0 +1,24 @@
+---
+// Trailers (funcional §6.2.3): solo si existen. Carrusel lateral de embeds ligeros de YouTube
+// con lite-youtube-embed (stack §7). El custom element <lite-youtube> se registra en cliente.
+interface Props {
+  youtubeIds: string[];
+}
+const { youtubeIds } = Astro.props;
+---
+{youtubeIds.length > 0 && (
+  <section class="my-8">
+    <h2 class="text-lg sm:text-xl font-bold mb-3">Trailers</h2>
+    <div class="daher-rail">
+      {youtubeIds.map((id) => (
+        <div class="w-72 sm:w-96 rounded-box overflow-hidden">
+          <lite-youtube videoid={id} playlabel="Reproducir tráiler"></lite-youtube>
+        </div>
+      ))}
+    </div>
+  </section>
+  <script>
+    // Registra el custom element solo si hay trailers en la página.
+    import('lite-youtube-embed');
+  </script>
+)}

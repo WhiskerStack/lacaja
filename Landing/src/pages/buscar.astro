@@ -1,0 +1,13 @@
+---
+// Buscar (funcional §6.4): la isla usa el índice MiniSearch local (o fallback API). Recibe las
+// cards del catálogo por SSG para resolver foto/año/tipo a partir del código del índice.
+import Base from '../layouts/Base.astro';
+import SearchView from '../features/search/ui/SearchView.tsx';
+import { getCards } from '../features/catalog/logic/buildData';
+
+const cards = getCards();
+---
+<Base title="Buscar — Daher">
+  <h1 class="text-2xl font-bold my-4">Buscar</h1>
+  <SearchView client:load cards={cards} />
+</Base>

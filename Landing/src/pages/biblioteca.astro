@@ -1,0 +1,14 @@
+---
+// Biblioteca (funcional §6.5): grid de 3 columnas con filtros. La isla recibe todo el catálogo
+// (cards) + las facetas por SSG; el filtrado/orden/scroll infinito ocurre en cliente.
+import Base from '../layouts/Base.astro';
+import LibraryGrid from '../features/catalog/ui/LibraryGrid.tsx';
+import { getCards, getFilterFacets } from '../features/catalog/logic/buildData';
+
+const cards = getCards();
+const facets = getFilterFacets();
+---
+<Base title="Biblioteca — Daher">
+  <h1 class="text-2xl font-bold my-4">Biblioteca</h1>
+  <LibraryGrid client:load cards={cards} facets={facets} />
+</Base>

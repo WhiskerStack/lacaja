@@ -1,0 +1,53 @@
+---
+// Layout base: navbar, banner de red, drawer/modales globales, botonera inferior y host de toasts.
+// Las islas globales viven aquí una sola vez y reaccionan vía nanostores en cualquier página.
+import '../styles/global.css';
+import Navbar from '../app/ui/Navbar.tsx';
+import BottomBar from '../app/ui/BottomBar.tsx';
+import NetworkBanner from '../app/ui/NetworkBanner.tsx';
+import ToastHost from '../app/ui/ToastHost.tsx';
+import Drawer from '../features/my-list/ui/Drawer.tsx';
+import SubmissionModal from '../features/submission/ui/SubmissionModal.tsx';
+import AuthModal from '../features/account/ui/AuthModal.tsx';
+
+interface Props {
+  title?: string;
+  description?: string;
+  /** Detalle móvil oculta el navbar (funcional §6.2.1). */
+  hideChrome?: boolean;
+}
+const {
+  title = 'Daher — Catálogo audiovisual',
+  description = 'Catálogo de consulta. Arma tu lista y envíala al negocio.',
+  hideChrome = false,
+} = Astro.props;
+---
+<!doctype html>
+<html lang="es" data-theme="daherdark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0b0f17" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <!-- Prefetch del índice de búsqueda en todas las páginas (especificaciones §4.2) -->
+    <link rel="prefetch" href="/search-index.json" as="fetch" crossorigin="anonymous" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <NetworkBanner client:load />
+    {!hideChrome && <Navbar client:load />}
+
+    <main class="max-w-content mx-auto px-3 sm:px-4 pb-24 md:pb-10">
+      <slot />
+    </main>
+
+    {!hideChrome && <BottomBar client:load />}
+
+    <!-- Islas globales (drawer + modales + toasts) -->
+    <Drawer client:idle />
+    <SubmissionModal client:idle />
+    <AuthModal client:idle />
+    <ToastHost client:idle />
+  </body>
+</html>

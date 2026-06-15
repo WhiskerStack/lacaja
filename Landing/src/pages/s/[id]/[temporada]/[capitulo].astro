@@ -1,0 +1,38 @@
+---
+// Detalle de capítulo /s/[id]/[temporada]/[capitulo] (funcional §6.3.1). Agregar genera S1122-3-10.
+import Base from '../../../../layouts/Base.astro';
+import DetailHero from '../../../../features/catalog/ui/DetailHero.astro';
+import EpisodicNav from '../../../../features/catalog/ui/EpisodicNav.astro';
+import { getEpisodic, getById } from '../../../../features/catalog/logic/buildData';
+
+export function getStaticPaths() {
+  return getEpisodic().flatMap((e) =>
+    (e.seasons ?? []).flatMap((s) =>
+      s.episodes.map((ep) => ({
+        params: { id: String(e.id), temporada: String(s.number), capitulo: String(ep.number) },
+        props: { id: e.id, season: s.number, episode: ep.number },
+      })),
+    ),
+  );
+}
+
+const { id, season, episode } = Astro.props as { id: number; season: number; episode: number };
+const item = getById(id);
+const seasonView = item?.seasons?.find((s) => s.number === season);
+const ep = seasonView?.episodes.find((x) => x.number === episode);
+if (!item || !seasonView || !ep) return Astro.redirect('/404');
+---
+<Base title={`${item.name} · T${season}E${episode} — Daher`} description={item.description}>
+  <DetailHero
+    item={item}
+    context={`Temporada ${season} · Capítulo ${episode}`}
+    add={{
+      code: ep.code,
+      level: 'episode',
+      targetId: ep.id,
+      name: `${item.name} · T${season}E${episode}`,
+      sizeGb: ep.sizeGb,
+    }}
+  />
+  <EpisodicNav item={item} activeSeason={season} activeEpisode={episode} />
+</Base>

@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* lite-youtube-embed: estilos del componente (cargado por el paquete en runtime). */
+@import 'lite-youtube-embed/src/lite-yt-embed.css';
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  @apply bg-base-100 text-base-content antialiased;
+}
+
+/* Carrusel lateral con scroll-snap (Home recomendados, sugerencias, trailers). */
+.daher-rail {
+  @apply flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory;
+  scrollbar-width: thin;
+}
+.daher-rail > * {
+  @apply snap-start shrink-0;
+}
+
+/* Truncado multilínea para descripciones (funcional §6.1.1 / §6.2.2). */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Evita el flash del contenido antes de hidratar islas above-the-fold. */
+.daher-skeleton {
+  @apply animate-pulse bg-base-300 rounded;
+}
