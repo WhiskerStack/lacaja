@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm --version)",
+      "Bash(npm --version)",
+      "Bash(git --version)",
+      "Bash(gh --version)",
+      "Bash(gh auth *)",
+      "Bash(git init *)",
+      "Bash(git branch *)",
+      "Bash(mkdir -p packages/domain/src)",
+      "Bash(pnpm install *)",
+      "Bash(pnpm --filter @daher/domain build)",
+      "Bash(pnpm --filter @daher/domain test)",
+      "Bash(git add *)",
+      "Bash(git -c user.name=neounanue -c user.email=jose.unanue@hotmail.com commit -q -m 'chore: monorepo foundation + @daher/domain shared package *)"
+    ]
+  }
+}

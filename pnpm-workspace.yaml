@@ -1,0 +1,9 @@
+packages:
+  - 'packages/*'
+  - 'Backend'
+  - 'Landing'
+  - 'Admin'
+allowBuilds:
+  esbuild: true
+onlyBuiltDependencies:
+  - esbuild

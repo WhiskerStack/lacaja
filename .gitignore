@@ -1,0 +1,39 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# builds
+dist/
+dist-new/
+build/
+.output/
+.astro/
+.vite/
+*.tsbuildinfo
+
+# env
+.env
+.env.*
+!.env.example
+
+# logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# os / editor
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# test / coverage
+coverage/
+.nyc_output/
+
+# astro generated images cache
+Landing/.astro/
+Landing/public/posters/_generated/
+
+# drizzle
+Backend/drizzle/meta/_journal.json.bak
