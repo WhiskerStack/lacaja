@@ -21,9 +21,13 @@ export class Audiovisual {
     return audiovisualCode(this.type, this.id);
   }
 
-  /** Precio según sea estreno o normal. La tarifa viene de PRICE_RATE (configurable). */
+  /**
+   * Precio unitario según el tipo y si es estreno o normal (tarifa configurable PRICE_RATE).
+   * En episódicos esto es el precio por capítulo; la multiplicación por cantidad vive en quien agrega.
+   */
   price(rate: Rate): number {
-    return this.isPremiere ? rate.premiere : rate.normal;
+    const typeRate = rate[this.type];
+    return this.isPremiere ? typeRate.premiere : typeRate.normal;
   }
 
   isEpisodic(): boolean {

@@ -89,7 +89,19 @@ describe('codes / rates', () => {
     expect(isCode('juego de tronos')).toBe(false);
   });
 
-  it('resuelve tarifa con defaults', () => {
-    expect(rateFromRates([{ key: 'normal', priceCup: 15 }])).toEqual({ normal: 15, premiere: 20 });
+  it('resuelve tarifa por tipo con defaults', () => {
+    const rate = rateFromRates([{ type: 'movie', key: 'normal', priceCup: 15 }]);
+    expect(rate.movie).toEqual({ normal: 15, premiere: 20 });
+    // Los tipos sin fila caen al default de referencia.
+    expect(rate.series).toEqual({ normal: 10, premiere: 20 });
+  });
+
+  it('aplica precio por tipo', () => {
+    const rate = rateFromRates([
+      { type: 'series', key: 'normal', priceCup: 5 },
+      { type: 'series', key: 'premiere', priceCup: 8 },
+    ]);
+    expect(new Audiovisual(1, 'series', 'S', 2020, 8, 0, false).price(rate)).toBe(5);
+    expect(new Audiovisual(2, 'series', 'S', 2020, 8, 0, true).price(rate)).toBe(8);
   });
 });

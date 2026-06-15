@@ -12,6 +12,6 @@ export { ListItem } from './ListItem';
 export { WebSubmission, makeSubmissionCode } from './WebSubmission';
 export { SubmissionItem } from './SubmissionItem';
 export { ContentRequest } from './ContentRequest';
-export { PriceRate, DEFAULT_RATE, rateFromRates } from './PriceRate';
+export { PriceRate, DEFAULT_RATE, rateFromRates, AUDIOVISUAL_TYPES } from './PriceRate';
 export { User } from './User';
 export { AdminUser } from './AdminUser';

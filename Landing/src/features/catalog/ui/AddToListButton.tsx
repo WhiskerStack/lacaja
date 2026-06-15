@@ -6,7 +6,7 @@ import { listService } from '../../../app/container';
 import { refreshList, useList } from '../../my-list/ui/useList';
 import { priceFor } from '../logic/pricing';
 import { pushToast } from '../../../app/stores/toast';
-import type { ItemLevel } from '@dahem/domain';
+import type { AudiovisualType, ItemLevel } from '@dahem/domain';
 
 interface Props {
   code: string;
@@ -14,7 +14,10 @@ interface Props {
   targetId: number;
   name: string;
   sizeGb: number;
+  type: AudiovisualType;
   isPremiere: boolean;
+  /** Nº de capítulos que cubre lo agregado (1 para películas/capítulos sueltos). */
+  units?: number;
   /** Etiqueta opcional para variantes (temporada/capítulo). */
   label?: string;
   block?: boolean;
@@ -39,7 +42,7 @@ export default function AddToListButton(props: Props) {
           targetId: props.targetId,
           name: props.name,
           sizeGb: props.sizeGb,
-          price: priceFor(props.isPremiere),
+          price: priceFor(props.type, props.isPremiere, props.units ?? 1),
         });
         await refreshList();
         pushToast({ message: `Agregado: ${props.name}`, durationMs: 3000 });

@@ -22,14 +22,19 @@ describe('códigos por nivel (funcional §6.3.1)', () => {
 });
 
 describe('pricing (funcional §8)', () => {
-  it('usa la tarifa de estreno para premieres', () => {
-    expect(priceFor(false)).toBe(DEFAULT_RATE.normal);
-    expect(priceFor(true)).toBe(DEFAULT_RATE.premiere);
+  it('usa la tarifa de estreno/normal por tipo', () => {
+    expect(priceFor('movie', false)).toBe(DEFAULT_RATE.movie.normal);
+    expect(priceFor('movie', true)).toBe(DEFAULT_RATE.movie.premiere);
+  });
+
+  it('multiplica por capítulos en episódicos', () => {
+    expect(priceFor('series', false, 3)).toBe(DEFAULT_RATE.series.normal * 3);
+    expect(priceFor('series', true, 10)).toBe(DEFAULT_RATE.series.premiere * 10);
   });
 
   it('reutiliza la regla de Audiovisual.price', () => {
     const av = new Audiovisual(1, 'movie', 'x', 2000, 8, 1, true);
-    expect(av.price(DEFAULT_RATE)).toBe(priceFor(true));
+    expect(av.price(DEFAULT_RATE)).toBe(priceFor('movie', true));
   });
 });
 

@@ -17,13 +17,16 @@ async function seed(): Promise<void> {
 
   console.log('Sembrando datos de demostración...');
 
-  // Tarifas por defecto.
+  // Tarifas por defecto: normal 10 / estreno 20 para cada tipo de audiovisual.
+  const types = ['movie', 'series', 'telenovela', 'show', 'anime'] as const;
   await db
     .insert(schema.priceRates)
-    .values([
-      { key: 'normal', priceCup: 10 },
-      { key: 'premiere', priceCup: 20 },
-    ])
+    .values(
+      types.flatMap((type) => [
+        { type, key: 'normal', priceCup: 10 },
+        { type, key: 'premiere', priceCup: 20 },
+      ]),
+    )
     .onConflictDoNothing();
 
   // Catálogos de filtrado.

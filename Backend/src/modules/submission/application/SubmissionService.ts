@@ -2,6 +2,7 @@ import {
   makeSubmissionCode,
   SubmissionItem,
   WebSubmission,
+  type AudiovisualType,
   type Rate,
 } from '@dahem/domain';
 import { Injectable, NotFoundException } from '@nestjs/common';
@@ -13,8 +14,12 @@ export interface SubmissionItemInput {
   code: string;
   name: string;
   sizeGb: number;
+  /** Tipo de audiovisual, para resolver la tarifa cuando no viene el precio. */
+  type?: AudiovisualType;
   /** Si se marca, se cobra la tarifa de estreno; si no, la normal. */
   isPremiere?: boolean;
+  /** Nº de capítulos cubiertos por el ítem (1 para películas/capítulos sueltos). */
+  units?: number;
   /** Precio explícito (snapshot del cliente). Si falta, se calcula desde PriceRate. */
   price?: number;
 }
@@ -59,6 +64,8 @@ export class SubmissionService {
   }
 
   private priceOf(item: SubmissionItemInput, rate: Rate): number {
-    return item.isPremiere ? rate.premiere : rate.normal;
+    const typeRate = rate[item.type ?? 'movie'];
+    const unit = item.isPremiere ? typeRate.premiere : typeRate.normal;
+    return unit * (item.units ?? 1);
   }
 }

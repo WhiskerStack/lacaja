@@ -74,6 +74,7 @@ export interface ContentRequestDTO {
 }
 
 export interface PriceRateDTO {
+  type: AudiovisualType;
   key: PriceKey;
   priceCup: number;
 }
@@ -93,8 +94,14 @@ export interface AdminUserDTO {
   createdAt?: string; // ISO
 }
 
-/** Tarifa resuelta y lista para calcular precios. */
-export interface Rate {
+/** Tarifa normal/estreno de un tipo de audiovisual. */
+export interface TypeRate {
   normal: number;
   premiere: number;
 }
+
+/**
+ * Tarifa resuelta por tipo de audiovisual, lista para calcular precios.
+ * En episódicos (series, telenovela, show, anime) el precio es por capítulo.
+ */
+export type Rate = Record<AudiovisualType, TypeRate>;

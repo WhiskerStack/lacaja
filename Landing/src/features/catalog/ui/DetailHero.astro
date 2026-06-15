@@ -9,8 +9,8 @@ import type { CatalogItemDTO } from '../types';
 
 interface Props {
   item: CatalogItemDTO;
-  /** Nivel a agregar (audiovisual/season/episode) con su código y peso. */
-  add: { code: string; level: 'audiovisual' | 'season' | 'episode'; targetId: number; name: string; sizeGb: number };
+  /** Nivel a agregar (audiovisual/season/episode) con su código, peso y nº de capítulos. */
+  add: { code: string; level: 'audiovisual' | 'season' | 'episode'; targetId: number; name: string; sizeGb: number; units?: number };
   /** Subtítulo opcional para temporada/capítulo. */
   context?: string;
 }
@@ -58,7 +58,9 @@ const long = item.description.length > limit;
       targetId={add.targetId}
       name={add.name}
       sizeGb={add.sizeGb}
+      type={item.type}
       isPremiere={item.isPremiere}
+      units={add.units ?? 1}
     />
   </div>
 </section>

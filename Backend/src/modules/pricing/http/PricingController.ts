@@ -1,25 +1,34 @@
+import { AUDIOVISUAL_TYPES } from '@dahem/domain';
 import { Body, Controller, Get, Put } from '@nestjs/common';
-import { IsNumber, IsOptional, Min } from 'class-validator';
+import { Type } from 'class-transformer';
+import { ArrayNotEmpty, IsIn, IsNumber, Min, ValidateNested } from 'class-validator';
 import { AdminOnly, Public } from '../../auth/http/decorators';
 import { PricingService } from '../application/PricingService';
 
-class UpdatePricingDto {
-  @IsOptional()
-  @IsNumber()
-  @Min(0)
-  normal?: number;
+class PriceRateRowDto {
+  @IsIn(AUDIOVISUAL_TYPES)
+  type!: (typeof AUDIOVISUAL_TYPES)[number];
 
-  @IsOptional()
+  @IsIn(['normal', 'premiere'])
+  key!: 'normal' | 'premiere';
+
   @IsNumber()
   @Min(0)
-  premiere?: number;
+  priceCup!: number;
+}
+
+class UpdatePricingDto {
+  @ArrayNotEmpty()
+  @ValidateNested({ each: true })
+  @Type(() => PriceRateRowDto)
+  rates!: PriceRateRowDto[];
 }
 
 @Controller()
 export class PricingController {
   constructor(private readonly service: PricingService) {}
 
-  /** Tarifas públicas (landing/admin). */
+  /** Tarifas públicas por tipo (landing/admin). */
   @Public()
   @Get('pricing')
   async get() {
@@ -27,11 +36,11 @@ export class PricingController {
     return rates.map((r) => r.toJSON());
   }
 
-  /** Actualiza normal/premiere (sólo admin). */
+  /** Actualiza las tarifas por tipo (sólo admin). */
   @AdminOnly()
   @Put('admin/pricing')
   async update(@Body() dto: UpdatePricingDto) {
-    const rates = await this.service.updateRates(dto);
+    const rates = await this.service.updateRates(dto.rates);
     return rates.map((r) => r.toJSON());
   }
 }

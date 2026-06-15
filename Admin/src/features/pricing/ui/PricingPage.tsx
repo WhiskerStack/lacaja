@@ -1,3 +1,4 @@
+import { AUDIOVISUAL_TYPES, type AudiovisualType, type Rate } from '@dahem/domain';
 import { useEffect, useState, type FormEvent } from 'react';
 import { toast } from 'sonner';
 import { PageHeader } from '@/components/PageHeader';
@@ -5,26 +6,45 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { formatCup } from '@/shared/format';
+import { audiovisualTypeLabel, formatCup } from '@/shared/format';
 import { usePricing, useUpdatePricing } from '../queries';
+
+/** Tarifas en edición como strings (evita NaN mientras se escribe). */
+type Draft = Record<AudiovisualType, { normal: string; premiere: string }>;
+
+const EMPTY_DRAFT: Draft = AUDIOVISUAL_TYPES.reduce((acc, type) => {
+  acc[type] = { normal: '', premiere: '' };
+  return acc;
+}, {} as Draft);
+
+function draftFromRate(rate: Rate): Draft {
+  return AUDIOVISUAL_TYPES.reduce((acc, type) => {
+    acc[type] = { normal: String(rate[type].normal), premiere: String(rate[type].premiere) };
+    return acc;
+  }, {} as Draft);
+}
 
 export function PricingPage() {
   const { data, isLoading } = usePricing();
   const update = useUpdatePricing();
-  const [normal, setNormal] = useState('');
-  const [premiere, setPremiere] = useState('');
+  const [draft, setDraft] = useState<Draft>(EMPTY_DRAFT);
 
   useEffect(() => {
-    if (data) {
-      setNormal(String(data.normal));
-      setPremiere(String(data.premiere));
-    }
+    if (data) setDraft(draftFromRate(data));
   }, [data]);
+
+  function setField(type: AudiovisualType, key: 'normal' | 'premiere', value: string) {
+    setDraft((d) => ({ ...d, [type]: { ...d[type], [key]: value } }));
+  }
 
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
     try {
-      await update.mutateAsync({ normal: Number(normal), premiere: Number(premiere) });
+      const rate = AUDIOVISUAL_TYPES.reduce((acc, type) => {
+        acc[type] = { normal: Number(draft[type].normal), premiere: Number(draft[type].premiere) };
+        return acc;
+      }, {} as Rate);
+      await update.mutateAsync(rate);
       toast.success('Tarifas actualizadas. Publica para reflejarlas en la web.');
     } catch (err) {
       toast.error(err instanceof Error ? err.message : 'No se pudo guardar.');
@@ -35,56 +55,63 @@ export function PricingPage() {
     <div>
       <PageHeader
         title="Tarifas"
-        description="Precios configurables en CUP. Se aplican por unidad agregada a la lista."
+        description="Precios configurables en CUP por tipo de audiovisual. En episódicos el precio es por capítulo."
       />
 
-      <Card className="max-w-md">
-        <CardHeader>
-          <CardTitle className="text-base">Precios por unidad</CardTitle>
-          <CardDescription>
-            Valores de referencia: normal $10, estreno $20.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          {isLoading ? (
-            <p className="text-sm text-muted-foreground">Cargando tarifas…</p>
-          ) : (
-            <form onSubmit={onSubmit} className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="normal">Audiovisual normal (CUP)</Label>
-                <Input
-                  id="normal"
-                  type="number"
-                  min={0}
-                  value={normal}
-                  onChange={(e) => setNormal(e.target.value)}
-                  required
-                />
-                <p className="text-xs text-muted-foreground">
-                  Actual: {data ? formatCup(data.normal) : '—'}
-                </p>
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="premiere">Estreno (CUP)</Label>
-                <Input
-                  id="premiere"
-                  type="number"
-                  min={0}
-                  value={premiere}
-                  onChange={(e) => setPremiere(e.target.value)}
-                  required
-                />
-                <p className="text-xs text-muted-foreground">
-                  Actual: {data ? formatCup(data.premiere) : '—'}
-                </p>
-              </div>
-              <Button type="submit" disabled={update.isPending}>
-                {update.isPending ? 'Guardando…' : 'Guardar tarifas'}
-              </Button>
-            </form>
-          )}
-        </CardContent>
-      </Card>
+      {isLoading ? (
+        <p className="text-sm text-muted-foreground">Cargando tarifas…</p>
+      ) : (
+        <form onSubmit={onSubmit} className="space-y-4 max-w-3xl">
+          <div className="grid gap-4 sm:grid-cols-2">
+            {AUDIOVISUAL_TYPES.map((type) => {
+              const isEpisodic = type !== 'movie';
+              return (
+                <Card key={type}>
+                  <CardHeader>
+                    <CardTitle className="text-base">{audiovisualTypeLabel(type)}</CardTitle>
+                    <CardDescription>
+                      {isEpisodic ? 'Precio por capítulo (CUP)' : 'Precio por película (CUP)'}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-2">
+                      <Label htmlFor={`${type}-normal`}>Normal (CUP)</Label>
+                      <Input
+                        id={`${type}-normal`}
+                        type="number"
+                        min={0}
+                        value={draft[type].normal}
+                        onChange={(e) => setField(type, 'normal', e.target.value)}
+                        required
+                      />
+                      <p className="text-xs text-muted-foreground">
+                        Actual: {data ? formatCup(data[type].normal) : '—'}
+                      </p>
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor={`${type}-premiere`}>Estreno (CUP)</Label>
+                      <Input
+                        id={`${type}-premiere`}
+                        type="number"
+                        min={0}
+                        value={draft[type].premiere}
+                        onChange={(e) => setField(type, 'premiere', e.target.value)}
+                        required
+                      />
+                      <p className="text-xs text-muted-foreground">
+                        Actual: {data ? formatCup(data[type].premiere) : '—'}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+          <Button type="submit" disabled={update.isPending}>
+            {update.isPending ? 'Guardando…' : 'Guardar tarifas'}
+          </Button>
+        </form>
+      )}
     </div>
   );
 }

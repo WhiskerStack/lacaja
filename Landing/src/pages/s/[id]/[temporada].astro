@@ -29,6 +29,7 @@ if (!item || !seasonView) return Astro.redirect('/404');
       targetId: seasonView.id,
       name: `${item.name} · T${season}`,
       sizeGb: seasonView.sizeGb,
+      units: seasonView.episodes.length,
     }}
   />
   <EpisodicNav item={item} activeSeason={season} />
