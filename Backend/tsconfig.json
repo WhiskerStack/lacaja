@@ -17,6 +17,6 @@
     "resolveJsonModule": true,
     "types": ["node", "vitest/globals"]
   },
-  "include": ["src/**/*.ts", "drizzle.config.ts", "test/**/*.ts"],
+  "include": ["src/**/*.ts", "tools/**/*.ts", "drizzle.config.ts", "test/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

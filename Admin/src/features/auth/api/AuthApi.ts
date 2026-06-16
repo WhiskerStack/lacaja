@@ -12,4 +12,9 @@ export class AuthApi {
   bootstrap(data: BootstrapData): Promise<AuthResponse> {
     return this.http.post<AuthResponse>('/admin/bootstrap', data);
   }
+
+  /** ¿Sigue disponible el bootstrap? (true mientras no exista ningún admin). */
+  bootstrapStatus(): Promise<{ needsBootstrap: boolean }> {
+    return this.http.get<{ needsBootstrap: boolean }>('/admin/bootstrap-status');
+  }
 }

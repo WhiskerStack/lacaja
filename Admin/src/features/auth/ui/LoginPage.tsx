@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react';
-import { Link, useNavigate, useSearch } from '@tanstack/react-router';
+import { useNavigate, useSearch } from '@tanstack/react-router';
 import { toast } from 'sonner';
 import { Clapperboard, LogIn } from 'lucide-react';
 import { useAuth } from '@/app/providers';
@@ -68,12 +68,6 @@ export function LoginPage() {
               {loading ? 'Entrando…' : 'Entrar'}
             </Button>
           </form>
-          <p className="mt-4 text-center text-xs text-muted-foreground">
-            ¿Primer arranque?{' '}
-            <Link to="/bootstrap" className="font-medium text-primary hover:underline">
-              Crear cuenta inicial
-            </Link>
-          </p>
         </CardContent>
       </Card>
     </div>

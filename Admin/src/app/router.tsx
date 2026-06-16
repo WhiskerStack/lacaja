@@ -5,7 +5,7 @@ import {
   Outlet,
 } from '@tanstack/react-router';
 import type { AppContainer } from './container';
-import { requireAuth, redirectIfAuthed, type RouterContext } from '@/features/auth/logic/guard';
+import { requireAuth, loginGuard, bootstrapGuard, type RouterContext } from '@/features/auth/logic/guard';
 import { AppLayout } from '@/components/AppLayout';
 import { LoginPage } from '@/features/auth/ui/LoginPage';
 import { BootstrapPage } from '@/features/auth/ui/BootstrapPage';
@@ -25,7 +25,7 @@ const rootRoute = createRootRouteWithContext<RouterContext>()({
 const loginRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/login',
-  beforeLoad: redirectIfAuthed,
+  beforeLoad: loginGuard,
   // Tipado laxo para la búsqueda ?redirect=...
   validateSearch: (search: Record<string, unknown>) => ({
     redirect: typeof search.redirect === 'string' ? search.redirect : undefined,
@@ -36,7 +36,7 @@ const loginRoute = createRoute({
 const bootstrapRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/bootstrap',
-  beforeLoad: redirectIfAuthed,
+  beforeLoad: bootstrapGuard,
   component: BootstrapPage,
 });
 

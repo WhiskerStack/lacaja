@@ -27,7 +27,10 @@ src/
     database/               ← DatabaseModule (token DRIZZLE) + schema.ts (barrel para drizzle-kit)
     config/                 ← @nestjs/config tipado (valida DATABASE_URL, JWT_SECRET)
     http/                   ← filtro global de excepciones
-  app.module.ts  main.ts  seed.ts
+  app.module.ts  main.ts
+tools/
+  seed.ts                   ← datos de demostración (idempotente)
+  clean.ts                  ← vacía todas las tablas del esquema public
 drizzle/
   0001_search.sql           ← migración manual: pg_trgm + tsvector con pesos + índices GIN
 ```
@@ -63,7 +66,8 @@ pnpm --filter @dahem/backend db:generate   # genera SQL de migración desde el e
 pnpm --filter @dahem/backend db:migrate     # aplica las migraciones
 # Paso de búsqueda (manual, ver más abajo):
 psql "$DATABASE_URL" -f Backend/drizzle/0001_search.sql
-pnpm --filter @dahem/backend seed           # datos de demostración
+pnpm --filter @dahem/backend seed           # datos de demostración (idempotente: no duplica)
+pnpm --filter @dahem/backend clean          # borra TODOS los datos (vacía las tablas)
 ```
 
 Alternativa rápida en desarrollo: `db:push` empuja el esquema sin generar archivos de migración.

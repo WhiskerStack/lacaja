@@ -13,6 +13,14 @@ export class AdminUsersController {
     private readonly admins: AdminUserRepository,
   ) {}
 
+  /** Indica si aún se puede hacer bootstrap (no hay ningún admin). Público: lo consulta el login. */
+  @Public()
+  @Get('bootstrap-status')
+  async bootstrapStatus() {
+    const count = await this.admins.count();
+    return { needsBootstrap: count === 0 };
+  }
+
   /** Bootstrap: público pero sólo funciona mientras NO exista ningún admin (AuthService valida). */
   @Public()
   @Throttle({ default: { limit: 3, ttl: 60_000 } })
