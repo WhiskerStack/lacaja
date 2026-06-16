@@ -4,18 +4,48 @@ import { useStore } from '@nanostores/preact';
 import { useState } from 'preact/hooks';
 import { $authModal, closeAuthModal } from '../store';
 import { $online } from '../../../app/stores/network';
-import { setSession } from '../../../app/stores/session';
+import { $session, clearSession, isLoggedIn, setSession } from '../../../app/stores/session';
 import { accountService } from '../../../app/container';
 
 export default function AuthModal() {
   const state = useStore($authModal);
+  const session = useStore($session);
   const online = useStore($online);
   const [mode, setMode] = useState(state.mode);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
-  const [form, setForm] = useState({ firstName: '', lastName: '', email: '', phone: '', contact: '' });
+  const [form, setForm] = useState({ firstName: '', lastName: '', email: '', phone: '', contact: '', password: '' });
 
   if (!state.open) return null;
+
+  // Sesión iniciada: el icono abre esta vista para cerrar sesión (funcional §5.1).
+  if (isLoggedIn(session) && session.user) {
+    const { firstName, lastName } = session.user;
+    return (
+      <div class="modal modal-open">
+        <div class="modal-box">
+          <h3 class="text-lg font-bold">Tu cuenta</h3>
+          <p class="mt-2 opacity-80">
+            Sesión iniciada como <strong>{`${firstName} ${lastName}`.trim()}</strong>.
+          </p>
+          <div class="modal-action">
+            <button type="button" class="btn btn-ghost" onClick={closeAuthModal}>Cerrar</button>
+            <button
+              type="button"
+              class="btn btn-error"
+              onClick={() => {
+                clearSession();
+                closeAuthModal();
+              }}
+            >
+              Cerrar sesión
+            </button>
+          </div>
+        </div>
+        <div class="modal-backdrop" onClick={closeAuthModal} />
+      </div>
+    );
+  }
 
   const set = (k: keyof typeof form) => (e: Event) =>
     setForm({ ...form, [k]: (e.target as HTMLInputElement).value });
@@ -30,10 +60,11 @@ export default function AuthModal() {
           ? await accountService.register({
               firstName: form.firstName,
               lastName: form.lastName,
+              password: form.password,
               email: form.email || undefined,
               phone: form.phone || undefined,
             })
-          : await accountService.login({ contact: form.contact });
+          : await accountService.login({ contact: form.contact, password: form.password });
       setSession(result.user, result.token);
       const cb = state.onSuccess;
       closeAuthModal();
@@ -59,9 +90,13 @@ export default function AuthModal() {
               <input class="input input-bordered w-full" placeholder="Apellidos" value={form.lastName} onInput={set('lastName')} />
               <input class="input input-bordered w-full" type="email" placeholder="Correo (opcional si pones teléfono)" value={form.email} onInput={set('email')} />
               <input class="input input-bordered w-full" placeholder="Teléfono (opcional si pones correo)" value={form.phone} onInput={set('phone')} />
+              <input class="input input-bordered w-full" type="password" placeholder="Contraseña (mínimo 6 caracteres)" value={form.password} onInput={set('password')} />
             </>
           ) : (
-            <input class="input input-bordered w-full" placeholder="Correo o teléfono" value={form.contact} onInput={set('contact')} />
+            <>
+              <input class="input input-bordered w-full" placeholder="Correo o teléfono" value={form.contact} onInput={set('contact')} />
+              <input class="input input-bordered w-full" type="password" placeholder="Contraseña" value={form.password} onInput={set('password')} />
+            </>
           )}
 
           {error && <p class="text-error text-sm">{error}</p>}

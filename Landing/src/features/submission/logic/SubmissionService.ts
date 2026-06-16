@@ -64,7 +64,7 @@ export class SubmissionService {
    */
   async sendWeb(data: SubmissionData): Promise<{ submissionCode: string }> {
     if (!this.web.token) throw new Error('Se requiere iniciar sesión para enviar por la web.');
-    const res = await this.web.fetchFn(`${this.web.apiUrl}/submissions`, {
+    const res = await this.web.fetchFn(`${this.web.apiUrl}/submission`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

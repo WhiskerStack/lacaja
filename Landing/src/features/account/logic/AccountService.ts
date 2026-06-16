@@ -1,8 +1,15 @@
 // AccountService: orquesta auth contra NestJS (especificaciones §2.2). Las reglas de validación
-// del usuario viven en User (@dahem/domain). F1: el backend puede no existir; degrada con un
-// modo local (sesión "optimista") para no bloquear el flujo del MVP.
+// del usuario viven en User (@dahem/domain). Si el backend no está accesible (offline), degrada
+// con un modo local (sesión "optimista") para no bloquear el flujo; los errores del backend
+// (credenciales/validación) SÍ se propagan.
 import { User, type UserDTO } from '@dahem/domain';
 import type { AuthResult, LoginInput, RegisterInput } from '../types';
+
+/** Respuesta cruda del backend de auth: el token viaja como `accessToken`. */
+interface AuthApiResponse {
+  user: UserDTO;
+  accessToken: string;
+}
 
 export class AccountService {
   constructor(
@@ -13,45 +20,79 @@ export class AccountService {
   /** Valida con la regla del dominio antes de tocar la red. */
   validateRegister(input: RegisterInput): string[] {
     const user = new User(input.firstName, input.lastName, input.email, input.phone);
-    return user.validate();
+    const errors = user.validate();
+    if (input.password.length < 6) errors.push('La contraseña debe tener al menos 6 caracteres.');
+    return errors;
   }
 
   async register(input: RegisterInput): Promise<AuthResult> {
     const errors = this.validateRegister(input);
     if (errors.length) throw new Error(errors.join(' '));
-    return this.post('/auth/register', input, {
-      firstName: input.firstName,
-      lastName: input.lastName,
-      email: input.email,
-      phone: input.phone,
-    });
+    return this.post(
+      '/account/register',
+      {
+        firstName: input.firstName,
+        lastName: input.lastName,
+        password: input.password,
+        email: input.email,
+        phone: input.phone,
+      },
+      { firstName: input.firstName, lastName: input.lastName, email: input.email, phone: input.phone },
+    );
   }
 
   async login(input: LoginInput): Promise<AuthResult> {
     if (!input.contact.trim()) throw new Error('Introduce tu correo o teléfono.');
+    if (!input.password) throw new Error('Introduce tu contraseña.');
     const isEmail = input.contact.includes('@');
-    return this.post('/auth/login', input, {
-      firstName: input.contact.split('@')[0] || 'Usuario',
-      lastName: '',
-      email: isEmail ? input.contact : undefined,
-      phone: isEmail ? undefined : input.contact,
-    });
+    return this.post(
+      '/account/login',
+      {
+        password: input.password,
+        email: isEmail ? input.contact : undefined,
+        phone: isEmail ? undefined : input.contact,
+      },
+      {
+        firstName: input.contact.split('@')[0] || 'Usuario',
+        lastName: '',
+        email: isEmail ? input.contact : undefined,
+        phone: isEmail ? undefined : input.contact,
+      },
+    );
   }
 
   private async post(path: string, body: unknown, fallbackUser: UserDTO): Promise<AuthResult> {
     if (!this.apiUrl) return this.localFallback(fallbackUser);
+    let res: Response;
     try {
-      const res = await this.fetchFn(`${this.apiUrl}${path}`, {
+      res = await this.fetchFn(`${this.apiUrl}${path}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
       });
-      if (!res.ok) throw new Error(`auth ${res.status}`);
-      return (await res.json()) as AuthResult;
     } catch {
-      // F1 / offline: sesión local optimista (no se persiste en backend hasta F2).
+      // Sin red / backend inalcanzable: sesión local optimista para no bloquear el MVP.
       return this.localFallback(fallbackUser);
     }
+    if (!res.ok) {
+      // El backend respondió un error (credenciales, validación, cuenta vetada): propágalo.
+      throw new Error(await this.errorMessage(res));
+    }
+    const data = (await res.json()) as AuthApiResponse;
+    return { user: data.user, token: data.accessToken };
+  }
+
+  /** Extrae un mensaje legible del cuerpo de error de NestJS. */
+  private async errorMessage(res: Response): Promise<string> {
+    try {
+      const body = await res.json();
+      const msg = body?.message;
+      if (Array.isArray(msg)) return msg.join(' ');
+      if (typeof msg === 'string') return msg;
+    } catch {
+      /* sin cuerpo JSON */
+    }
+    return `No se pudo completar (${res.status}).`;
   }
 
   private localFallback(user: UserDTO): AuthResult {
