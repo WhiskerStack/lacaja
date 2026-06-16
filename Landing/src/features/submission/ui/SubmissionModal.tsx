@@ -8,7 +8,7 @@ import { $session, isLoggedIn } from '../../../app/stores/session';
 import { $online } from '../../../app/stores/network';
 import { openAuthModal } from '../../account/store';
 import { submissionService } from '../../../app/container';
-import { pushToast } from '../../../app/stores/toast';
+import { pushToast, toastError } from '../../../app/stores/toast';
 import type { SubmissionData } from '../types';
 
 export default function SubmissionModal() {
@@ -36,15 +36,19 @@ export default function SubmissionModal() {
     try {
       const { submissionCode } = await submissionService.sendWeb(data);
       setSentCode(submissionCode);
-      pushToast({ message: `Enviado. Código: ${submissionCode}`, durationMs: 6000 });
+      pushToast({ message: `Enviado. Código: ${submissionCode}`, variant: 'success', durationMs: 6000 });
     } catch (e) {
-      pushToast({ message: (e as Error).message, durationMs: 5000 });
+      toastError(e);
     }
   }
 
   async function copy() {
-    await submissionService.copyClipboard(data);
-    pushToast({ message: 'Lista copiada al portapapeles', durationMs: 3000 });
+    try {
+      await submissionService.copyClipboard(data);
+      pushToast({ message: 'Lista copiada al portapapeles', durationMs: 3000 });
+    } catch (e) {
+      toastError(e);
+    }
   }
 
   return (

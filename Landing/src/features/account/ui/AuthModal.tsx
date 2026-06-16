@@ -6,6 +6,8 @@ import { $authModal, closeAuthModal } from '../store';
 import { $online } from '../../../app/stores/network';
 import { $session, clearSession, isLoggedIn, setSession } from '../../../app/stores/session';
 import { accountService } from '../../../app/container';
+import { toastError } from '../../../app/stores/toast';
+import { messageFromError } from '../../../shared/http';
 
 export default function AuthModal() {
   const state = useStore($authModal);
@@ -70,7 +72,8 @@ export default function AuthModal() {
       closeAuthModal();
       cb?.();
     } catch (err) {
-      setError((err as Error).message);
+      setError(messageFromError(err));
+      toastError(err);
     } finally {
       setBusy(false);
     }

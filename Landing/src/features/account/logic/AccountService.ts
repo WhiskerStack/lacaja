@@ -3,6 +3,7 @@
 // con un modo local (sesión "optimista") para no bloquear el flujo; los errores del backend
 // (credenciales/validación) SÍ se propagan.
 import { User, type UserDTO } from '@dahem/domain';
+import { extractApiError } from '../../../shared/http';
 import type { AuthResult, LoginInput, RegisterInput } from '../types';
 
 /** Respuesta cruda del backend de auth: el token viaja como `accessToken`. */
@@ -75,24 +76,12 @@ export class AccountService {
       return this.localFallback(fallbackUser);
     }
     if (!res.ok) {
-      // El backend respondió un error (credenciales, validación, cuenta vetada): propágalo.
-      throw new Error(await this.errorMessage(res));
+      // El backend respondió un error (credenciales, validación, cuenta vetada): propágalo
+      // con el detalle extraído del body para mostrarlo en pantalla.
+      throw new Error(await extractApiError(res));
     }
     const data = (await res.json()) as AuthApiResponse;
     return { user: data.user, token: data.accessToken };
-  }
-
-  /** Extrae un mensaje legible del cuerpo de error de NestJS. */
-  private async errorMessage(res: Response): Promise<string> {
-    try {
-      const body = await res.json();
-      const msg = body?.message;
-      if (Array.isArray(msg)) return msg.join(' ');
-      if (typeof msg === 'string') return msg;
-    } catch {
-      /* sin cuerpo JSON */
-    }
-    return `No se pudo completar (${res.status}).`;
   }
 
   private localFallback(user: UserDTO): AuthResult {

@@ -8,7 +8,7 @@ import { $online } from '../../../app/stores/network';
 import { $session, isLoggedIn } from '../../../app/stores/session';
 import { openAuthModal } from '../../account/store';
 import { requestContent } from '../../account/logic/requests';
-import { pushToast } from '../../../app/stores/toast';
+import { pushToast, toastError } from '../../../app/stores/toast';
 import { detailUrl } from '../../../shared/urls';
 import { TYPE_LABEL } from '../../catalog/types';
 import type { CatalogCardDTO } from '../../catalog/types';
@@ -71,9 +71,9 @@ export default function SearchView({ cards }: Props) {
     }
     try {
       await requestContent(session.token!, query.trim());
-      pushToast({ message: 'Solicitud registrada. Te avisaremos cuando esté disponible.', durationMs: 5000 });
+      pushToast({ message: 'Solicitud registrada. Te avisaremos cuando esté disponible.', variant: 'success', durationMs: 5000 });
     } catch (e) {
-      pushToast({ message: (e as Error).message, durationMs: 5000 });
+      toastError(e);
     }
   }
 

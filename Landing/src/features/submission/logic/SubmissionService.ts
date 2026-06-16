@@ -1,5 +1,6 @@
 // SubmissionService: orquesta las cuatro vías de envío (funcional §7.4). Las reglas del
 // mensaje viven en Submission (domain); el servicio coordina I/O del navegador y la API.
+import { apiFetch } from '../../../shared/http';
 import { Submission } from '../domain/Submission';
 import type { SubmissionChannel, SubmissionData } from '../types';
 
@@ -64,7 +65,7 @@ export class SubmissionService {
    */
   async sendWeb(data: SubmissionData): Promise<{ submissionCode: string }> {
     if (!this.web.token) throw new Error('Se requiere iniciar sesión para enviar por la web.');
-    const res = await this.web.fetchFn(`${this.web.apiUrl}/submission`, {
+    const res = await apiFetch(this.web.fetchFn, `${this.web.apiUrl}/submission`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -76,7 +77,6 @@ export class SubmissionService {
         totalPrice: data.totalPrice,
       }),
     });
-    if (!res.ok) throw new Error(`El envío falló (${res.status}).`);
     return (await res.json()) as { submissionCode: string };
   }
 

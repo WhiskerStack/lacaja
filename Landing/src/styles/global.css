@@ -1,9 +1,9 @@
+/* lite-youtube-embed: estilos del componente (cargado por el paquete en runtime). */
+@import 'lite-youtube-embed/src/lite-yt-embed.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* lite-youtube-embed: estilos del componente (cargado por el paquete en runtime). */
-@import 'lite-youtube-embed/src/lite-yt-embed.css';
 
 :root {
   color-scheme: dark;
