@@ -5,12 +5,15 @@
   "description": "Landing público de Dahem: catálogo audiovisual de consulta (Astro SSG + islas Preact).",
   "type": "module",
   "scripts": {
-    "prebuild": "node scripts/build-search-index.mjs",
-    "dev": "node scripts/build-search-index.mjs && astro dev",
-    "build": "node scripts/build-search-index.mjs && astro build",
+    "sync": "node scripts/sync-catalog.mjs",
+    "prebuild": "node scripts/sync-catalog.mjs && node scripts/build-search-index.mjs",
+    "dev": "node scripts/sync-catalog.mjs && node scripts/build-search-index.mjs && astro dev",
+    "build": "node scripts/sync-catalog.mjs && node scripts/build-search-index.mjs && astro build",
     "preview": "astro preview",
+    "pretest": "node scripts/use-sample-catalog.mjs",
     "test": "vitest run",
     "test:e2e": "playwright test",
+    "prelint": "node scripts/use-sample-catalog.mjs",
     "lint": "astro check"
   },
   "dependencies": {

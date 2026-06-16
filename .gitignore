@@ -42,5 +42,8 @@ Landing/public/posters/_generated/
 Landing/public/search-index*.json
 Landing/public/library-index*.json
 
+# catálogo sincronizado desde el backend en build-time (sync-catalog.mjs); el sample sí se versiona
+Landing/src/data/catalog.json
+
 # drizzle
 Backend/drizzle/meta/_journal.json.bak

@@ -12,17 +12,25 @@ interface Props {
 }
 const { card, width = 200 } = Astro.props;
 const height = Math.round((width * 3) / 2);
+// imageUrl puede venir vacío (ítems sin póster en el backend): mostramos un placeholder.
+const hasImage = Boolean(card.imageUrl);
 ---
 <a href={detailUrl(card)} class="block w-36 sm:w-44 group">
   <div class="aspect-[2/3] rounded-box overflow-hidden bg-base-300 relative">
-    <Image
-      src={card.imageUrl}
-      alt={card.name}
-      width={width}
-      height={height}
-      loading="lazy"
-      class="object-cover w-full h-full group-hover:scale-105 transition-transform"
-    />
+    {hasImage ? (
+      <Image
+        src={card.imageUrl}
+        alt={card.name}
+        width={width}
+        height={height}
+        loading="lazy"
+        class="object-cover w-full h-full group-hover:scale-105 transition-transform"
+      />
+    ) : (
+      <div class="w-full h-full flex items-center justify-center p-2 text-center text-xs opacity-50">
+        {card.name}
+      </div>
+    )}
     <span class="absolute top-1 right-1 badge badge-sm badge-neutral">★ {formatRating(card.rating)}</span>
     {card.isPremiere && <span class="absolute top-1 left-1 badge badge-sm badge-secondary">Estreno</span>}
   </div>

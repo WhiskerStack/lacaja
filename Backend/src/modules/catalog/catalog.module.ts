@@ -5,6 +5,7 @@ import { AudiovisualRepository } from './domain/AudiovisualRepository';
 import { CatalogMetadataRepository } from './domain/CatalogMetadataRepository';
 import { DrizzleAudiovisualRepository } from './infrastructure/DrizzleAudiovisualRepository';
 import { DrizzleCatalogMetadataRepository } from './infrastructure/DrizzleCatalogMetadataRepository';
+import { CatalogExportService } from './infrastructure/CatalogExportService';
 import { AdminCatalogController } from './http/AdminCatalogController';
 import { CatalogController } from './http/CatalogController';
 
@@ -14,6 +15,7 @@ import { CatalogController } from './http/CatalogController';
   controllers: [CatalogController, AdminCatalogController],
   providers: [
     CatalogService,
+    CatalogExportService,
     { provide: AudiovisualRepository, useClass: DrizzleAudiovisualRepository },
     { provide: CatalogMetadataRepository, useClass: DrizzleCatalogMetadataRepository },
   ],

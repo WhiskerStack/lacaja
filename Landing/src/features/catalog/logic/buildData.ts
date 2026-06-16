@@ -1,13 +1,14 @@
-// CatalogService de build-time: lee el JSON de muestra y produce los DTOs aplanados
-// que consumen getStaticPaths y las páginas (arquitectura §5). No hace I/O de red:
-// el SSG construye standalone desde src/data/catalog.sample.json.
+// CatalogService de build-time: lee el catálogo sincronizado y produce los DTOs aplanados
+// que consumen getStaticPaths y las páginas (arquitectura §5). No hace I/O de red en este módulo:
+// el SSG construye standalone desde src/data/catalog.json, que scripts/sync-catalog.mjs genera
+// desde el backend (o copia del sample si el backend no está disponible).
 import { audiovisualCode } from '@dahem/domain';
 import type {
   CatalogCardDTO,
   CatalogItemDTO,
   SeasonViewDTO,
 } from '../types';
-import raw from '../../../data/catalog.sample.json';
+import raw from '../../../data/catalog.json';
 
 interface RawEpisode {
   id: number;

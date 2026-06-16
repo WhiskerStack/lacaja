@@ -17,16 +17,20 @@ interface Props {
 const { item, add, context } = Astro.props;
 const limit = 240;
 const long = item.description.length > limit;
+// imageUrl puede venir vacío (ítems sin póster en el backend): omitimos la imagen de fondo.
+const hasImage = Boolean(item.imageUrl);
 ---
 <section class="relative w-screen left-1/2 -translate-x-1/2 min-h-[70vh] flex items-end">
-  <Image
-    src={item.imageUrl}
-    alt={item.name}
-    width={1200}
-    height={1800}
-    loading="eager"
-    class="absolute inset-0 w-full h-full object-cover"
-  />
+  {hasImage && (
+    <Image
+      src={item.imageUrl}
+      alt={item.name}
+      width={1200}
+      height={1800}
+      loading="eager"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+  )}
   <div class="absolute inset-0 bg-gradient-to-t from-base-100 via-base-100/80 to-base-100/20"></div>
 
   <div class="relative max-w-content mx-auto w-full p-6 sm:p-10">
