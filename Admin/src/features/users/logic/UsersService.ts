@@ -1,20 +1,26 @@
-import { AdminUser } from '@dahem/domain';
+import { User } from '@dahem/domain';
 import type { UsersApi } from '../api/UsersApi';
-import type { CreateAdminInput } from '../types';
+import type { UpdateUserInput } from '../types';
 
-/** Orquesta el slice de usuarios admin; valida vía la entidad AdminUser. */
+/** Orquesta el slice de clientes del sistema; valida la edición vía la entidad User. */
 export class UsersService {
   constructor(private readonly usersApi: UsersApi) {}
 
-  list(): Promise<AdminUser[]> {
-    return this.usersApi.list().then((dtos) => dtos.map(AdminUser.fromJSON));
+  list(): Promise<User[]> {
+    return this.usersApi.list().then((dtos) => dtos.map(User.fromJSON));
   }
 
-  async create(input: CreateAdminInput): Promise<AdminUser> {
-    const errors = new AdminUser(input.username, input.displayName).validate();
-    if (input.password.length < 8) errors.push('La contraseña debe tener al menos 8 caracteres.');
+  async update(id: number, input: UpdateUserInput): Promise<User> {
+    const errors = new User(input.firstName, input.lastName, input.email, input.phone).validate();
     if (errors.length) throw new Error(errors.join(' '));
-    const dto = await this.usersApi.create(input);
-    return AdminUser.fromJSON(dto);
+    return User.fromJSON(await this.usersApi.update(id, input));
+  }
+
+  setBanned(id: number, banned: boolean): Promise<User> {
+    return this.usersApi.setBanned(id, banned).then(User.fromJSON);
+  }
+
+  async remove(id: number): Promise<void> {
+    await this.usersApi.remove(id);
   }
 }

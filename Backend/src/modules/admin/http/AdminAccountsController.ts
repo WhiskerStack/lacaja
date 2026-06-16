@@ -7,7 +7,7 @@ import { CreateAdminDto } from './admin.dto';
 
 /** Cuentas del panel admin: bootstrap del primero, listar y crear desde dentro. */
 @Controller('admin')
-export class AdminUsersController {
+export class AdminAccountsController {
   constructor(
     private readonly auth: AuthService,
     private readonly admins: AdminUserRepository,
@@ -35,14 +35,14 @@ export class AdminUsersController {
   }
 
   @AdminOnly()
-  @Get('users')
+  @Get('admins')
   async list() {
     const users = await this.admins.list();
     return users.map((u) => u.toJSON());
   }
 
   @AdminOnly()
-  @Post('users')
+  @Post('admins')
   async create(@Body() dto: CreateAdminDto) {
     const { admin } = await this.auth.createAdmin(dto.username, dto.password, dto.displayName);
     return admin.toJSON();

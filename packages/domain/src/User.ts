@@ -8,6 +8,10 @@ export class User {
     public readonly email?: string,
     public readonly phone?: string,
     public readonly id?: number,
+    /** Código autogenerado e inmutable (U{id}); lo asigna el backend al crear. */
+    public readonly code?: string,
+    /** Cliente vetado: no puede iniciar sesión. */
+    public readonly banned: boolean = false,
   ) {}
 
   fullName(): string {
@@ -25,16 +29,18 @@ export class User {
   }
 
   static fromJSON(d: UserDTO): User {
-    return new User(d.firstName, d.lastName, d.email, d.phone, d.id);
+    return new User(d.firstName, d.lastName, d.email, d.phone, d.id, d.code, d.banned ?? false);
   }
 
   toJSON(): UserDTO {
     return {
       id: this.id,
+      code: this.code,
       firstName: this.firstName,
       lastName: this.lastName,
       email: this.email,
       phone: this.phone,
+      banned: this.banned,
     };
   }
 }

@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { DatabaseModule } from '../../shared/database/database.module';
-import { AdminUsersController } from './http/AdminUsersController';
+import { AdminAccountsController } from './http/AdminAccountsController';
 
 /**
  * Cuentas del panel admin. AuthService y AdminUserRepository vienen del AuthModule global,
@@ -8,6 +8,6 @@ import { AdminUsersController } from './http/AdminUsersController';
  */
 @Module({
   imports: [DatabaseModule],
-  controllers: [AdminUsersController],
+  controllers: [AdminAccountsController],
 })
 export class AdminModule {}

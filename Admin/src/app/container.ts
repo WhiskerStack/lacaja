@@ -10,6 +10,8 @@ import { RequestsApi } from '@/features/requests/api/RequestsApi';
 import { RequestsService } from '@/features/requests/logic/RequestsService';
 import { PricingApi } from '@/features/pricing/api/PricingApi';
 import { PricingService } from '@/features/pricing/logic/PricingService';
+import { AdminsApi } from '@/features/admins/api/AdminsApi';
+import { AdminsService } from '@/features/admins/logic/AdminsService';
 import { UsersApi } from '@/features/users/api/UsersApi';
 import { UsersService } from '@/features/users/logic/UsersService';
 import { PublishApi } from '@/features/publish/api/PublishApi';
@@ -68,7 +70,11 @@ export function buildContainer(options: ContainerOptions = {}): AppContainer {
     pricingApi: asClass(PricingApi).singleton(),
     pricingService: asClass(PricingService).singleton(),
 
-    // users
+    // admins (operadores del panel)
+    adminsApi: asClass(AdminsApi).singleton(),
+    adminsService: asClass(AdminsService).singleton(),
+
+    // users (clientes del sistema)
     usersApi: asClass(UsersApi).singleton(),
     usersService: asClass(UsersService).singleton(),
 

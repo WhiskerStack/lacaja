@@ -2,6 +2,7 @@ import { AdminUser, User } from '@dahem/domain';
 import {
   BadRequestException,
   ConflictException,
+  ForbiddenException,
   Injectable,
   UnauthorizedException,
 } from '@nestjs/common';
@@ -96,6 +97,9 @@ export class AuthService {
     const record = await this.users.findByContact(email, phone);
     if (!record || !record.passwordHash || !(await this.hasher.verify(record.passwordHash, password))) {
       throw new UnauthorizedException('Credenciales inválidas.');
+    }
+    if (record.banned) {
+      throw new ForbiddenException('Esta cuenta ha sido suspendida.');
     }
     return { user: record.user, token: this.sign(record.user.id!, 'user') };
   }

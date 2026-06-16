@@ -1,16 +1,24 @@
 import type { HttpClient } from '@/app/http';
-import type { AdminUserDTO } from '@dahem/domain';
-import type { CreateAdminInput } from '../types';
+import type { UserDTO } from '@dahem/domain';
+import type { UpdateUserInput } from '../types';
 
-/** Llamadas HTTP de cuentas admin a NestJS. Solo I/O. */
+/** Llamadas HTTP de gestión de clientes del sistema (USER) a NestJS. Solo I/O. */
 export class UsersApi {
   constructor(private readonly http: HttpClient) {}
 
-  list(): Promise<AdminUserDTO[]> {
-    return this.http.get<AdminUserDTO[]>('/admin/users');
+  list(): Promise<UserDTO[]> {
+    return this.http.get<UserDTO[]>('/admin/users');
   }
 
-  create(input: CreateAdminInput): Promise<AdminUserDTO> {
-    return this.http.post<AdminUserDTO>('/admin/users', input);
+  update(id: number, input: UpdateUserInput): Promise<UserDTO> {
+    return this.http.put<UserDTO>(`/admin/users/${id}`, input);
+  }
+
+  setBanned(id: number, banned: boolean): Promise<UserDTO> {
+    return this.http.patch<UserDTO>(`/admin/users/${id}/ban`, { banned });
+  }
+
+  remove(id: number): Promise<{ deleted: boolean }> {
+    return this.http.delete<{ deleted: boolean }>(`/admin/users/${id}`);
   }
 }

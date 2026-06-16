@@ -81,10 +81,14 @@ export interface PriceRateDTO {
 
 export interface UserDTO {
   id?: number;
+  /** Código autogenerado e inmutable: U{id} (p. ej. U123). Vacío hasta que el backend lo materializa. */
+  code?: string;
   firstName: string;
   lastName: string;
   email?: string;
   phone?: string;
+  /** Cliente vetado: no puede iniciar sesión en el landing. */
+  banned?: boolean;
 }
 
 export interface AdminUserDTO {

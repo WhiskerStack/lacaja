@@ -14,6 +14,7 @@ import { CatalogListPage } from '@/features/catalog/ui/CatalogListPage';
 import { SubmissionsPage } from '@/features/submissions/ui/SubmissionsPage';
 import { RequestsPage } from '@/features/requests/ui/RequestsPage';
 import { PricingPage } from '@/features/pricing/ui/PricingPage';
+import { AdminsPage } from '@/features/admins/ui/AdminsPage';
 import { UsersPage } from '@/features/users/ui/UsersPage';
 
 // Raíz con contexto tipado: el contenedor IoC viaja por aquí a los guards.
@@ -78,6 +79,12 @@ const pricingRoute = createRoute({
   component: PricingPage,
 });
 
+const adminsRoute = createRoute({
+  getParentRoute: () => protectedRoute,
+  path: '/admins',
+  component: AdminsPage,
+});
+
 const usersRoute = createRoute({
   getParentRoute: () => protectedRoute,
   path: '/users',
@@ -93,6 +100,7 @@ const routeTree = rootRoute.addChildren([
     submissionsRoute,
     requestsRoute,
     pricingRoute,
+    adminsRoute,
     usersRoute,
   ]),
 ]);

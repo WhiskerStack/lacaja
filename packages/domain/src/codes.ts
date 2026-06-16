@@ -10,6 +10,11 @@ export function audiovisualCode(type: AudiovisualType, id: number): string {
   return `${typeLetter(type)}${String(id).padStart(4, '0')}`;
 }
 
+/** Código de un cliente del sistema: U + id (p. ej. U123). Inmutable y autogenerado. */
+export function userCode(id: number): string {
+  return `U${id}`;
+}
+
 /** Detecta si una query es un código de audiovisual (búsqueda §2.4). */
 export const CODE_PATTERN = /^[PS]\d{4}(-\d+)?(-\d+)?$/i;
 

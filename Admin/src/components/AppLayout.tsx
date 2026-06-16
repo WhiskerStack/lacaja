@@ -7,6 +7,7 @@ import {
   ListChecks,
   LogOut,
   Menu,
+  ShieldCheck,
   Tags,
   Users,
 } from 'lucide-react';
@@ -31,6 +32,7 @@ const NAV = [
   { to: '/requests', label: 'Solicitudes', icon: ListChecks },
   { to: '/pricing', label: 'Tarifas', icon: Tags },
   { to: '/users', label: 'Usuarios', icon: Users },
+  { to: '/admins', label: 'Administradores', icon: ShieldCheck },
 ] as const;
 
 /** Layout de la zona protegida: barra lateral de navegación + header + outlet. */
