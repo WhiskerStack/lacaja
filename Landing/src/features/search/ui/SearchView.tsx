@@ -97,15 +97,17 @@ export default function SearchView({ cards }: Props) {
         </label>
       </div>
 
-      {/* Enlace de solicitud entre buscador y resultados (funcional §6.4.3) */}
-      <button
-        type="button"
-        class="link link-secondary text-sm mb-4"
-        disabled={!online}
-        onClick={solicitar}
-      >
-        ¿No encontraste lo que buscabas? Solicítala y estará disponible en unos días.
-      </button>
+      {/* Enlace de solicitud: solo si el usuario escribió algo en el buscador (funcional §6.4.3) */}
+      {query.trim().length > 0 && (
+        <button
+          type="button"
+          class="link link-secondary text-sm mb-4"
+          disabled={!online}
+          onClick={solicitar}
+        >
+          ¿No encontraste lo que buscabas? Solicítala y estará disponible en unos días.
+        </button>
+      )}
 
       {query.trim().length >= 2 && hits.length === 0 && (
         <p class="opacity-70 text-sm py-6">Sin resultados para “{query.trim()}”.</p>

@@ -1,7 +1,9 @@
 // Navbar (client:load): logo, navegación desktop, ícono de usuario y badge de Mi lista.
 // El badge usa placeholder neutro hasta hidratar para evitar el flash de "0" (especificaciones §8.4).
 import { useStore } from '@nanostores/preact';
-import { $session, userColor, userInitial, isLoggedIn } from '../stores/session';
+import { Clapperboard, ShoppingCart, User } from 'lucide-preact';
+import { $session, isLoggedIn } from '../stores/session';
+import { userAvatar } from '../../shared/avatar';
 import { openAuthModal } from '../../features/account/store';
 import { openDrawer } from '../../features/my-list/store';
 import { useList } from '../../features/my-list/ui/useList';
@@ -23,7 +25,7 @@ export default function Navbar() {
     <header class="navbar bg-base-200/80 backdrop-blur sticky top-0 z-50 border-b border-base-300">
       <div class="navbar-start">
         <a href="/" class="btn btn-ghost text-xl font-bold gap-2">
-          <span class="text-primary">●</span> Dahem
+          <Clapperboard class="text-primary" size={24} aria-hidden /> Dahem
         </a>
       </div>
 
@@ -41,7 +43,7 @@ export default function Navbar() {
         {/* Mi lista */}
         <button type="button" class="btn btn-ghost btn-circle" aria-label="Mi lista" onClick={openDrawer}>
           <div class="indicator">
-            <span aria-hidden>🛒</span>
+            <ShoppingCart size={20} aria-hidden />
             {count !== null && count > 0 && (
               <span class="badge badge-primary badge-sm indicator-item">{count}</span>
             )}
@@ -52,12 +54,13 @@ export default function Navbar() {
         {logged && session.user ? (
           <button
             type="button"
-            class="btn btn-circle text-sm font-bold"
-            style={{ backgroundColor: userColor(session.user), color: '#fff' }}
+            class="btn btn-ghost btn-circle avatar hover:bg-transparent"
             aria-label={`Sesión de ${session.user.firstName}`}
             onClick={() => openAuthModal({ reason: 'Tu cuenta' })}
           >
-            {userInitial(session.user)}
+            <div class="w-9 rounded-full bg-base-300">
+              <img src={userAvatar(session.user)} alt="" width="36" height="36" />
+            </div>
           </button>
         ) : (
           <button
@@ -66,7 +69,7 @@ export default function Navbar() {
             aria-label="Iniciar sesión"
             onClick={() => openAuthModal()}
           >
-            <span aria-hidden>👤</span>
+            <User size={20} aria-hidden />
           </button>
         )}
       </div>

@@ -18,12 +18,15 @@
   },
   "dependencies": {
     "@dahem/domain": "workspace:*",
+    "@dicebear/collection": "^9.4.2",
+    "@dicebear/core": "^9.4.2",
     "@nanostores/persistent": "^0.10.2",
     "@nanostores/preact": "^0.5.2",
     "@preact/signals": "^2.0.1",
     "astro": "^5.1.1",
     "dexie": "^4.0.10",
     "lite-youtube-embed": "^0.3.3",
+    "lucide-preact": "^0.460.0",
     "minisearch": "^7.1.1",
     "nanostores": "^0.11.3",
     "preact": "^10.25.3"
