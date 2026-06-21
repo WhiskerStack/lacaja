@@ -14,6 +14,13 @@ body {
   min-height: 100%;
 }
 
+/* Evita el scroll horizontal que provoca el full-bleed (100vw) de la carátula del
+   Home cuando hay barra de scroll vertical. `clip` recorta sin crear contenedor de
+   scroll, por lo que no afecta al `position: sticky` del navbar. */
+html {
+  overflow-x: clip;
+}
+
 body {
   @apply bg-base-100 text-base-content antialiased;
 }
