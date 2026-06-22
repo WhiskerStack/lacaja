@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { DatabaseModule } from '../../shared/database/database.module';
 import { CatalogService } from './application/CatalogService';
+import { CatalogImportService } from './application/CatalogImportService';
 import { AudiovisualRepository } from './domain/AudiovisualRepository';
 import { CatalogMetadataRepository } from './domain/CatalogMetadataRepository';
 import { DrizzleAudiovisualRepository } from './infrastructure/DrizzleAudiovisualRepository';
@@ -15,6 +16,7 @@ import { CatalogController } from './http/CatalogController';
   controllers: [CatalogController, AdminCatalogController],
   providers: [
     CatalogService,
+    CatalogImportService,
     CatalogExportService,
     { provide: AudiovisualRepository, useClass: DrizzleAudiovisualRepository },
     { provide: CatalogMetadataRepository, useClass: DrizzleCatalogMetadataRepository },

@@ -14,7 +14,7 @@ import {
 
 describe('Audiovisual', () => {
   it('genera código de película', () => {
-    expect(new Audiovisual(23, 'movie', 'El Gigante de Hierro', 1999, 8, 1.2, false).code()).toBe('P0023');
+    expect(new Audiovisual(23, 'movie', 'El Gigante de Hierro', 1999, 8, 1.2, false).code()).toBe('P23');
   });
 
   it('genera código de episódico', () => {

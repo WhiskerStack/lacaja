@@ -16,6 +16,7 @@ import { RequestsPage } from '@/features/requests/ui/RequestsPage';
 import { PricingPage } from '@/features/pricing/ui/PricingPage';
 import { AdminsPage } from '@/features/admins/ui/AdminsPage';
 import { UsersPage } from '@/features/users/ui/UsersPage';
+import { InventoryPage } from '@/features/inventory/ui/InventoryPage';
 
 // Raíz con contexto tipado: el contenedor IoC viaja por aquí a los guards.
 const rootRoute = createRootRouteWithContext<RouterContext>()({
@@ -91,6 +92,12 @@ const usersRoute = createRoute({
   component: UsersPage,
 });
 
+const inventoryRoute = createRoute({
+  getParentRoute: () => protectedRoute,
+  path: '/inventory',
+  component: InventoryPage,
+});
+
 const routeTree = rootRoute.addChildren([
   loginRoute,
   bootstrapRoute,
@@ -102,6 +109,7 @@ const routeTree = rootRoute.addChildren([
     pricingRoute,
     adminsRoute,
     usersRoute,
+    inventoryRoute,
   ]),
 ]);
 

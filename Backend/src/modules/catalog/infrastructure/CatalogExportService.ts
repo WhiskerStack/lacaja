@@ -1,4 +1,5 @@
 import { Inject, Injectable } from '@nestjs/common';
+import { audiovisualCode, type AudiovisualType } from '@dahem/domain';
 import { eq } from 'drizzle-orm';
 import { DRIZZLE } from '../../../shared/database/database.tokens';
 import type { Database } from '../../../shared/database/database.types';
@@ -32,6 +33,8 @@ export interface CatalogExportSeason {
 /** Item completo del catálogo, desnormalizado para el SSG del Landing. */
 export interface CatalogExportItem {
   id: number;
+  /** Código del inventario/catálogo (P1, S2...). Fuente de verdad para el Landing. */
+  code: string;
   type: string;
   name: string;
   year: number;
@@ -129,6 +132,9 @@ export class CatalogExportService {
       const seasons = seasonsByAv.get(a.id)?.sort((x, y) => x.number - y.number);
       return {
         id: a.id,
+        // El código guardado es la fuente de verdad (físico en importaciones, P{id} en
+        // altas manuales); cae a derivarlo del id si una fila antigua lo tuviera vacío.
+        code: a.code || audiovisualCode(a.type as AudiovisualType, a.id),
         type: a.type,
         name: a.name,
         year: a.year,

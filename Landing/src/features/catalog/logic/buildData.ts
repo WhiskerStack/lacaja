@@ -23,6 +23,8 @@ interface RawSeason {
 }
 interface RawItem {
   id: number;
+  /** Código del catálogo (P1, S2...). Puede faltar en samples antiguos → se deriva. */
+  code?: string;
   type: CatalogItemDTO['type'];
   name: string;
   year: number;
@@ -44,7 +46,8 @@ const catalog = raw as { items: RawItem[]; genres: string[]; regions: string[]; 
 
 /** Hidrata un item crudo del JSON al DTO aplanado, calculando códigos y peso total. */
 function toItemDTO(r: RawItem): CatalogItemDTO {
-  const code = audiovisualCode(r.type, r.id);
+  // El código guardado manda; si el sample no lo trae, se deriva del id (mismo formato).
+  const code = r.code || audiovisualCode(r.type, r.id);
   let seasons: SeasonViewDTO[] | undefined;
   let totalSizeGb = r.sizeGb ?? 0;
 

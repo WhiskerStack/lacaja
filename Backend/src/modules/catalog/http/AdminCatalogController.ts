@@ -9,11 +9,13 @@ import {
   Put,
 } from '@nestjs/common';
 import { CatalogService } from '../application/CatalogService';
+import { CatalogImportService } from '../application/CatalogImportService';
 import { AdminOnly } from '../../auth/http/decorators';
 import {
   CreateEpisodeDto,
   CreateSeasonDto,
   CreateTrailerDto,
+  ImportCatalogDto,
   LinkCastDto,
   NamedDto,
   UpsertAudiovisualDto,
@@ -27,12 +29,24 @@ import { toResponse } from './CatalogController';
 @AdminOnly()
 @Controller('admin/catalog')
 export class AdminCatalogController {
-  constructor(private readonly service: CatalogService) {}
+  constructor(
+    private readonly service: CatalogService,
+    private readonly importService: CatalogImportService,
+  ) {}
 
   // --- Audiovisuales ---
   @Post()
   async create(@Body() dto: UpsertAudiovisualDto) {
     return toResponse(await this.service.create(dto));
+  }
+
+  /**
+   * Importación masiva desde el inventario físico (datos del SearchEngine).
+   * Deduplica por `code` (P1, S2...): inserta solo los que no existen.
+   */
+  @Post('import')
+  async import(@Body() dto: ImportCatalogDto) {
+    return this.importService.import(dto.items);
   }
 
   @Put(':id')

@@ -20,8 +20,13 @@ const OUT_DIR = resolve(ROOT, 'public');
 function typeLetter(type) {
   return type === 'movie' ? 'P' : 'S';
 }
+/** Código derivado del id (fallback). Mismo formato que el dominio: letra + número. */
 function audiovisualCode(type, id) {
-  return `${typeLetter(type)}${String(id).padStart(4, '0')}`;
+  return `${typeLetter(type)}${id}`;
+}
+/** Código del item: el guardado manda; se deriva del id si el sample no lo trae. */
+function itemCode(it) {
+  return it.code || audiovisualCode(it.type, it.id);
 }
 
 function buildIndices() {
@@ -37,10 +42,10 @@ function buildIndices() {
   const li = (name) => Math.max(0, languages.indexOf(name));
 
   // Solo el item completo entra al índice; no temporadas ni capítulos (funcional §6.4.2).
-  const searchItems = items.map((it) => [audiovisualCode(it.type, it.id), it.name]);
+  const searchItems = items.map((it) => [itemCode(it), it.name]);
 
   const libraryItems = items.map((it) => [
-    audiovisualCode(it.type, it.id),
+    itemCode(it),
     it.name,
     it.year,
     it.type,

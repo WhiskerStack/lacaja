@@ -16,6 +16,9 @@ import { UsersApi } from '@/features/users/api/UsersApi';
 import { UsersService } from '@/features/users/logic/UsersService';
 import { PublishApi } from '@/features/publish/api/PublishApi';
 import { PublishService } from '@/features/publish/logic/PublishService';
+import { SearchEngineApi } from '@/features/inventory/api/SearchEngineApi';
+import { InventoryApi } from '@/features/inventory/api/InventoryApi';
+import { InventoryService } from '@/features/inventory/logic/InventoryService';
 
 /**
  * Contenedor awilix en modo CLASSIC: resuelve cada dependencia por el NOMBRE
@@ -81,6 +84,11 @@ export function buildContainer(options: ContainerOptions = {}): AppContainer {
     // publish
     publishApi: asClass(PublishApi).singleton(),
     publishService: asClass(PublishService).singleton(),
+
+    // inventory (SearchEngine local + importación masiva)
+    searchEngineApi: asClass(SearchEngineApi).singleton(),
+    inventoryApi: asClass(InventoryApi).singleton(),
+    inventoryService: asClass(InventoryService).singleton(),
   });
 
   return container;

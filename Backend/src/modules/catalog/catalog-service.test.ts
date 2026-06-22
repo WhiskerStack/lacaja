@@ -52,7 +52,7 @@ describe('CatalogService', () => {
   it('busca por nombre parcial (LIKE)', async () => {
     const service = new CatalogService(new FakeAudiovisualRepository([...seed]), metaStub);
     const { items } = await service.search({ name: 'tronos' });
-    expect(items.map((a) => a.code())).toEqual(['S0003']);
+    expect(items.map((a) => a.code())).toEqual(['S3']);
   });
 
   it('homeData devuelve sólo estrenos', async () => {

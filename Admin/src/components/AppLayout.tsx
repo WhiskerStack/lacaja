@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, Outlet, useNavigate, useRouterState } from '@tanstack/react-router';
 import {
   Clapperboard,
+  HardDrive,
   Inbox,
   LayoutDashboard,
   ListChecks,
@@ -13,6 +14,7 @@ import {
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useAuth } from '@/app/providers';
+import { useSearchEngineHealth } from '@/features/inventory/queries';
 import { Button } from '@/components/ui/button';
 import { PublishButton } from '@/components/PublishButton';
 import { ThemeToggle } from '@/components/ThemeToggle';
@@ -35,12 +37,19 @@ const NAV = [
   { to: '/admins', label: 'Administradores', icon: ShieldCheck },
 ] as const;
 
+// Entrada que solo aparece si el SearchEngine local está habilitado (puerto 4111).
+const INVENTORY_NAV = { to: '/inventory', label: 'Inventario', icon: HardDrive } as const;
+
 /** Layout de la zona protegida: barra lateral de navegación + header + outlet. */
 export function AppLayout() {
   const { admin, logout } = useAuth();
   const navigate = useNavigate();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const [open, setOpen] = useState(false);
+
+  // El inventario solo se ofrece si el SearchEngine local responde.
+  const searchEngine = useSearchEngineHealth();
+  const navItems = searchEngine.data ? [...NAV, INVENTORY_NAV] : NAV;
 
   function onLogout() {
     logout();
@@ -49,7 +58,7 @@ export function AppLayout() {
 
   const sidebar = (
     <nav className="flex flex-1 flex-col gap-1 p-3">
-      {NAV.map((item) => {
+      {navItems.map((item) => {
         const { to, label } = item;
         const Icon = item.icon;
         const exact = 'exact' in item ? item.exact : false;

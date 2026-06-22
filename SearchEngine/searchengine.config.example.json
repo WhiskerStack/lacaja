@@ -1,0 +1,10 @@
+{
+  "port": 4111,
+  "root": ".",
+  "tmdbApiKey": "PEGA_AQUI_TU_API_KEY_DE_TMDB",
+  "language": "es-ES",
+  "allowedOrigins": [
+    "http://localhost:5173",
+    "http://localhost:5174"
+  ]
+}
