@@ -1,5 +1,4 @@
-// Drawer "Mi lista" (funcional §7). Items con quitar+deshacer, totales,
-// y botón "Enviar lista". Ya no se muestra el peso.
+// Drawer "Mi lista" (funcional §7). Items con quitar+deshacer, sin precios ni GB.
 import { useStore } from '@nanostores/preact';
 import { useState } from 'preact/hooks';
 import { $drawerOpen, closeDrawer } from '../store';
@@ -7,7 +6,6 @@ import { useList, refreshList } from './useList';
 import { listService } from '../../../app/container';
 import { pushToast } from '../../../app/stores/toast';
 import { openSubmissionModal } from '../../submission/store';
-import { formatCup } from '../../../shared/format';
 import { ListItemDTO } from '../types';
 
 export default function Drawer() {
@@ -54,7 +52,7 @@ export default function Drawer() {
                   <div class="flex-1 min-w-0">
                     <p class="font-semibold truncate">{it.name}</p>
                     <p class="text-xs opacity-70 font-mono">{it.code}</p>
-                    <p class="text-xs opacity-70">{formatCup(it.price)}</p>
+                    {/* ← ELIMINADA la línea del precio {formatCup(it.price)} */}
                   </div>
                   <button type="button" class="btn btn-xs btn-ghost text-error" onClick={() => remove(it)}>
                     Quitar
@@ -64,12 +62,8 @@ export default function Drawer() {
             ))}
           </div>
 
-          {/* Totales (solo precio) */}
-          <div class="p-4 border-t border-base-300 space-y-3 bg-base-300/40">
-            <div class="flex justify-between text-sm">
-              <span>Total</span>
-              <span class="font-bold">{formatCup(list?.totalPrice ?? 0)}</span>
-            </div>
+          {/* Totales: solo el botón de enviar, sin precio ni GB */}
+          <div class="p-4 border-t border-base-300 bg-base-300/40">
             <button
               type="button"
               class="btn btn-primary w-full"

@@ -1,11 +1,10 @@
-// Modal de envío con las cuatro vías (funcional §7.4). web → requiere sesión y red;
-// las otras tres funcionan offline. Lee el snapshot de la lista del store.
 import { useStore } from '@nanostores/preact';
 import { useState } from 'preact/hooks';
 import { $submissionOpen, closeSubmissionModal } from '../store';
 import { $list } from '../../my-list/store';
 import { submissionService } from '../../../app/container';
 import { pushToast, toastError } from '../../../app/stores/toast';
+import { WHATSAPP_NUMBER } from '../../../shared/env';
 import type { SubmissionData } from '../types';
 
 export default function SubmissionModal() {
@@ -30,6 +29,27 @@ export default function SubmissionModal() {
     }
   }
 
+  function shareList() {
+    const text = submissionService.build(data).toText();
+    if (navigator.share) {
+      navigator.share({ title: 'Mi lista de La Caja', text })
+        .catch((e) => {
+          if (e.name !== 'AbortError') toastError(e);
+        });
+    } else {
+      // Si no hay share nativo, copiamos como fallback
+      copy();
+    }
+  }
+
+  function whatsappShare() {
+    const text = submissionService.build(data).toText();
+    const encoded = encodeURIComponent(text);
+    const number = WHATSAPP_NUMBER.replace(/\D/g, ''); // solo dígitos
+    const url = `https://wa.me/${number}?text=${encoded}`;
+    window.open(url, '_blank');
+  }
+
   return (
     <div class="modal modal-open">
       <div class="modal-box">
@@ -47,6 +67,14 @@ export default function SubmissionModal() {
             </button>
             <button type="button" class="btn justify-start gap-3" onClick={copy}>
               📋 Copiar al portapapeles
+            </button>
+            {/* NUEVO: WhatsApp */}
+            <button type="button" class="btn justify-start gap-3" onClick={whatsappShare}>
+              💬 Enviar por WhatsApp
+            </button>
+            {/* NUEVO: Compartir nativo (SMS, etc.) */}
+            <button type="button" class="btn justify-start gap-3" onClick={shareList}>
+              📲 Compartir…
             </button>
           </div>
         )}

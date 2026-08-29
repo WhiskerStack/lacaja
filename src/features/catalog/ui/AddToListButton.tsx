@@ -37,7 +37,7 @@ export default function AddToListButton(props: Props) {
           level: props.level,
           targetId: props.targetId,
           name: props.name,
-          sizeGb: 0,                 // ← peso siempre 0
+          sizeGb: 0,
           price: priceFor(props.type, props.isPremiere, props.units ?? 1),
         });
         await refreshList();
@@ -57,7 +57,7 @@ export default function AddToListButton(props: Props) {
   return (
     <button type="button" class={cls} disabled={busy} onClick={toggle} aria-pressed={inList}>
       {inList ? '✓ En Mi lista' : (props.label ?? 'Agregar a Mi lista')}
-      <span class="badge badge-sm font-mono">{props.code}</span>
+      <span class="badge badge-md font-mono">{props.code}</span>
     </button>
   );
 }

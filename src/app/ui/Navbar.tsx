@@ -1,8 +1,7 @@
-// Navbar (client:load): logo, navegación desktop, ícono de usuario y badge de Mi lista.
-// El badge usa placeholder neutro hasta hidratar para evitar el flash de "0" (especificaciones §8.4).
-import { Clapperboard, ShoppingCart } from 'lucide-preact';
+import { Clapperboard, ShoppingCart, Share2 } from 'lucide-preact';
 import { openDrawer } from '../../features/my-list/store';
 import { useList } from '../../features/my-list/ui/useList';
+import { pushToast } from '../stores/toast';
 
 const NAV = [
   { href: '/', label: 'Inicio' },
@@ -12,8 +11,42 @@ const NAV = [
 
 export default function Navbar() {
   const list = useList();
-  // list === null → aún no hidratado: badge neutro (sin número).
   const count = list?.count ?? null;
+
+  async function shareUrl() {
+    const url = window.location.href;
+    const title = document.title || 'La Caja — Catálogo audiovisual';
+    // Intenta usar la Web Share API (nativa en móviles/PWA)
+    if (navigator.share) {
+      try {
+        await navigator.share({ title, text: 'Mira esto en La Caja', url });
+        return;
+      } catch (e) {
+        // Si el usuario cancela o falla, no hacemos nada (no mostrar error)
+        if ((e as Error).name !== 'AbortError') {
+          console.warn('Web Share falló, usando copia de respaldo', e);
+        } else {
+          return; // Usuario canceló
+        }
+      }
+    }
+    // Fallback: copiar al portapapeles
+    try {
+      await navigator.clipboard.writeText(url);
+      pushToast({ message: 'Enlace copiado al portapapeles', durationMs: 3000 });
+    } catch {
+      // Fallback antiguo
+      const textarea = document.createElement('textarea');
+      textarea.value = url;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+      pushToast({ message: 'Enlace copiado al portapapeles', durationMs: 3000 });
+    }
+  }
 
   return (
     <header class="navbar bg-base-200/80 backdrop-blur sticky top-0 z-50 border-b border-base-300">
@@ -34,8 +67,22 @@ export default function Navbar() {
       </nav>
 
       <div class="navbar-end gap-1">
-        {/* Mi lista */}
-        <button type="button" class="btn btn-ghost btn-circle" aria-label="Mi lista" onClick={openDrawer}>
+        {/* Botón compartir mejorado */}
+        <button
+          type="button"
+          class="btn btn-ghost btn-circle"
+          aria-label="Compartir enlace"
+          onClick={shareUrl}
+        >
+          <Share2 size={20} aria-hidden />
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-ghost btn-circle"
+          aria-label="Mi lista"
+          onClick={openDrawer}
+        >
           <div class="indicator">
             <ShoppingCart size={20} aria-hidden />
             {count !== null && count > 0 && (
