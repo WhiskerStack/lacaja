@@ -11,7 +11,7 @@ import { AudiovisualType, ItemLevel } from '@/features/common/domain/types';
 interface Props {
   code: string;
   level: ItemLevel;
-  targetId: number;
+  targetId: string;
   name: string;
   sizeGb: number;
   type: AudiovisualType;

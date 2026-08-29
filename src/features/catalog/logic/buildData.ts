@@ -8,21 +8,20 @@ import type {
   SeasonViewDTO,
 } from '../types';
 import raw from '../../../data/catalog.json';
-import { audiovisualCode } from '@/features/common/helper/codes';
 
 interface RawEpisode {
-  id: number;
+  id: string;
   number: number;
   sizeGb: number;
   durationMin?: number;
 }
 interface RawSeason {
-  id: number;
+  id: string;
   number: number;
   episodes: RawEpisode[];
 }
 interface RawItem {
-  id: number;
+  id: string;
   /** Código del catálogo (P1, S2...). Puede faltar en samples antiguos → se deriva. */
   code?: string;
   type: CatalogItemDTO['type'];
@@ -40,6 +39,8 @@ interface RawItem {
   cast: string[];
   trailers: string[];
   seasons?: RawSeason[];
+  seasonCount: number;
+  episodeCount: number;
 }
 
 const catalog = raw as { items: RawItem[]; genres: string[]; regions: string[]; languages: string[] };
@@ -47,8 +48,8 @@ const catalog = raw as { items: RawItem[]; genres: string[]; regions: string[]; 
 /** Hidrata un item crudo del JSON al DTO aplanado, calculando códigos y peso total. */
 function toItemDTO(r: RawItem): CatalogItemDTO {
   // El código guardado manda; si el sample no lo trae, se deriva del id (mismo formato).
-  const code = r.code || audiovisualCode(r.type, r.id);
-  let seasons: SeasonViewDTO[] | undefined;
+  const code = r.code || r.id;
+  let seasons: SeasonViewDTO[] | [] = [];
   let totalSizeGb = r.sizeGb ?? 0;
 
   if (r.seasons?.length) {
@@ -86,18 +87,20 @@ function toItemDTO(r: RawItem): CatalogItemDTO {
     trailers: r.trailers ?? [],
     seasons,
     totalSizeGb: Math.round(totalSizeGb * 100) / 100,
+    seasonCount: r.seasonCount,
+    episodeCount: r.episodeCount,
   };
 }
 
 const ITEMS: CatalogItemDTO[] = catalog.items.map(toItemDTO);
-const BY_ID = new Map<number, CatalogItemDTO>(ITEMS.map((i) => [i.id, i]));
+const BY_ID = new Map<string, CatalogItemDTO>(ITEMS.map((i) => [i.id, i]));
 
 /** Todos los items del catálogo como DTOs aplanados. */
 export function getCatalogIndex(): CatalogItemDTO[] {
   return ITEMS;
 }
 
-export function getById(id: number): CatalogItemDTO | undefined {
+export function getById(id: string): CatalogItemDTO | undefined {
   return BY_ID.get(id);
 }
 

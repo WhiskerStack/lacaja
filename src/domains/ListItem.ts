@@ -9,7 +9,7 @@ export class ListItem {
   constructor(
     public readonly code: string,
     public readonly level: ItemLevel,
-    public readonly targetId: number,
+    public readonly targetId: string,
     public readonly name: string,
     public readonly sizeGb: number,
     public readonly price: number,

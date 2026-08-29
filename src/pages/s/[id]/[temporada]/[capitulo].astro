@@ -16,7 +16,7 @@ export function getStaticPaths() {
   );
 }
 
-const { id, season, episode } = Astro.props as { id: number; season: number; episode: number };
+const { id, season, episode } = Astro.props as { id: string; season: number; episode: number };
 const item = getById(id);
 const seasonView = item?.seasons?.find((s) => s.number === season);
 const ep = seasonView?.episodes.find((x) => x.number === episode);

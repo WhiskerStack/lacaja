@@ -5,7 +5,7 @@ import type { AudiovisualDTO, AudiovisualType } from '@/features/common/domain/t
 export type { AudiovisualType };
 
 export interface EpisodeViewDTO {
-  id: number;
+  id: string;
   number: number;
   sizeGb: number;
   durationMin?: number;
@@ -14,7 +14,7 @@ export interface EpisodeViewDTO {
 }
 
 export interface SeasonViewDTO {
-  id: number;
+  id: string;
   number: number;
   sizeGb: number;
   /** Código calculado en build: "S1122-3". */
@@ -40,11 +40,13 @@ export interface CatalogItemDTO extends AudiovisualDTO {
   seasons?: SeasonViewDTO[];
   /** Peso total (suma de temporadas si es episódico; sizeGb si es película). */
   totalSizeGb: number;
+  seasonCount: number
+  episodeCount: number,
 }
 
 /** Ítem ligero para grids/carruseles (foto, nombre, clasificación, año). */
 export interface CatalogCardDTO {
-  id: number;
+  id: string;
   code: string;
   type: AudiovisualType;
   name: string;

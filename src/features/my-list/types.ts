@@ -9,7 +9,7 @@ export type { ListItemDTO };
 export interface AddToListInput {
   code: string;
   level: ListItemDTO['level'];
-  targetId: number;
+  targetId: string;
   name: string;
   sizeGb: number;
   price: number;

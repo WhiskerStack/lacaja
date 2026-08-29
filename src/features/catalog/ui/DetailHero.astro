@@ -10,7 +10,7 @@ import type { CatalogItemDTO } from '../types';
 interface Props {
   item: CatalogItemDTO;
   /** Nivel a agregar (audiovisual/season/episode) con su código, peso y nº de capítulos. */
-  add: { code: string; level: 'audiovisual' | 'season' | 'episode'; targetId: number; name: string; sizeGb: number; units?: number };
+  add: { code: string; level: 'audiovisual' | 'season' | 'episode'; targetId: string; name: string; sizeGb: number; units?: number };
   /** Subtítulo opcional para temporada/capítulo. */
   context?: string;
 }

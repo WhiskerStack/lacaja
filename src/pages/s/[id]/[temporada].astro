@@ -14,7 +14,7 @@ export function getStaticPaths() {
   );
 }
 
-const { id, season } = Astro.props as { id: number; season: number };
+const { id, season } = Astro.props as { id: string; season: number };
 const item = getById(id);
 const seasonView = item?.seasons?.find((s) => s.number === season);
 if (!item || !seasonView) return Astro.redirect('/404');

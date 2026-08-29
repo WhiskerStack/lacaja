@@ -13,7 +13,7 @@ export type RequestStatus = 'pending' | 'available' | 'notified';
 export type PriceKey = 'normal' | 'premiere';
 
 export interface AudiovisualDTO {
-  id: number;
+  id: string;
   type: AudiovisualType;
   name: string;
   year: number;
@@ -24,14 +24,14 @@ export interface AudiovisualDTO {
 }
 
 export interface SeasonDTO {
-  id: number;
+  id: string;
   audiovisualId: number;
   number: number;
   sizeGb: number;
 }
 
 export interface EpisodeDTO {
-  id: number;
+  id: string;
   seasonId: number;
   number: number;
   sizeGb: number;
@@ -43,7 +43,7 @@ export interface ListItemDTO {
   code: string;
   level: ItemLevel;
   /** id del audiovisual/season/episode según level. */
-  targetId: number;
+  targetId: string;
   name: string; // snapshot
   sizeGb: number; // snapshot
   price: number; // snapshot
