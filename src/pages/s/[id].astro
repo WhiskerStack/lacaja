@@ -13,7 +13,7 @@ export function getStaticPaths() {
   return getEpisodic().map((e) => ({ params: { id: String(e.id) }, props: { id: e.id } }));
 }
 
-const { id } = Astro.props as { id: number };
+const { id } = Astro.props as { id: string };
 const item = getById(id);
 if (!item) return Astro.redirect('/404');
 const suggestions = getSuggestions(item);

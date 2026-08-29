@@ -6,11 +6,11 @@ export function detailUrl(card: { type: string; id: number }): string {
   return card.type === 'movie' ? `/p/${card.id}` : `/s/${card.id}`;
 }
 
-export function seasonUrl(id: number, season: number): string {
+export function seasonUrl(id: string, season: number): string {
   return `/s/${id}/${season}`;
 }
 
-export function episodeUrl(id: number, season: number, episode: number): string {
+export function episodeUrl(id: string, season: number, episode: number): string {
   return `/s/${id}/${season}/${episode}`;
 }
 

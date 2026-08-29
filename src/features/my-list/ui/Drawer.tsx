@@ -1,5 +1,5 @@
-// Drawer "Mi lista" (funcional §7). Items con quitar+deshacer, totales, espacio disponible,
-// y botón "Enviar lista" que abre el modal de envío. La hidratación viene de Dexie vía useList.
+// Drawer "Mi lista" (funcional §7). Items con quitar+deshacer, totales,
+// y botón "Enviar lista". Ya no se muestra el peso.
 import { useStore } from '@nanostores/preact';
 import { useState } from 'preact/hooks';
 import { $drawerOpen, closeDrawer } from '../store';
@@ -7,23 +7,16 @@ import { useList, refreshList } from './useList';
 import { listService } from '../../../app/container';
 import { pushToast } from '../../../app/stores/toast';
 import { openSubmissionModal } from '../../submission/store';
-import { formatCup, formatGb } from '../../../shared/format';
-import type { ListItemDTO } from '@dahem/domain';
+import { formatCup } from '../../../shared/format';
+import { ListItemDTO } from '../types';
 
 export default function Drawer() {
   const open = useStore($drawerOpen);
   const list = useList();
-  const [spaceInput, setSpaceInput] = useState<string>('');
-
-  const available = list?.availableSpaceGb ?? null;
-  const total = list?.totalGb ?? 0;
-  const overflow = available !== null ? Math.max(0, total - available) : 0;
-  const fits = available === null ? null : total <= available;
 
   async function remove(item: ListItemDTO) {
     await listService.remove(item.code);
     await refreshList();
-    // Toast con "Deshacer" durante ~7s (funcional §7.2).
     pushToast({
       message: `Quitado: ${item.name}`,
       actionLabel: 'Deshacer',
@@ -35,19 +28,11 @@ export default function Drawer() {
     });
   }
 
-  async function applySpace() {
-    const n = spaceInput.trim() === '' ? null : Number(spaceInput);
-    await listService.setAvailableSpace(n);
-    await refreshList();
-  }
-
   if (!open) return null;
 
   return (
     <div class="fixed inset-0 z-[60]" role="dialog" aria-label="Mi lista">
-      {/* Overlay */}
       <div class="absolute inset-0 bg-black/50" onClick={closeDrawer} />
-      {/* Panel lateral derecho */}
       <div class="absolute inset-y-0 right-0">
         <aside class="w-80 sm:w-96 h-full bg-base-200 flex flex-col shadow-2xl">
           <div class="flex items-center justify-between p-4 border-b border-base-300">
@@ -69,7 +54,7 @@ export default function Drawer() {
                   <div class="flex-1 min-w-0">
                     <p class="font-semibold truncate">{it.name}</p>
                     <p class="text-xs opacity-70 font-mono">{it.code}</p>
-                    <p class="text-xs opacity-70">{formatGb(it.sizeGb)} · {formatCup(it.price)}</p>
+                    <p class="text-xs opacity-70">{formatCup(it.price)}</p>
                   </div>
                   <button type="button" class="btn btn-xs btn-ghost text-error" onClick={() => remove(it)}>
                     Quitar
@@ -79,33 +64,11 @@ export default function Drawer() {
             ))}
           </div>
 
-          {/* Espacio disponible (funcional §7.3) */}
-          <div class="p-3 border-t border-base-300 space-y-2">
-            <label class="text-xs font-semibold opacity-80">Espacio disponible (GB)</label>
-            <div class="join w-full">
-              <input
-                type="number"
-                min="0"
-                step="0.5"
-                class="input input-sm input-bordered join-item w-full"
-                placeholder={available !== null ? String(available) : 'ej. 16'}
-                value={spaceInput}
-                onInput={(e) => setSpaceInput((e.target as HTMLInputElement).value)}
-              />
-              <button type="button" class="btn btn-sm join-item" onClick={applySpace}>OK</button>
-            </div>
-            {fits !== null && (
-              <p class={`text-xs ${fits ? 'text-success' : 'text-error'}`}>
-                {fits ? `Cabe (sobran ${formatGb(available! - total)})` : `Se pasa por ${formatGb(overflow)}`}
-              </p>
-            )}
-          </div>
-
-          {/* Totales + enviar (funcional §7.2, §7.4) */}
+          {/* Totales (solo precio) */}
           <div class="p-4 border-t border-base-300 space-y-3 bg-base-300/40">
             <div class="flex justify-between text-sm">
               <span>Total</span>
-              <span class="font-bold">{formatGb(total)} · {formatCup(list?.totalPrice ?? 0)}</span>
+              <span class="font-bold">{formatCup(list?.totalPrice ?? 0)}</span>
             </div>
             <button
               type="button"

@@ -1,15 +1,15 @@
 ---
-// Hero del detalle (funcional §6.2.2): foto de fondo + nombre, género, duración, rating, peso,
-// descripción (con "...más" expandible) y el botón "Agregar a Mi lista" (isla).
+// Hero del detalle (funcional §6.2.2): foto de fondo + nombre, género, duración, rating,
+// descripción y el botón "Agregar a Mi lista" (isla).
 import { Image } from 'astro:assets';
 import AddToListButton from './AddToListButton.tsx';
-import { formatDuration, formatGb, formatRating, truncate } from '../../../shared/format';
+import { formatDuration, formatRating, truncate } from '../../../shared/format';
 import { TYPE_LABEL } from '../types';
 import type { CatalogItemDTO } from '../types';
 
 interface Props {
   item: CatalogItemDTO;
-  /** Nivel a agregar (audiovisual/season/episode) con su código, peso y nº de capítulos. */
+  /** Nivel a agregar (audiovisual/season/episode) con su código, nombre y nº de capítulos. */
   add: { code: string; level: 'audiovisual' | 'season' | 'episode'; targetId: string; name: string; sizeGb: number; units?: number };
   /** Subtítulo opcional para temporada/capítulo. */
   context?: string;
@@ -17,7 +17,6 @@ interface Props {
 const { item, add, context } = Astro.props;
 const limit = 240;
 const long = item.description.length > limit;
-// imageUrl puede venir vacío (ítems sin póster en el backend): omitimos la imagen de fondo.
 const hasImage = Boolean(item.imageUrl);
 ---
 <section class="relative w-screen left-1/2 -translate-x-1/2 min-h-[70vh] flex items-end">
@@ -43,7 +42,9 @@ const hasImage = Boolean(item.imageUrl);
       <span class="opacity-90">· {item.genre}</span>
       <span class="opacity-90">· {item.year}</span>
       {item.durationMin ? <span class="opacity-90">· {formatDuration(item.durationMin)}</span> : null}
-      <span class="opacity-90">· {formatGb(add.sizeGb || item.totalSizeGb)}</span>
+      {item.type !== 'movie' && (
+        <span class="opacity-90">· {item.seasonCount} temporadas · {item.episodeCount} capítulos</span>
+      )}
       {item.isPremiere && <span class="badge badge-secondary">Estreno</span>}
     </div>
 
@@ -61,7 +62,7 @@ const hasImage = Boolean(item.imageUrl);
       level={add.level}
       targetId={add.targetId}
       name={add.name}
-      sizeGb={add.sizeGb}
+      sizeGb={0}
       type={item.type}
       isPremiere={item.isPremiere}
       units={add.units ?? 1}

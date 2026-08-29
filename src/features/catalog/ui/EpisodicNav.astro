@@ -1,12 +1,11 @@
 ---
-// Navegación rápida a temporadas y capítulos (funcional §6.3.2): reemplaza la sección "Capítulos".
+// Navegación rápida a temporadas y capítulos (funcional §6.3.2).
 import { seasonUrl, episodeUrl } from '../../../shared/urls';
 import { formatGb } from '../../../shared/format';
 import type { CatalogItemDTO } from '../types';
 
 interface Props {
   item: CatalogItemDTO;
-  /** Temporada actualmente abierta (si la vista es de temporada/capítulo). */
   activeSeason?: number;
   activeEpisode?: number;
 }
@@ -23,7 +22,6 @@ const seasons = item.seasons ?? [];
           class={`btn btn-sm ${activeSeason === s.number ? 'btn-primary' : 'btn-outline'}`}
         >
           Temporada {s.number}
-          <span class="badge badge-xs ml-1">{formatGb(s.sizeGb)}</span>
         </a>
       ))}
     </div>
@@ -40,7 +38,7 @@ const seasons = item.seasons ?? [];
               }`}
             >
               <span>Capítulo {ep.number}</span>
-              <span class="text-xs font-mono opacity-80">{ep.code} · {formatGb(ep.sizeGb)}</span>
+              <span class="text-xs font-mono opacity-80">{ep.code}</span>
             </a>
           ))}
       </div>

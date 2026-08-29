@@ -1,6 +1,4 @@
-// Isla del botón "Agregar a Mi lista" (funcional §6.2.2). Para episódico, genera el código
-// según el nivel (§6.3.1): S1122 / S1122-3 / S1122-3-10. Las reglas de código/precio vienen
-// del dominio; aquí solo se construye el snapshot y se llama al servicio.
+// Isla del botón "Agregar a Mi lista" (funcional §6.2.2).
 import { useState } from 'preact/hooks';
 import { listService } from '../../../app/container';
 import { refreshList, useList } from '../../my-list/ui/useList';
@@ -16,9 +14,7 @@ interface Props {
   sizeGb: number;
   type: AudiovisualType;
   isPremiere: boolean;
-  /** Nº de capítulos que cubre lo agregado (1 para películas/capítulos sueltos). */
   units?: number;
-  /** Etiqueta opcional para variantes (temporada/capítulo). */
   label?: string;
   block?: boolean;
 }
@@ -41,7 +37,7 @@ export default function AddToListButton(props: Props) {
           level: props.level,
           targetId: props.targetId,
           name: props.name,
-          sizeGb: props.sizeGb,
+          sizeGb: 0,                 // ← peso siempre 0
           price: priceFor(props.type, props.isPremiere, props.units ?? 1),
         });
         await refreshList();
