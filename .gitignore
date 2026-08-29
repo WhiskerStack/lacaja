@@ -40,3 +40,5 @@ coverage/
 
 # mkctx - generated context
 mkctx/
+
+logs/
