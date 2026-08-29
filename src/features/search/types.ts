@@ -3,7 +3,7 @@
 import { AudiovisualType } from "../catalog/types";
 
 /** Tres estados de la búsqueda (especificaciones §4.1). */
-export type SearchMode = 'loading' | 'local' | 'api';
+export type SearchMode = 'loading' | 'local';
 
 /** Resultado normalizado que pinta la UI (foto se resuelve por código contra el catálogo). */
 export interface SearchHit {

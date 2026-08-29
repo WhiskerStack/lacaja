@@ -1,10 +1,6 @@
 // Navbar (client:load): logo, navegación desktop, ícono de usuario y badge de Mi lista.
 // El badge usa placeholder neutro hasta hidratar para evitar el flash de "0" (especificaciones §8.4).
-import { useStore } from '@nanostores/preact';
-import { Clapperboard, ShoppingCart, User } from 'lucide-preact';
-import { $session, isLoggedIn } from '../stores/session';
-import { userAvatar } from '../../shared/avatar';
-import { openAuthModal } from '../../features/account/store';
+import { Clapperboard, ShoppingCart } from 'lucide-preact';
 import { openDrawer } from '../../features/my-list/store';
 import { useList } from '../../features/my-list/ui/useList';
 
@@ -15,9 +11,7 @@ const NAV = [
 ];
 
 export default function Navbar() {
-  const session = useStore($session);
   const list = useList();
-  const logged = isLoggedIn(session);
   // list === null → aún no hidratado: badge neutro (sin número).
   const count = list?.count ?? null;
 
@@ -49,29 +43,6 @@ export default function Navbar() {
             )}
           </div>
         </button>
-
-        {/* Usuario */}
-        {logged && session.user ? (
-          <button
-            type="button"
-            class="btn btn-ghost btn-circle avatar hover:bg-transparent"
-            aria-label={`Sesión de ${session.user.firstName}`}
-            onClick={() => openAuthModal({ reason: 'Tu cuenta' })}
-          >
-            <div class="w-9 rounded-full bg-base-300">
-              <img src={userAvatar(session.user)} alt="" width="36" height="36" />
-            </div>
-          </button>
-        ) : (
-          <button
-            type="button"
-            class="btn btn-ghost btn-circle"
-            aria-label="Iniciar sesión"
-            onClick={() => openAuthModal()}
-          >
-            <User size={20} aria-hidden />
-          </button>
-        )}
       </div>
     </header>
   );

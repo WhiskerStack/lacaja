@@ -4,10 +4,6 @@ import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
 import { useStore } from '@nanostores/preact';
 import { searchService } from '../../../app/container';
 import { $searchMode } from '../store';
-import { $online } from '../../../app/stores/network';
-import { $session, isLoggedIn } from '../../../app/stores/session';
-import { openAuthModal } from '../../account/store';
-import { requestContent } from '../../account/logic/requests';
 import { pushToast, toastError } from '../../../app/stores/toast';
 import { detailUrl } from '../../../shared/urls';
 import { TYPE_LABEL } from '../../catalog/types';
@@ -23,8 +19,6 @@ const PAGE = 12;
 
 export default function SearchView({ cards }: Props) {
   const mode = useStore($searchMode);
-  const online = useStore($online);
-  const session = useStore($session);
   const [query, setQuery] = useState('');
   const [hits, setHits] = useState<SearchHit[]>([]);
   const [shown, setShown] = useState(PAGE);
@@ -64,19 +58,6 @@ export default function SearchView({ cards }: Props) {
     return () => obs.disconnect();
   }, [hits.length]);
 
-  async function solicitar() {
-    if (!isLoggedIn(session)) {
-      openAuthModal({ reason: 'para solicitar contenido no disponible', onSuccess: solicitar });
-      return;
-    }
-    try {
-      await requestContent(session.token!, query.trim());
-      pushToast({ message: 'Solicitud registrada. Te avisaremos cuando esté disponible.', variant: 'success', durationMs: 5000 });
-    } catch (e) {
-      toastError(e);
-    }
-  }
-
   const visible = hits.slice(0, shown);
 
   return (
@@ -92,22 +73,10 @@ export default function SearchView({ cards }: Props) {
         />
         <label class="label">
           <span class="label-text-alt opacity-60">
-            Modo: {mode === 'local' ? 'índice local' : mode === 'api' ? 'servidor' : 'cargando índice…'}
+            Modo: {mode === 'local' ? 'índice local' : 'cargando índice…'}
           </span>
         </label>
       </div>
-
-      {/* Enlace de solicitud: solo si el usuario escribió algo en el buscador (funcional §6.4.3) */}
-      {query.trim().length > 0 && (
-        <button
-          type="button"
-          class="link link-secondary text-sm mb-4"
-          disabled={!online}
-          onClick={solicitar}
-        >
-          ¿No encontraste lo que buscabas? Solicítala y estará disponible en unos días.
-        </button>
-      )}
 
       {query.trim().length >= 2 && hits.length === 0 && (
         <p class="opacity-70 text-sm py-6">Sin resultados para “{query.trim()}”.</p>

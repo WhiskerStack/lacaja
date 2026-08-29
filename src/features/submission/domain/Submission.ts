@@ -14,7 +14,6 @@ export class Submission {
   toText(): string {
     const lines: string[] = [];
     lines.push('🎬 Pedido Dahem');
-    if (this.data.customerName) lines.push(`Cliente: ${this.data.customerName}`);
     lines.push('');
     lines.push('Lista solicitada:');
     for (const it of this.data.items) {
@@ -30,13 +29,5 @@ export class Submission {
   fileName(): string {
     const stamp = new Date().toISOString().slice(0, 10);
     return `pedido-dahem-${stamp}.txt`;
-  }
-
-  /** URL de wa.me con el mensaje pre-formateado (funcional §7.4.2). */
-  whatsappUrl(phoneNumber: string): string {
-    const base = phoneNumber
-      ? `https://wa.me/${phoneNumber.replace(/\D/g, '')}`
-      : 'https://wa.me/';
-    return `${base}?text=${encodeURIComponent(this.toText())}`;
   }
 }

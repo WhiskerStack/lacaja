@@ -14,7 +14,6 @@ const processTerm = (term: string): string =>
 
 export interface SearchServiceDeps {
   indexUrl: string; // /search-index.json
-  apiUrl: string; // fallback NestJS
   fetchFn: typeof fetch;
   /** Timeout duro de descarga del índice, 10-15s (especificaciones §4.1). */
   timeoutMs?: number;
@@ -25,7 +24,7 @@ export class SearchService {
   private mode: SearchMode = 'loading';
   private index: MiniSearch<SearchHit> | null = null;
 
-  constructor(private readonly deps: SearchServiceDeps) {}
+  constructor(private readonly deps: SearchServiceDeps) { }
 
   getMode(): SearchMode {
     return this.mode;
@@ -57,8 +56,7 @@ export class SearchService {
       this.index = mini;
       this.setMode('local');
     } catch {
-      // timeout, 404, parser error → API permanente esta sesión (especificaciones §4.1).
-      this.setMode('api');
+      this.setMode('loading');
     } finally {
       clearTimeout(timeout);
     }
@@ -75,7 +73,8 @@ export class SearchService {
     if (this.mode === 'local' && this.index) {
       return this.searchLocal(q, limit);
     }
-    return this.searchApi(q, limit);
+    
+    return []
   }
 
   private searchLocal(q: string, limit: number): SearchHit[] {
@@ -93,20 +92,6 @@ export class SearchService {
       .search(q)
       .slice(0, limit)
       .map((r) => ({ code: r.code as string, title: r.title as string }));
-  }
-
-  /** Fallback contra NestJS: GET {apiUrl}/search?q=... (especificaciones §2.2, §4.1). */
-  private async searchApi(q: string, limit: number): Promise<SearchHit[]> {
-    if (!this.deps.apiUrl) return [];
-    try {
-      const url = `${this.deps.apiUrl}/search?q=${encodeURIComponent(q)}&limit=${limit}`;
-      const res = await this.deps.fetchFn(url);
-      if (!res.ok) return [];
-      const data = (await res.json()) as { items?: SearchHit[] } | SearchHit[];
-      return Array.isArray(data) ? data : (data.items ?? []);
-    } catch {
-      return [];
-    }
   }
 }
 

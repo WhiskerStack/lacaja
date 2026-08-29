@@ -1,6 +1,6 @@
 // Store de toasts global (incluye el "Deshacer" de Mi lista, funcional §7.2).
 import { atom } from 'nanostores';
-import { messageFromError } from '../../shared/http';
+import { messageFromError } from '../../shared/message-from-error';
 
 /** Estilo del toast → clase DaisyUI (alert-info/success/error/warning). */
 export type ToastVariant = 'info' | 'success' | 'error' | 'warning';

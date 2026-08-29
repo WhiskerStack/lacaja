@@ -1,4 +1,5 @@
-import type { ListItemDTO } from '@dahem/domain';
+import { ListItemDTO } from "../my-list/types";
+
 
 export type SubmissionChannel = 'web' | 'whatsapp' | 'txt' | 'clipboard';
 
@@ -7,6 +8,4 @@ export interface SubmissionData {
   items: ListItemDTO[];
   totalGb: number;
   totalPrice: number;
-  /** Nombre del usuario si hay sesión (opcional para vías sin cuenta). */
-  customerName?: string;
 }

@@ -4,11 +4,9 @@
 import '../styles/global.css';
 import Navbar from '../app/ui/Navbar.tsx';
 import BottomBar from '../app/ui/BottomBar.tsx';
-import NetworkBanner from '../app/ui/NetworkBanner.tsx';
 import ToastHost from '../app/ui/ToastHost.tsx';
 import Drawer from '../features/my-list/ui/Drawer.tsx';
 import SubmissionModal from '../features/submission/ui/SubmissionModal.tsx';
-import AuthModal from '../features/account/ui/AuthModal.tsx';
 
 interface Props {
   title?: string;
@@ -35,7 +33,6 @@ const {
     <title>{title}</title>
   </head>
   <body>
-    <NetworkBanner client:load />
     {!hideChrome && <Navbar client:load />}
 
     <main class="max-w-content mx-auto px-3 sm:px-4 pb-24 md:pb-10">
@@ -47,7 +44,6 @@ const {
     <!-- Islas globales (drawer + modales + toasts) -->
     <Drawer client:idle />
     <SubmissionModal client:idle />
-    <AuthModal client:idle />
     <ToastHost client:idle />
   </body>
 </html>

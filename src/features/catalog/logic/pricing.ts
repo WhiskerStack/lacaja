@@ -2,9 +2,9 @@
 // capítulo, por lo que se multiplica por la cantidad de capítulos agregados. DEFAULT_RATE de
 // @dahem/domain para build/offline; fetchRate() intenta /pricing en runtime (especificaciones §8.3).
 
-import { PriceRateDTO, Rate } from "@/features/common/domain/types";
+import { Rate } from "@/features/common/domain/types";
 import { AudiovisualType } from "../types";
-import { DEFAULT_RATE, rateFromRates } from "@/domains/PriceRate";
+import { DEFAULT_RATE } from "@/domains/PriceRate";
 import { Audiovisual } from "@/features/audiovisual/domain/Audiovisual";
 
 
@@ -21,17 +21,4 @@ export function priceFor(
   // Reutiliza la regla del dominio en vez de duplicarla.
   const av = new Audiovisual(0, type, 'x', 2000, 0, 1, isPremiere);
   return av.price(rate) * units;
-}
-
-/** Intenta leer la tarifa configurable del backend; cae a DEFAULT_RATE si no hay red. */
-export async function fetchRate(apiUrl: string, fetchFn: typeof fetch): Promise<Rate> {
-  if (!apiUrl) return DEFAULT_RATE;
-  try {
-    const res = await fetchFn(`${apiUrl}/pricing`);
-    if (!res.ok) return DEFAULT_RATE;
-    const rows = (await res.json()) as PriceRateDTO[];
-    return rateFromRates(rows);
-  } catch {
-    return DEFAULT_RATE;
-  }
 }
