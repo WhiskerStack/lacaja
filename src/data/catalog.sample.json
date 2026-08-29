@@ -1,0 +1,481 @@
+{
+  "version": 1,
+  "genres": [
+    "Acción",
+    "Drama",
+    "Ciencia ficción",
+    "Comedia",
+    "Fantasía",
+    "Animación",
+    "Aventura",
+    "Suspenso"
+  ],
+  "regions": [
+    "EE.UU.",
+    "Reino Unido",
+    "Corea del Sur",
+    "Japón",
+    "España",
+    "Cuba"
+  ],
+  "languages": [
+    "Inglés",
+    "Español",
+    "Coreano",
+    "Japonés"
+  ],
+  "items": [
+    {
+      "id": 23,
+      "type": "movie",
+      "name": "El Gigante de Hierro",
+      "year": 1999,
+      "rating": 8.1,
+      "sizeGb": 1.4,
+      "durationMin": 86,
+      "isPremiere": false,
+      "genre": "Animación",
+      "region": "EE.UU.",
+      "language": "Inglés",
+      "description": "En plena Guerra Fría, un niño hace amistad con un gigantesco robot de hierro caído del cielo, mientras un agente del gobierno intenta destruirlo. Una fábula sobre la identidad, la amistad y la decisión de no ser un arma.",
+      "imageUrl": "https://dummyimage.com/800x1200/0b132b/dfe6f3.jpg&text=El%20Gigante%20de%20Hierro",
+      "cast": [
+        "Eli Marienthal",
+        "Jennifer Aniston",
+        "Harry Connick Jr.",
+        "Vin Diesel"
+      ],
+      "trailers": [
+        "B1_Bd5g5_Fg"
+      ]
+    },
+    {
+      "id": 451,
+      "type": "movie",
+      "name": "Dune: Parte Tres",
+      "year": 2026,
+      "rating": 8.7,
+      "sizeGb": 4.8,
+      "durationMin": 166,
+      "isPremiere": true,
+      "genre": "Ciencia ficción",
+      "region": "EE.UU.",
+      "language": "Inglés",
+      "description": "El destino de Arrakis se decide en una guerra final por el control de la especia. Paul Atreides enfrenta el peso de su profecía mientras el universo conocido se reordena en torno a su nombre.",
+      "imageUrl": "https://dummyimage.com/800x1200/102a43/dfe6f3.jpg&text=Dune%3A%20Parte%20Tres",
+      "cast": [
+        "Timothée Chalamet",
+        "Zendaya",
+        "Rebecca Ferguson",
+        "Javier Bardem"
+      ],
+      "trailers": [
+        "Way9Dexny3w",
+        "n9xhJrPXop4"
+      ]
+    },
+    {
+      "id": 88,
+      "type": "movie",
+      "name": "La Ciudad Silenciosa",
+      "year": 2025,
+      "rating": 7.6,
+      "sizeGb": 2.9,
+      "durationMin": 118,
+      "isPremiere": true,
+      "genre": "Suspenso",
+      "region": "España",
+      "language": "Español",
+      "description": "Una detective regresa a su pueblo natal para investigar una serie de desapariciones que el resto del país prefiere ignorar. El silencio de los vecinos esconde más de lo que dicen.",
+      "imageUrl": "https://dummyimage.com/800x1200/3a0ca3/dfe6f3.jpg&text=La%20Ciudad%20Silenciosa",
+      "cast": [
+        "Najwa Nimri",
+        "Eduard Fernández",
+        "Bárbara Lennie"
+      ],
+      "trailers": []
+    },
+    {
+      "id": 102,
+      "type": "movie",
+      "name": "Risas de Verano",
+      "year": 2023,
+      "rating": 6.9,
+      "sizeGb": 1.8,
+      "durationMin": 99,
+      "isPremiere": false,
+      "genre": "Comedia",
+      "region": "EE.UU.",
+      "language": "Inglés",
+      "description": "Cuatro amigos planean el viaje perfecto de fin de curso y absolutamente nada sale como esperaban. Una comedia ligera sobre crecer sin querer hacerlo.",
+      "imageUrl": "https://dummyimage.com/800x1200/3c096c/dfe6f3.jpg&text=Risas%20de%20Verano",
+      "cast": [
+        "Emma Stone",
+        "Jonah Hill",
+        "Awkwafina"
+      ],
+      "trailers": [
+        "dQw4w9WgXcQ"
+      ]
+    },
+    {
+      "id": 311,
+      "type": "movie",
+      "name": "El Último Faro",
+      "year": 2024,
+      "rating": 8,
+      "sizeGb": 3.1,
+      "durationMin": 131,
+      "isPremiere": false,
+      "genre": "Drama",
+      "region": "Reino Unido",
+      "language": "Inglés",
+      "description": "Dos fareros quedan aislados por una tormenta interminable en una isla remota. La soledad y la culpa empiezan a borrar la línea entre lo real y lo imaginado.",
+      "imageUrl": "https://dummyimage.com/800x1200/0b132b/dfe6f3.jpg&text=El%20%C3%9Altimo%20Faro",
+      "cast": [
+        "Robert Pattinson",
+        "Willem Dafoe"
+      ],
+      "trailers": [
+        "Hbib53dbn5c"
+      ]
+    },
+    {
+      "id": 77,
+      "type": "movie",
+      "name": "Cazadores del Horizonte",
+      "year": 2022,
+      "rating": 7.2,
+      "sizeGb": 3.6,
+      "durationMin": 142,
+      "isPremiere": false,
+      "genre": "Aventura",
+      "region": "EE.UU.",
+      "language": "Inglés",
+      "description": "Una expedición busca una ciudad perdida en lo profundo de la selva amazónica, donde cada paso adelante cuesta más de lo que cualquiera estaba dispuesto a pagar.",
+      "imageUrl": "https://dummyimage.com/800x1200/240046/dfe6f3.jpg&text=Cazadores%20del%20Horizont",
+      "cast": [
+        "Charlie Hunnam",
+        "Robert Pattinson",
+        "Sienna Miller"
+      ],
+      "trailers": []
+    },
+    {
+      "id": 190,
+      "type": "movie",
+      "name": "Neón Profundo",
+      "year": 2026,
+      "rating": 8.4,
+      "sizeGb": 4.2,
+      "durationMin": 134,
+      "isPremiere": true,
+      "genre": "Acción",
+      "region": "EE.UU.",
+      "language": "Inglés",
+      "description": "En una megaciudad gobernada por corporaciones, una mercenaria descubre que el contrato que aceptó borra la frontera entre sus recuerdos y los de su objetivo.",
+      "imageUrl": "https://dummyimage.com/800x1200/14213d/dfe6f3.jpg&text=Ne%C3%B3n%20Profundo",
+      "cast": [
+        "Ana de Armas",
+        "Oscar Isaac",
+        "John Boyega"
+      ],
+      "trailers": [
+        "6stlCkUDG_s"
+      ]
+    },
+    {
+      "id": 1122,
+      "type": "series",
+      "name": "Tronos de Ceniza",
+      "year": 2021,
+      "rating": 9.1,
+      "isPremiere": false,
+      "genre": "Fantasía",
+      "region": "EE.UU.",
+      "language": "Inglés",
+      "description": "Siete casas nobles libran una guerra sin cuartel por un trono mientras una amenaza ancestral despierta en el norte. Política, traición y dragones en un mundo al borde del invierno.",
+      "imageUrl": "https://dummyimage.com/800x1200/3c096c/dfe6f3.jpg&text=Tronos%20de%20Ceniza",
+      "cast": [
+        "Emilia Clarke",
+        "Kit Harington",
+        "Peter Dinklage",
+        "Lena Headey"
+      ],
+      "trailers": [
+        "BpJYNVhGf1s",
+        "rlR4PJn8b8I"
+      ],
+      "seasons": [
+        {
+          "id": 11221,
+          "number": 1,
+          "episodes": [
+            {
+              "id": 1122101,
+              "number": 1,
+              "sizeGb": 0.9,
+              "durationMin": 62
+            },
+            {
+              "id": 1122102,
+              "number": 2,
+              "sizeGb": 0.85,
+              "durationMin": 55
+            },
+            {
+              "id": 1122103,
+              "number": 3,
+              "sizeGb": 0.88,
+              "durationMin": 58
+            }
+          ]
+        },
+        {
+          "id": 11222,
+          "number": 2,
+          "episodes": [
+            {
+              "id": 1122201,
+              "number": 1,
+              "sizeGb": 0.92,
+              "durationMin": 60
+            },
+            {
+              "id": 1122202,
+              "number": 2,
+              "sizeGb": 0.9,
+              "durationMin": 57
+            }
+          ]
+        },
+        {
+          "id": 11223,
+          "number": 3,
+          "episodes": [
+            {
+              "id": 1122301,
+              "number": 1,
+              "sizeGb": 0.95,
+              "durationMin": 61
+            },
+            {
+              "id": 1122302,
+              "number": 2,
+              "sizeGb": 0.93,
+              "durationMin": 59
+            },
+            {
+              "id": 1122310,
+              "number": 10,
+              "sizeGb": 1.1,
+              "durationMin": 68
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1305,
+      "type": "anime",
+      "name": "Espadas del Alba",
+      "year": 2024,
+      "rating": 8.8,
+      "isPremiere": true,
+      "genre": "Animación",
+      "region": "Japón",
+      "language": "Japonés",
+      "description": "Un joven espadachín se une a un cuerpo de cazadores para vengar a su aldea, mientras descubre que el enemigo que persigue comparte más con él de lo que imaginaba.",
+      "imageUrl": "https://dummyimage.com/800x1200/2b2d42/dfe6f3.jpg&text=Espadas%20del%20Alba",
+      "cast": [
+        "Natsuki Hanae",
+        "Akari Kitō",
+        "Hiro Shimono"
+      ],
+      "trailers": [
+        "VQGCKyvzIM4"
+      ],
+      "seasons": [
+        {
+          "id": 13051,
+          "number": 1,
+          "episodes": [
+            {
+              "id": 1305101,
+              "number": 1,
+              "sizeGb": 0.45,
+              "durationMin": 24
+            },
+            {
+              "id": 1305102,
+              "number": 2,
+              "sizeGb": 0.44,
+              "durationMin": 24
+            },
+            {
+              "id": 1305103,
+              "number": 3,
+              "sizeGb": 0.46,
+              "durationMin": 24
+            },
+            {
+              "id": 1305104,
+              "number": 4,
+              "sizeGb": 0.45,
+              "durationMin": 24
+            }
+          ]
+        },
+        {
+          "id": 13052,
+          "number": 2,
+          "episodes": [
+            {
+              "id": 1305201,
+              "number": 1,
+              "sizeGb": 0.48,
+              "durationMin": 25
+            },
+            {
+              "id": 1305202,
+              "number": 2,
+              "sizeGb": 0.47,
+              "durationMin": 25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1440,
+      "type": "telenovela",
+      "name": "Corazón de Arena",
+      "year": 2023,
+      "rating": 7.4,
+      "isPremiere": false,
+      "genre": "Drama",
+      "region": "España",
+      "language": "Español",
+      "description": "En un pueblo costero, dos familias rivales ven cómo un amor prohibido amenaza con derribar décadas de secretos, herencias y rencores enterrados bajo la arena.",
+      "imageUrl": "https://dummyimage.com/800x1200/1a1a2e/dfe6f3.jpg&text=Coraz%C3%B3n%20de%20Arena",
+      "cast": [
+        "Blanca Suárez",
+        "Mario Casas",
+        "Inma Cuesta"
+      ],
+      "trailers": [],
+      "seasons": [
+        {
+          "id": 14401,
+          "number": 1,
+          "episodes": [
+            {
+              "id": 1440101,
+              "number": 1,
+              "sizeGb": 0.6,
+              "durationMin": 45
+            },
+            {
+              "id": 1440102,
+              "number": 2,
+              "sizeGb": 0.58,
+              "durationMin": 45
+            },
+            {
+              "id": 1440103,
+              "number": 3,
+              "sizeGb": 0.59,
+              "durationMin": 45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1599,
+      "type": "show",
+      "name": "Cocina Extrema",
+      "year": 2025,
+      "rating": 7,
+      "isPremiere": false,
+      "genre": "Comedia",
+      "region": "Reino Unido",
+      "language": "Inglés",
+      "description": "Chefs aficionados compiten en retos imposibles bajo la mirada implacable de un jurado que no perdona ni una pizca de sal de más.",
+      "imageUrl": "https://dummyimage.com/800x1200/533483/dfe6f3.jpg&text=Cocina%20Extrema",
+      "cast": [
+        "Gordon Voss",
+        "Mei Lin",
+        "Carla Doménech"
+      ],
+      "trailers": [],
+      "seasons": [
+        {
+          "id": 15991,
+          "number": 1,
+          "episodes": [
+            {
+              "id": 1599101,
+              "number": 1,
+              "sizeGb": 0.7,
+              "durationMin": 48
+            },
+            {
+              "id": 1599102,
+              "number": 2,
+              "sizeGb": 0.69,
+              "durationMin": 48
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2001,
+      "type": "series",
+      "name": "Estación Orbital",
+      "year": 2026,
+      "rating": 8.9,
+      "isPremiere": true,
+      "genre": "Ciencia ficción",
+      "region": "Corea del Sur",
+      "language": "Coreano",
+      "description": "La tripulación de la primera estación orbital coreana descubre una señal imposible justo cuando el contacto con la Tierra se corta. Aislados, deben decidir en quién confiar.",
+      "imageUrl": "https://dummyimage.com/800x1200/2b2d42/dfe6f3.jpg&text=Estaci%C3%B3n%20Orbital",
+      "cast": [
+        "Bae Doona",
+        "Gong Yoo",
+        "Lee Joon"
+      ],
+      "trailers": [
+        "9CcwLkS2NMc"
+      ],
+      "seasons": [
+        {
+          "id": 20011,
+          "number": 1,
+          "episodes": [
+            {
+              "id": 2001101,
+              "number": 1,
+              "sizeGb": 1,
+              "durationMin": 52
+            },
+            {
+              "id": 2001102,
+              "number": 2,
+              "sizeGb": 0.98,
+              "durationMin": 50
+            },
+            {
+              "id": 2001103,
+              "number": 3,
+              "sizeGb": 1.02,
+              "durationMin": 53
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

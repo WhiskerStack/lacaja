@@ -1,13 +1,3 @@
-packages:
-  - 'packages/*'
-  - 'Backend'
-  - 'Landing'
-  - 'Admin'
 allowBuilds:
-  '@nestjs/core': true
-  '@swc/core': true
-  argon2: true
-  esbuild: true
-  sharp: true
-onlyBuiltDependencies:
-  - esbuild
+  esbuild: set this to true or false
+  sharp: set this to true or false

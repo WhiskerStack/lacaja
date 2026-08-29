@@ -2,19 +2,45 @@
   "name": "dahem",
   "version": "0.1.0",
   "private": true,
-  "description": "Dahem — catálogo audiovisual de consulta (landing SSG + panel admin + backend). Monorepo.",
-  "packageManager": "pnpm@11.1.1",
-  "engines": {
-    "node": ">=20"
-  },
+  "description": "Landing público de Dahem: catálogo audiovisual de consulta (Astro SSG + islas Preact).",
+  "type": "module",
   "scripts": {
-    "build:domain": "pnpm --filter @dahem/domain build",
-    "dev:backend": "pnpm --filter @dahem/backend start:dev",
-    "dev:landing": "pnpm --filter @dahem/landing dev",
-    "dev:admin": "pnpm --filter @dahem/admin dev",
-    "build": "pnpm -r build",
-    "test": "pnpm -r test",
-    "lint": "pnpm -r lint"
+    "sync": "node scripts/sync-catalog.mjs",
+    "prebuild": "node scripts/sync-catalog.mjs && node scripts/build-search-index.mjs",
+    "dev": "node scripts/sync-catalog.mjs && node scripts/build-search-index.mjs && astro dev",
+    "build": "node scripts/sync-catalog.mjs && node scripts/build-search-index.mjs && astro build",
+    "preview": "astro preview",
+    "pretest": "node scripts/use-sample-catalog.mjs",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "prelint": "node scripts/use-sample-catalog.mjs",
+    "lint": "astro check"
   },
-  "license": "MIT"
+  "dependencies": {
+    "@dicebear/collection": "^9.4.2",
+    "@dicebear/core": "^9.4.2",
+    "@nanostores/persistent": "^0.10.2",
+    "@nanostores/preact": "^0.5.2",
+    "@preact/signals": "^2.0.1",
+    "astro": "^5.1.1",
+    "dexie": "^4.0.10",
+    "lite-youtube-embed": "^0.3.3",
+    "lucide-preact": "^0.460.0",
+    "minisearch": "^7.1.1",
+    "nanostores": "^0.11.3",
+    "preact": "^10.25.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/preact": "^4.0.1",
+    "@astrojs/tailwind": "^5.1.4",
+    "@playwright/test": "^1.49.1",
+    "@vite-pwa/astro": "^0.5.0",
+    "daisyui": "^4.12.23",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8",
+    "workbox-window": "^7.3.0"
+  }
 }

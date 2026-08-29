@@ -1,67 +1,98 @@
-# Dahem
+# @dahem/landing
 
-Catálogo audiovisual de consulta para un negocio **presencial** en Cuba (películas, series, novelas, shows, animes). La web no vende ni reproduce contenido: muestra el inventario, deja al usuario armar una lista (GB + precio + espacio disponible) y enviarla al vendedor por una de cuatro vías. El negocio identifica al cliente en el encuentro presencial y le copia lo solicitado.
+Landing público de **Dahem**: catálogo audiovisual de consulta. Web estática (Astro SSG) con
+islas interactivas en Preact. **No vende ni reproduce contenido**: muestra el inventario, deja
+armar una lista y enviarla al negocio por cuatro vías.
 
-> Inspiración visual: **EPIX PLAY**. Mobile-first. Entorno de red lenta (Cuba): cada KB importa.
+Forma parte del monorepo pnpm de Dahem y reutiliza las reglas de negocio del paquete
+compartido `@dahem/domain` (clases `Audiovisual`, `EpisodicContainer`, `Season`, `Episode`,
+`List`, `ListItem`, `User`, códigos, `DEFAULT_RATE`).
 
-## Monorepo (pnpm workspaces)
+## Stack
+
+Astro 5 (SSG puro) · Preact + `@preact/signals` · nanostores (`@nanostores/preact`,
+`@nanostores/persistent`) · MiniSearch · Dexie (IndexedDB) · Tailwind v3 + daisyUI v4 ·
+`lite-youtube-embed` · `@vite-pwa/astro` (Workbox) · `astro:assets` + sharp. Tests: Vitest + Playwright.
+
+## Arquitectura
+
+Vertical slicing + screaming architecture (ver `Docs/documentacion_tecnica_sobre_arquitectura_del_landing.md`).
 
 ```
-Dahem/
-  packages/domain/   @dahem/domain — clases de dominio compartidas (una sola fuente de verdad de las reglas)
-  Backend/           @dahem/backend — NestJS + Drizzle + Postgres (frontera de escritura + generador del SSG)
-  Landing/           @dahem/landing — Astro SSG + islas Preact (catálogo público de solo lectura)
-  Admin/             @dahem/admin — React + Vite + shadcn/ui (panel del vendedor)
-  Docs/              especificaciones del proyecto (fuente de verdad funcional y técnica)
+src/
+  features/
+    catalog/    { domain via @dahem/domain, ui/, logic/, types.ts }   Home, Biblioteca, detalle
+    search/     { ui/, logic/SearchService, store.ts, types.ts }       buscador 3-state loading|local|api
+    my-list/    { ui/, logic/ListService, store.ts, types.ts }         drawer, totales, Dexie
+    submission/ { domain/Submission, ui/, logic/, types.ts }           4 vías de envío
+    account/    { ui/, logic/, store.ts, types.ts }                    login/registro modal, sesión
+  app/
+    container.ts   composition root (cablea servicios)
+    db.ts          Dexie (listItems + meta)
+    stores/        session, network, toast
+    ui/            Navbar, BottomBar, NetworkBanner, ToastHost
+  shared/          format (CUP/GB), urls, env — utilidades sin dominio
+  layouts/Base.astro
+  pages/           routing delgado (solo importa islas de slices)
+  data/catalog.sample.json   fuente de catálogo en build-time
+  styles/global.css
+scripts/build-search-index.mjs
 ```
 
-Tres apps, tres contextos, tres stacks — coherente, no contradictorio:
+Regla de dependencias: `ui → logic → domain → shared`; `ui → store`. El dominio no importa
+Preact/Astro ni I/O. Las clases de dominio cruzan la frontera SSG/Dexie/API como **DTOs planos**
+y se hidratan con `fromJSON`/`toJSON` en los bordes. Stores guardan DTOs, no instancias.
 
-| | Landing | Admin | Backend |
-|---|---|---|---|
-| Plataforma | Astro SSG + Preact | SPA React + Vite | NestJS |
-| Operación dominante | **lectura** | **escritura** (CRUD) | **escritura** + genera el SSG |
-| UI | daisyUI (sin Radix, por peso) | shadcn/ui (Radix) | — |
-| IoC | sin contenedor (cableado manual) | awilix | contenedor de NestJS |
-| Frontera de serialización | build SSG | API HTTP | fila de BD ↔ dominio |
+## Scripts
 
-La regla mental: **lectura siempre desde SSG, escritura siempre contra el backend.**
+| Script | Acción |
+|---|---|
+| `pnpm dev` | genera índices + `astro dev` |
+| `pnpm build` | genera índices + `astro build` (SSG en `dist/`) |
+| `pnpm preview` | sirve el build |
+| `pnpm test` | unitarios (Vitest) |
+| `pnpm test:e2e` | E2E (Playwright contra el build) |
+| `pnpm lint` | `astro check` |
 
-## Requisitos
+> No ejecutar `pnpm install` por slice: el lockfile del monorepo es compartido.
 
-- Node ≥ 20, pnpm ≥ 11
-- Postgres (para el backend) — local o gestionado
-- Redis opcional (BullMQ para la cola de rebuild; el MVP puede ir sin cola)
+## Índices de búsqueda
 
-## Arranque
+`scripts/build-search-index.mjs` lee `src/data/catalog.sample.json` y emite en `public/`:
 
-```bash
-pnpm install
-pnpm build:domain        # compila @dahem/domain (dual ESM/CJS), lo consumen las 3 apps
+- `search-index.json` — `{ v, items: [[code, title], …] }` (autocomplete, minúsculo).
+- `library-index.json` — `{ v, genres, regions, languages, items: [[code, title, year, type, gi, ri, li], …] }`.
 
-# Backend
-cp Backend/.env.example Backend/.env   # configura DATABASE_URL, JWT_SECRET
-pnpm --filter @dahem/backend db:push   # aplica el esquema Drizzle
-pnpm dev:backend                       # http://localhost:3000
+Formato nivel 1 (diccionarios + tuplas posicionales, especificaciones §4.4). Solo entra el item
+completo, no temporadas ni capítulos (funcional §6.4.2). El script corre en `prebuild`/`dev`/`build`.
+La búsqueda en cliente usa MiniSearch con `processTerm` que quita acentos (NFD) y fuzzy+prefix;
+rutea por código (`P0023`, `S1122-3-10`) a prefijo exacto. Si el índice no carga (timeout 12s),
+cae a modo `api` contra `PUBLIC_API_URL/search`.
 
-# Landing
-pnpm dev:landing                       # http://localhost:4321
+## Variables de entorno (`.env.example`)
 
-# Admin
-pnpm dev:admin                         # http://localhost:5173
-```
+- `PUBLIC_API_URL` — backend NestJS para fallback de búsqueda, `/pricing` y escrituras (auth, envío web, solicitudes).
+- `PUBLIC_WHATSAPP_NUMBER` — número del negocio para `wa.me`.
+- `SITE` — URL pública del sitio.
 
-## Dominio compartido
+En build-time el catálogo se lee del JSON de muestra: el SSG construye standalone sin backend.
+El API solo se consulta en runtime (y degrada con gracia si no está).
 
-`@dahem/domain` contiene las clases con sus reglas adentro (`Audiovisual.code()`, `List.fitsIn()`,
-`User.validate()`, snapshots de envío, tarifas). Las tres apps **hidratan en la frontera**
-(`fromJSON`/`toJSON`) y delegan las reglas al dominio, nunca las reimplementan.
+## Fases de implementación
 
-## Documentación
+- **F1 — MVP** (este código): páginas SSG (Home, Biblioteca, Buscar, detalles), Mi lista en Dexie,
+  4 vías de envío (WhatsApp/TXT/copiar sin cuenta; web con sesión local optimista), buscador con
+  índice local, imágenes con `astro:assets`.
+- **F2 — backend + auth**: endpoints reales NestJS (auth, Mi lista, solicitudes, envío web), webhook de rebuild.
+- **F3 — offline + PWA**: `@vite-pwa/astro` con Workbox (configurado), indicador de red (hecho),
+  fallback API de búsqueda (hecho), sincronización offline-first de Mi lista con la cuenta.
+- **F4 — optimizaciones**: hash en nombres de índices, caché de build de imágenes, medición en 3G.
 
-Las especificaciones completas (funcional + técnica de cada pieza, modelo de datos, estrategia de
-búsqueda) viven en [`Docs/`](./Docs).
+## Notas / stubs
 
-## Licencia
-
-MIT
+- Las imágenes de muestra son URLs remotas (`picsum.photos`); `astro.config.mjs` las habilita para
+  `astro:assets`. En producción se descargan/optimizan en build (Opción A, especificaciones §7).
+- Iconos PWA en `public/icons/` son placeholders (ver su README).
+- `AccountService`/envío por web/solicitudes degradan a un modo local optimista cuando no hay
+  `PUBLIC_API_URL` o backend (F1). En F2 apuntan a NestJS real.
+- La sincronización de Mi lista anónimo→cuenta (merge) queda para F3.

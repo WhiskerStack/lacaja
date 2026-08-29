@@ -1,9 +1,0 @@
-examples
-
-# Binarios compilados
-/searchengine
-/searchengine.exe
-*.exe
-
-# Configuración local (puede contener la API key de TMDb)
-searchengine.config.json
