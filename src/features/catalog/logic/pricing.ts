@@ -2,10 +2,10 @@
 // capítulo, por lo que se multiplica por la cantidad de capítulos agregados. DEFAULT_RATE de
 // @dahem/domain para build/offline; fetchRate() intenta /pricing en runtime (especificaciones §8.3).
 
-import { PriceRateDTO, Rate } from "src/features/common/domain/types";
+import { PriceRateDTO, Rate } from "@/features/common/domain/types";
 import { AudiovisualType } from "../types";
-import { DEFAULT_RATE, rateFromRates } from "src/domains/PriceRate";
-import { Audiovisual } from "src/features/audiovisual/domain/Audiovisual";
+import { DEFAULT_RATE, rateFromRates } from "@/domains/PriceRate";
+import { Audiovisual } from "@/features/audiovisual/domain/Audiovisual";
 
 
 /**
