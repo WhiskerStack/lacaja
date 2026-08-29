@@ -50,8 +50,8 @@ export default defineConfig({
         ],
       },
       manifest: {
-        name: 'Dahem — Catálogo audiovisual',
-        short_name: 'Dahem',
+        name: 'La Caja — Catálogo audiovisual',
+        short_name: 'La Caja',
         description: 'Catálogo de consulta de audiovisuales. Arma tu lista y envíala al negocio.',
         lang: 'es',
         start_url: '/',

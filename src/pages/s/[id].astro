@@ -20,7 +20,7 @@ const suggestions = getSuggestions(item);
 // Serie completa: precio por capítulo × total de capítulos de todas las temporadas.
 const totalEpisodes = (item.seasons ?? []).reduce((n, s) => n + s.episodes.length, 0);
 ---
-<Base title={`${item.name} — Dahem`} description={item.description}>
+<Base title={`${item.name} — La Caja`} description={item.description}>
   <DetailHero
     item={item}
     add={{ code: item.code, level: 'audiovisual', targetId: item.id, name: item.name, sizeGb: item.totalSizeGb, units: totalEpisodes }}

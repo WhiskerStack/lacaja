@@ -2,7 +2,7 @@
 import type { CatalogCardDTO } from '../features/catalog/types';
 
 /** URL del detalle de un audiovisual completo (película o episódico, vista global). */
-export function detailUrl(card: { type: string; id: number }): string {
+export function detailUrl(card: CatalogCardDTO): string {
   return card.type === 'movie' ? `/p/${card.id}` : `/s/${card.id}`;
 }
 
@@ -15,3 +15,5 @@ export function episodeUrl(id: string, season: number, episode: number): string 
 }
 
 export type CardLike = Pick<CatalogCardDTO, 'type' | 'id'>;
+
+export const PLACEHOLDER_IMAGE = "/image-not-found.png"

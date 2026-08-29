@@ -52,3 +52,14 @@ body {
 .dahem-skeleton {
   @apply animate-pulse bg-base-300 rounded;
 }
+
+.desc-details .full { display: none; }
+.desc-details[open] .truncated { display: none; }
+.desc-details[open] .full { display: inline; }
+.desc-details .toggle-label::after { content: "más"; }
+.desc-details[open] .toggle-label::after { content: "menos"; }
+.desc-details .toggle-label {
+  color: #e11d48; /* rojo cinematográfico del tema */
+  font-weight: 600; /* opcional: negrita */
+  cursor: pointer;
+}

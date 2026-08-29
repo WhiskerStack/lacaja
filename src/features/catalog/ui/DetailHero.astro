@@ -1,39 +1,56 @@
 ---
 // Hero del detalle (funcional §6.2.2): foto de fondo + nombre, género, duración, rating,
 // descripción y el botón "Agregar a Mi lista" (isla).
-import { Image } from 'astro:assets';
-import AddToListButton from './AddToListButton.tsx';
-import { formatDuration, formatRating, truncate } from '../../../shared/format';
-import { TYPE_LABEL } from '../types';
-import type { CatalogItemDTO } from '../types';
+import { Image } from "astro:assets";
+import AddToListButton from "./AddToListButton.tsx";
+import { formatDuration, formatRating, truncate } from "../../../shared/format";
+import { TYPE_LABEL } from "../types";
+import type { CatalogItemDTO } from "../types";
+import { PLACEHOLDER_IMAGE } from "@/shared/urls";
 
 interface Props {
   item: CatalogItemDTO;
   /** Nivel a agregar (audiovisual/season/episode) con su código, nombre y nº de capítulos. */
-  add: { code: string; level: 'audiovisual' | 'season' | 'episode'; targetId: string; name: string; sizeGb: number; units?: number };
+  add: {
+    code: string;
+    level: "audiovisual" | "season" | "episode";
+    targetId: string;
+    name: string;
+    sizeGb: number;
+    units?: number;
+  };
   /** Subtítulo opcional para temporada/capítulo. */
   context?: string;
 }
 const { item, add, context } = Astro.props;
 const limit = 240;
-const long = item.description.length > limit;
+const longDescription = item.description.length > limit;
 const hasImage = Boolean(item.imageUrl);
+const imageSrc = hasImage ? item.imageUrl : PLACEHOLDER_IMAGE;
 ---
-<section class="relative w-screen left-1/2 -translate-x-1/2 min-h-[70vh] flex items-end">
-  {hasImage && (
-    <Image
-      src={item.imageUrl}
-      alt={item.name}
-      width={1200}
-      height={1800}
-      loading="eager"
-      class="absolute inset-0 w-full h-full object-cover"
-    />
-  )}
-  <div class="absolute inset-0 bg-gradient-to-t from-base-100 via-base-100/80 to-base-100/20"></div>
+
+<section
+  class="relative w-screen left-1/2 -translate-x-1/2 min-h-[70vh] flex items-end"
+>
+  <Image
+    src={imageSrc}
+    alt={item.name}
+    width={1200}
+    height={1800}
+    loading="eager"
+    class="absolute inset-0 w-full h-full object-cover"
+  />
+  <div
+    class="absolute inset-0 bg-gradient-to-t from-base-100 via-base-100/80 to-base-100/20"
+  >
+  </div>
 
   <div class="relative max-w-content mx-auto w-full p-6 sm:p-10">
-    {context && <p class="text-sm text-secondary font-semibold mb-1">{context}</p>}
+    {
+      context && (
+        <p class="text-sm text-secondary font-semibold mb-1">{context}</p>
+      )
+    }
     <h1 class="text-3xl sm:text-5xl font-extrabold mb-3">{item.name}</h1>
 
     <div class="flex flex-wrap gap-2 items-center text-sm mb-4">
@@ -41,20 +58,32 @@ const hasImage = Boolean(item.imageUrl);
       <span class="opacity-90">{TYPE_LABEL[item.type]}</span>
       <span class="opacity-90">· {item.genre}</span>
       <span class="opacity-90">· {item.year}</span>
-      {item.durationMin ? <span class="opacity-90">· {formatDuration(item.durationMin)}</span> : null}
-      {item.type !== 'movie' && (
-        <span class="opacity-90">· {item.seasonCount} temporadas · {item.episodeCount} capítulos</span>
-      )}
+      {
+        item.durationMin ? (
+          <span class="opacity-90">· {formatDuration(item.durationMin)}</span>
+        ) : null
+      }
+      {
+        item.type !== "movie" && (
+          <span class="opacity-90">
+            · {item.seasonCount} temporadas · {item.episodeCount} capítulos
+          </span>
+        )
+      }
       {item.isPremiere && <span class="badge badge-secondary">Estreno</span>}
     </div>
 
-    <details class="max-w-2xl mb-5">
-      <summary class="cursor-pointer list-none opacity-90">
-        {long ? truncate(item.description, limit) : item.description}
-        {long && <span class="text-primary ml-1">…más</span>}
-      </summary>
-      {long && <p class="mt-2 opacity-90">{item.description}</p>}
-    </details>
+    {longDescription ? (
+      <details class="max-w-2xl mb-5 desc-details">
+        <summary class="cursor-pointer list-none opacity-90">
+          <span class="truncated">{truncate(item.description, limit)}</span>
+          <span class="full">{item.description}</span>
+          <span class="toggle-label text-primary"></span>
+        </summary>
+      </details>
+    ) : (
+      <p class="max-w-2xl mb-5 opacity-90">{item.description}</p>
+    )}
 
     <AddToListButton
       client:visible

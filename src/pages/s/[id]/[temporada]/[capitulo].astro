@@ -22,7 +22,7 @@ const seasonView = item?.seasons?.find((s) => s.number === season);
 const ep = seasonView?.episodes.find((x) => x.number === episode);
 if (!item || !seasonView || !ep) return Astro.redirect('/404');
 ---
-<Base title={`${item.name} · T${season}E${episode} — Dahem`} description={item.description}>
+<Base title={`${item.name} · T${season}E${episode} — La Caja`} description={item.description}>
   <DetailHero
     item={item}
     context={`Temporada ${season} · Capítulo ${episode}`}

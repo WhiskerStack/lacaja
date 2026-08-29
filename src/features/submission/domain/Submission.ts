@@ -13,14 +13,13 @@ export class Submission {
   /** Mensaje de texto plano, legible para el vendedor (WhatsApp, TXT, portapapeles). */
   toText(): string {
     const lines: string[] = [];
-    lines.push('🎬 Pedido Dahem');
+    lines.push('🎬 Pedido La Caja');
     lines.push('');
     lines.push('Lista solicitada:');
     for (const it of this.data.items) {
       lines.push(`• ${it.code}  ${it.name} — ${formatGb(it.sizeGb)} — ${formatCup(it.price)}`);
     }
     lines.push('');
-    lines.push(`Total: ${formatGb(this.data.totalGb)} · ${formatCup(this.data.totalPrice)}`);
     lines.push(`Artículos: ${this.data.items.length}`);
     return lines.join('\n');
   }

@@ -19,7 +19,7 @@ const item = getById(id);
 const seasonView = item?.seasons?.find((s) => s.number === season);
 if (!item || !seasonView) return Astro.redirect('/404');
 ---
-<Base title={`${item.name} · Temporada ${season} — Dahem`} description={item.description}>
+<Base title={`${item.name} · Temporada ${season} — La Caja`} description={item.description}>
   <DetailHero
     item={item}
     context={`Temporada ${season}`}

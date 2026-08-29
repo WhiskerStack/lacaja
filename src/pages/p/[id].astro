@@ -11,12 +11,12 @@ export function getStaticPaths() {
   return getMovies().map((m) => ({ params: { id: String(m.id) }, props: { id: m.id } }));
 }
 
-const { id } = Astro.props as { id: number };
+const { id } = Astro.props as { id: string };
 const item = getById(id);
 if (!item) return Astro.redirect('/404');
 const suggestions = getSuggestions(item);
 ---
-<Base title={`${item.name} — Dahem`} description={item.description}>
+<Base title={`${item.name} — La Caja`} description={item.description}>
   <DetailHero
     item={item}
     add={{ code: item.code, level: 'audiovisual', targetId: item.id, name: item.name, sizeGb: item.totalSizeGb }}

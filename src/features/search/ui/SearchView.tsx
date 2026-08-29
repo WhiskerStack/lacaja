@@ -5,7 +5,7 @@ import { useStore } from '@nanostores/preact';
 import { searchService } from '../../../app/container';
 import { $searchMode } from '../store';
 import { pushToast, toastError } from '../../../app/stores/toast';
-import { detailUrl } from '../../../shared/urls';
+import { detailUrl, PLACEHOLDER_IMAGE } from '../../../shared/urls';
 import { TYPE_LABEL } from '../../catalog/types';
 import type { CatalogCardDTO } from '../../catalog/types';
 import type { SearchHit } from '../types';
@@ -93,7 +93,7 @@ export default function SearchView({ cards }: Props) {
               >
                 {card && (
                   <figure class="w-16 shrink-0">
-                    <img src={card.imageUrl} alt="" width="64" height="96" loading="lazy" class="object-cover h-full w-full" />
+                    <img src={card?.imageUrl || PLACEHOLDER_IMAGE} alt="" width="64" height="96" loading="lazy" class="object-cover h-full w-full" />
                   </figure>
                 )}
                 <div class="card-body">
