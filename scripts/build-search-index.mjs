@@ -31,7 +31,7 @@ function itemCode(it) {
 
 function buildIndices() {
   const catalog = JSON.parse(readFileSync(SOURCE, 'utf8'));
-  const items = catalog.items ?? [];
+  const items = catalog.items?.filter(item => item.isActive !== false) ?? [];
 
   // Diccionarios: índices estables para que las tuplas referencien por posición.
   const genres = catalog.genres ?? [];

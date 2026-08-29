@@ -41,6 +41,7 @@ interface RawItem {
   seasons?: RawSeason[];
   seasonCount: number;
   episodeCount: number;
+  isActive?: boolean;
 }
 
 const catalog = raw as { items: RawItem[]; genres: string[]; regions: string[]; languages: string[] };
@@ -92,7 +93,9 @@ function toItemDTO(r: RawItem): CatalogItemDTO {
   };
 }
 
-const ITEMS: CatalogItemDTO[] = catalog.items.map(toItemDTO);
+const activeItems = catalog.items.filter(item => item.isActive !== false);
+
+const ITEMS: CatalogItemDTO[] = activeItems.map(toItemDTO);
 const BY_ID = new Map<string, CatalogItemDTO>(ITEMS.map((i) => [i.id, i]));
 
 /** Todos los items del catálogo como DTOs aplanados. */

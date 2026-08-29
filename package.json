@@ -8,6 +8,7 @@
     "sync": "node scripts/sync-catalog.mjs && node scripts/enrich-catalog.mjs && node scripts/build-search-index.mjs",
     "enrich-catalog": "node scripts/enrich-catalog.mjs",
     "sync-catalog": "node scripts/sync-catalog.mjs",
+    "check-enrichment": "node scripts/check-enrichment.mjs",
     "build-search-index": "node scripts/build-search-index.mjs",
     "dev": "astro dev",
     "build": "astro build",

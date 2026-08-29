@@ -66,7 +66,6 @@ async function searchTMDB(query, year) {
   const res = await fetch(url);
   if (!res.ok) {
     if (res.status === 429) {
-      // Rate limit: esperar 1s y reintentar
       await sleep(1000);
       return searchTMDB(query, year);
     }
@@ -97,26 +96,23 @@ function extractData(tmdbItem, details) {
     : '';
   const description = details.overview || '';
   const rating = details.vote_average || 0;
-  // Cast: primeros 5 actores
   const cast = (details.credits?.cast || [])
     .slice(0, 5)
     .map((actor) => actor.name);
-  // Trailers: vídeos de tipo 'Trailer' de YouTube
   const trailers = (details.videos?.results || [])
     .filter((v) => v.site === 'YouTube' && v.type === 'Trailer')
     .map((v) => v.key);
   return { poster, description, rating, cast, trailers };
 }
 
-// Procesar un ítem del catálogo
+// Procesar un ítem del catálogo (solo si no está enriquecido)
 async function enrichItem(item) {
-  // Si ya está enriquecido, saltar
+  // Si ya está enriquecido (true), no hacer nada
   if (item.enriched === true) {
     return { changed: false };
   }
 
   const { name, enName, year } = item;
-  // Intentar primero con el nombre en inglés, luego con el nombre en español
   const queries = [];
   if (enName && enName.trim()) queries.push(enName);
   if (name && name.trim()) queries.push(name);
@@ -128,7 +124,6 @@ async function enrichItem(item) {
 
   for (const q of queries) {
     const results = await searchTMDB(q, year);
-    // Buscar coincidencia de año exacta (si existe) para mayor precisión
     const exactYearMatch = results.find(
       (r) => r.release_date && r.release_date.startsWith(String(year))
     );
@@ -141,7 +136,6 @@ async function enrichItem(item) {
         found = true;
         break;
       } catch {
-        // Si falla, probar con la siguiente query
         continue;
       }
     }
@@ -149,15 +143,12 @@ async function enrichItem(item) {
 
   if (!found) {
     console.log(`[enrich] No encontrado: ${name} (${enName})`);
-    // Marcar como procesado pero sin datos para no repetir
+    // Marcar como procesado (aunque sin datos) para no repetir
     item.enriched = true;
     return { changed: true };
   }
 
-  const { poster, description, rating, cast, trailers } = extractData(
-    null,
-    details
-  );
+  const { poster, description, rating, cast, trailers } = extractData(null, details);
 
   let changed = false;
   if (poster && poster !== item.imageUrl) {
@@ -196,16 +187,17 @@ async function enrichItem(item) {
 async function main() {
   const catalog = readCatalog();
   const items = catalog.items || [];
+
+  // Filtrar solo los ítems que no están enriquecidos
+  const pendingItems = items.filter(item => item.enriched !== true);
+  console.log(`[dahem] Total: ${items.length} ítems, pendientes: ${pendingItems.length}`);
+
   let totalChanged = 0;
-
-  console.log(`[dahem] Iniciando enriquecimiento de ${items.length} ítems…`);
-
-  // Procesar en lotes para guardar periódicamente (cada 20 cambios)
   let batchSize = 20;
   let changedInBatch = 0;
 
-  for (let i = 0; i < items.length; i++) {
-    const item = items[i];
+  for (let i = 0; i < pendingItems.length; i++) {
+    const item = pendingItems[i];
     try {
       const result = await enrichItem(item);
       if (result.changed) {
@@ -214,25 +206,22 @@ async function main() {
       }
     } catch (err) {
       console.error(`[enrich] Error al procesar ${item.code}:`, err.message);
-      // Marcamos como enriched para no repetir en futuras ejecuciones (pero guardamos el error)
+      // Si falla, lo marcamos como enriched para no repetir
       if (!item.enriched) {
         item.enriched = true;
         changedInBatch++;
       }
     }
 
-    // Guardar cada lote
     if (changedInBatch >= batchSize) {
       saveCatalog(catalog);
-      console.log(`[dahem] Progreso guardado (${i + 1}/${items.length})`);
+      console.log(`[dahem] Progreso guardado (${i + 1}/${pendingItems.length})`);
       changedInBatch = 0;
     }
 
-    // Respetar rate limit: 250ms entre peticiones
     await sleep(250);
   }
 
-  // Guardar cambios finales
   saveCatalog(catalog);
   console.log(`[dahem] Enriquecimiento completado. ${totalChanged} ítems actualizados.`);
 }
