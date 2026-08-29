@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 // sync-catalog.mjs
-// Lee todos los archivos .xlsx en la carpeta dataset/ y extrae cada ítem
-// según el formato: P105_Magical Girl_(Magical Girl)_[2014].mp4_(Drama)_(Thriller)_(Crimen)_[España]
-// Genera src/data/catalog.json
+// Lee todos los archivos .xlsx en dataset/ y extrae cada ítem.
+// Genera src/data/catalog.json con UUIDs, año null si falta, y datos normalizados.
 
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { resolve, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { randomUUID } from 'node:crypto';
 import XLSX from 'xlsx';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
@@ -19,128 +19,239 @@ const genresSet = new Set();
 const regionsSet = new Set();
 const languagesSet = new Set();
 
-// Mapa de ítems por código
+// Mapa de ítems por código (para evitar duplicados exactos)
 const itemsMap = new Map();
 
-// --- Función de parsing mejorada ---
+// Normalización de regiones
+const regionMap = {
+  'Cánada': 'Canadá',
+  'Republica Dominicana': 'República Dominicana',
+  'Netherlands': 'Países Bajos',
+  'South Africa': 'Sudáfrica',
+  'Russia': 'Rusia',
+  'EU': 'EU',
+  'USA': 'USA',
+  'Reino Unido': 'Reino Unido',
+  'España': 'España',
+  'Alemania': 'Alemania',
+  'Francia': 'Francia',
+  'Irlanda': 'Irlanda',
+  'Mexico': 'México',
+  'Argentina': 'Argentina',
+  'Uruguay': 'Uruguay',
+  'Australia': 'Australia',
+  'Nueva Zelanda': 'Nueva Zelanda',
+  'Suecia': 'Suecia',
+  'Tailandia': 'Tailandia',
+  'Estonia': 'Estonia',
+  'Desconocido': 'Desconocido',
+  'Turquia': 'Turquía',
+  'South Korea': 'Corea del Sur',
+};
+
+// Normalización de géneros
+const genreMap = {
+  'Fantacía': 'Fantasía',
+  'Animados': 'Animado',
+  'Futurista': 'Ciencia Ficción',
+  'Desastres': 'Desastres',
+  'Intriga': 'Intriga',
+  'Suspenso': 'Suspenso',
+  'Terror': 'Terror',
+  'Horror': 'Horror',
+  'Misterio': 'Misterio',
+  'Thriller': 'Thriller',
+  'Comedia': 'Comedia',
+  'Drama': 'Drama',
+  'Acción': 'Acción',
+  'Aventura': 'Aventura',
+  'Ciencia Ficción': 'Ciencia Ficción',
+  'Romance': 'Romance',
+  'Guerra': 'Guerra',
+  'Documental': 'Documental',
+  'Animado': 'Animado',
+  'Crimen': 'Crimen',
+  'Policiaco': 'Policiaco',
+  'Bélica': 'Bélica',
+  'Mafia': 'Mafia',
+  'Aliens': 'Aliens',
+  'Animales': 'Animales',
+  'Espionaje': 'Espionaje',
+  'Terrorismo': 'Terrorismo',
+  'Zombies': 'Zombies',
+  'Vampiros': 'Vampiros',
+  'Samurai': 'Samurai',
+  'Música': 'Música',
+  'Sexualidad': 'Sexualidad',
+  'Pornografía': 'Pornografía',
+  'Hechos Reales': 'Hechos Reales',
+  'Bibliografica': 'Biográfico',
+  'Deporte': 'Deporte',
+  'Wester': 'Western',
+  'Superheroes': 'Superhéroes',
+  'Secuestro': 'Secuestro',
+  'Drogas': 'Drogas',
+};
+
+function normalizeRegion(region) {
+  if (!region) return 'Desconocido';
+  const trimmed = region.trim();
+  return regionMap[trimmed] || trimmed;
+}
+
+function normalizeGenre(genre) {
+  if (!genre) return 'Sin género';
+  const trimmed = genre.trim();
+  return genreMap[trimmed] || trimmed;
+}
 
 function parseItem(text) {
   if (!text || typeof text !== 'string') return null;
   text = text.trim();
   if (!text) return null;
 
-  // Dividir por '_' y eliminar partes vacías
-  const parts = text.split('_').filter(p => p.length > 0);
-  if (parts.length < 5) {
-    // No tiene la estructura mínima esperada
-    return null;
-  }
-
-  let idx = 0;
-
-  // 1. Código: debe ser P o S seguido de número
-  const codePart = parts[idx++];
-  const codeMatch = codePart.match(/^([PS])(\d+)$/);
+  // Extraer código (P1, S1, etc.)
+  const codeMatch = text.match(/^([PS]\d+)_/);
   if (!codeMatch) return null;
-  const prefix = codeMatch[1];
-  const id = parseInt(codeMatch[2], 10);
+  const code = codeMatch[1];
+  const prefix = code[0];
   const type = prefix === 'P' ? 'movie' : 'series';
-  const code = `${prefix}${id}`;
+  let rest = text.slice(codeMatch[0].length);
 
-  // 2. Nombre en español
-  const spanishName = parts[idx++];
-
-  // 3. Nombre en inglés (entre paréntesis)
-  let engNamePart = parts[idx++];
-  // Quitar paréntesis
-  let englishName = engNamePart.replace(/^\(|\)$/g, '');
-
-  // 4. Año (entre corchetes) - puede tener .mp4 pegado
-  let yearPart = parts[idx++];
-  // Si contiene .mp4, lo quitamos
-  yearPart = yearPart.replace(/\.mp4$/, '');
-  // Extraer año entre corchetes
-  const yearMatch = yearPart.match(/\[(\d{4})\]/);
-  let year = yearMatch ? parseInt(yearMatch[1], 10) : 0;
-
-  // 5. Géneros: mientras la parte empiece con '(' y termine con ')'
-  const genres = [];
-  while (idx < parts.length && parts[idx].startsWith('(') && parts[idx].endsWith(')')) {
-    const genre = parts[idx].replace(/^\(|\)$/g, '');
-    if (genre) genres.push(genre);
-    idx++;
-  }
-
-  // 6. País: debe ser el último elemento y debe empezar con '['
-  let region = '';
-  if (idx < parts.length) {
-    const lastPart = parts[idx];
-    // Si el último elemento empieza con '[' y termina con ']'
-    if (lastPart.startsWith('[') && lastPart.endsWith(']')) {
-      region = lastPart.replace(/^\[|\]$/g, '');
-    } else {
-      // intentar extraer corchetes de la parte restante
-      const regionMatch = lastPart.match(/\[([^\]]+)\]$/);
-      if (regionMatch) region = regionMatch[1];
+  // Extraer año: [2023] o (2023) o 2023 suelto
+  let year = null;
+  const yearMatch = rest.match(/\[(\d{4})\]/);
+  if (yearMatch) {
+    year = parseInt(yearMatch[1], 10);
+    rest = rest.replace(/\[\d{4}\]/, '');
+  } else {
+    // Buscar año sin corchetes
+    const altYear = rest.match(/\b(19|20)\d{2}\b/);
+    if (altYear) {
+      year = parseInt(altYear[0], 10);
+      rest = rest.replace(/\b(19|20)\d{2}\b/, '');
     }
   }
 
-  // Si no se encontró región, usamos 'Desconocido'
-  if (!region) region = 'Desconocido';
+  // Extraer región: último corchete que quede
+  let region = 'Desconocido';
+  const regionMatch = rest.match(/\[([^\]]+)\]$/);
+  if (regionMatch) {
+    region = regionMatch[1];
+    rest = rest.replace(/\[[^\]]+\]$/, '');
+  } else {
+    // intentar encontrar cualquier corchete
+    const anyRegion = rest.match(/\[([^\]]+)\]/);
+    if (anyRegion) {
+      region = anyRegion[1];
+      rest = rest.replace(/\[[^\]]+\]/, '');
+    }
+  }
 
-  // 7. Deducir idioma a partir de la región
+  // Extraer todos los paréntesis (potencial nombre inglés y géneros)
+  const parens = [];
+  let temp = rest;
+  let match;
+  while ((match = temp.match(/\(([^)]*)\)/)) !== null) {
+    parens.push(match[1]);
+    temp = temp.replace(/\([^)]*\)/, '');
+  }
+
+  // El primer paréntesis suele ser el nombre en inglés (si existe)
+  let englishName = '';
+  let genres = [];
+  if (parens.length > 0) {
+    englishName = parens.shift().trim();
+    // Los restantes son géneros
+    genres = parens.map(g => g.trim()).filter(g => g);
+  }
+
+  // Limpiar temp de paréntesis y corchetes para obtener nombre español
+  let spanishName = temp.replace(/\([^)]*\)/g, '').replace(/\[[^\]]*\]/g, '').trim();
+  // Si el nombre español está vacío, intentar obtenerlo de la parte antes del primer paréntesis
+  if (!spanishName) {
+    const beforeParen = rest.match(/^([^(]*)/);
+    if (beforeParen) spanishName = beforeParen[1].trim();
+  }
+
+  // Limpiar extensiones de archivo
+  spanishName = spanishName.replace(/\.(mp4|ts|mkv|avi|mov)$/, '').trim();
+
+  // Si no hay géneros, usar 'Sin género'
+  const mainGenre = genres.length > 0 ? normalizeGenre(genres[0]) : 'Sin género';
+
+  // Normalizar región
+  const normalizedRegion = normalizeRegion(region);
+
+  // Deducir idioma (mejorable)
   let language = 'Español';
-  if (region && (region === 'EU' || region === 'EE.UU.' || region === 'Reino Unido' || region === 'Inglaterra')) {
+  if (['EU', 'USA', 'Reino Unido', 'Irlanda', 'Australia', 'Nueva Zelanda', 'Canadá', 'Sudáfrica'].includes(normalizedRegion)) {
     language = 'Inglés';
-  } else if (region && region === 'Japón') {
-    language = 'Japonés';
-  } else if (region && region === 'Corea del Sur') {
-    language = 'Coreano';
-  } else if (region && region === 'España') {
+  } else if (normalizedRegion === 'Suecia') {
+    language = 'Sueco';
+  } else if (normalizedRegion === 'Francia') {
+    language = 'Francés';
+  } else if (normalizedRegion === 'Alemania') {
+    language = 'Alemán';
+  } else if (normalizedRegion === 'Tailandia') {
+    language = 'Tailandés';
+  } else if (normalizedRegion === 'Estonia') {
+    language = 'Estonio';
+  } else if (normalizedRegion === 'Rusia') {
+    language = 'Ruso';
+  } else if (normalizedRegion === 'México' || normalizedRegion === 'Argentina' || normalizedRegion === 'Uruguay' || normalizedRegion === 'España') {
+    language = 'Español';
+  } else {
     language = 'Español';
   }
 
-  // 8. Determinar género principal (el primero)
-  const mainGenre = genres.length > 0 ? genres[0] : 'Sin género';
+  // Extraer información de temporadas (solo para series)
+  let seasonInfo = null;
+  if (type === 'series') {
+    const seasonMatch = rest.match(/(\d+)\s*Temp\.?\s*(\d+)\s*Cap\.?/i);
+    if (seasonMatch) {
+      seasonInfo = { seasons: parseInt(seasonMatch[1], 10), episodes: parseInt(seasonMatch[2], 10) };
+    }
+  }
 
-  // 9. Construir el item
+  const normalizeName = (name) => {
+    if(!name) return '';
+    return name.split("_")[0]
+  }
+
+  // Construir el objeto
   const item = {
-    id,
+    id: randomUUID(),
     type,
-    name: spanishName || '',
+    name: normalizeName(spanishName) || '',
     enName: englishName || '',
-    year: year || 0,
+    year: year !== null ? year : null,
     rating: 0,
     sizeGb: 0,
     isPremiere: false,
     genre: mainGenre,
-    region: region,
+    region: normalizedRegion,
     language: language,
     description: '',
     imageUrl: '',
     cast: [],
     trailers: [],
     seasons: [],
+    seasonCount: seasonInfo?.seasons || 1,
+    episodeCount: seasonInfo?.episodes || 1,
     code: code,
   };
 
-  // Si es serie, podemos crear temporadas genéricas (más adelante se pueden enriquecer)
-  // No tenemos información de capítulos, así que dejamos seasons vacío por ahora.
-  // (Pero si en el futuro añadimos más datos, se puede modificar)
-
+  // Añadir a conjuntos (se hará fuera)
   return item;
 }
 
-// --- Función principal ---
-
 function syncCatalogFromExcel() {
-  // Comprobar que existe la carpeta dataset
   let files = [];
   try {
     files = readdirSync(DATASET_DIR).filter(f => f.endsWith('.xlsx') || f.endsWith('.xls'));
   } catch {
     console.warn('[dahem] No se encontró la carpeta dataset/. Se usará el catálogo sample.');
-    // Copiar sample si existe
     try {
       const sample = readFileSync(resolve(ROOT, 'src/data/catalog.sample.json'), 'utf8');
       writeFileSync(OUTPUT, sample);
@@ -176,13 +287,10 @@ function syncCatalogFromExcel() {
       continue;
     }
 
-    // Recorrer todas las hojas
     for (const sheetName of workbook.SheetNames) {
       const worksheet = workbook.Sheets[sheetName];
-      // Convertir a array de arrays (todas las celdas)
       const rows = XLSX.utils.sheet_to_json(worksheet, { header: 1, defval: '' });
 
-      // Recorrer cada fila y columna
       for (let rowIdx = 0; rowIdx < rows.length; rowIdx++) {
         const row = rows[rowIdx];
         for (let colIdx = 0; colIdx < row.length; colIdx++) {
@@ -197,10 +305,10 @@ function syncCatalogFromExcel() {
             if (!itemsMap.has(code)) {
               itemsMap.set(code, item);
               totalItems++;
-              // Añadir a conjuntos
-              if (item.genre) genresSet.add(item.genre);
-              if (item.region) regionsSet.add(item.region);
-              if (item.language) languagesSet.add(item.language);
+              // Añadir a conjuntos (para listas globales)
+              genresSet.add(item.genre);
+              regionsSet.add(item.region);
+              languagesSet.add(item.language);
             }
           }
         }
@@ -208,7 +316,6 @@ function syncCatalogFromExcel() {
     }
   }
 
-  // Si no se extrajo nada, usar sample
   if (totalItems === 0) {
     console.warn('[dahem] No se extrajo ningún ítem de los Excel. Se usará sample.');
     try {
@@ -222,7 +329,6 @@ function syncCatalogFromExcel() {
 
   const filterOnlyText = (value) => isNaN(value);
 
-  // Construir catálogo final
   const catalog = {
     version: 1,
     genres: Array.from(genresSet).filter(filterOnlyText).sort(),
