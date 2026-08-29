@@ -107,7 +107,8 @@ function parseItem(text) {
   const item = {
     id,
     type,
-    name: spanishName || 'Sin título',
+    name: spanishName || '',
+    enName: englishName || '',
     year: year || 0,
     rating: 0,
     sizeGb: 0,
