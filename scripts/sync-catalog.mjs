@@ -2,6 +2,7 @@
 // sync-catalog.mjs
 // Lee todos los archivos .xlsx en dataset/ y extrae cada ítem.
 // Genera src/data/catalog.json con UUIDs, año null si falta, y datos normalizados.
+// Ahora: carga el catálogo existente para evitar duplicados por código.
 
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { resolve, join } from 'node:path';
@@ -19,7 +20,7 @@ const genresSet = new Set();
 const regionsSet = new Set();
 const languagesSet = new Set();
 
-// Mapa de ítems por código (para evitar duplicados exactos)
+// Mapa de ítems por código (para evitar duplicados)
 const itemsMap = new Map();
 
 // Normalización de regiones
@@ -247,6 +248,29 @@ function parseItem(text) {
 }
 
 function syncCatalogFromExcel() {
+  // 1. Cargar el catálogo existente (para evitar duplicados)
+  let existingItems = [];
+  try {
+    const existingRaw = readFileSync(OUTPUT, 'utf8');
+    const existing = JSON.parse(existingRaw);
+    if (existing && Array.isArray(existing.items)) {
+      existingItems = existing.items;
+    }
+  } catch (_) {
+    // No existe o no es válido, se empezará vacío
+  }
+
+  // Poblar el mapa y conjuntos con los ítems existentes
+  for (const item of existingItems) {
+    if (item.code) {
+      itemsMap.set(item.code, item);
+      if (item.genre) genresSet.add(item.genre);
+      if (item.region) regionsSet.add(item.region);
+      if (item.language) languagesSet.add(item.language);
+    }
+  }
+
+  // 2. Intentar leer archivos de dataset
   let files = [];
   try {
     files = readdirSync(DATASET_DIR).filter(f => f.endsWith('.xlsx') || f.endsWith('.xls'));
@@ -275,6 +299,7 @@ function syncCatalogFromExcel() {
   }
 
   let totalItems = 0;
+  let nuevos = 0;
 
   for (const file of files) {
     const filePath = join(DATASET_DIR, file);
@@ -300,11 +325,12 @@ function syncCatalogFromExcel() {
           const text = String(cell).trim();
           const item = parseItem(text);
           if (item) {
-            // Evitar duplicados por código
             const code = item.code;
+            // Si el código ya existe (del catálogo previo o de esta ejecución), se omite
             if (!itemsMap.has(code)) {
               itemsMap.set(code, item);
               totalItems++;
+              nuevos++;
               // Añadir a conjuntos (para listas globales)
               genresSet.add(item.genre);
               regionsSet.add(item.region);
@@ -316,7 +342,8 @@ function syncCatalogFromExcel() {
     }
   }
 
-  if (totalItems === 0) {
+  if (totalItems === 0 && itemsMap.size === 0) {
+    // No se extrajo ningún ítem nuevo ni existía catálogo previo
     console.warn('[dahem] No se extrajo ningún ítem de los Excel. Se usará sample.');
     try {
       const sample = readFileSync(resolve(ROOT, 'src/data/catalog.sample.json'), 'utf8');
@@ -338,7 +365,7 @@ function syncCatalogFromExcel() {
   };
 
   writeFileSync(OUTPUT, JSON.stringify(catalog, null, 2));
-  console.log(`[dahem] Catálogo sincronizado: ${totalItems} ítems → ${OUTPUT}`);
+  console.log(`[dahem] Catálogo sincronizado: ${itemsMap.size} ítems totales (${nuevos} nuevos) → ${OUTPUT}`);
 }
 
 syncCatalogFromExcel();
