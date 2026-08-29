@@ -3,6 +3,7 @@
 // Lee todos los archivos .xlsx en dataset/ y extrae cada ítem.
 // Genera src/data/catalog.json con UUIDs, año null si falta, y datos normalizados.
 // Ahora: carga el catálogo existente para evitar duplicados por código.
+// Nota: Ya no restaura desde catalog.sample.json.
 
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { resolve, join } from 'node:path';
@@ -275,26 +276,12 @@ function syncCatalogFromExcel() {
   try {
     files = readdirSync(DATASET_DIR).filter(f => f.endsWith('.xlsx') || f.endsWith('.xls'));
   } catch {
-    console.warn('[dahem] No se encontró la carpeta dataset/. Se usará el catálogo sample.');
-    try {
-      const sample = readFileSync(resolve(ROOT, 'src/data/catalog.sample.json'), 'utf8');
-      writeFileSync(OUTPUT, sample);
-      console.log('[dahem] catalog.json restaurado desde sample.');
-    } catch {
-      console.error('[dahem] No se pudo restaurar catalog.sample.json.');
-    }
+    console.warn('[dahem] No se encontró la carpeta dataset/. No se modifica el catálogo.');
     return;
   }
 
   if (files.length === 0) {
-    console.warn('[dahem] No hay archivos .xlsx en dataset/. Se usará sample.');
-    try {
-      const sample = readFileSync(resolve(ROOT, 'src/data/catalog.sample.json'), 'utf8');
-      writeFileSync(OUTPUT, sample);
-      console.log('[dahem] catalog.json restaurado desde sample.');
-    } catch {
-      console.error('[dahem] No se pudo restaurar catalog.sample.json.');
-    }
+    console.warn('[dahem] No hay archivos .xlsx en dataset/. No se modifica el catálogo.');
     return;
   }
 
@@ -343,14 +330,7 @@ function syncCatalogFromExcel() {
   }
 
   if (totalItems === 0 && itemsMap.size === 0) {
-    // No se extrajo ningún ítem nuevo ni existía catálogo previo
-    console.warn('[dahem] No se extrajo ningún ítem de los Excel. Se usará sample.');
-    try {
-      const sample = readFileSync(resolve(ROOT, 'src/data/catalog.sample.json'), 'utf8');
-      writeFileSync(OUTPUT, sample);
-    } catch {
-      console.error('[dahem] No se pudo restaurar catalog.sample.json.');
-    }
+    console.warn('[dahem] No se extrajo ningún ítem de los Excel. No se modifica el catálogo.');
     return;
   }
 
