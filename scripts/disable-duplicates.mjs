@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 // scripts/disable-duplicates.mjs
 // Encuentra duplicados en el catálogo (mismo tipo, año y nombre similar).
-// Para cada par, desactiva (isActive: false) el ítem más viejo según año y código.
-// Los ítems ya inactivos no se consideran en la búsqueda.
+// Para cada par, desactiva (isActive: false) el ítem con el número de código más grande
+// (el que tiene la letra P/S seguida de un número mayor).
 
 import { readFileSync, writeFileSync } from 'fs';
 import { resolve, dirname } from 'path';
@@ -39,26 +39,22 @@ function similarity(a, b) {
 }
 
 /**
- * Extrae el número de un código (P123 → 123, S45 → 45)
+ * Extrae el número de un código base (P123 → 123, S45 → 45).
+ * Solo funciona con códigos sin guiones (nivel audiovisual).
  */
 function codeNumber(code) {
-  const match = code.match(/^[PS](\d+)/);
+  const match = code.match(/^[PS](\d+)$/);
   return match ? parseInt(match[1], 10) : 0;
 }
 
 /**
- * Determina cuál de dos ítems es más viejo.
- * Prioriza el año menor; si son iguales, el código numérico menor.
- * Devuelve el índice del más viejo (0 o 1) dentro del par [a, b].
+ * Determina cuál de dos ítems tiene el número de código mayor.
+ * Devuelve el índice del de mayor número (0 o 1) dentro del par [a, b].
  */
-function getOlderIndex(a, b) {
-  if (a.year !== b.year) {
-    return a.year < b.year ? 0 : 1;
-  }
-  // Mismo año: comparar código numérico
+function getNewerIndex(a, b) {
   const numA = codeNumber(a.code || a.id);
   const numB = codeNumber(b.code || b.id);
-  return numA < numB ? 0 : 1;
+  return numA > numB ? 0 : 1; // mayor número → se desactiva
 }
 
 function main() {
@@ -69,11 +65,16 @@ function main() {
     return;
   }
 
-  // Solo considerar ítems activos (isActive no es false)
-  const activeItems = items.filter(item => item.isActive !== false);
-  console.log(`📦 Total de ítems: ${items.length}, activos: ${activeItems.length}`);
+  // Solo considerar ítems activos (isActive !== false) y que sean de nivel audiovisual
+  // (código sin guiones, p.ej. P123 o S456)
+  const activeItems = items.filter(item => {
+    if (item.isActive === false) return false;
+    const code = item.code || item.id;
+    return /^[PS]\d+$/.test(code); // solo códigos base
+  });
 
-  const pairs = [];
+  console.log(`📦 Total de ítems: ${items.length}, audiovisuales activos: ${activeItems.length}`);
+
   const toDisable = new Set(); // guardamos códigos de los que desactivaremos
 
   for (let i = 0; i < activeItems.length; i++) {
@@ -87,14 +88,13 @@ function main() {
 
       const sim = similarity(a.name, b.name);
       if (sim >= SIMILARITY_THRESHOLD) {
-        pairs.push({ i, j, a, b, sim });
-        // Determinar cuál es más viejo
-        const olderIdx = getOlderIndex(a, b);
-        const older = olderIdx === 0 ? a : b;
-        toDisable.add(older.code || older.id);
+        // Determinar cuál tiene mayor número (el más nuevo)
+        const newerIdx = getNewerIndex(a, b);
+        const newer = newerIdx === 0 ? a : b;
+        toDisable.add(newer.code || newer.id);
         console.log(
           `🔍 Par: ${a.code || a.id} (“${a.name}”) vs ${b.code || b.id} (“${b.name}”) — ` +
-          `similitud: ${sim.toFixed(3)} — Se desactivará ${older.code || older.id} (más viejo)`
+          `similitud: ${sim.toFixed(3)} — Se desactivará ${newer.code || newer.id} (número mayor)`
         );
       }
     }
@@ -117,7 +117,7 @@ function main() {
 
   // Guardar el catálogo
   writeFileSync(CATALOG_PATH, JSON.stringify(catalog, null, 2));
-  console.log(`\n✅ Desactivados ${disabledCount} ítems duplicados (los más viejos).`);
+  console.log(`\n✅ Desactivados ${disabledCount} ítems duplicados (los de número de código mayor).`);
   console.log(`💾 Catálogo actualizado: ${CATALOG_PATH}`);
 }
 

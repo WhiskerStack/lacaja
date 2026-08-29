@@ -3241,7 +3241,8 @@
       "episodeCount": 16,
       "code": "S53",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "isActive": false
     },
     {
       "id": "3c3c1f8d-7d7e-4111-9ef2-21daa39d159a",
@@ -4784,7 +4785,8 @@
       "episodeCount": 6,
       "code": "S78",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "isActive": false
     },
     {
       "id": "b640f0e0-940f-406d-826f-6b780272fa81",
@@ -4846,7 +4848,8 @@
       "episodeCount": 8,
       "code": "S79",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "isActive": false
     },
     {
       "id": "359313ad-91be-4b43-8cf3-f634b0575dd0",
@@ -4907,7 +4910,8 @@
       "episodeCount": 8,
       "code": "S80",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "isActive": false
     },
     {
       "id": "922f65e4-0528-4744-8cde-1136f9be1260",
@@ -4973,7 +4977,8 @@
       "episodeCount": 8,
       "code": "S81",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "isActive": false
     },
     {
       "id": "f5ce3c92-c7af-4585-bf56-49eea8d5129b",
@@ -10239,7 +10244,8 @@
       "episodeCount": 1,
       "code": "P222",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "isActive": false
     },
     {
       "id": "6df8ff47-c516-4985-95b0-3d5fe42af699",
@@ -10462,7 +10468,8 @@
       "episodeCount": 1,
       "code": "P229",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "isActive": false
     },
     {
       "id": "4aa2ece7-7ebe-49df-bce4-74d0cdef32a3",
@@ -10711,7 +10718,8 @@
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P237",
-      "enriched": true
+      "enriched": true,
+      "isActive": false
     },
     {
       "id": "af99b225-d510-483f-98e6-4e8a04f5bd32",
@@ -11934,7 +11942,8 @@
       "episodeCount": 1,
       "code": "P276",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "isActive": false
     },
     {
       "id": "ebea5df0-5035-4955-86d3-75671ead2aec",
@@ -11999,7 +12008,8 @@
       "episodeCount": 1,
       "code": "P278",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "isActive": false
     },
     {
       "id": "6097884d-2d3d-4913-84f0-eee5ab13c0ab",
@@ -12132,7 +12142,8 @@
       "episodeCount": 1,
       "code": "P282",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "isActive": false
     },
     {
       "id": "7011289e-f1b4-41a4-82b0-03b876683eff",
@@ -13253,7 +13264,8 @@
       "episodeCount": 1,
       "code": "P318",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "isActive": false
     },
     {
       "id": "12b7e53f-9d72-4d7c-9861-acf169ad27d2",
@@ -13645,7 +13657,8 @@
       "episodeCount": 1,
       "code": "P331",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "isActive": false
     },
     {
       "id": "61406d82-9526-4b2c-829e-8f8e46ad22de",
@@ -13836,7 +13849,8 @@
       "episodeCount": 1,
       "code": "P337",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "isActive": false
     },
     {
       "id": "e9af3c76-f31d-44ac-b45f-0399bf8dfd97",
@@ -14024,7 +14038,8 @@
       "episodeCount": 1,
       "code": "P343",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "isActive": false
     },
     {
       "id": "a135740d-d20b-4e1f-bf1c-27c47d44347b",
@@ -14941,7 +14956,8 @@
       "episodeCount": 1,
       "code": "P372",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "isActive": false
     },
     {
       "id": "2d5db9ed-001e-400a-9dc7-30b20c044157",
@@ -15001,7 +15017,8 @@
       "episodeCount": 1,
       "code": "P374",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "isActive": false
     },
     {
       "id": "284ea6b6-0610-455a-b70b-2aecc32a6aa3",
@@ -15672,7 +15689,8 @@
       "episodeCount": 1,
       "code": "P395",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "isActive": false
     },
     {
       "id": "92ab4168-b6ee-4be5-be13-119fb4ad5a99",
@@ -17769,7 +17787,8 @@
       "episodeCount": 1,
       "code": "P462",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "isActive": false
     },
     {
       "id": "8afc4b5b-d07a-4bf9-a1c2-ca62f2966be9",
@@ -17863,7 +17882,8 @@
       "episodeCount": 1,
       "code": "P465",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "isActive": false
     },
     {
       "id": "d2a9a809-d7cb-4349-b376-6f3eedf627d3",
@@ -18565,7 +18585,8 @@
       "episodeCount": 1,
       "code": "P488",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "isActive": false
     },
     {
       "id": "48a39134-d829-4ca5-a648-e43635de71a4",
