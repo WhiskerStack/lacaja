@@ -1,4 +1,4 @@
-import { Clapperboard, ShoppingCart, Share2 } from 'lucide-preact';
+import { Clapperboard, Bookmark, Share2 } from 'lucide-preact';
 import { openDrawer } from '../../features/my-list/store';
 import { useList } from '../../features/my-list/ui/useList';
 import { pushToast } from '../stores/toast';
@@ -84,7 +84,7 @@ export default function Navbar() {
           onClick={openDrawer}
         >
           <div class="indicator">
-            <ShoppingCart size={20} aria-hidden />
+            <Bookmark size={20} aria-hidden />
             {count !== null && count > 0 && (
               <span class="badge badge-primary badge-sm indicator-item">{count}</span>
             )}

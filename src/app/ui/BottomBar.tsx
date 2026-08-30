@@ -1,6 +1,6 @@
 // Botonera inferior, solo móvil (funcional §5.2). En desktop se oculta (md:hidden).
 import { useStore } from '@nanostores/preact';
-import { Home, Library, Search, ShoppingCart } from 'lucide-preact';
+import { Home, Library, Search, Bookmark } from 'lucide-preact';
 import { openDrawer } from '../../features/my-list/store';
 import { useList } from '../../features/my-list/ui/useList';
 import { $list } from '../../features/my-list/store';
@@ -26,7 +26,7 @@ export default function BottomBar() {
       </a>
       <button type="button" aria-label="Mi lista" onClick={openDrawer}>
         <div class="indicator">
-          <ShoppingCart size={20} aria-hidden />
+          <Bookmark size={20} aria-hidden />
           {count !== null && count > 0 && (
             <span class="badge badge-primary badge-xs indicator-item">{count}</span>
           )}
