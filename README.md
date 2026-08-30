@@ -1,12 +1,9 @@
-# @dahem/landing
-
-Landing público de **Dahem**: catálogo audiovisual de consulta. Web estática (Astro SSG) con
+Landing público de **La Caja**: catálogo audiovisual de consulta. Web estática (Astro SSG) con
 islas interactivas en Preact. **No vende ni reproduce contenido**: muestra el inventario, deja
 armar una lista y enviarla al negocio por cuatro vías.
 
-Forma parte del monorepo pnpm de Dahem y reutiliza las reglas de negocio del paquete
-compartido `@dahem/domain` (clases `Audiovisual`, `EpisodicContainer`, `Season`, `Episode`,
-`List`, `ListItem`, `User`, códigos, `DEFAULT_RATE`).
+El proyecto es autónomo (no depende de un monorepo externo) y utiliza clases de dominio propias
+(`src/domains/`) para las reglas de negocio.
 
 ## Stack
 
@@ -16,27 +13,36 @@ Astro 5 (SSG puro) · Preact + `@preact/signals` · nanostores (`@nanostores/pre
 
 ## Arquitectura
 
-Vertical slicing + screaming architecture (ver `Docs/documentacion_tecnica_sobre_arquitectura_del_landing.md`).
+Vertical slicing + screaming architecture. Cada *feature* contiene su propia lógica, UI y tipos,
+y se comunica a través de servicios inyectados en el contenedor raíz (`src/app/container.ts`).
 
 ```
 src/
-  features/
-    catalog/    { domain via @dahem/domain, ui/, logic/, types.ts }   Home, Biblioteca, detalle
-    search/     { ui/, logic/SearchService, store.ts, types.ts }       buscador 3-state loading|local|api
-    my-list/    { ui/, logic/ListService, store.ts, types.ts }         drawer, totales, Dexie
-    submission/ { domain/Submission, ui/, logic/, types.ts }           4 vías de envío
-    account/    { ui/, logic/, store.ts, types.ts }                    login/registro modal, sesión
   app/
-    container.ts   composition root (cablea servicios)
-    db.ts          Dexie (listItems + meta)
-    stores/        session, network, toast
-    ui/            Navbar, BottomBar, NetworkBanner, ToastHost
-  shared/          format (CUP/GB), urls, env — utilidades sin dominio
+    container.ts   # composition root (servicios)
+    db.ts          # Dexie (listItems + meta)
+    stores/        # toasts, etc.
+    ui/            # Navbar, BottomBar, ToastHost
+  data/
+    catalog.json   # fuente del catálogo (generada por scripts)
+    catalog.sample.json  # muestra inicial
+  domains/         # clases de dominio puras (sin I/O ni frameworks)
+    Audiovisual.ts (en features/audiovisual/domain/), Episode, Season, List, ListItem, PriceRate, Submission, etc.
+  features/
+    audiovisual/   # dominio Audiovisual (entidad raíz)
+    catalog/       # lógica de build (getStaticPaths, filtros, precios) y UI (detalle, carrusel, grid)
+    common/        # tipos compartidos y helpers (códigos)
+    my-list/       # lógica de lista (Dexie, store, drawer) y UI (Drawer, useList)
+    search/        # búsqueda con MiniSearch (modo local/loading) y UI (SearchView)
+    submission/    # envío de lista (4 vías: WhatsApp, TXT, portapapeles, compartir) y UI (modal)
   layouts/Base.astro
-  pages/           routing delgado (solo importa islas de slices)
-  data/catalog.sample.json   fuente de catálogo en build-time
+  pages/           # routing (index, biblioteca, buscar, detalle /p/[id], /s/[id] y rutas de temporada/capítulo)
+  shared/          # utilidades (format, urls, env, message-from-error)
   styles/global.css
-scripts/build-search-index.mjs
+scripts/           # sincronización, enriquecimiento, índices, utilidades
+tests/
+  e2e/             # Playwright
+  unit/            # Vitest
 ```
 
 Regla de dependencias: `ui → logic → domain → shared`; `ui → store`. El dominio no importa
@@ -47,52 +53,60 @@ y se hidratan con `fromJSON`/`toJSON` en los bordes. Stores guardan DTOs, no ins
 
 | Script | Acción |
 |---|---|
-| `pnpm dev` | genera índices + `astro dev` |
-| `pnpm build` | genera índices + `astro build` (SSG en `dist/`) |
+| `pnpm sync` | ejecuta `sync-catalog`, `enrich-catalog` y `build-search-index` en serie |
+| `pnpm sync-catalog` | lee archivos `.xlsx` de `dataset/` y genera `src/data/catalog.json` (evita duplicados por código) |
+| `pnpm enrich-catalog` | enriquece el catálogo con datos de TMDB (póster, descripción, reparto, tráiler, rating) |
+| `pnpm translate-descriptions` | traduce descripciones al español usando Ollama (requiere `OLLAMA_URL` y `OLLAMA_MODEL`) |
+| `pnpm build-search-index` | genera `public/search-index.json` y `public/library-index.json` desde `catalog.json` |
+| `pnpm check-enrichment` | reporta items sin enriquecer o enriquecidos sin imagen |
+| `pnpm find-duplicates` | busca posibles duplicados por nombre, año y tipo (umbral de similitud 85%) |
+| `pnpm disable-duplicates` | desactiva los duplicados (mantiene el código más bajo) |
+| `pnpm dev` | `astro dev` (previamente genera índices si no existen) |
+| `pnpm build` | `astro build` (SSG en `dist/`) |
 | `pnpm preview` | sirve el build |
 | `pnpm test` | unitarios (Vitest) |
 | `pnpm test:e2e` | E2E (Playwright contra el build) |
 | `pnpm lint` | `astro check` |
 
-> No ejecutar `pnpm install` por slice: el lockfile del monorepo es compartido.
+> **Nota**: Los scripts de sincronización y enriquecimiento requieren variables de entorno (ver `.env.example`).
+> `TMDB_API_KEY` es obligatoria para `enrich-catalog`; `OLLAMA_URL` y `OLLAMA_MODEL` son opcionales para traducciones.
 
 ## Índices de búsqueda
 
-`scripts/build-search-index.mjs` lee `src/data/catalog.sample.json` y emite en `public/`:
+`scripts/build-search-index.mjs` lee `src/data/catalog.json` y emite en `public/`:
 
 - `search-index.json` — `{ v, items: [[code, title], …] }` (autocomplete, minúsculo).
 - `library-index.json` — `{ v, genres, regions, languages, items: [[code, title, year, type, gi, ri, li], …] }`.
 
-Formato nivel 1 (diccionarios + tuplas posicionales, especificaciones §4.4). Solo entra el item
-completo, no temporadas ni capítulos (funcional §6.4.2). El script corre en `prebuild`/`dev`/`build`.
+Formato nivel 1 (diccionarios + tuplas posicionales). Solo entra el item completo, no temporadas ni capítulos.
 La búsqueda en cliente usa MiniSearch con `processTerm` que quita acentos (NFD) y fuzzy+prefix;
-rutea por código (`P0023`, `S1122-3-10`) a prefijo exacto. Si el índice no carga (timeout 12s),
-cae a modo `api` contra `PUBLIC_API_URL/search`.
+rutea por código (`P0023`, `S1122-3-10`) a prefijo exacto.
 
 ## Variables de entorno (`.env.example`)
 
-- `PUBLIC_API_URL` — backend NestJS para fallback de búsqueda, `/pricing` y escrituras (auth, envío web, solicitudes).
-- `PUBLIC_WHATSAPP_NUMBER` — número del negocio para `wa.me`.
-- `SITE` — URL pública del sitio.
+- `PUBLIC_API_URL` — backend NestJS (actualmente no se usa; reservado para futuros endpoints).
+- `PUBLIC_WHATSAPP_NUMBER` — número del negocio para `wa.me` (formato internacional sin '+').
+- `SITE` — URL pública del sitio (usada por Astro para canonical, sitemap, etc.).
+- `TMDB_API_KEY` — clave de API de TheMovieDB (necesaria para enriquecimiento).
+- `OLLAMA_URL` (opcional) — URL de Ollama para traducción de descripciones (por defecto `http://localhost:11434/api/generate`).
+- `OLLAMA_MODEL` (opcional) — modelo de Ollama (por defecto `llama3.1:8b`).
 
-En build-time el catálogo se lee del JSON de muestra: el SSG construye standalone sin backend.
-El API solo se consulta en runtime (y degrada con gracia si no está).
+El catálogo se construye a partir de archivos Excel en `dataset/`. El SSG genera el sitio estático
+sin necesidad de backend en tiempo de construcción.
 
-## Fases de implementación
+## Fases de implementación (actual)
 
-- **F1 — MVP** (este código): páginas SSG (Home, Biblioteca, Buscar, detalles), Mi lista en Dexie,
-  4 vías de envío (WhatsApp/TXT/copiar sin cuenta; web con sesión local optimista), buscador con
-  índice local, imágenes con `astro:assets`.
-- **F2 — backend + auth**: endpoints reales NestJS (auth, Mi lista, solicitudes, envío web), webhook de rebuild.
-- **F3 — offline + PWA**: `@vite-pwa/astro` con Workbox (configurado), indicador de red (hecho),
-  fallback API de búsqueda (hecho), sincronización offline-first de Mi lista con la cuenta.
-- **F4 — optimizaciones**: hash en nombres de índices, caché de build de imágenes, medición en 3G.
+- **Catálogo**: sincronización desde Excel, enriquecimiento con TMDB, traducción de descripciones.
+- **Frontend**: SSG con rutas para películas, series, temporadas y capítulos. Búsqueda local con MiniSearch.
+- **Mi lista**: almacenamiento en Dexie (IndexedDB), drawer y badge con contador.
+- **Envío**: cuatro vías (WhatsApp, TXT, portapapeles, compartir nativo) sin necesidad de cuenta.
+- **PWA**: Service Worker con Workbox, caché de imágenes e índices, modo offline.
+- **Testing**: unitario (dominio, lógica) y E2E (smoke tests).
 
-## Notas / stubs
+## Notas
 
-- Las imágenes de muestra son URLs remotas (`picsum.photos`); `astro.config.mjs` las habilita para
-  `astro:assets`. En producción se descargan/optimizan en build (Opción A, especificaciones §7).
-- Iconos PWA en `public/icons/` son placeholders (ver su README).
-- `AccountService`/envío por web/solicitudes degradan a un modo local optimista cuando no hay
-  `PUBLIC_API_URL` o backend (F1). En F2 apuntan a NestJS real.
-- La sincronización de Mi lista anónimo→cuenta (merge) queda para F3.
+- Las imágenes del catálogo se obtienen de TMDB durante el enriquecimiento y se sirven optimizadas con `astro:assets`.
+- Los iconos PWA en `public/icons/` son placeholders (ver su README).
+- La sincronización de `dataset/` evita duplicados basándose en el código (P1, S1, etc.).
+- La lista se guarda localmente y no requiere autenticación (modo anónimo).
+- El envío por WhatsApp usa el número configurado en `PUBLIC_WHATSAPP_NUMBER`.
