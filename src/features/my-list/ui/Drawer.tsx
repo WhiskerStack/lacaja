@@ -1,4 +1,4 @@
-// Drawer "Mi lista" (funcional §7). Items con quitar+deshacer, sin precios ni GB.
+// src/features/my-list/ui/Drawer.tsx
 import { useStore } from '@nanostores/preact';
 import { useState } from 'preact/hooks';
 import { $drawerOpen, closeDrawer } from '../store';
@@ -26,16 +26,34 @@ export default function Drawer() {
     });
   }
 
-  if (!open) return null;
-
   return (
-    <div class="fixed inset-0 z-[60]" role="dialog" aria-label="Mi lista">
+    // Contenedor principal: siempre presente, controlamos opacidad y eventos
+    <div
+      class={`fixed inset-0 z-[60] transition-opacity duration-300 ease-in-out ${
+        open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+      }`}
+      role="dialog"
+      aria-label="Mi lista"
+    >
+      {/* Overlay con fade */}
       <div class="absolute inset-0 bg-black/50" onClick={closeDrawer} />
-      <div class="absolute inset-y-0 right-0">
+
+      {/* Panel lateral que se desliza desde la derecha */}
+      <div
+        class={`absolute inset-y-0 right-0 transition-transform duration-300 ease-in-out transform ${
+          open ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
         <aside class="w-80 sm:w-96 h-full bg-base-200 flex flex-col shadow-2xl">
+          {/* Cabecera */}
           <div class="flex items-center justify-between p-4 border-b border-base-300">
             <h2 class="text-lg font-bold">Mi lista</h2>
-            <button type="button" class="btn btn-sm btn-circle btn-ghost" onClick={closeDrawer} aria-label="Cerrar">
+            <button
+              type="button"
+              class="btn btn-sm btn-circle btn-ghost"
+              onClick={closeDrawer}
+              aria-label="Cerrar"
+            >
               ✕
             </button>
           </div>
@@ -44,7 +62,9 @@ export default function Drawer() {
           <div class="flex-1 overflow-y-auto p-3 space-y-2">
             {list === null && <div class="dahem-skeleton h-20" />}
             {list && list.items.length === 0 && (
-              <p class="text-sm opacity-70 text-center py-8">Tu lista está vacía. Explora el catálogo y agrega lo que quieras ver.</p>
+              <p class="text-sm opacity-70 text-center py-8">
+                Tu lista está vacía. Explora el catálogo y agrega lo que quieras ver.
+              </p>
             )}
             {list?.items.map((it) => (
               <div key={it.code} class="card card-compact bg-base-100">
@@ -52,9 +72,12 @@ export default function Drawer() {
                   <div class="flex-1 min-w-0">
                     <p class="font-semibold truncate">{it.name}</p>
                     <p class="text-xs opacity-70 font-mono">{it.code}</p>
-                    {/* ← ELIMINADA la línea del precio {formatCup(it.price)} */}
                   </div>
-                  <button type="button" class="btn btn-xs btn-ghost text-error" onClick={() => remove(it)}>
+                  <button
+                    type="button"
+                    class="btn btn-xs btn-ghost text-error"
+                    onClick={() => remove(it)}
+                  >
                     Quitar
                   </button>
                 </div>
@@ -62,7 +85,7 @@ export default function Drawer() {
             ))}
           </div>
 
-          {/* Totales: solo el botón de enviar, sin precio ni GB */}
+          {/* Botón de enviar */}
           <div class="p-4 border-t border-base-300 bg-base-300/40">
             <button
               type="button"
