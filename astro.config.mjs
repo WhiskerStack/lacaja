@@ -19,7 +19,7 @@ export default defineConfig({
       // Workbox genera el SW; estrategias por tipo de recurso (guía técnica §5.2).
       workbox: {
         globPatterns: ['**/*.{html,js,css,svg,png,webp,avif,ico,json,woff2}'],
-        navigateFallback: '/404',
+        navigateFallback: '/404/',
         runtimeCaching: [
           {
             // HTML de páginas → stale-while-revalidate
