@@ -1,5 +1,6 @@
 import { useStore } from '@nanostores/preact';
 import { useState } from 'preact/hooks';
+import { FileText, Clipboard, Share2 } from 'lucide-preact'; // <-- nuevo
 import { $submissionOpen, closeSubmissionModal } from '../store';
 import { $list } from '../../my-list/store';
 import { submissionService } from '../../../app/container';
@@ -36,7 +37,6 @@ export default function SubmissionModal() {
           if (e.name !== 'AbortError') toastError(e);
         });
     } else {
-      // Si no hay share nativo, copiamos como fallback
       copy();
     }
   }
@@ -54,14 +54,13 @@ export default function SubmissionModal() {
         ) : (
           <div class="grid gap-2">
             <button type="button" class="btn justify-start gap-3" onClick={() => submissionService.downloadTxt(data)}>
-              📄 Exportar a TXT
+              <FileText size={20} /> Exportar a TXT
             </button>
             <button type="button" class="btn justify-start gap-3" onClick={copy}>
-              📋 Copiar al portapapeles
+              <Clipboard size={20} /> Copiar al portapapeles
             </button>
-            {/* NUEVO: Compartir nativo (SMS, etc.) */}
             <button type="button" class="btn justify-start gap-3" onClick={shareList}>
-              📲 Compartir…
+              <Share2 size={20} /> Compartir…
             </button>
           </div>
         )}

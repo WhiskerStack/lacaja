@@ -13,6 +13,7 @@
     "find-duplicates": "node scripts/find-duplicates.mjs",
     "translate-descriptions": "node scripts/translate-descriptions.mjs",
     "disable-duplicates": "node scripts/disable-duplicates.mjs",
+    "generate-pwa-icons": "node scripts/generate-pwa-icons.mjs",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
