@@ -72,9 +72,11 @@ export default defineConfig({
     }),
   ],
   image: {
-    // Las imágenes de muestra son URLs remotas; permitir su optimización con sharp (guía técnica §7).
-    domains: ['image.tmdb.org', 'images.unsplash.com', 'dummyimage.com'],
-    remotePatterns: [{ protocol: 'https' }],
+    remotePatterns: [
+      { protocol: 'https', hostname: 'image.tmdb.org' },
+      { protocol: 'https', hostname: 'images.unsplash.com' },
+      { protocol: 'https', hostname: 'dummyimage.com' },
+    ],
   },
   vite: {
     define: {
