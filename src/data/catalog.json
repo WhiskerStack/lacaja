@@ -1,12 +1,10 @@
 {
   "version": 1,
   "genres": [
-    "Acci¢n",
     "Acción",
     "Animado",
     "Aventura",
     "Ciencia Ficción",
-    "Ciencia ficción",
     "Comedia",
     "Crimen",
     "Desastres",
@@ -20,12 +18,9 @@
     "Música",
     "Romance",
     "Sin género",
-    "Suspense",
     "Suspenso",
     "Terror",
-    "Thriller",
-    "Uzbekistan",
-    "Western"
+    "Thriller"
   ],
   "regions": [
     "Alemania",
