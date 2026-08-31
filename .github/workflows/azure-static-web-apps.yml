@@ -36,7 +36,7 @@ jobs:
       - name: Build
         run: pnpm build
         env:
-          SITE: https://green-smoke-0c5bd1810.6.azurestaticapps.net
+          SITE: https://lacaja.callemedio.com
 
       - name: Deploy
         uses: Azure/static-web-apps-deploy@v1
