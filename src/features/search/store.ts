@@ -2,7 +2,7 @@
 import { atom } from 'nanostores';
 import type { SearchMode } from './types';
 
-export const $searchMode = atom<SearchMode>('loading');
+export const $searchMode = atom<SearchMode>('local');
 
 export function setSearchMode(mode: SearchMode): void {
   $searchMode.set(mode);

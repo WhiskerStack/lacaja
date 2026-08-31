@@ -4,7 +4,6 @@ import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
 import { useStore } from '@nanostores/preact';
 import { searchService } from '../../../app/container';
 import { $searchMode } from '../store';
-import { pushToast, toastError } from '../../../app/stores/toast';
 import { detailUrl, PLACEHOLDER_IMAGE } from '../../../shared/urls';
 import { TYPE_LABEL } from '../../catalog/types';
 import type { CatalogCardDTO } from '../../catalog/types';
@@ -71,11 +70,6 @@ export default function SearchView({ cards }: Props) {
           onInput={(e) => setQuery((e.target as HTMLInputElement).value)}
           autoFocus
         />
-        <label class="label">
-          <span class="label-text-alt opacity-60">
-            Modo: {mode === 'local' ? 'índice local' : 'cargando índice…'}
-          </span>
-        </label>
       </div>
 
       {query.trim().length >= 2 && hits.length === 0 && (
