@@ -84,8 +84,6 @@ rutea por código (`P0023`, `S1122-3-10`) a prefijo exacto.
 
 ## Variables de entorno (`.env.example`)
 
-- `PUBLIC_API_URL` — backend NestJS (actualmente no se usa; reservado para futuros endpoints).
-- `PUBLIC_WHATSAPP_NUMBER` — número del negocio para `wa.me` (formato internacional sin '+').
 - `SITE` — URL pública del sitio (usada por Astro para canonical, sitemap, etc.).
 - `TMDB_API_KEY` — clave de API de TheMovieDB (necesaria para enriquecimiento).
 - `OLLAMA_URL` (opcional) — URL de Ollama para traducción de descripciones (por defecto `http://localhost:11434/api/generate`).

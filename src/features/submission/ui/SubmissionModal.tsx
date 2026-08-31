@@ -4,7 +4,6 @@ import { $submissionOpen, closeSubmissionModal } from '../store';
 import { $list } from '../../my-list/store';
 import { submissionService } from '../../../app/container';
 import { pushToast, toastError } from '../../../app/stores/toast';
-import { WHATSAPP_NUMBER } from '../../../shared/env';
 import type { SubmissionData } from '../types';
 
 export default function SubmissionModal() {
@@ -42,14 +41,6 @@ export default function SubmissionModal() {
     }
   }
 
-  function whatsappShare() {
-    const text = submissionService.build(data).toText();
-    const encoded = encodeURIComponent(text);
-    const number = WHATSAPP_NUMBER.replace(/\D/g, ''); // solo dígitos
-    const url = `https://wa.me/${number}?text=${encoded}`;
-    window.open(url, '_blank');
-  }
-
   return (
     <div class="modal modal-open">
       <div class="modal-box">
@@ -67,10 +58,6 @@ export default function SubmissionModal() {
             </button>
             <button type="button" class="btn justify-start gap-3" onClick={copy}>
               📋 Copiar al portapapeles
-            </button>
-            {/* NUEVO: WhatsApp */}
-            <button type="button" class="btn justify-start gap-3" onClick={whatsappShare}>
-              💬 Enviar por WhatsApp
             </button>
             {/* NUEVO: Compartir nativo (SMS, etc.) */}
             <button type="button" class="btn justify-start gap-3" onClick={shareList}>
