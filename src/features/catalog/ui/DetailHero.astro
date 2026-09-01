@@ -45,7 +45,7 @@ const imageSrc = hasImage ? item.imageUrl : PLACEHOLDER_IMAGE;
   >
   </div>
 
-  <div class="relative max-w-content mx-auto w-full p-6 sm:p-10">
+  <div class="relative max-w-content mx-auto w-full p-6 sm:p-10 pb-4 sm:pb-6">
     {
       context && (
         <p class="text-sm text-secondary font-semibold mb-1">{context}</p>
@@ -71,10 +71,11 @@ const imageSrc = hasImage ? item.imageUrl : PLACEHOLDER_IMAGE;
         )
       }
       {item.isPremiere && <span class="badge badge-secondary">Estreno</span>}
+      <span class="badge badge-outline">Doblado al español</span>
     </div>
 
     {longDescription ? (
-      <details class="max-w-2xl mb-5 desc-details">
+      <details class="max-w-2xl mb-10 sm:mb-8 desc-details">
         <summary class="cursor-pointer list-none opacity-90">
           <span class="truncated">{truncate(item.description, limit)}</span>
           <span class="full">{item.description}</span>
@@ -82,7 +83,7 @@ const imageSrc = hasImage ? item.imageUrl : PLACEHOLDER_IMAGE;
         </summary>
       </details>
     ) : (
-      <p class="max-w-2xl mb-5 opacity-90">{item.description}</p>
+      <p class="max-w-2xl mb-10 sm:mb-8 opacity-90">{item.description}</p>
     )}
 
     <AddToListButton

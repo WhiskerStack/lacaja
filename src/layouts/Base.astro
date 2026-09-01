@@ -42,9 +42,17 @@ const {
   <body>
     {!hideChrome && <Navbar client:load />}
 
-    <main class="max-w-content mx-auto px-3 sm:px-4 pb-24 md:pb-10">
+    <main class="max-w-content mx-auto px-3 sm:px-4 pb-8">
       <slot />
     </main>
+
+    <!-- Nota global del catálogo. El padding inferior deja libre la botonera fija
+         de móvil (antes lo hacía <main>). -->
+    <footer class="max-w-content mx-auto px-3 sm:px-4 pb-24 md:pb-10">
+      <p class="border-t border-base-300 pt-4 text-sm opacity-70">
+        Todo el contenido del catálogo está doblado al español.
+      </p>
+    </footer>
 
     {!hideChrome && <BottomBar client:load />}
 
