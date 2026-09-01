@@ -8142,27 +8142,30 @@
       "name": "Crash-Colisión",
       "enName": "The Crash",
       "year": 2026,
-      "rating": 7,
+      "rating": 6.9,
       "sizeGb": 0,
       "isPremiere": false,
       "genre": "Documental",
       "region": "Reino Unido",
       "language": "Inglés",
-      "description": "",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/7URZ9SvWTnvQOgipFj40YjFiZQx.jpg",
+      "description": "Una adolescente estrella su coche contra un edificio, matando a su novio y a su amigo. Lo que parece un accidente trágico se convierte en un caso de asesinato.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/veskdPx4YUTmkrFrTs6zRJ8VV4E.jpg",
       "cast": [
-        "Steven Mackintosh",
-        "Jean-Sébastien Blouin",
-        "Erik Coelingh",
-        "Ross Bullock",
-        "Mattias Gripenland"
+        "Mackenzie Shirilla",
+        "Tim Troup",
+        "Rosie Graham",
+        "Bubba Turner",
+        "Faythe Walsh"
       ],
-      "trailers": [],
+      "trailers": [
+        "fODfHjrBz6Y"
+      ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P154",
-      "enriched": true
+      "enriched": true,
+      "translated": true
     },
     {
       "id": "95c480e6-6ec4-4bc5-9787-a60497cc3aa3",
@@ -13386,7 +13389,7 @@
       "genre": "Comedia",
       "region": "EU",
       "language": "Inglés",
-      "description": "When out-of-work accountant Brian joins stay-at-home dad Jeff for a playdate with their sons, he expects a laid-back afternoon. Instead, they're chased by mercenaries, and Brian—totally unprepared—must survive one absurd obstacle after another.",
+      "description": "Cuando el contador desempleado Brian se une al padre que se queda en casa Jeff para una cita de juegos con sus hijos, espera un mediodía relajante. En cambio, son perseguidos por mercenarios, y Brian —totalmente desprovisto de preparación— debe sobrevivir a uno absurdo obstáculo después de otro.",
       "imageUrl": "https://image.tmdb.org/t/p/w500/fGodXWqJkkkbSebPIlxLSygV8GY.jpg",
       "cast": [
         "Alan Ritchson",
@@ -13402,7 +13405,8 @@
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P321",
-      "enriched": true
+      "enriched": true,
+      "translated": true
     },
     {
       "id": "7ef40ca1-08f7-4b70-8e0e-8c97c9e708a2",
@@ -18216,18 +18220,24 @@
       "name": "Oxygen",
       "enName": "Oxígeno",
       "year": 2021,
-      "rating": 7,
+      "rating": 6.613,
       "sizeGb": 0,
       "isPremiere": false,
       "genre": "Ciencia Ficción",
       "region": "Francia",
       "language": "Francés",
-      "description": "¿Algunas sueños tienen un precio demasiado alto? Esa es la dilema que se cierne sobre Rasmus, quien lucha por convertirse en el primer danés en ascender a la montaña Everest sin llevar oxígeno.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/pCYjOz26GxJ6D2mSSIbUldGHriB.jpg",
+      "description": "Una mujer se despierta en una cámara criogénica sin recuerdo de cómo llegó allí, y debe encontrar una forma de salir antes de que se acabe el aire.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/u74DFoZGTcZ8cuHO8nvQkCqXEVP.jpg",
       "cast": [
-        "Rasmus Kragh"
+        "Mélanie Laurent",
+        "Mathieu Amalric",
+        "Malik Zidi",
+        "Laura Boujenah",
+        "Éric Herson-Macarel"
       ],
-      "trailers": [],
+      "trailers": [
+        "8IqXgZd-P98"
+      ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
