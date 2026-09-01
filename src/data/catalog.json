@@ -1705,26 +1705,27 @@
     {
       "id": "9d7d267d-6e0c-4c55-a757-62dd8ce4e5bc",
       "type": "movie",
-      "name": "Breaking Point",
-      "enName": "Punto de ruptura",
+      "name": "Punto de ruptura",
+      "enName": "Breaking Point",
       "year": 2023,
-      "rating": 8.471,
+      "rating": 7,
       "sizeGb": 0,
       "isPremiere": false,
       "genre": "Thriller",
       "region": "Francia",
       "language": "Francés",
-      "description": "Las dos equipos se vuelven aún más tensos cuando los Metal Maniacs obtienen un nuevo líder. Mientras tanto, los Acceleracers y los Drones de Carrera enfrentan desafíos mientras compiten en los Reinos de Carrera con un nuevo y misterioso oponente.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/qlBHpAYSRH0D2mFViqbqLLNmYFE.jpg",
+      "description": "Dos hermanos adoptivos llenos de resentimiento el uno hacia el otro después de la pérdida de su madre, unidos en su amor por el breakdance, se ven impulsados a unirse mientras emprenden un viaje hacia el Oro.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/gPTHb636P8kVTTuxlWu1lnQhmPq.jpg",
       "cast": [
-        "Andrew Francis",
-        "Kathleen Barr",
-        "Lisa Ann Beley",
-        "Dexter Bell",
-        "Michael Donovan"
+        "Hannah John-Kamen",
+        "Emily Carey",
+        "Lucian Msamati",
+        "Celina Sinden",
+        "Alec Hopkins"
       ],
       "trailers": [
-        "YmphAzR3uv0"
+        "3M0PlYL2TRo",
+        "p1t_jDwuLO4"
       ],
       "seasons": [],
       "seasonCount": 1,
@@ -9396,7 +9397,8 @@
       "episodeCount": 1,
       "code": "P194",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "isActive": false
     },
     {
       "id": "ed380c31-4ca0-4622-b125-86b6aeb31887",
@@ -18881,7 +18883,7 @@
       "genre": "Thriller",
       "region": "EU",
       "language": "Inglés",
-      "description": "Chris, a wealthy divorcee, lives in a high-tech house of his own design in Montana. His life changes when he meets Sky, a mysterious young woman who draws him out of his shell and moves in after Chris is injured.",
+      "description": "Chris, una divorciada adinerada, vive en una casa de alta tecnología de su propio diseño en Montana. Su vida cambia cuando conoce a Sky, una joven misteriosa que lo saca de su caparazón y se muda con él después de que Chris resulte herido.",
       "imageUrl": "https://image.tmdb.org/t/p/w500/ounMihksHS9EI3Uc3KyK46WzD13.jpg",
       "cast": [
         "Cameron Monaghan",
@@ -18899,7 +18901,8 @@
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P498",
-      "enriched": true
+      "enriched": true,
+      "translated": true
     },
     {
       "id": "5025eda0-0d76-4ed8-af6f-6591a00d90bc",
