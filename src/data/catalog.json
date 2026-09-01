@@ -2793,23 +2793,23 @@
     {
       "id": "fbc88198-8701-400c-9d57-c8f6f232f125",
       "type": "series",
-      "name": "Animal",
-      "enName": "Animal",
+      "name": "Animal Salvage",
+      "enName": "Old Dog, New Tricks",
       "year": 2025,
-      "rating": 7.778,
+      "rating": 6.8,
       "sizeGb": 0,
       "isPremiere": false,
       "genre": "Comedia",
       "region": "España",
       "language": "Español",
-      "description": "Joshua \"J\" Cody de 17 años se muda con sus familiares desinhibidos en su pueblo costero de California del sur después de que su madre muere por una sobredosis de heroína.  Liderados por la matriarca Janine \"Smurf\" Cody y su mano derecha Baz, quien se ocupa de los asuntos y da las órdenes, la familia también consta de Pope, el mayor y más peligroso de los chicos Cody; Craig, el hijo medio y temerario; y Deran, el \"bebé\" problemático y sospechoso de la familia.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/rzvdKrnSRKPFI0pgqMQknDPpRC9.jpg",
+      "description": "El veterinario endeudado Antón acepta un trabajo en una tienda de mascotas elegante, pasando de tratar a animales de granja rurales a vender tratados de alta gama para perros mimados.",
+      "imageUrl": "https://media.themoviedb.org/t/p/w500/UgYg7GY6LYQnGhCmt1PQ7OhwEU.jpg",
       "cast": [
-        "Finn Cole",
-        "Shawn Hatosy",
-        "Ben Robson",
-        "Jake Weary",
-        "Leila George"
+        "Luis Zahera",
+        "Lucía Caraballo",
+        "Carmen Ruiz",
+        "Antonio Durán 'Morris'",
+        "Nuno Gallego"
       ],
       "trailers": [
         "gTZwd0f92YE"
