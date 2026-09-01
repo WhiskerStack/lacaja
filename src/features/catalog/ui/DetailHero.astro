@@ -70,13 +70,27 @@ const imageSrc = hasImage ? item.imageUrl : PLACEHOLDER_IMAGE;
     </svg>
   </a>
 
-  <div class="relative max-w-content mx-auto w-full p-6 sm:p-10">
+  <div class="relative max-w-content mx-auto w-full p-6 sm:p-10 pb-4 sm:pb-6">
     {
       context && (
         <p class="text-sm text-secondary font-semibold mb-1">{context}</p>
       )
     }
-    <h1 class="text-3xl sm:text-5xl font-extrabold mb-3">{item.name}</h1>
+    <h1
+      class:list={[
+        "text-3xl sm:text-5xl font-extrabold",
+        item.altName ? "mb-1" : "mb-3",
+      ]}
+    >
+      {item.name}
+    </h1>
+    {
+      item.altName && (
+        <p class="text-base sm:text-lg opacity-70 mb-3">
+          <span class="font-semibold">{item.altName}</span>
+        </p>
+      )
+    }
 
     <div class="flex flex-wrap gap-2 items-center text-sm mb-4">
       <span class="badge badge-primary">★ {formatRating(item.rating)}</span>
@@ -96,10 +110,11 @@ const imageSrc = hasImage ? item.imageUrl : PLACEHOLDER_IMAGE;
         )
       }
       {item.isPremiere && <span class="badge badge-secondary">Estreno</span>}
+      <span class="badge badge-outline">Doblado al español</span>
     </div>
 
     {longDescription ? (
-      <details class="max-w-2xl mb-5 desc-details">
+      <details class="max-w-2xl mb-10 sm:mb-8 desc-details">
         <summary class="cursor-pointer list-none opacity-90">
           <span class="truncated">{truncate(item.description, limit)}</span>
           <span class="full">{item.description}</span>
@@ -107,7 +122,7 @@ const imageSrc = hasImage ? item.imageUrl : PLACEHOLDER_IMAGE;
         </summary>
       </details>
     ) : (
-      <p class="max-w-2xl mb-5 opacity-90">{item.description}</p>
+      <p class="max-w-2xl mb-10 sm:mb-8 opacity-90">{item.description}</p>
     )}
 
     <AddToListButton

@@ -19,6 +19,9 @@ const {
   description = "Catálogo de consulta. Arma tu lista y envíala al negocio.",
   hideChrome = false,
 } = Astro.props;
+
+// Ruta actual: las barras de navegación la usan para resaltar la sección activa.
+const pathname = Astro.url.pathname;
 ---
 
 <!doctype html>
@@ -40,18 +43,33 @@ const {
     <title>{title}</title>
   </head>
   <body>
-    {!hideChrome && <Navbar client:load />}
+    {!hideChrome && <Navbar client:load pathname={pathname} />}
 
     <main class="max-w-content mx-auto px-3 sm:px-4 pb-24 md:pb-10">
       <slot />
     </main>
 
-    {!hideChrome && <BottomBar client:load />}
+    {!hideChrome && <BottomBar client:load pathname={pathname} />}
 
     <!-- Islas globales (drawer + modales + toasts) -->
     <Drawer client:idle />
     <SubmissionModal client:idle />
     <ToastHost client:idle />
+
+    <!-- Publica el alto real del navbar en `--navbar-h` para que las barras
+         pegajosas de cada página (filtros de Biblioteca) se sitúen justo debajo. -->
+    <script is:inline>
+      (() => {
+        const root = document.documentElement;
+        const header = document.querySelector('header.navbar');
+        const sync = () => {
+          root.style.setProperty('--navbar-h', (header ? header.offsetHeight : 0) + 'px');
+        };
+        sync();
+        if (header && 'ResizeObserver' in window) new ResizeObserver(sync).observe(header);
+        else window.addEventListener('resize', sync);
+      })();
+    </script>
 
     <!-- Restauración de posición al volver atrás (scroll de página y de carruseles). -->
     <script>

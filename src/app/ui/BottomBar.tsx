@@ -1,30 +1,52 @@
 // Botonera inferior, solo móvil (funcional §5.2). En desktop se oculta (md:hidden).
 import { useStore } from '@nanostores/preact';
 import { Home, Library, Search, Bookmark } from 'lucide-preact';
-import { openDrawer } from '../../features/my-list/store';
+import { $drawerOpen, openDrawer } from '../../features/my-list/store';
 import { useList } from '../../features/my-list/ui/useList';
 import { $list } from '../../features/my-list/store';
+import { isActivePath } from './nav';
 
-export default function BottomBar() {
+const NAV = [
+  { href: '/', label: 'Inicio', Icon: Home },
+  { href: '/biblioteca', label: 'Biblioteca', Icon: Library },
+  { href: '/buscar', label: 'Buscar', Icon: Search },
+];
+
+interface Props {
+  /** Ruta actual, inyectada por el layout en build (SSG) para resaltar la sección. */
+  pathname?: string;
+}
+
+export default function BottomBar({ pathname = '/' }: Props) {
   useList(); // asegura hidratación
   const list = useStore($list);
   const count = list?.count ?? null;
+  const drawerOpen = useStore($drawerOpen);
 
   return (
     <nav class="btm-nav md:hidden z-40 border-t border-base-300">
-      <a href="/" aria-label="Inicio">
-        <Home size={20} aria-hidden />
-        <span class="btm-nav-label text-xs">Inicio</span>
-      </a>
-      <a href="/biblioteca" aria-label="Biblioteca">
-        <Library size={20} aria-hidden />
-        <span class="btm-nav-label text-xs">Biblioteca</span>
-      </a>
-      <a href="/buscar" aria-label="Buscar">
-        <Search size={20} aria-hidden />
-        <span class="btm-nav-label text-xs">Buscar</span>
-      </a>
-      <button type="button" aria-label="Mi lista" onClick={openDrawer}>
+      {NAV.map(({ href, label, Icon }) => {
+        const active = isActivePath(href, pathname);
+        return (
+          <a
+            key={href}
+            href={href}
+            aria-label={label}
+            aria-current={active ? 'page' : undefined}
+            class={active ? 'active text-primary' : ''}
+          >
+            <Icon size={20} aria-hidden />
+            <span class="btm-nav-label text-xs">{label}</span>
+          </a>
+        );
+      })}
+      <button
+        type="button"
+        aria-label="Mi lista"
+        aria-expanded={drawerOpen}
+        class={drawerOpen ? 'active text-primary' : ''}
+        onClick={openDrawer}
+      >
         <div class="indicator">
           <Bookmark size={20} aria-hidden />
           {count !== null && count > 0 && (

@@ -29,6 +29,12 @@ export interface SeasonViewDTO {
 export interface CatalogItemDTO extends AudiovisualDTO {
   /** Código base ya calculado: "P0023" / "S1122". */
   code: string;
+  /**
+   * Título alternativo del catálogo (campo `enName`): el que no está en `name`.
+   * Según el ítem es el original o el conocido en español, así que la UI lo
+   * presenta como "También conocido como". Ausente si no aporta nada nuevo.
+   */
+  altName?: string;
   durationMin?: number;
   description: string;
   imageUrl: string;
@@ -56,6 +62,8 @@ export interface CatalogCardDTO {
   genre: string;
   isPremiere: boolean;
   totalSizeGb: number;
+  /** Título alternativo; ver CatalogItemDTO.altName. */
+  altName?: string;
 }
 
 export const TYPE_LABEL: Record<AudiovisualType, string> = {

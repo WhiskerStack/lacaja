@@ -123,6 +123,7 @@ export default function SearchView({ cards }: Props) {
                 )}
                 <div class="card-body">
                   <p class="font-semibold">{hit.title}</p>
+                  {hit.alt && <p class="text-sm opacity-70">{hit.alt}</p>}
                   <p class="text-xs opacity-70">
                     <span class="font-mono">{hit.code}</span>
                     {card && ` · ${TYPE_LABEL[card.type]} · ${card.year}`}
