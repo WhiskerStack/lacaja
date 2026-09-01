@@ -8,7 +8,7 @@ const ROOT = resolve(__dirname, '..');
 const CATALOG_PATH = resolve(ROOT, 'src/data/catalog.json');
 
 const OLLAMA_URL = process.env.OLLAMA_URL || 'http://localhost:11434/api/generate';
-const MODEL = process.env.OLLAMA_MODEL || 'llama3.1:8b ';
+const MODEL = process.env.OLLAMA_MODEL || 'llama3.1:8b';
 const DELAY_MS = 1000; // pausa entre peticiones
 const SAVE_EVERY = 5;   // guarda cada N traducciones
 
