@@ -51,7 +51,21 @@ const imageSrc = hasImage ? item.imageUrl : PLACEHOLDER_IMAGE;
         <p class="text-sm text-secondary font-semibold mb-1">{context}</p>
       )
     }
-    <h1 class="text-3xl sm:text-5xl font-extrabold mb-3">{item.name}</h1>
+    <h1
+      class:list={[
+        "text-3xl sm:text-5xl font-extrabold",
+        item.altName ? "mb-1" : "mb-3",
+      ]}
+    >
+      {item.name}
+    </h1>
+    {
+      item.altName && (
+        <p class="text-base sm:text-lg opacity-70 mb-3">
+          También conocido como <span class="font-semibold">{item.altName}</span>
+        </p>
+      )
+    }
 
     <div class="flex flex-wrap gap-2 items-center text-sm mb-4">
       <span class="badge badge-primary">★ {formatRating(item.rating)}</span>

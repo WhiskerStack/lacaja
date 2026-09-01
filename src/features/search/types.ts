@@ -9,6 +9,8 @@ export type SearchMode = 'loading' | 'local';
 export interface SearchHit {
   code: string;
   title: string;
+  /** Título alternativo (original o en español según el ítem); ausente si no lo hay. */
+  alt?: string;
   year?: number;
   type?: AudiovisualType;
   genre?: string;
@@ -17,7 +19,7 @@ export interface SearchHit {
 /** Forma del search-index.json (tuplas posicionales, especificaciones §4.4). */
 export interface SearchIndexFile {
   v: number;
-  items: [string, string][]; // [code, title]
+  items: ([string, string] | [string, string, string])[]; // [code, title, alt?]
 }
 
 /** Forma del library-index.json. */

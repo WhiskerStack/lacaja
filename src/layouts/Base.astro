@@ -19,6 +19,9 @@ const {
   description = "Catálogo de consulta. Arma tu lista y envíala al negocio.",
   hideChrome = false,
 } = Astro.props;
+
+// Ruta actual: las barras de navegación la usan para resaltar la sección activa.
+const pathname = Astro.url.pathname;
 ---
 
 <!doctype html>
@@ -40,7 +43,7 @@ const {
     <title>{title}</title>
   </head>
   <body>
-    {!hideChrome && <Navbar client:load />}
+    {!hideChrome && <Navbar client:load pathname={pathname} />}
 
     <main class="max-w-content mx-auto px-3 sm:px-4 pb-8">
       <slot />
@@ -54,7 +57,7 @@ const {
       </p>
     </footer>
 
-    {!hideChrome && <BottomBar client:load />}
+    {!hideChrome && <BottomBar client:load pathname={pathname} />}
 
     <!-- Islas globales (drawer + modales + toasts) -->
     <Drawer client:idle />

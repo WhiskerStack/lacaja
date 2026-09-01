@@ -3,7 +3,9 @@
 // (Sin shebang: este módulo lo importa también tests/unit/search-index.test.ts y el transform
 // de Vite no admite `#!`; se ejecuta como `node scripts/build-search-index.mjs`.)
 // Formato nivel 1 (especificaciones §4.4): diccionarios + tuplas posicionales.
-//   - search-index.json:  { v, items: [[code, title], ...] }            (autocomplete, minúsculo)
+//   - search-index.json:  { v, items: [[code, title, alt?], ...] }      (autocomplete, minúsculo)
+//     `alt` es el título alternativo (campo enName): unos ítems lo traen en español y otros
+//     en el idioma original, así que se indexa junto al principal para poder buscar por ambos.
 //   - library-index.json: { v, genres, regions, languages,
 //                           items: [[code, title, year, gi, ri, li], ...] }  (filtros de Biblioteca)
 // Ambos se generan en el mismo pass desde la misma fuente, garantizando consistencia (§4.5).
@@ -29,6 +31,18 @@ function itemCode(it) {
   return it.code || audiovisualCode(it.type, it.id);
 }
 
+/** Clave de comparación de títulos: sin acentos, mayúsculas ni espacios de más. */
+function titleKey(title) {
+  return title.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+/** Título alternativo del item, solo si aporta algo distinto al principal. */
+function altTitle(it) {
+  const alt = (it.enName || '').trim();
+  if (!alt || titleKey(alt) === titleKey(it.name)) return null;
+  return alt;
+}
+
 function buildIndices() {
   const catalog = JSON.parse(readFileSync(SOURCE, 'utf8'));
   const items = catalog.items?.filter(item => item.isActive !== false) ?? [];
@@ -42,7 +56,11 @@ function buildIndices() {
   const li = (name) => Math.max(0, languages.indexOf(name));
 
   // Solo el item completo entra al índice; no temporadas ni capítulos (funcional §6.4.2).
-  const searchItems = items.map((it) => [itemCode(it), it.name]);
+  // La tercera posición (título alternativo) se omite cuando no la hay, para no engordar el JSON.
+  const searchItems = items.map((it) => {
+    const alt = altTitle(it);
+    return alt ? [itemCode(it), it.name, alt] : [itemCode(it), it.name];
+  });
 
   const libraryItems = items.map((it) => [
     itemCode(it),
