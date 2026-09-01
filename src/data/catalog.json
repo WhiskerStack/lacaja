@@ -1971,22 +1971,24 @@
       "name": "Lost In Space",
       "enName": "Perdidos en el espacio",
       "year": 2018,
-      "rating": 7.25,
+      "rating": 7.497,
       "sizeGb": 0,
       "isPremiere": false,
       "genre": "Ciencia Ficción",
       "region": "2021",
       "language": "Español",
-      "description": "La familia Robinson es enviada en una misión de cinco años para encontrar un nuevo planeta para colonizar. La travesía es sabotajeada una y otra vez por un inepto stowaway, Dr. Zachary Smith. La nave espacial de la familia, Jupiter II, también lleva a un robot amistoso que soporta una interminable lluvia de abusos del Dr. Smith, pero es un compañero de confianza del joven Will Robinson.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/f7xArCMZPBW7SoCsqsOXvc3X8Ry.jpg",
+      "description": "Después de que el avión se estrella en un planeta alienígena, la familia Robinson lucha contra todas las posibilidades para sobrevivir y escapar. Pero están rodeados de peligros ocultos.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/y8NJnTXzb4rio9uvVYFVrXEMofU.jpg",
       "cast": [
-        "Guy Williams",
-        "June Lockhart",
-        "Mark Goddard",
-        "Marta Kristen",
-        "Angela Cartwright"
+        "Toby Stephens",
+        "Molly Parker",
+        "Maxwell Jenkins",
+        "Taylor Russell",
+        "Mina Sundwall"
       ],
-      "trailers": [],
+      "trailers": [
+        "fzmM0AB60QQ"
+      ],
       "seasons": [],
       "seasonCount": 3,
       "episodeCount": 28,
