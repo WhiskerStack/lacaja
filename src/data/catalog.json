@@ -8943,30 +8943,33 @@
       "id": "39ac05a1-aeab-4b25-b4fa-81452aad03fe",
       "type": "movie",
       "name": "Venganza",
-      "enName": "Revenge",
+      "enName": "Vengeance",
       "year": 2026,
-      "rating": 7,
+      "rating": 7.538,
       "sizeGb": 0,
       "isPremiere": false,
       "genre": "Acción",
       "region": "México",
       "language": "Español",
-      "description": "El área de Yau Tsim Mong, el núcleo comercial de Hong Kong, ha experimentado recientemente una serie de robos. Muchas tiendas de joyería en la zona han sido saqueadas por pandilleros. Una unidad de policía ha recibido la misión de llevar a los pandilleros a la custodia, pero la operación no es tan fácil.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/xqu6u29ToxZos0PojcgXy2hEx9b.jpg",
+      "description": "The brutal murder of the wife of “Toro,” a military hero in the special forces, turns him into a man with a single purpose: revenge. After a stroke of fate makes him a millionaire, Carlos transforms his fortune into an arsenal and, together with his closest soldiers, sets out to hunt down those responsible.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/ygWXPL0RS91JyJPNOfK34eV3bRE.jpg",
       "cast": [
-        "Alex Fong Chung-Sun",
-        "Carlos Chan Ka-Lok",
-        "Louis Cheung",
-        "Andy On Chi-Kit",
-        "Ray Lui"
+        "Omar Chaparro",
+        "Alejandro Speitzer",
+        "Paola Nuñez",
+        "Natalia Solián",
+        "Luis Alberti"
       ],
-      "trailers": [],
+      "trailers": [
+        "2Iqvbe98Gb4",
+        "MPyXlWTZ32E",
+        "FKSdXH89jbo"
+      ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P180",
-      "enriched": true,
-      "translated": true
+      "enriched": true
     },
     {
       "id": "bceb8da6-99ae-4057-aac1-d42aafc47d2a",
