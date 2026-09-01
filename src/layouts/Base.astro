@@ -52,5 +52,11 @@ const {
     <Drawer client:idle />
     <SubmissionModal client:idle />
     <ToastHost client:idle />
+
+    <!-- Restauración de posición al volver atrás (scroll de página y de carruseles). -->
+    <script>
+      import { installNavRestore } from "../shared/nav-state";
+      installNavRestore();
+    </script>
   </body>
 </html>
