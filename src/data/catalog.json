@@ -4528,22 +4528,24 @@
       "name": "Cazador de demonios",
       "enName": "The Bondsman",
       "year": 2025,
-      "rating": 6.8,
+      "rating": 7.227,
       "sizeGb": 0,
       "isPremiere": false,
       "genre": "Acción",
       "region": "EU",
       "language": "Inglés",
-      "description": "Para salvar a su esposa A Rou, Lang Wujue parte en una peligrosa misión de caza de demonios pero es engañado por el daoísta Baiyun y se transforma en una bestia. Con el espíritu de A Rou despertado, ella comienza una larga y difícil búsqueda para romper el hechizo y restaurar su humanidad.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/lLOmriVwsfJRA1gQhA7g9na5mdO.jpg",
+      "description": "El cazarrecompensas del bosque profundo, Hub Halloran, regresa de entre los muertos con una segunda oportunidad inesperada en la vida, el amor y la carrera musical casi olvidada — solo para encontrar que su antiguo trabajo tiene ahora un giro demoníaco.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/gwd2HpY2ymvmASUP3zMYF59IIr7.jpg",
       "cast": [
-        "Cai Heng",
-        "Nan Sheng",
-        "Feng Lijun",
-        "Li Ruoxi",
-        "Shi Xuanru"
+        "Kevin Bacon",
+        "Jennifer Nettles",
+        "Beth Grant",
+        "Damon Herriman",
+        "Maxwell Jenkins"
       ],
-      "trailers": [],
+      "trailers": [
+        "XmiGkuMWJ94"
+      ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 8,
