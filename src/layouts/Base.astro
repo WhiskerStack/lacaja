@@ -76,5 +76,13 @@ const pathname = Astro.url.pathname;
       import { installNavRestore } from "../shared/nav-state";
       installNavRestore();
     </script>
+
+    <!-- Registro del service worker (soporte offline). Hay que hacerlo a mano: vite-plugin-pwa
+         inyecta su script con el hook transformIndexHtml de Vite, y Astro no pasa por ahí las
+         páginas que genera, así que sin esto la PWA se instala pero no cachea nada. -->
+    <script>
+      import { registerSW } from "virtual:pwa-register";
+      registerSW({ immediate: true });
+    </script>
   </body>
 </html>

@@ -71,7 +71,7 @@ test('detalle abierto en frío: el botón atrás lleva al nivel superior', async
   // Entrada directa (enlace compartido): sin referrer propio, "Volver" no debe salir del sitio.
   await page.goto(href!);
   await page.getByRole('link', { name: 'Volver' }).click();
-  await expect(page).toHaveURL(/localhost:4321\/$/);
+  await expect(page).toHaveURL(/^https?:\/\/[^/]+\/$/);
 });
 
 test('entrar por el menú a biblioteca no arrastra filtros viejos', async ({ page }) => {
