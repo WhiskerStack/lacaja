@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 // scripts/fix-title-languages.mjs
-// Ordena los títulos del catálogo por idioma con Ollama:
+// Traduce títulos del catálogo con Ollama:
 // - Si falta name, traduce enName al español y lo pone en name.
 // - Si falta enName, traduce name al inglés y lo pone en enName.
-// - Si ambos existen, no hace nada (no detecta ni intercambia).
+// - Si ambos existen, traduce name al inglés (para enName) y enName al español (para name),
+//   asegurando que name quede en español y enName en inglés.
 //
 // Uso:
 //   node scripts/fix-title-languages.mjs --dry-run     (no escribe: solo informa qué haría)
@@ -71,49 +72,79 @@ ${text}`;
 // ----------------------------------------------------------------- Ítems ---
 
 /**
- * Revisa un ítem: si falta name, traduce enName a español; si falta enName, traduce name a inglés.
- * Si ambos existen, no hace nada.
+ * Revisa un ítem y aplica las traducciones necesarias para que
+ * name quede en español y enName en inglés.
  */
 export async function fixItem(item, { dryRun = false } = {}) {
   const name = item.name ?? '';
   const enName = item.enName ?? '';
 
-  // Caso: falta name, traducir enName a español
+  let changed = false;
+  let details = [];
+
+  // Caso 1: falta name → traducir enName a español
   if (!name.trim() && enName.trim()) {
     const translated = await translateTitle(enName, 'es');
-    if (!translated) {
-      return { action: 'skip', reason: 'traducción descartada', changed: false };
+    if (translated) {
+      if (!dryRun) {
+        item.name = translated;
+        item.titlesChecked = true;
+      }
+      changed = true;
+      details.push(`name = "${translated}" (desde enName)`);
+    } else {
+      return { action: 'skip', reason: 'traducción fallida para name', changed: false };
     }
-    if (!dryRun) {
-      item.name = translated;
-      item.titlesChecked = true;
-    }
-    return {
-      action: 'translate',
-      changed: true,
-      detail: `name = "${translated}" (desde enName)`,
-    };
   }
-
-  // Caso: falta enName, traducir name a inglés
-  if (name.trim() && !enName.trim()) {
+  // Caso 2: falta enName → traducir name a inglés
+  else if (name.trim() && !enName.trim()) {
     const translated = await translateTitle(name, 'en');
-    if (!translated) {
-      return { action: 'skip', reason: 'traducción descartada', changed: false };
+    if (translated) {
+      if (!dryRun) {
+        item.enName = translated;
+        item.titlesChecked = true;
+      }
+      changed = true;
+      details.push(`enName = "${translated}" (desde name)`);
+    } else {
+      return { action: 'skip', reason: 'traducción fallida para enName', changed: false };
     }
-    if (!dryRun) {
-      item.enName = translated;
-      item.titlesChecked = true;
+  }
+  // Caso 3: ambos existen → traducir ambos (name→en, enName→es)
+  else if (name.trim() && enName.trim()) {
+    // Traducir name al inglés para enName
+    const translatedEn = await translateTitle(name, 'en');
+    // Traducir enName al español para name
+    const translatedEs = await translateTitle(enName, 'es');
+
+    let anyOk = false;
+    if (translatedEn) {
+      if (!dryRun) item.enName = translatedEn;
+      changed = true;
+      anyOk = true;
+      details.push(`enName = "${translatedEn}" (desde name)`);
     }
-    return {
-      action: 'translate',
-      changed: true,
-      detail: `enName = "${translated}" (desde name)`,
-    };
+    if (translatedEs) {
+      if (!dryRun) item.name = translatedEs;
+      changed = true;
+      anyOk = true;
+      details.push(`name = "${translatedEs}" (desde enName)`);
+    }
+    if (!anyOk) {
+      return { action: 'skip', reason: 'ambas traducciones fallaron', changed: false };
+    }
+    if (!dryRun) item.titlesChecked = true;
+  }
+  // Caso 4: ambos vacíos (no debería ocurrir)
+  else {
+    return { action: 'skip', reason: 'ambos campos vacíos', changed: false };
   }
 
-  // Ambos existen: no hacer nada
-  return { action: 'skip', reason: 'ambos existen', changed: false };
+  return {
+    action: changed ? 'translate' : 'skip',
+    changed,
+    detail: details.join('; '),
+  };
 }
 
 // ------------------------------------------------------------------ Main ---
