@@ -42,3 +42,6 @@ coverage/
 mkctx/
 
 logs/
+# playwright
+test-results/
+playwright-report/

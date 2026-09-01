@@ -70,5 +70,11 @@ const pathname = Astro.url.pathname;
         else window.addEventListener('resize', sync);
       })();
     </script>
+
+    <!-- Restauración de posición al volver atrás (scroll de página y de carruseles). -->
+    <script>
+      import { installNavRestore } from "../shared/nav-state";
+      installNavRestore();
+    </script>
   </body>
 </html>
