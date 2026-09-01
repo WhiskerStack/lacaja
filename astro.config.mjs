@@ -52,7 +52,7 @@ export default defineConfig({
       manifest: {
         name: 'La Caja — Catálogo audiovisual',
         short_name: 'La Caja',
-        description: 'Catálogo de consulta de audiovisuales. Arma tu lista y envíala al negocio.',
+        description: 'Catálogo de consulta de audiovisuales. Arma tu lista y envíala a Lacaja123.',
         lang: 'es',
         start_url: '/',
         display: 'standalone',

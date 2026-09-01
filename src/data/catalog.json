@@ -2903,7 +2903,8 @@
       "episodeCount": 1,
       "code": "P48",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "isActive": false
     },
     {
       "id": "4c78f7b4-d48d-44b8-b6ac-8d05c890b43b",
@@ -4689,7 +4690,8 @@
       "episodeCount": 1,
       "code": "P77",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "isActive": false
     },
     {
       "id": "afdcd15e-09b4-4872-a2ff-cc421c2ee7ce",
@@ -5393,7 +5395,7 @@
     {
       "id": "76df31c5-3ff0-4930-9b03-d19dc5c6d505",
       "type": "movie",
-      "name": "La casa",
+      "name": "The House",
       "enName": "La casa",
       "year": 2024,
       "rating": 8.231,
@@ -5402,17 +5404,17 @@
       "genre": "Drama",
       "region": "España",
       "language": "Español",
-      "description": "Para llevar a cabo la mayor estafa de la historia, un hombre misterioso llamado El Profesor recluta a una banda de ocho ladrones que tienen un solo rasgo: ninguno de ellos tiene nada que perder. Cinco meses de aislamiento - memorizando cada paso, cada detalle, cada probabilidad - culminan en once días encerrados en la Fábrica Nacional de Moneda y Timbre de España, rodeados de fuerzas policiales y con docenas de rehenes en su poder, para saber si su apuesta por la muerte conducirá a todo o a nada.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg",
+      "description": "Después de la muerte de su padre, tres hermanos vuelven a la casa familiar donde crecieron. Tienen la intención de venderla y seguir sus caminos muy diferentes. Pero a medida que los recuerdos afloran en cada rincón, crece en ellos el miedo de deshacerse del pasado y un impulso de reunirse. Como último homenaje a su padre, todavía puede haber tiempo para recuperar el tiempo perdido, y la casa puede ser testigo de nuevas historias.",
+      "imageUrl": "https://media.themoviedb.org/t/p/w500/hpic0UkV1imMnAxL26QOktRXtDg.jpg",
       "cast": [
-        "Úrsula Corberó",
-        "Itziar Ituño",
-        "Álvaro Morte",
-        "Pedro Alonso",
-        "Miguel Herrán"
+        "David Verdaguer",
+        "Luis Callejo",
+        "Óscar de la Fuente",
+        "Olivia Molina",
+        "María Romanillos"
       ],
       "trailers": [
-        "_InqQJRqGW4"
+        "h9nQtpxlT-Q"
       ],
       "seasons": [],
       "seasonCount": 1,
@@ -6835,7 +6837,7 @@
       ],
       "seasons": [],
       "seasonCount": 1,
-      "episodeCount": 1,
+      "episodeCount": 101,
       "code": "S112",
       "enriched": true,
       "translated": true
@@ -11908,7 +11910,8 @@
       "episodeCount": 1,
       "code": "P275",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "isActive": false
     },
     {
       "id": "14d3f2ee-c440-4452-9837-3f035db336b1",

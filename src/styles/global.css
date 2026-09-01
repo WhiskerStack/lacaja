@@ -7,6 +7,10 @@
 
 :root {
   color-scheme: dark;
+  /* Alto del navbar sticky. Base.astro lo mide en runtime; el valor por defecto
+     es el `min-height` del navbar de daisyUI. Lo usan las barras que se pegan
+     justo debajo del navbar (p. ej. los filtros de Biblioteca). */
+  --navbar-h: 4rem;
 }
 
 html,
