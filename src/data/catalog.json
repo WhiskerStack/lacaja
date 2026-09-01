@@ -13380,22 +13380,24 @@
       "name": "Playdate",
       "enName": "Juego de niños",
       "year": 2025,
-      "rating": 7,
+      "rating": 6.146,
       "sizeGb": 0,
       "isPremiere": false,
       "genre": "Comedia",
       "region": "EU",
       "language": "Inglés",
-      "description": "",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/vrkGb3VYKUXO8ckY1oBxbJhNuDP.jpg",
+      "description": "When out-of-work accountant Brian joins stay-at-home dad Jeff for a playdate with their sons, he expects a laid-back afternoon. Instead, they're chased by mercenaries, and Brian—totally unprepared—must survive one absurd obstacle after another.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/fGodXWqJkkkbSebPIlxLSygV8GY.jpg",
       "cast": [
-        "Isabel Alemany",
-        "Alicia Altabella",
-        "Ana Mariscal",
-        "George Rigaud",
-        "Juanjo Menéndez"
+        "Alan Ritchson",
+        "Kevin James",
+        "Banks Pierce",
+        "Benjamin Pajak",
+        "Alan Tudyk"
       ],
-      "trailers": [],
+      "trailers": [
+        "xGTq0blCPVQ"
+      ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
