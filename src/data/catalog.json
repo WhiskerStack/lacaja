@@ -9876,21 +9876,24 @@
       "name": "En sue¤os",
       "enName": "In your dreams",
       "year": 2025,
-      "rating": 6.9,
+      "rating": 6.946,
       "sizeGb": 0,
       "isPremiere": false,
       "genre": "Animado",
       "region": "EU",
       "language": "Inglés",
-      "description": "La trabajadora de oficina Ryou Fujihashi se encuentra atrapada en su apartamento, que se ha incendiado. Los bomberos llegan a tiempo para salvarla, y uno de ellos resulta ser Souma Mizuno, amigo de la infancia de Fujihashi con quien ella tenía un enamoramiento. Mientras se apaga el incendio en el apartamento, se reenciende un antiguo amor.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/yHUDRf2e9FGeWXPsT5lVF3iCUwc.jpg",
+      "description": "Stevie y su hermano pequeño Elliot viajan al paisaje absurdamente loco de sus propios sueños para preguntar al Hombre de Arena que les conceda la perfecta familia.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/ug0TqgmByPCEYzR9lQWQmyAa7sw.jpg",
       "cast": [
-        "Natsumi Takamori",
-        "Kent Ito",
-        "Kiiro Tsukino",
-        "Shiu Kase"
+        "Jolie Hoang-Rappaport",
+        "Elias Janssen",
+        "Simu Liu",
+        "Craig Robinson",
+        "Cristin Milioti"
       ],
-      "trailers": [],
+      "trailers": [
+        "Jjjcn4acAC8"
+      ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
