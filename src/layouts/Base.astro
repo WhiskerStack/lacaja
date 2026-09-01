@@ -52,5 +52,20 @@ const {
     <Drawer client:idle />
     <SubmissionModal client:idle />
     <ToastHost client:idle />
+
+    <!-- Publica el alto real del navbar en `--navbar-h` para que las barras
+         pegajosas de cada página (filtros de Biblioteca) se sitúen justo debajo. -->
+    <script is:inline>
+      (() => {
+        const root = document.documentElement;
+        const header = document.querySelector('header.navbar');
+        const sync = () => {
+          root.style.setProperty('--navbar-h', (header ? header.offsetHeight : 0) + 'px');
+        };
+        sync();
+        if (header && 'ResizeObserver' in window) new ResizeObserver(sync).observe(header);
+        else window.addEventListener('resize', sync);
+      })();
+    </script>
   </body>
 </html>
