@@ -2774,7 +2774,7 @@
       "id": "c345374f-8abd-4426-aa22-18b0bb276e37",
       "type": "movie",
       "name": "A pesar de todo",
-      "enName": "",
+      "enName": "Against All Odds",
       "year": 2019,
       "rating": 6.011,
       "sizeGb": 0,
@@ -2797,7 +2797,8 @@
       "episodeCount": 1,
       "code": "P46",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "fbc88198-8701-400c-9d57-c8f6f232f125",
@@ -4029,7 +4030,7 @@
       "id": "ec401643-3b77-43a0-b6ea-6013b7b19b4e",
       "type": "series",
       "name": "Mr. Robot",
-      "enName": "",
+      "enName": "Mr. Robot",
       "year": 2015,
       "rating": 8.274,
       "sizeGb": 0,
@@ -4054,13 +4055,14 @@
       "episodeCount": 40,
       "code": "S66",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "a69dc0f6-9287-4b65-a252-6afb0d386972",
       "type": "movie",
       "name": "Mikaela",
-      "enName": "",
+      "enName": "Mikaela",
       "year": 2025,
       "rating": 6.167,
       "sizeGb": 0,
@@ -4085,13 +4087,14 @@
       "episodeCount": 1,
       "code": "P67",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "dda293a1-3702-4122-abe3-7e1879a0bd05",
       "type": "series",
       "name": "Rapa",
-      "enName": "",
+      "enName": "Rapa Nui",
       "year": 2022,
       "rating": 7.2,
       "sizeGb": 0,
@@ -4114,7 +4117,8 @@
       "episodeCount": 18,
       "code": "S67",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "bf35a06b-d01d-4ed7-a3e5-9f74ebbae13c",
@@ -4400,7 +4404,7 @@
       "id": "7b9d5b8f-b41a-422f-bace-ac5557c7622d",
       "type": "series",
       "name": "Red Eye",
-      "enName": "",
+      "enName": "Red Eye",
       "year": 2024,
       "rating": 0,
       "sizeGb": 0,
@@ -4419,7 +4423,8 @@
       "episodeCount": 12,
       "code": "S72",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "74cd5945-94f7-472c-8f14-7e10b200212f",
@@ -4456,7 +4461,7 @@
       "id": "39f1f125-118f-4189-8a88-4280042fc2b1",
       "type": "series",
       "name": "Bojack Horseman",
-      "enName": "",
+      "enName": "BoJack Horseman",
       "year": 2014,
       "rating": 8.531,
       "sizeGb": 0,
@@ -4482,7 +4487,8 @@
       "episodeCount": 77,
       "code": "S73",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "2fab44f6-ef73-4bea-ac85-e92fab2468e7",
@@ -4645,7 +4651,7 @@
       "id": "5b0ebc3a-a2d9-4a62-95bc-fa07785c4d16",
       "type": "series",
       "name": "Debris",
-      "enName": "",
+      "enName": "Debris",
       "year": 2021,
       "rating": 7.061,
       "sizeGb": 0,
@@ -4670,7 +4676,8 @@
       "episodeCount": 13,
       "code": "S76",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "3661ae52-dd3f-43d9-be7b-ba2ba162db37",
@@ -5087,7 +5094,7 @@
       "id": "7d9a6780-78b4-42b0-aa73-85557619528f",
       "type": "series",
       "name": "Dirty Money",
-      "enName": "",
+      "enName": "Dirty Money",
       "year": 2018,
       "rating": 0,
       "sizeGb": 0,
@@ -5110,7 +5117,8 @@
       "episodeCount": 12,
       "code": "S83",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "81c3cf79-ce0b-465a-ac81-1545e547ca45",
@@ -5145,7 +5153,7 @@
       "id": "498e663c-b61a-4cbf-bf88-c990e75a6060",
       "type": "series",
       "name": "Lobo, morir matando",
-      "enName": "",
+      "enName": "Wolf, Kill and Kill",
       "year": 2026,
       "rating": 8.8,
       "sizeGb": 0,
@@ -5166,7 +5174,8 @@
       "episodeCount": 70,
       "code": "S84",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "dd29fd45-1075-4b29-b85f-43c02aeebe0c",
@@ -5618,7 +5627,7 @@
       "id": "98f0fd58-ab71-47a2-96ea-80bf47313132",
       "type": "series",
       "name": "Olivia",
-      "enName": "",
+      "enName": "Olivia",
       "year": 2026,
       "rating": 8,
       "sizeGb": 0,
@@ -5641,7 +5650,8 @@
       "episodeCount": 6,
       "code": "S92",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "501ff873-7595-4d49-ab82-e5c8e089fd23",
@@ -5982,7 +5992,7 @@
       "id": "a82dace4-9277-4774-b6b4-6407c4153604",
       "type": "series",
       "name": "33 días",
-      "enName": "",
+      "enName": "33 Days",
       "year": 2026,
       "rating": 8.091,
       "sizeGb": 0,
@@ -6001,7 +6011,8 @@
       "seasonCount": 1,
       "episodeCount": 6,
       "code": "S98",
-      "enriched": true
+      "enriched": true,
+      "titlesChecked": true
     },
     {
       "id": "3f9c32ac-77e1-4864-a6f7-554cece6c032",
@@ -6221,7 +6232,7 @@
       "id": "3569dfe9-1fb3-4961-b0cc-270a02cf4427",
       "type": "series",
       "name": "Mi verdad oculta",
-      "enName": "",
+      "enName": "My Hidden Truth",
       "year": 2025,
       "rating": 7.619,
       "sizeGb": 0,
@@ -6244,7 +6255,8 @@
       "episodeCount": 82,
       "code": "S102",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "83fe3bfd-f2ec-4257-8a21-523d26360e81",
@@ -6339,7 +6351,7 @@
       "id": "2c0a52e9-26f6-436c-8442-8619d2ddce89",
       "type": "series",
       "name": "Ella, maldita alma",
-      "enName": "",
+      "enName": "She, a Wicked Soul",
       "year": 2026,
       "rating": 0,
       "sizeGb": 0,
@@ -6362,7 +6374,8 @@
       "episodeCount": 9,
       "code": "S104",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "7c7c204e-65ba-4446-aa49-e48f82786375",
@@ -6581,7 +6594,7 @@
       "id": "ccab6954-209f-47fc-a555-e552c82a7863",
       "type": "series",
       "name": "Reacher",
-      "enName": "",
+      "enName": "The Whole Truth",
       "year": 2022,
       "rating": 8.096,
       "sizeGb": 0,
@@ -6607,7 +6620,8 @@
       "episodeCount": 32,
       "code": "S108",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "08977ddf-f4d8-41e9-97e4-60afb9818fd1",
@@ -9604,7 +9618,7 @@
       "id": "43ecf786-cdd5-4248-a475-0c2303017efc",
       "type": "movie",
       "name": "Quieres ser mi novia",
-      "enName": "",
+      "enName": "Do You Want to Be My Girlfriend",
       "year": 2026,
       "rating": 8.6,
       "sizeGb": 0,
@@ -9629,7 +9643,8 @@
       "episodeCount": 1,
       "code": "P201",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "9d47afcb-fb55-4b15-9cba-4f7ee849424a",
@@ -9698,7 +9713,7 @@
       "id": "d853c435-99e9-4c1f-b2ad-055bb7fa83c0",
       "type": "movie",
       "name": "Alien rubicon",
-      "enName": "",
+      "enName": "Alien Rubicon",
       "year": 2024,
       "rating": 3.621,
       "sizeGb": 0,
@@ -9723,7 +9738,8 @@
       "episodeCount": 1,
       "code": "P204",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "74c8c2e5-d3ea-47f0-86b4-f55d815966b3",
@@ -10773,7 +10789,7 @@
       "id": "7d81196f-28cf-46db-853c-b595aac0404b",
       "type": "movie",
       "name": "Psicopata-El asesino del conejo blanco",
-      "enName": "",
+      "enName": "Psycho-Pass: The Movie",
       "year": 2026,
       "rating": 7.135,
       "sizeGb": 0,
@@ -10796,13 +10812,14 @@
       "episodeCount": 1,
       "code": "P239",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "632739c1-a752-446a-83e2-801e5bcc9ac3",
       "type": "movie",
       "name": "Rumba Love",
-      "enName": "",
+      "enName": "Rumba Love",
       "year": 2021,
       "rating": 7,
       "sizeGb": 0,
@@ -10827,13 +10844,14 @@
       "episodeCount": 1,
       "code": "P240",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "686e7315-4a7a-46c1-b5c2-532172ab1c5c",
       "type": "movie",
       "name": "Scary Movie",
-      "enName": "",
+      "enName": "Scary Movie",
       "year": 2026,
       "rating": 6.446,
       "sizeGb": 0,
@@ -10859,7 +10877,8 @@
       "episodeCount": 1,
       "code": "P241",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "9aa403bc-6595-4a06-bf10-b702b4a5b4e2",
@@ -10958,7 +10977,7 @@
       "id": "456c2275-8e4a-4b93-ab26-cbf80ac8eba9",
       "type": "movie",
       "name": "Steve",
-      "enName": "",
+      "enName": "Steve McQueen",
       "year": 2025,
       "rating": 6.389,
       "sizeGb": 0,
@@ -10984,7 +11003,8 @@
       "episodeCount": 1,
       "code": "P245",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "0185e61e-da0f-4719-8c07-f540597dadba",
@@ -11023,7 +11043,7 @@
       "id": "ddcabc00-5d55-46a4-8321-1c00f9d77426",
       "type": "movie",
       "name": "The baker",
-      "enName": "",
+      "enName": "The Baker",
       "year": 2023,
       "rating": 6.3,
       "sizeGb": 0,
@@ -11048,7 +11068,8 @@
       "episodeCount": 1,
       "code": "P247",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "ffa04b9b-9791-40c1-a8fc-fa0cbc60d0f2",
@@ -11242,7 +11263,7 @@
       "id": "8e865d4a-93f3-40e1-85a3-0df0a378a178",
       "type": "movie",
       "name": "Thunderbolts",
-      "enName": "",
+      "enName": "Thunderbolts",
       "year": 2025,
       "rating": 7.305,
       "sizeGb": 0,
@@ -11273,7 +11294,8 @@
       "episodeCount": 1,
       "code": "P254",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "5630a9ca-df64-4a5b-9bef-1d9151e59e6f",
@@ -11430,7 +11452,7 @@
       "id": "d8f36519-596f-4217-ab31-9b4b2c778698",
       "type": "movie",
       "name": "Diablo",
-      "enName": "",
+      "enName": "Hellblazer",
       "year": 2025,
       "rating": 7.308,
       "sizeGb": 0,
@@ -11456,7 +11478,8 @@
       "episodeCount": 1,
       "code": "P260",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "b5c90323-349c-4823-ac2f-7e446989eff3",
@@ -11528,7 +11551,7 @@
       "id": "ca0789d5-ec22-4fbf-8030-9febef24e982",
       "type": "movie",
       "name": "Lilo & Stitch",
-      "enName": "",
+      "enName": "Lilo & Stitch",
       "year": 2025,
       "rating": 7.185,
       "sizeGb": 0,
@@ -11553,7 +11576,8 @@
       "episodeCount": 1,
       "code": "P263",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "251b940a-8298-4fca-9bd1-7c8326f824a2",
@@ -11622,7 +11646,7 @@
       "id": "4b3f8e2a-f9d0-4bdb-86f6-7fdffd08df69",
       "type": "movie",
       "name": "Risa y la cabina del viento",
-      "enName": "",
+      "enName": "Laughter in the Dark",
       "year": 2026,
       "rating": 8.3,
       "sizeGb": 0,
@@ -11645,7 +11669,8 @@
       "episodeCount": 1,
       "code": "P266",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "983186f3-64d5-4926-8f9f-41d2f071d73f",
@@ -11715,7 +11740,7 @@
       "id": "b91389f1-2448-4b2d-8f79-caf344aa0b1d",
       "type": "movie",
       "name": "The first snow of Fraggle Rock",
-      "enName": "",
+      "enName": "The First Snow of Fraggle Rock",
       "year": 2025,
       "rating": 7,
       "sizeGb": 0,
@@ -11740,7 +11765,8 @@
       "episodeCount": 1,
       "code": "P269",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "b510b34a-d49c-452f-aa15-8a8945b8144a",
@@ -14450,7 +14476,7 @@
       "id": "1d57e463-84e3-4ce9-a960-84116292b4c5",
       "type": "movie",
       "name": "Enola Holmes 2",
-      "enName": "",
+      "enName": "Enola Holmes 2",
       "year": 2022,
       "rating": 7.405,
       "sizeGb": 0,
@@ -14476,13 +14502,14 @@
       "episodeCount": 1,
       "code": "P356",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "992e7528-9f2f-45ec-90b3-3ad303ed0bc8",
       "type": "movie",
       "name": "Enola Holmes 3",
-      "enName": "",
+      "enName": "Enola Holmes 3",
       "year": 2026,
       "rating": 6.8,
       "sizeGb": 0,
@@ -14507,7 +14534,8 @@
       "episodeCount": 1,
       "code": "P357",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "af8db2f8-91eb-48ed-a8c4-8974afff73b0",
@@ -14574,7 +14602,7 @@
       "id": "bcd0c4e7-c31e-46f5-835f-c5884d1adc2d",
       "type": "movie",
       "name": "La Familia del Barrio - La maldicion del quinto partido",
-      "enName": "",
+      "enName": "The Neighborhood - The Curse of the Fifth House",
       "year": 2026,
       "rating": 9.191,
       "sizeGb": 0,
@@ -14594,7 +14622,8 @@
       "episodeCount": 1,
       "code": "P360",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "8f12edf0-4619-4ca6-be5f-2ecc227fef49",
@@ -14631,7 +14660,7 @@
       "id": "dbb95672-f3ae-420e-bc28-1689d6d9bdf7",
       "type": "movie",
       "name": "Madame Web",
-      "enName": "",
+      "enName": "Madame Web",
       "year": 2023,
       "rating": 5.28,
       "sizeGb": 0,
@@ -14656,7 +14685,8 @@
       "episodeCount": 1,
       "code": "P362",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "ee296e80-db04-4a79-8430-cc467dba249c",
@@ -14788,7 +14818,7 @@
       "id": "5e162cdf-bcdf-4ac9-8077-07143c880785",
       "type": "movie",
       "name": "Sweet River",
-      "enName": "",
+      "enName": "Sweet River",
       "year": 2021,
       "rating": 5.375,
       "sizeGb": 0,
@@ -14813,13 +14843,14 @@
       "episodeCount": 1,
       "code": "P367",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "90ab1db4-7e80-47be-bb9d-d5bfb59849c6",
       "type": "movie",
       "name": "Toy Story 4",
-      "enName": "",
+      "enName": "Toy Story 4",
       "year": 2019,
       "rating": 7.464,
       "sizeGb": 0,
@@ -14846,7 +14877,8 @@
       "episodeCount": 1,
       "code": "P368",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "40cf5d8d-6f14-4461-80a7-4e0c24270f37",
@@ -14916,7 +14948,7 @@
       "id": "b03d25d9-8963-4499-a17f-b65db322a803",
       "type": "movie",
       "name": "Blue Moon",
-      "enName": "",
+      "enName": "Blue Moon Rising",
       "year": 2025,
       "rating": 6.62,
       "sizeGb": 0,
@@ -14941,7 +14973,8 @@
       "episodeCount": 1,
       "code": "P371",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "be8dd51a-c152-4cdb-8f23-94a4461a6a8a",
@@ -15012,7 +15045,7 @@
       "id": "b0bfa378-8352-4f99-994d-1d5832856041",
       "type": "movie",
       "name": "El fantasma de mi mujer",
-      "enName": "",
+      "enName": "My Wife, Murderer",
       "year": 2026,
       "rating": 4.8,
       "sizeGb": 0,
@@ -15036,7 +15069,8 @@
       "code": "P374",
       "enriched": true,
       "translated": true,
-      "isActive": false
+      "isActive": false,
+      "titlesChecked": true
     },
     {
       "id": "284ea6b6-0610-455a-b70b-2aecc32a6aa3",
@@ -15620,7 +15654,7 @@
       "id": "b8261b10-6469-4369-9866-29f539382c61",
       "type": "movie",
       "name": "Boulevar",
-      "enName": "",
+      "enName": "Boulevard",
       "year": 2026,
       "rating": 7.6,
       "sizeGb": 0,
@@ -15643,7 +15677,8 @@
       "episodeCount": 1,
       "code": "P393",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "482c4b02-9132-42ad-9394-19e3929cc5b1",
@@ -15776,7 +15811,7 @@
       "id": "72598782-8cf4-49dd-9ea1-7f953ab966cc",
       "type": "movie",
       "name": "Shadow Force",
-      "enName": "",
+      "enName": "Shadow Force: The War Against Evil",
       "year": 2025,
       "rating": 6.318,
       "sizeGb": 0,
@@ -15801,13 +15836,14 @@
       "episodeCount": 1,
       "code": "P398",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "77780deb-3bfd-4857-9878-0f3b2c08d57e",
       "type": "movie",
       "name": "Amarga Navidad",
-      "enName": "",
+      "enName": "Bitter Christmas",
       "year": 2026,
       "rating": 6.3,
       "sizeGb": 0,
@@ -15832,13 +15868,14 @@
       "episodeCount": 1,
       "code": "P399",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "51fedbb0-b6b3-45bf-8165-66dda942b69d",
       "type": "movie",
       "name": "Backrooms",
-      "enName": "",
+      "enName": "The Backrooms",
       "year": 2026,
       "rating": 7.086,
       "sizeGb": 0,
@@ -15863,13 +15900,14 @@
       "episodeCount": 1,
       "code": "P400",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "1436b266-3bba-4ff2-87da-6403878b996e",
       "type": "movie",
       "name": "El Ruido",
-      "enName": "",
+      "enName": "The Sound",
       "year": 2026,
       "rating": 0,
       "sizeGb": 0,
@@ -15890,13 +15928,14 @@
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P401",
-      "enriched": true
+      "enriched": true,
+      "titlesChecked": true
     },
     {
       "id": "0ab99c1e-fe1b-4106-97c9-02e31a224d98",
       "type": "movie",
       "name": "Ella solo come carne",
-      "enName": "",
+      "enName": "She's a Man, Eat My Dust",
       "year": 2026,
       "rating": 2.7,
       "sizeGb": 0,
@@ -15918,7 +15957,8 @@
       "episodeCount": 1,
       "code": "P402",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "1be37ef4-4bbc-4a43-baf4-270a77421a10",
@@ -16049,7 +16089,7 @@
       "id": "20aa7d3d-fba5-4caa-8b14-7e258a90996c",
       "type": "movie",
       "name": "Solos",
-      "enName": "",
+      "enName": "Alone",
       "year": 2026,
       "rating": 6.154,
       "sizeGb": 0,
@@ -16070,7 +16110,8 @@
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P407",
-      "enriched": true
+      "enriched": true,
+      "titlesChecked": true
     },
     {
       "id": "ded8c1a7-3d7c-4f80-8408-8f0c9a47b35c",
@@ -16141,7 +16182,7 @@
       "id": "e96b881a-25bc-48ca-ae22-cd4811444bdc",
       "type": "movie",
       "name": "M3GAN",
-      "enName": "",
+      "enName": "M3GAN",
       "year": 2022,
       "rating": 7.011,
       "sizeGb": 0,
@@ -16167,13 +16208,14 @@
       "episodeCount": 1,
       "code": "P410",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "c89621e9-085e-4f67-901d-bef514a6a67e",
       "type": "movie",
       "name": "M3GAN 2.0",
-      "enName": "",
+      "enName": "M3GAN 2.0",
       "year": 2025,
       "rating": 7.157,
       "sizeGb": 0,
@@ -16199,7 +16241,8 @@
       "episodeCount": 1,
       "code": "P411",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "b1ac3c9b-cf93-4696-94da-080a15e431aa",
@@ -16331,7 +16374,7 @@
       "id": "cfa73698-6b60-4e1f-a6d7-18066da2f890",
       "type": "movie",
       "name": "Sorda",
-      "enName": "",
+      "enName": "Deaf",
       "year": 2025,
       "rating": 7.2,
       "sizeGb": 0,
@@ -16356,13 +16399,14 @@
       "episodeCount": 1,
       "code": "P416",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "c5cd9369-20b2-46cb-be34-9e363f528241",
       "type": "movie",
       "name": "Altas capacidades",
-      "enName": "",
+      "enName": "Gifted",
       "year": 2026,
       "rating": 5.294,
       "sizeGb": 0,
@@ -16385,7 +16429,8 @@
       "episodeCount": 1,
       "code": "P417",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "0a8a1a9b-c098-481e-abcf-ebdb61130512",
@@ -16533,7 +16578,7 @@
       "id": "e0e93d87-c6b7-4dc8-a5d6-ea7c845c9b5a",
       "type": "movie",
       "name": "Dual",
-      "enName": "",
+      "enName": "Dual (2022)",
       "year": 2022,
       "rating": 5.968,
       "sizeGb": 0,
@@ -16559,7 +16604,8 @@
       "episodeCount": 1,
       "code": "P422",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "a7b703a6-0bbf-4d6f-888d-b2b28d77fde8",
@@ -16660,7 +16706,7 @@
       "id": "a2637b50-8267-4769-a965-5f3c7fb35843",
       "type": "movie",
       "name": "La ahorcada",
-      "enName": "",
+      "enName": "The Hangman",
       "year": 2026,
       "rating": 5.375,
       "sizeGb": 0,
@@ -16685,13 +16731,14 @@
       "episodeCount": 1,
       "code": "P426",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "62c6cbb4-cf73-4140-97f2-79116534cc5d",
       "type": "movie",
       "name": "La sospecha de Sofía",
-      "enName": "",
+      "enName": "Sofia's Suspicion",
       "year": 2025,
       "rating": 5.8,
       "sizeGb": 0,
@@ -16714,13 +16761,14 @@
       "episodeCount": 1,
       "code": "P427",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "dcfdfdec-78cb-447a-8c6c-5e34b4023069",
       "type": "movie",
       "name": "Normal",
-      "enName": "",
+      "enName": "Normal",
       "year": 2026,
       "rating": 7.27,
       "sizeGb": 0,
@@ -16746,7 +16794,8 @@
       "episodeCount": 1,
       "code": "P428",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "9b12f0cc-a639-4f47-9c38-521c17876f14",
@@ -16821,7 +16870,7 @@
       "id": "e8105759-fd61-4f6f-8de8-d985787c5ce2",
       "type": "movie",
       "name": "Supergirl",
-      "enName": "",
+      "enName": "Supergirl",
       "year": 2026,
       "rating": 6.737,
       "sizeGb": 0,
@@ -16848,7 +16897,8 @@
       "episodeCount": 1,
       "code": "P431",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "44366e1e-d987-41e4-8899-6ff6234c0cf7",
@@ -16983,7 +17033,7 @@
       "id": "8bd05450-ac77-408c-855f-be4c3ba11bed",
       "type": "movie",
       "name": "Volition",
-      "enName": "",
+      "enName": "Volition",
       "year": 2019,
       "rating": 5.489,
       "sizeGb": 0,
@@ -17008,7 +17058,8 @@
       "episodeCount": 1,
       "code": "P436",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "cf56ddc8-c724-4ec8-b0db-e0c1657a2527",
@@ -17045,7 +17096,7 @@
       "id": "c28ce4c5-74ef-45d7-9981-f80dfe2f45b5",
       "type": "movie",
       "name": "The Amazing Spider-Man",
-      "enName": "",
+      "enName": "The Amazing Spider-Man 2",
       "year": 2012,
       "rating": 6.758,
       "sizeGb": 0,
@@ -17072,7 +17123,8 @@
       "episodeCount": 1,
       "code": "P438",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "0c56da4a-ebbf-4edf-9bfd-f9048c487d16",
@@ -17233,7 +17285,7 @@
       "id": "c32fec35-b3b3-4199-86e3-c82560e40676",
       "type": "movie",
       "name": "Objetos",
-      "enName": "",
+      "enName": "Objects",
       "year": 2022,
       "rating": 6.029,
       "sizeGb": 0,
@@ -17256,13 +17308,14 @@
       "episodeCount": 1,
       "code": "P444",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "2319bbbf-92ff-4d05-9084-1ac3545d87d7",
       "type": "movie",
       "name": "Soulm8te",
-      "enName": "",
+      "enName": "Soulmate",
       "year": 2026,
       "rating": 7.389,
       "sizeGb": 0,
@@ -17287,13 +17340,14 @@
       "episodeCount": 1,
       "code": "P445",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "f7ccee12-f3f9-4f06-8301-0c9a9c54dadb",
       "type": "movie",
       "name": "2067",
-      "enName": "",
+      "enName": "2067: A Year in Space",
       "year": 2020,
       "rating": 5.485,
       "sizeGb": 0,
@@ -17318,7 +17372,8 @@
       "episodeCount": 1,
       "code": "P446",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "2a41e51a-2132-4af1-b831-56ef1dce73e4",
@@ -17417,7 +17472,7 @@
       "id": "84700044-fb7b-4016-b6ca-01d696a60675",
       "type": "movie",
       "name": "Daddio",
-      "enName": "",
+      "enName": "Daddio",
       "year": 2024,
       "rating": 6.3,
       "sizeGb": 0,
@@ -17444,7 +17499,8 @@
       "episodeCount": 1,
       "code": "P450",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "ab040d39-2350-403d-a11d-9e6c61e8a569",
@@ -17753,7 +17809,7 @@
       "id": "095de705-431d-40fd-9bbe-f37ed2742cb4",
       "type": "movie",
       "name": "El silencio del pantano",
-      "enName": "",
+      "enName": "The Silence of the Marsh",
       "year": 2019,
       "rating": 5.243,
       "sizeGb": 0,
@@ -17776,13 +17832,14 @@
       "episodeCount": 1,
       "code": "P461",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "2ac1f617-a993-483d-af2c-dff2c761b3ef",
       "type": "movie",
       "name": "Objetos",
-      "enName": "",
+      "enName": "Objects",
       "year": 2022,
       "rating": 6.029,
       "sizeGb": 0,
@@ -17806,7 +17863,8 @@
       "code": "P462",
       "enriched": true,
       "translated": true,
-      "isActive": false
+      "isActive": false,
+      "titlesChecked": true
     },
     {
       "id": "8afc4b5b-d07a-4bf9-a1c2-ca62f2966be9",
@@ -17907,7 +17965,7 @@
       "id": "d2a9a809-d7cb-4349-b376-6f3eedf627d3",
       "type": "movie",
       "name": "Todo lo que nunca fuimos",
-      "enName": "",
+      "enName": "Everything We Never Said",
       "year": 2026,
       "rating": 8.139,
       "sizeGb": 0,
@@ -17932,13 +17990,14 @@
       "episodeCount": 1,
       "code": "P466",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "533b501e-8059-49ab-aa4d-d15569aa8279",
       "type": "movie",
       "name": "Zeta",
-      "enName": "",
+      "enName": "Zeta One",
       "year": 2026,
       "rating": 6.656,
       "sizeGb": 0,
@@ -17963,7 +18022,8 @@
       "episodeCount": 1,
       "code": "P467",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "0fb85194-d5f8-4481-b7f5-e1203cd7d2f1",
@@ -18395,7 +18455,7 @@
       "id": "555ddd36-a94f-46c9-92e8-32d463e962c2",
       "type": "movie",
       "name": "Viaje todo robado",
-      "enName": "",
+      "enName": "All Robbed",
       "year": 2023,
       "rating": 3,
       "sizeGb": 0,
@@ -18418,13 +18478,14 @@
       "episodeCount": 1,
       "code": "P482",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "1042b262-ba64-40f5-9d41-29ad15c521d9",
       "type": "movie",
       "name": "Caminando con el diablo",
-      "enName": "",
+      "enName": "Walking with the Devil",
       "year": 2026,
       "rating": 4.5,
       "sizeGb": 0,
@@ -18447,7 +18508,8 @@
       "episodeCount": 1,
       "code": "P483",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "5989f7ba-b20f-41c3-8216-6156d6c08f2d",
@@ -18578,7 +18640,7 @@
       "id": "3cadd28b-4f1f-45fa-b930-71d1e573817b",
       "type": "movie",
       "name": "Los tigres",
-      "enName": "",
+      "enName": "Tigers",
       "year": 2025,
       "rating": 6.162,
       "sizeGb": 0,
@@ -18604,13 +18666,14 @@
       "code": "P488",
       "enriched": true,
       "translated": true,
-      "isActive": false
+      "isActive": false,
+      "titlesChecked": true
     },
     {
       "id": "48a39134-d829-4ca5-a648-e43635de71a4",
       "type": "movie",
       "name": "Mala influencia",
-      "enName": "",
+      "enName": "Bad Influence",
       "year": 2025,
       "rating": 5.73,
       "sizeGb": 0,
@@ -18633,7 +18696,8 @@
       "episodeCount": 1,
       "code": "P489",
       "enriched": true,
-      "translated": true
+      "translated": true,
+      "titlesChecked": true
     },
     {
       "id": "0bde7126-816f-4b05-bf99-4b3366818a23",
@@ -18700,7 +18764,7 @@
       "id": "75ff5946-539b-4626-aad9-f87199525e8c",
       "type": "movie",
       "name": "Sin cobertura",
-      "enName": "",
+      "enName": "Uncovered",
       "year": 2025,
       "rating": 5.606,
       "sizeGb": 0,
@@ -18724,7 +18788,8 @@
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P492",
-      "enriched": true
+      "enriched": true,
+      "titlesChecked": true
     },
     {
       "id": "7983947b-a919-4bca-b7ad-2af5b7d34525",
