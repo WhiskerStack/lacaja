@@ -71,10 +71,10 @@ export default function LibraryGrid({ cards, facets }: Props) {
     <div>
       {/* Barra de controles fija (funcional §6.5.2): al bajar el scroll queda pegada
           justo debajo del navbar, para cambiar de sección/filtro sin volver arriba.
-          Comparte fondo y borde con el navbar para que se lean como una sola pieza;
+          Fondo opaco (sin blur) para que el grid no se transparente por debajo;
           el desplazamiento negativo compensa el padding horizontal de <main>. */}
       <div
-        class="sticky z-30 -mx-3 sm:-mx-4 px-3 sm:px-4 pt-3 mb-4 bg-base-200/80 backdrop-blur border-b border-base-300"
+        class="sticky z-30 -mx-3 sm:-mx-4 px-3 sm:px-4 pt-3 mb-4 bg-base-100 border-b border-base-300"
         style="top: var(--navbar-h, 4rem)"
       >
         {/* Chips rápidos (funcional §6.5.2) */}
@@ -102,7 +102,7 @@ export default function LibraryGrid({ cards, facets }: Props) {
         </div>
 
         {showFilters && (
-          <div class="card bg-base-300 p-4 mb-3 grid sm:grid-cols-4 gap-3">
+          <div class="card bg-base-200 p-4 mb-3 grid sm:grid-cols-4 gap-3">
             <select class="select select-sm select-bordered" value={year} onChange={(e) => setYear((e.target as HTMLSelectElement).value)}>
               <option value="">Año (todos)</option>
               {facets.years.map((y) => <option key={y} value={String(y)}>{y}</option>)}
