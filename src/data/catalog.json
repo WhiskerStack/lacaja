@@ -6536,23 +6536,23 @@
       "name": "Lucky",
       "enName": "Lucky",
       "year": 2026,
-      "rating": 7.153,
+      "rating": 7.262,
       "sizeGb": 0,
       "isPremiere": false,
       "genre": "Drama",
       "region": "EU",
       "language": "Inglés",
-      "description": "Un soldado americano herido lucha por sobrevivir detrás de las líneas enemigas durante la Batalla de las Ardenas en la Segunda Guerra Mundial contra los alemanes, recurriendo a su instinto, espionaje y una radio de mano para evitar la captura y encontrar el camino de regreso a su unidad.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/7AEBdyGYXumXWmMFeynE8227KeZ.jpg",
+      "description": "Cuando un golpe de millones de dólares sale mal, la artista con artimañas Lucky se ve obligada a huir. Perseguida tanto por la FBI como por un criminal sin escrúpulos, Lucky debe luchar por su vida - y una forma de salir.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/xsrkiXg8EuNNtbPtbmvCxg95gK7.jpg",
       "cast": [
-        "Scott Eastwood",
-        "Colin Hanks",
+        "Anya Taylor-Joy",
+        "Annette Bening",
+        "Clifton Collins Jr.",
         "Aunjanue Ellis-Taylor",
-        "Taylor John Smith",
-        "Lorne MacFadyen"
+        "Timothy Olyphant"
       ],
       "trailers": [
-        "vtEnjikCXyA"
+        "GAbT5qCTXR8"
       ],
       "seasons": [],
       "seasonCount": 1,
@@ -8965,7 +8965,7 @@
       "genre": "Acción",
       "region": "México",
       "language": "Español",
-      "description": "The brutal murder of the wife of “Toro,” a military hero in the special forces, turns him into a man with a single purpose: revenge. After a stroke of fate makes him a millionaire, Carlos transforms his fortune into an arsenal and, together with his closest soldiers, sets out to hunt down those responsible.",
+      "description": "La brutal asesinato de la esposa de \"Toro\", un héroe militar en las fuerzas especiales, lo convierte en un hombre con un solo objetivo: la venganza. Después de que un golpe de la suerte lo hace millonario, Carlos transforma su fortuna en un arsenal y, junto a sus soldados más cercanos, se dispone a cazar a los responsables.",
       "imageUrl": "https://image.tmdb.org/t/p/w500/ygWXPL0RS91JyJPNOfK34eV3bRE.jpg",
       "cast": [
         "Omar Chaparro",
@@ -8983,7 +8983,8 @@
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P180",
-      "enriched": true
+      "enriched": true,
+      "translated": true
     },
     {
       "id": "bceb8da6-99ae-4057-aac1-d42aafc47d2a",
