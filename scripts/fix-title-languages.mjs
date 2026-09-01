@@ -52,17 +52,54 @@ async function ollama(prompt, { json = false } = {}) {
 
 const LANGS = ['es', 'en', 'other', 'unknown'];
 
-// Palabras comunes para heurística de respaldo
+// Palabras comunes ampliadas para heurística de respaldo
 const SPANISH_WORDS = new Set([
-  'el', 'la', 'los', 'las', 'un', 'una', 'de', 'del', 'y', 'que', 'en', 'por', 'para',
-  'con', 'sin', 'sobre', 'entre', 'a', 'al', 'lo', 'su', 'mi', 'tu', 'se', 'me', 'te',
-  'nos', 'os', 'les', 'sí', 'no', 'ya', 'ahora', 'cuando', 'donde', 'cómo', 'qué'
+  'el', 'la', 'los', 'las', 'un', 'una', 'unos', 'unas', 'de', 'del', 'al', 'y', 'que', 'en', 'por', 'para',
+  'con', 'sin', 'sobre', 'entre', 'a', 'al', 'lo', 'su', 'mi', 'tu', 'se', 'me', 'te', 'nos', 'os', 'les',
+  'sí', 'no', 'ya', 'ahora', 'cuando', 'donde', 'cómo', 'qué', 'quién', 'cuál', 'cual', 'porque', 'pues',
+  'aunque', 'mientras', 'durante', 'tras', 'según', 'hasta', 'desde', 'contra', 'ante', 'bajo', 'cabe',
+  'conmigo', 'contigo', 'consigo', 'nosotros', 'vosotros', 'ellos', 'ellas', 'ustedes', 'yo', 'tú', 'él', 'ella',
+  'usted', 'nos', 'os', 'les', 'los', 'las', 'les', 'mis', 'tus', 'sus', 'nuestros', 'vuestros', 'suyos',
+  'esto', 'eso', 'aquello', 'este', 'ese', 'aquel', 'estos', 'esos', 'aquellos', 'esta', 'esa', 'aquella',
+  'estas', 'esas', 'aquellas', 'muy', 'mucho', 'poco', 'tan', 'tanto', 'más', 'menos', 'bien', 'mal', 'casi',
+  'demasiado', 'bastante', 'solo', 'solamente', 'incluso', 'inclusive', 'además', 'también', 'así', 'aún', 'todavía',
+  'ya', 'ayer', 'hoy', 'mañana', 'antes', 'después', 'pronto', 'tarde', 'temprano', 'siempre', 'nunca', 'jamás',
+  'algo', 'alguien', 'nada', 'nadie', 'todo', 'todos', 'cada', 'cualquier', 'algunos', 'ningún', 'ninguno',
+  'cerca', 'lejos', 'arriba', 'abajo', 'dentro', 'fuera', 'encima', 'debajo', 'delante', 'detrás', 'alrededor',
+  'contra', 'sin', 'mediante', 'durante', 'excepto', 'salvo', 'menos', 'incluso', 'pero', 'sino', 'aunque',
+  'mientras', 'cuando', 'donde', 'como', 'porque', 'pues', 'ya que', 'asi que', 'conque', 'luego', 'entonces',
+  'así', 'tan', 'tanto', 'más', 'menos', 'muy', 'poco', 'bastante', 'demasiado', 'casi', 'todo', 'nada',
+  'algo', 'alguien', 'nadie', 'otro', 'otra', 'otros', 'otras', 'mismo', 'misma', 'mismos', 'mismas',
+  'tal', 'tales', 'cual', 'cuales', 'quien', 'quienes', 'cuyo', 'cuya', 'cuyos', 'cuyas'
 ]);
+
 const ENGLISH_WORDS = new Set([
   'the', 'of', 'and', 'to', 'for', 'on', 'at', 'from', 'with', 'without', 'about',
   'between', 'by', 'in', 'into', 'through', 'during', 'after', 'before', 'above',
   'below', 'up', 'down', 'a', 'an', 'is', 'are', 'was', 'were', 'have', 'has', 'had',
-  'do', 'does', 'did', 'will', 'would', 'could', 'should', 'may', 'might', 'must'
+  'do', 'does', 'did', 'will', 'would', 'could', 'should', 'may', 'might', 'must',
+  'this', 'that', 'these', 'those', 'then', 'than', 'so', 'because', 'since', 'as',
+  'like', 'unlike', 'than', 'so', 'such', 'some', 'any', 'no', 'every', 'each',
+  'both', 'neither', 'either', 'all', 'few', 'many', 'several', 'most', 'more',
+  'less', 'least', 'enough', 'too', 'very', 'rather', 'quite', 'almost', 'just',
+  'only', 'really', 'actually', 'really', 'very', 'almost', 'just', 'only',
+  'also', 'too', 'even', 'still', 'already', 'yet', 'soon', 'now', 'then',
+  'once', 'twice', 'again', 'always', 'never', 'often', 'sometimes', 'usually',
+  'finally', 'eventually', 'soon', 'later', 'earlier', 'today', 'yesterday', 'tomorrow',
+  'morning', 'afternoon', 'evening', 'night', 'day', 'week', 'month', 'year',
+  'time', 'way', 'life', 'world', 'man', 'woman', 'people', 'thing', 'work',
+  'home', 'house', 'room', 'door', 'window', 'hand', 'head', 'eye', 'face',
+  'day', 'night', 'life', 'love', 'hope', 'dream', 'future', 'past', 'present',
+  'good', 'great', 'big', 'small', 'long', 'short', 'high', 'low', 'wide', 'deep',
+  'important', 'possible', 'able', 'real', 'whole', 'certain', 'common', 'different',
+  'same', 'true', 'false', 'best', 'better', 'bad', 'worse', 'worst', 'happy', 'sad',
+  'angry', 'scared', 'excited', 'tired', 'crazy', 'strange', 'normal', 'clear',
+  'dark', 'light', 'bright', 'shiny', 'old', 'new', 'young', 'fresh', 'dead', 'alive',
+  'free', 'open', 'close', 'hard', 'soft', 'easy', 'difficult', 'simple', 'complex',
+  'cheap', 'expensive', 'rich', 'poor', 'strong', 'weak', 'fast', 'slow', 'hot', 'cold',
+  'warm', 'cool', 'dry', 'wet', 'clean', 'dirty', 'safe', 'dangerous', 'beautiful',
+  'ugly', 'nice', 'kind', 'cruel', 'wise', 'foolish', 'brave', 'coward', 'loyal',
+  'honest', 'dishonest', 'fair', 'unfair', 'right', 'wrong', 'true', 'false'
 ]);
 
 function guessLanguage(text) {
@@ -79,6 +116,7 @@ function guessLanguage(text) {
 
 /**
  * Detecta el idioma de los dos títulos. Si Ollama devuelve unknown, usa heurística.
+ * Además, si un campo es unknown y el otro es es/en, asigna el contrario a ese campo.
  */
 export async function detectLanguages(name, enName) {
   const prompt = `Eres un catalogador de cine. Analiza estos dos títulos de una misma película o serie.
@@ -114,6 +152,14 @@ Responde SOLO con un objeto JSON con esta forma exacta:
     translatable: parsed.translatable === true,
   };
 
+  // Si uno es unknown y el otro es es/en, asignar el contrario
+  if (result.name === 'unknown' && (result.enName === 'es' || result.enName === 'en')) {
+    result.name = (result.enName === 'es') ? 'en' : 'es';
+  }
+  if (result.enName === 'unknown' && (result.name === 'es' || result.name === 'en')) {
+    result.enName = (result.name === 'es') ? 'en' : 'es';
+  }
+
   // Si ambos son unknown, usar heurística
   if (result.name === 'unknown' && result.enName === 'unknown') {
     const guessA = guessLanguage(name);
@@ -124,6 +170,17 @@ Responde SOLO con un objeto JSON con esta forma exacta:
       result.translatable = name.toLowerCase() !== enName.toLowerCase();
     }
   }
+
+  // Si aún hay unknown, intentar con heurística individual
+  if (result.name === 'unknown') {
+    const guess = guessLanguage(name);
+    if (guess !== 'unknown') result.name = guess;
+  }
+  if (result.enName === 'unknown') {
+    const guess = guessLanguage(enName);
+    if (guess !== 'unknown') result.enName = guess;
+  }
+
   return result;
 }
 
