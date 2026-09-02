@@ -6903,26 +6903,26 @@
     {
       "id": "187ed7d7-077f-4e60-b0df-640f4dd97e43",
       "type": "series",
-      "name": "Yabani",
-      "enName": "Salvaje",
-      "year": 2025,
-      "rating": 6.8,
+      "name": "Salvaje",
+      "enName": "Wild Heart",
+      "year": 2023,
+      "rating": 8.8,
       "sizeGb": 0,
       "isPremiere": false,
       "genre": "Drama",
       "region": "Turquía",
       "language": "Español",
-      "description": "El veterinario de escasos recursos, Antón, toma un empleo en una tienda de mascotas de lujo, pasando de tratar a animales de granja rurales a vender tratamientos premium para perros mimados.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/UgYg7GY6LYQnGhCmt1PQ7OhwEU.jpg",
+      "description": "Un niño pequeño secuestrado de una familia acaudalada crece en las calles, formando un fuerte vínculo con otros niños de la calle mientras sobrevive a la pobreza y la violencia.  Pasados los años, es sorpresivamente reunido con su familia biológica, lo que lo obliga a navegar por dos mundos completamente diferentes.  Entre su identidad pasada y sus nuevos lazos familiares, lucha por recuperar su lugar mientras se enfrenta a la traición, el conflicto de clases y las heridas emocionales.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/eixnqRSbRDrcLP6UuVlh8UrYTbf.jpg",
       "cast": [
-        "Luis Zahera",
-        "Lucía Caraballo",
-        "Carmen Ruiz",
-        "Antonio Durán 'Morris'",
-        "Nuno Gallego"
+        "Halit Özgür Sarı",
+        "Yurdaer Okur",
+        "Dolunay Soysert",
+        "Bertan Asllani",
+        "Bertan Aslani"
       ],
       "trailers": [
-        "UQI8Ac7OJEA"
+        "pgvYnvBT8no"
       ],
       "seasons": [],
       "seasonCount": 1,
