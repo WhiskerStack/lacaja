@@ -1100,27 +1100,28 @@
     {
       "id": "e09e2c3a-846b-4b3c-a296-a9d69fc5b1ae",
       "type": "movie",
-      "name": "ASH",
-      "enName": "ASH",
+      "name": "Ash",
+      "enName": "Ash",
       "year": 2025,
-      "rating": 7.65,
+      "rating": 5.2,
       "sizeGb": 0,
       "isPremiere": false,
-      "genre": "Ciencia Ficción",
+      "genre": "Horror",
       "region": "EU",
       "language": "Inglés",
-      "description": "En la sombra de la devastadora guerra contra la RDA y la pérdida de su hijo mayor, Jake Sully y Neytiri enfrentan una nueva amenaza en Pandora: la gente de la ceniza, un tribu Na'vi violenta y ambiciosa liderada por el feroz Varang. La familia de Jake debe luchar por su supervivencia y el futuro de Pandora en un conflicto que los empuja a sus límites emocionales y físicos.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/bRBeSHfGHwkEpImlhxPmOcUsaeg.jpg",
+      "description": "En el planeta misterioso de Ash, Riya despierta para encontrar a su tripulación masacrada. Cuando llega un hombre llamado Brion para rescatarla, comienza un trance de terror psicológico y físico mientras Riya y Brion deben decidir si pueden confiar el uno en el otro para sobrevivir.",
+      "imageUrl": "https://media.themoviedb.org/t/p/w500/nRa8B3tQCUK6pVwjasIyQehbvpF.jpg",
       "cast": [
-        "Sam Worthington",
-        "Zoe Saldaña",
-        "Sigourney Weaver",
-        "Stephen Lang",
-        "Oona Chaplin"
+        "Eiza González",
+        "Aaron Paul",
+        "Iko Uwais",
+        "Kate Elliott",
+        "Beulah Koale",
+        "Flying Lotus"
       ],
       "trailers": [
-        "Ma1x7ikpid8",
-        "nb_fFj_0rq8"
+        "S2Y3zQtKAEk",
+        "uvp2EYCXYwU"
       ],
       "seasons": [],
       "seasonCount": 1,
