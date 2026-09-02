@@ -7501,28 +7501,27 @@
     {
       "id": "b1b71c4c-6f24-4f65-bb45-9c5d97b8e8b7",
       "type": "movie",
-      "name": "Raqa",
-      "enName": "Raqa-Spy vs. Spy",
+      "name": "Raqqa: Spy vs. Spy",
+      "enName": "Raqqa: Spy vs. Spy",
       "year": 2024,
-      "rating": 6.9,
+      "rating": 6,
       "sizeGb": 0,
       "isPremiere": false,
       "genre": "Thriller",
       "region": "España",
       "language": "Español",
-      "description": "La jugadora de tenis y entrenadora Tashi ha transformado a su esposo, Art, en un campeón mundial. Para sacarlo de su reciente racha de derrotas, se inscribe a él en un evento de \"Desafío\" - cercano al nivel más bajo de torneo profesional -, donde se encuentra frente a la red con su mejor amigo de siempre y ex novio de Tashi.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/H6vke7zGiuLsz4v4RPeReb9rsv.jpg",
+      "description": "Un espía internacional enigmático al servicio de Rusia y un agente español de origen marroquí que trabaja para Europol coinciden en la ciudad siria de Raqqa, un enclave de la auto proclamada organización Estado Islámico (ISIS). A pesar de estar en lados opuestos, ambos comparten un objetivo común: encontrar las coordenadas de uno de los principales líderes de la Yihad, conocido como El Jordano, para facilitar su eliminación y precipitar la caída de la organización. En un ambiente de mutuo recelo, ambos tendrán que eludir peligros, desde ejecuciones sumarias hasta mujeres vendidas a la esclavitud.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/jDzliBDT3xuNnifOX8qBIAJI8oA.jpg",
       "cast": [
-        "Zendaya",
-        "Mike Faist",
-        "Josh O'Connor",
-        "Darnell Appling",
-        "Bryan Doo"
+        "Álvaro Morte",
+        "Mina El Hammani",
+        "Abdelatif Hwidar",
+        "Fariba Sheikhan",
+        "Ben Temple"
       ],
       "trailers": [
-        "-2N3hmRmwHQ",
-        "VobTTbg-te0",
-        "MDnVk5jIJr0"
+        "clpF53fTifo",
+        "zeR_ZmiMjZQ"
       ],
       "seasons": [],
       "seasonCount": 1,
