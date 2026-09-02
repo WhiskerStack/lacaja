@@ -179,6 +179,8 @@ export async function enrichItem(item, { force = false } = {}) {
     return { changed: false };
   }
 
+  if (force) delete item.translated;
+
   const { name, enName, year, type } = item;
   const queries = [];
   if (enName && enName.trim()) queries.push(enName);
