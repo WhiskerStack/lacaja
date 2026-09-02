@@ -17,39 +17,32 @@ export default defineConfig({
     AstroPWA({
       registerType: 'autoUpdate',
       workbox: {
+        // Precacheamos TODO el HTML generado, incluidas las ~600 paginas de detalle
+        // (/p/{id}, /s/{id}, /s/{id}/{temporada}, /s/{id}/{temporada}/{capitulo}).
+        // Es el unico modo de que el catalogo sea navegable sin conexion: una regla
+        // de runtime solo cachea lo que el usuario ya visito. Son ~600 ficheros de
+        // ~20 KB (comprimidos viajan ~2 MB), asi que el coste de instalacion es bajo.
+        // Las imagenes quedan FUERA del precache a proposito: los posters optimizados
+        // pesan decenas de MB y se cachean bajo demanda con la regla CacheFirst.
         globPatterns: [
-          'index.html',
-          '404.html',
-          'biblioteca/index.html',
-          'buscar/index.html',
+          '**/*.html',
           '_astro/**/*.{js,css,woff2}',
           '*.{svg,png,ico,webmanifest}',
           '{search,library}-index.json',
           'icons/*.png',
         ],
+        // @vite-pwa/astro inyecta `navigateFallback: '/'` cuando la opcion no aparece,
+        // y registra esa NavigationRoute ANTES de runtimeCaching. Resultado: cualquier
+        // navegacion que no estuviera precacheada devolvia el HTML del home (el bug de
+        // "los detalles me llevan al inicio") y dejaba muertas todas las reglas de
+        // navegacion de abajo. Con la clave presente y sin valor no se registra la ruta
+        // y el control vuelve a runtimeCaching.
+        navigateFallback: undefined,
         cleanupOutdatedCaches: true,
         runtimeCaching: [
-          // 1. Páginas de detalle de películas (/p/{id})
-          {
-            urlPattern: /^\/p\/[^/]+$/,
-            handler: 'StaleWhileRevalidate',
-            options: {
-              cacheName: 'dahem-detail-p',
-              expiration: { maxEntries: 300, maxAgeSeconds: 60 * 60 * 24 * 30 },
-              precacheFallback: { fallbackURL: '/404' },
-            },
-          },
-          // 2. Páginas de detalle de series y sus niveles (/s/{id}, /s/{id}/{temporada}, /s/{id}/{temporada}/{capitulo})
-          {
-            urlPattern: /^\/s\/[^/]+(\/\d+(\/\d+)?)?$/,
-            handler: 'StaleWhileRevalidate',
-            options: {
-              cacheName: 'dahem-detail-s',
-              expiration: { maxEntries: 300, maxAgeSeconds: 60 * 60 * 24 * 30 },
-              precacheFallback: { fallbackURL: '/404' },
-            },
-          },
-          // 3. Resto de navegaciones (página principal, biblioteca, buscar)
+          // 1. Navegaciones (paginas). El precache resuelve todo lo que existia en el
+          //    ultimo build; esta regla solo entra para URLs nuevas: intenta red, cae al
+          //    cache y, si no hay nada, muestra el 404 precacheado.
           {
             urlPattern: ({ request }) => request.mode === 'navigate',
             handler: 'StaleWhileRevalidate',
@@ -59,22 +52,22 @@ export default defineConfig({
               precacheFallback: { fallbackURL: '/404' },
             },
           },
-          // 4. Imágenes (Cache First)
+          // 2. Imagenes (Cache First): posters optimizados y remotos, bajo demanda.
           {
             urlPattern: ({ request }) => request.destination === 'image',
             handler: 'CacheFirst',
             options: {
               cacheName: 'dahem-images',
-              expiration: { maxEntries: 500, maxAgeSeconds: 60 * 60 * 24 * 90 },
+              expiration: { maxEntries: 1500, maxAgeSeconds: 60 * 60 * 24 * 90 },
             },
           },
-          // 5. Índices de búsqueda (Stale While Revalidate)
+          // 3. Indices de busqueda (Stale While Revalidate)
           {
             urlPattern: /\/(search|library)-index.*\.json$/,
             handler: 'StaleWhileRevalidate',
             options: { cacheName: 'dahem-search-index' },
           },
-          // 6. API (Network Only)
+          // 4. API (Network Only)
           {
             urlPattern: ({ url }) => url.pathname.startsWith('/api'),
             handler: 'NetworkOnly',

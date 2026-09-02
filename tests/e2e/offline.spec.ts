@@ -14,20 +14,7 @@ async function serviceWorkerReady(page: Page): Promise<void> {
         const reg = await navigator.serviceWorker.getRegistration();
         return Boolean(reg?.active);
       }),
-      { timeout: 30_000, message: 'el service worker no llegó a activarse' },
-    )
-    .toBe(true);
-  // El precache se llena durante el install: se espera a que la home esté guardada.
-  await expect
-    .poll(
-      () => page.evaluate(async () => {
-        for (const name of await caches.keys()) {
-          const cache = await caches.open(name);
-          if (await cache.match('/', { ignoreSearch: true })) return true;
-        }
-        return false;
-      }),
-      { timeout: 30_000, message: 'el precache no incluyó la home' },
+      { timeout: 60_000, message: 'el service worker no llegó a activarse' },
     )
     .toBe(true);
   await page.reload();
@@ -36,15 +23,20 @@ async function serviceWorkerReady(page: Page): Promise<void> {
     .toBe(true);
 }
 
-test('las vistas principales y una ficha visitada funcionan sin conexión', async ({ page, context }) => {
+/** Comprueba que una URL concreta quedó guardada en alguna caché del navegador. */
+function isPrecached(page: Page, url: string): Promise<boolean> {
+  return page.evaluate(async (target) => {
+    for (const name of await caches.keys()) {
+      const cache = await caches.open(name);
+      if (await cache.match(target, { ignoreSearch: true })) return true;
+    }
+    return false;
+  }, url);
+}
+
+test('las vistas principales funcionan sin conexión', async ({ page, context }) => {
   await page.goto('/');
   await serviceWorkerReady(page);
-
-  // Se visita una ficha para que quede en la caché de navegación.
-  await page.goto('/biblioteca');
-  const href = await page.locator('.grid.grid-cols-3 > a').first().getAttribute('href');
-  await page.goto(href!);
-  await expect(page.getByRole('link', { name: 'Volver' })).toBeVisible();
 
   await context.setOffline(true);
 
@@ -56,23 +48,90 @@ test('las vistas principales y una ficha visitada funcionan sin conexión', asyn
 
   await page.goto('/buscar');
   await expect(page.getByPlaceholder(/Busca por nombre/)).toBeVisible();
-
-  // La ficha visitada antes de perder la conexión sigue disponible.
-  await page.goto(href!);
-  await expect(page.getByRole('link', { name: 'Volver' })).toBeVisible();
 });
 
-test('una ficha no visitada cae en la página de respaldo, no en el error de red', async ({ page, context }) => {
+test('una ficha nunca visitada se abre sin conexión', async ({ page, context }) => {
   await page.goto('/');
   await serviceWorkerReady(page);
 
-  const hrefs = await page.goto('/biblioteca').then(() =>
-    page.locator('.grid.grid-cols-3 > a').evaluateAll((els) => els.map((e) => (e as HTMLAnchorElement).getAttribute('href'))),
-  );
+  await page.goto('/biblioteca');
+  const hrefs = await page
+    .locator('.grid.grid-cols-3 > a')
+    .evaluateAll((els) => els.map((e) => (e as HTMLAnchorElement).getAttribute('href')!));
+  expect(hrefs.length).toBeGreaterThan(1);
   const noVisitada = hrefs.at(-1)!;
 
+  // El precache tarda en llenarse (~600 páginas): se espera a que esta ficha esté dentro.
+  await expect
+    .poll(() => isPrecached(page, noVisitada), {
+      timeout: 60_000,
+      message: `la ficha ${noVisitada} no entró al precache`,
+    })
+    .toBe(true);
+
   await context.setOffline(true);
+
   const res = await page.goto(noVisitada);
+  expect(res?.status()).toBe(200);
+  await expect(page.getByRole('link', { name: 'Volver' })).toBeVisible();
+  // Es la ficha real, no el respaldo 404 ni el home.
+  await expect(page.getByRole('heading', { name: /No pudimos mostrar esa ficha/ })).toHaveCount(0);
+  expect(new URL(page.url()).pathname).toBe(noVisitada);
+});
+
+test('los niveles de una serie (temporada y capítulo) se abren sin conexión', async ({ page, context }) => {
+  await page.goto('/');
+  await serviceWorkerReady(page);
+
+  // Los carruseles del home traen series ya renderizadas en el HTML estático.
+  const serieHref = await page
+    .locator('a[href^="/s/"]')
+    .first()
+    .getAttribute('href');
+  test.skip(!serieHref, 'el home no mostró ninguna serie');
+
+  // Los niveles se descubren leyendo el HTML de la serie con fetch(): a diferencia de una
+  // navegación, no pasa por la regla de runtime, así que no contamina la caché dahem-html.
+  const niveles = await page.evaluate(async (base) => {
+    const enlaces = async (url: string, patron: RegExp) => {
+      const html = await (await fetch(url)).text();
+      return [...html.matchAll(patron)].map((m) => m[0]);
+    };
+    const temporadas = await enlaces(base, new RegExp(`${base}/\\d+(?=")`, 'g'));
+    if (!temporadas.length) return null;
+    const temporada = temporadas[0];
+    const capitulos = await enlaces(temporada, new RegExp(`${temporada}/\\d+(?=")`, 'g'));
+    return { temporada, capitulo: capitulos[0] ?? null };
+  }, serieHref!);
+  // Se salta mientras el catálogo no traiga `seasons`: sin ellas no se generan estas páginas.
+  test.skip(!niveles?.capitulo, 'ninguna serie del catálogo tiene temporadas/capítulos generados');
+
+  const rutas = [serieHref!, niveles!.temporada, niveles!.capitulo!];
+
+  await expect
+    .poll(() => isPrecached(page, rutas[2]), {
+      timeout: 60_000,
+      message: `${rutas[2]} no entró al precache`,
+    })
+    .toBe(true);
+
+  await context.setOffline(true);
+
+  for (const url of rutas) {
+    const res = await page.goto(url);
+    expect(res?.status(), `respuesta de ${url}`).toBe(200);
+    expect(new URL(page.url()).pathname, `URL final de ${url}`).toBe(url);
+    await expect(page.getByRole('heading', { name: /No pudimos mostrar esa ficha/ })).toHaveCount(0);
+  }
+});
+
+test('una URL que no existía en el último build cae en el 404, no en el home', async ({ page, context }) => {
+  await page.goto('/');
+  await serviceWorkerReady(page);
+
+  await context.setOffline(true);
+
+  const res = await page.goto('/p/no-existe-en-el-catalogo');
   expect(res?.status()).toBe(200);
   await expect(page.getByRole('heading', { name: /No pudimos mostrar esa ficha/ })).toBeVisible();
 });
