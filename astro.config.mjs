@@ -18,14 +18,36 @@ export default defineConfig({
       registerType: 'autoUpdate',
       // Workbox genera el SW; estrategias por tipo de recurso (guía técnica §5.2).
       workbox: {
-        globPatterns: ['**/*.{html,js,css,svg,png,webp,avif,ico,json,woff2}'],
-        navigateFallback: '/404/',
+        // Precache solo el esqueleto: las tres vistas principales, el JS/CSS, los iconos y los
+        // índices de búsqueda (~2 MB). Las 600+ fichas NO se precachean: son 12 MB de HTML que
+        // casi nadie consulta entero, y se van guardando al visitarlas con la regla de navegación
+        // de más abajo. Sin `**/*.html` aquí, la instalación en móvil con datos es asumible.
+        globPatterns: [
+          'index.html',
+          '404.html',
+          'biblioteca/index.html',
+          'buscar/index.html',
+          '_astro/**/*.{js,css,woff2}',
+          '*.{svg,png,ico,webmanifest}',
+          '{search,library}-index.json',
+          'icons/*.png',
+        ],
+        // Sin navigateFallback: es configuración de SPA. Aquí interceptaría TODAS las
+        // navegaciones y serviría siempre la misma página; en un sitio estático cada página se
+        // sirve del precache o de la caché de navegación, y el respaldo offline va como
+        // precacheFallback de esa regla.
+        cleanupOutdatedCaches: true,
         runtimeCaching: [
           {
-            // HTML de páginas → stale-while-revalidate
+            // HTML de páginas → stale-while-revalidate. Guarda cada ficha visitada, y si se pide
+            // una que no está en caché sin conexión, responde con la página 404 (precacheada).
             urlPattern: ({ request }) => request.mode === 'navigate',
             handler: 'StaleWhileRevalidate',
-            options: { cacheName: 'dahem-html' },
+            options: {
+              cacheName: 'dahem-html',
+              expiration: { maxEntries: 300, maxAgeSeconds: 60 * 60 * 24 * 30 },
+              precacheFallback: { fallbackURL: '/404' },
+            },
           },
           {
             // Imágenes de posters → cache-first (no re-descargar nunca)

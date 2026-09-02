@@ -21,8 +21,10 @@ interface Props {
   };
   /** Subtítulo opcional para temporada/capítulo. */
   context?: string;
+  /** Destino del botón "Atrás" cuando no hay historial propio (enlace compartido). */
+  backHref?: string;
 }
-const { item, add, context } = Astro.props;
+const { item, add, context, backHref = "/" } = Astro.props;
 const limit = 240;
 const longDescription = item.description.length > limit;
 const hasImage = Boolean(item.imageUrl);
@@ -44,6 +46,29 @@ const imageSrc = hasImage ? item.imageUrl : PLACEHOLDER_IMAGE;
     class="absolute inset-0 bg-gradient-to-t from-base-100 via-base-100/80 to-base-100/20"
   >
   </div>
+
+  {/* Atrás explícito: en la PWA instalada (display standalone) no hay barra del navegador. */}
+  <a
+    href={backHref}
+    data-detail-back
+    class="btn btn-circle btn-sm sm:btn-md bg-base-100/70 hover:bg-base-100 border-none absolute top-4 left-4 z-10"
+    aria-label="Volver"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <path d="m15 18-6-6 6-6"></path>
+    </svg>
+  </a>
 
   <div class="relative max-w-content mx-auto w-full p-6 sm:p-10 pb-4 sm:pb-6">
     {
@@ -113,3 +138,18 @@ const imageSrc = hasImage ? item.imageUrl : PLACEHOLDER_IMAGE;
     />
   </div>
 </section>
+
+<script>
+  // El enlace funciona sin JS (href al nivel superior); con JS se prefiere el historial real
+  // para devolver al usuario a la vista y el scroll exactos de donde vino.
+  import { goBack } from "../../../shared/nav-state";
+
+  document
+    .querySelectorAll<HTMLAnchorElement>("a[data-detail-back]")
+    .forEach((el) => {
+      el.addEventListener("click", (event) => {
+        event.preventDefault();
+        goBack(el.getAttribute("href") ?? "/");
+      });
+    });
+</script>

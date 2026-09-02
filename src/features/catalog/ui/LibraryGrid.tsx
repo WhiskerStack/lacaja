@@ -1,9 +1,14 @@
 // Isla de Biblioteca (funcional §6.5): chips de tipo, panel de filtros (año/género/región/idioma),
 // ordenar por, grid de 3 columnas con scroll infinito. Los controles van en una barra pegajosa
 // bajo el navbar. Recibe el catálogo completo por props (SSG).
-import { useMemo, useEffect, useRef, useState } from 'preact/hooks';
+//
+// Los filtros viven en la URL (replaceState) y la paginación en el snapshot de la entrada del
+// historial, para que "atrás" desde un detalle devuelva la misma vista y el mismo scroll, mientras
+// que entrar por el menú a /biblioteca (URL limpia) empieza de cero.
+import { useMemo, useEffect, useLayoutEffect, useRef, useState } from 'preact/hooks';
 import { detailUrl } from '../../../shared/urls';
 import { formatRating } from '../../../shared/format';
+import { patchSnapshot, readSnapshot, replaceUrl } from '../../../shared/nav-state';
 import { TYPE_LABEL_PLURAL } from '../types';
 import type { AudiovisualType, CatalogCardDTO } from '../types';
 
@@ -22,16 +27,71 @@ type SortKey = 'rating' | 'year' | 'name';
 const PAGE = 12;
 const TYPES: AudiovisualType[] = ['movie', 'series', 'anime', 'telenovela', 'show'];
 
+interface Filters {
+  type: AudiovisualType | 'all';
+  genre: string;
+  region: string;
+  language: string;
+  year: string;
+  sort: SortKey;
+}
+const DEFAULTS: Filters = {
+  type: 'all',
+  genre: '',
+  region: '',
+  language: '',
+  year: '',
+  sort: 'rating',
+};
+
+/** Nombre de cada filtro en la query string (URLs legibles y compartibles). */
+const PARAM: Record<keyof Filters, string> = {
+  type: 'tipo',
+  genre: 'genero',
+  region: 'region',
+  language: 'idioma',
+  year: 'anio',
+  sort: 'orden',
+};
+
+function filtersFromUrl(search: string): Filters {
+  const p = new URLSearchParams(search);
+  const type = p.get(PARAM.type) as AudiovisualType | 'all' | null;
+  const sort = p.get(PARAM.sort) as SortKey | null;
+  return {
+    type: type && (type === 'all' || TYPES.includes(type)) ? type : DEFAULTS.type,
+    genre: p.get(PARAM.genre) ?? DEFAULTS.genre,
+    region: p.get(PARAM.region) ?? DEFAULTS.region,
+    language: p.get(PARAM.language) ?? DEFAULTS.language,
+    year: p.get(PARAM.year) ?? DEFAULTS.year,
+    sort: sort && ['rating', 'year', 'name'].includes(sort) ? sort : DEFAULTS.sort,
+  };
+}
+
+function urlFromFilters(f: Filters): string {
+  const p = new URLSearchParams();
+  (Object.keys(PARAM) as (keyof Filters)[]).forEach((k) => {
+    if (f[k] !== DEFAULTS[k]) p.set(PARAM[k], String(f[k]));
+  });
+  const qs = p.toString();
+  return qs ? `${location.pathname}?${qs}` : location.pathname;
+}
+
 export default function LibraryGrid({ cards, facets }: Props) {
-  const [type, setType] = useState<AudiovisualType | 'all'>('all');
+  const [filters, setFilters] = useState<Filters>(DEFAULTS);
   const [showFilters, setShowFilters] = useState(false);
-  const [genre, setGenre] = useState('');
-  const [region, setRegion] = useState('');
-  const [language, setLanguage] = useState('');
-  const [year, setYear] = useState('');
-  const [sort, setSort] = useState<SortKey>('rating');
   const [shown, setShown] = useState(PAGE);
   const sentinel = useRef<HTMLDivElement | null>(null);
+  const { type, genre, region, language, year, sort } = filters;
+
+  // Restauración al volver atrás. En hidratación no se puede leer la URL (el HTML viene del SSG),
+  // así que se aplica en un layout effect: se pinta ya con el estado correcto, sin parpadeo.
+  useLayoutEffect(() => {
+    setFilters(filtersFromUrl(location.search));
+    const snap = readSnapshot();
+    if (snap.shown && snap.shown > PAGE) setShown(snap.shown);
+    if (snap.filtersOpen) setShowFilters(true);
+  }, []);
 
   // El idioma/región no están en CatalogCardDTO; se filtran por género/tipo/año/orden aquí.
   // (library-index.json lleva esos ejes para una versión cliente más completa.)
@@ -50,7 +110,9 @@ export default function LibraryGrid({ cards, facets }: Props) {
     return out;
   }, [cards, type, genre, year, sort]);
 
-  useEffect(() => setShown(PAGE), [type, genre, region, language, year, sort]);
+  useEffect(() => {
+    patchSnapshot({ shown, filtersOpen: showFilters });
+  }, [shown, showFilters]);
 
   useEffect(() => {
     if (!sentinel.current) return;
@@ -61,8 +123,16 @@ export default function LibraryGrid({ cards, facets }: Props) {
     return () => obs.disconnect();
   }, [filtered.length]);
 
+  /** Cambia filtros: reinicia la paginación y refleja el estado en la URL sin tocar el historial. */
+  function patch(p: Partial<Filters>) {
+    const next = { ...filters, ...p };
+    setFilters(next);
+    setShown(PAGE);
+    replaceUrl(urlFromFilters(next));
+  }
+
   function reset() {
-    setGenre(''); setRegion(''); setLanguage(''); setYear('');
+    patch({ genre: '', region: '', language: '', year: '' });
   }
 
   const visible = filtered.slice(0, shown);
@@ -79,11 +149,11 @@ export default function LibraryGrid({ cards, facets }: Props) {
       >
         {/* Chips rápidos (funcional §6.5.2) */}
         <div class="flex gap-2 overflow-x-auto pb-3">
-          <button type="button" class={`btn btn-sm ${type === 'all' ? 'btn-primary' : 'btn-ghost'}`} onClick={() => setType('all')}>
+          <button type="button" class={`btn btn-sm ${type === 'all' ? 'btn-primary' : 'btn-ghost'}`} onClick={() => patch({ type: 'all' })}>
             Todos
           </button>
           {TYPES.map((t) => (
-            <button key={t} type="button" class={`btn btn-sm ${type === t ? 'btn-primary' : 'btn-ghost'}`} onClick={() => setType(t)}>
+            <button key={t} type="button" class={`btn btn-sm ${type === t ? 'btn-primary' : 'btn-ghost'}`} onClick={() => patch({ type: t })}>
               {TYPE_LABEL_PLURAL[t]}
             </button>
           ))}
@@ -93,7 +163,7 @@ export default function LibraryGrid({ cards, facets }: Props) {
           <button type="button" class="btn btn-sm btn-outline" onClick={() => setShowFilters((s) => !s)}>
             {showFilters ? 'Ocultar filtros' : 'Filtrar'}
           </button>
-          <select class="select select-sm select-bordered" value={sort} onChange={(e) => setSort((e.target as HTMLSelectElement).value as SortKey)}>
+          <select class="select select-sm select-bordered" value={sort} onChange={(e) => patch({ sort: (e.target as HTMLSelectElement).value as SortKey })}>
             <option value="rating">Ordenar: mejor votadas</option>
             <option value="year">Ordenar: más recientes</option>
             <option value="name">Ordenar: nombre (A-Z)</option>
@@ -103,19 +173,19 @@ export default function LibraryGrid({ cards, facets }: Props) {
 
         {showFilters && (
           <div class="card bg-base-200 p-4 mb-3 grid sm:grid-cols-4 gap-3">
-            <select class="select select-sm select-bordered" value={year} onChange={(e) => setYear((e.target as HTMLSelectElement).value)}>
+            <select class="select select-sm select-bordered" value={year} onChange={(e) => patch({ year: (e.target as HTMLSelectElement).value })}>
               <option value="">Año (todos)</option>
               {facets.years.map((y) => <option key={y} value={String(y)}>{y}</option>)}
             </select>
-            <select class="select select-sm select-bordered" value={genre} onChange={(e) => setGenre((e.target as HTMLSelectElement).value)}>
+            <select class="select select-sm select-bordered" value={genre} onChange={(e) => patch({ genre: (e.target as HTMLSelectElement).value })}>
               <option value="">Género (todos)</option>
               {facets.genres.map((g) => <option key={g} value={g}>{g}</option>)}
             </select>
-            <select class="select select-sm select-bordered" value={region} onChange={(e) => setRegion((e.target as HTMLSelectElement).value)}>
+            <select class="select select-sm select-bordered" value={region} onChange={(e) => patch({ region: (e.target as HTMLSelectElement).value })}>
               <option value="">Región (todas)</option>
               {facets.regions.map((r) => <option key={r} value={r}>{r}</option>)}
             </select>
-            <select class="select select-sm select-bordered" value={language} onChange={(e) => setLanguage((e.target as HTMLSelectElement).value)}>
+            <select class="select select-sm select-bordered" value={language} onChange={(e) => patch({ language: (e.target as HTMLSelectElement).value })}>
               <option value="">Idioma (todos)</option>
               {facets.languages.map((l) => <option key={l} value={l}>{l}</option>)}
             </select>

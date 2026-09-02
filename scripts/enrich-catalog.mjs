@@ -1,13 +1,19 @@
 #!/usr/bin/env node
 // scripts/enrich-catalog.mjs
 // Enriquece el catálogo con datos de TMDB: póster, descripción, reparto, tráiler, rating.
-// Solo procesa ítems que no tengan enriched: true.
+// Solo procesa ítems que no tengan enriched: true (con --force los reprocesa todos).
 // Lee catalog.json, escribe los cambios y lo guarda periódicamente.
 // Necesita TMDB_API_KEY en .env
+//
+// El año del catálogo se usa como filtro de verdad, no como adorno: se consulta el endpoint del
+// tipo correspondiente (search/movie o search/tv), que son los únicos que admiten filtro por año
+// —search/multi lo ignora—, y entre los candidatos se elige por cercanía al año antes que por
+// popularidad. Sin eso, títulos repetidos ("Dune", "Mufasa", cualquier remake) se enriquecían con
+// la versión más popular en vez de con la del catálogo.
 
 import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -35,12 +41,6 @@ function loadEnv() {
 }
 const env = loadEnv();
 const TMDB_API_KEY = env.TMDB_API_KEY;
-if (!TMDB_API_KEY) {
-  console.error(
-    '[dahem] ERROR: Falta TMDB_API_KEY en .env. Obtén una clave gratuita en themoviedb.org y añádela.'
-  );
-  process.exit(1);
-}
 
 const CATALOG_PATH = resolve(ROOT, 'src/data/catalog.json');
 const TMDB_IMAGE_BASE = 'https://image.tmdb.org/t/p/w500';
@@ -58,21 +58,88 @@ function saveCatalog(data) {
 // Esperar ms
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-// Búsqueda en TMDB (multi: películas y series)
-async function searchTMDB(query, year) {
-  const url = `https://api.themoviedb.org/3/search/multi?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(
-    query
-  )}&year=${year || ''}`;
+// Un ítem del catálogo es 'movie' o 'series'; TMDB llama 'tv' a lo segundo.
+const tmdbMediaType = (type) => (type === 'movie' ? 'movie' : 'tv');
+
+/** Año de estreno de un resultado de TMDB (las series lo traen en first_air_date). */
+export function resultYear(result) {
+  const date = result.release_date || result.first_air_date || '';
+  const year = Number.parseInt(date.slice(0, 4), 10);
+  return Number.isNaN(year) ? null : year;
+}
+
+/**
+ * Elige el mejor candidato de una búsqueda. El año manda sobre la popularidad: gana el más
+ * cercano al del catálogo, y la popularidad solo desempata entre candidatos igual de cercanos
+ * (la ficha del proveedor y TMDB discrepan a menudo en un año por estreno regional o por año de
+ * producción). Sin año en el catálogo se ordena por popularidad, que es lo único disponible.
+ */
+export function pickBestMatch(results, { year, mediaType } = {}) {
+  const candidates = (results || []).filter((r) => {
+    // search/multi devuelve también personas: nunca son un audiovisual.
+    if (r.media_type === 'person') return false;
+    if (mediaType && r.media_type && r.media_type !== mediaType) return false;
+    return true;
+  });
+  if (candidates.length === 0) return null;
+  if (!year) {
+    return [...candidates].sort((a, b) => (b.popularity ?? 0) - (a.popularity ?? 0))[0];
+  }
+
+  // Distancia al año pedido; sin fecha, se trata como lejano pero no descartable.
+  const distance = (r) => {
+    const y = resultYear(r);
+    return y === null ? Number.MAX_SAFE_INTEGER : Math.abs(y - year);
+  };
+  return [...candidates].sort((a, b) => {
+    const byYear = distance(a) - distance(b);
+    return byYear !== 0 ? byYear : (b.popularity ?? 0) - (a.popularity ?? 0);
+  })[0];
+}
+
+/** Llamada a TMDB con reintento ante 429. */
+async function tmdbFetch(url) {
   const res = await fetch(url);
   if (!res.ok) {
     if (res.status === 429) {
       await sleep(1000);
-      return searchTMDB(query, year);
+      return tmdbFetch(url);
     }
     throw new Error(`TMDB search error: ${res.status}`);
   }
-  const data = await res.json();
-  return data.results || [];
+  return res.json();
+}
+
+/**
+ * Busca en TMDB priorizando el endpoint del tipo del ítem, que es el único que filtra por año
+ * (primary_release_year en películas, first_air_date_year en series). Si no da resultados, se
+ * relaja: mismo endpoint sin año, luego el otro tipo, y por último search/multi.
+ */
+export async function searchTMDB(query, { year, type } = {}) {
+  const q = encodeURIComponent(query);
+  const key = `api_key=${TMDB_API_KEY}`;
+  const primary = tmdbMediaType(type);
+  const secondary = primary === 'movie' ? 'tv' : 'movie';
+  const yearParam = (mediaType) =>
+    year ? `&${mediaType === 'movie' ? 'primary_release_year' : 'first_air_date_year'}=${year}` : '';
+
+  const attempts = [
+    year ? { mediaType: primary, url: `https://api.themoviedb.org/3/search/${primary}?${key}&query=${q}${yearParam(primary)}` } : null,
+    { mediaType: primary, url: `https://api.themoviedb.org/3/search/${primary}?${key}&query=${q}` },
+    year ? { mediaType: secondary, url: `https://api.themoviedb.org/3/search/${secondary}?${key}&query=${q}${yearParam(secondary)}` } : null,
+    { mediaType: null, url: `https://api.themoviedb.org/3/search/multi?${key}&query=${q}` },
+  ].filter(Boolean);
+
+  for (const attempt of attempts) {
+    const data = await tmdbFetch(attempt.url);
+    const results = (data.results || []).map((r) => ({
+      ...r,
+      // search/movie y search/tv no rellenan media_type; se conoce por el endpoint usado.
+      media_type: r.media_type || attempt.mediaType || undefined,
+    }));
+    if (results.length > 0) return results;
+  }
+  return [];
 }
 
 // Obtener detalles de una película o serie (incluye créditos y vídeos)
@@ -106,13 +173,15 @@ function extractData(tmdbItem, details) {
 }
 
 // Procesar un ítem del catálogo (solo si no está enriquecido)
-async function enrichItem(item) {
+export async function enrichItem(item, { force = false } = {}) {
   // Si ya está enriquecido (true), no hacer nada
-  if (item.enriched === true) {
+  if (item.enriched === true && !force) {
     return { changed: false };
   }
 
-  const { name, enName, year } = item;
+  if (force) delete item.translated;
+
+  const { name, enName, year, type } = item;
   const queries = [];
   if (enName && enName.trim()) queries.push(enName);
   if (name && name.trim()) queries.push(name);
@@ -121,24 +190,50 @@ async function enrichItem(item) {
   let mediaType = null;
   let tmdbId = null;
   let details = null;
+  let matchedYear = null;
 
+  // Se juntan los resultados de ambos títulos y se ordenan por cercanía al año: antes bastaba con
+  // que la primera consulta devolviera algo, aunque fuera de otro año, y la segunda ni se miraba.
+  const pool = [];
   for (const q of queries) {
-    const results = await searchTMDB(q, year);
-    const exactYearMatch = results.find(
-      (r) => r.release_date && r.release_date.startsWith(String(year))
-    );
-    const best = exactYearMatch || results[0];
-    if (best) {
-      mediaType = best.media_type || (best.first_air_date ? 'tv' : 'movie');
-      tmdbId = best.id;
-      try {
-        details = await getDetails(mediaType, tmdbId);
-        found = true;
-        break;
-      } catch {
-        continue;
-      }
+    const results = await searchTMDB(q, { year, type });
+    for (const r of results) {
+      if (!pool.some((p) => p.id === r.id && p.media_type === r.media_type)) pool.push(r);
     }
+  }
+
+  // Preferencia por el tipo del catálogo; si con ese filtro no queda nada, se acepta cualquiera.
+  const ranked = [];
+  const rank = (opts) => {
+    const rest = [...pool];
+    let next;
+    while ((next = pickBestMatch(rest, opts))) {
+      rest.splice(rest.indexOf(next), 1);
+      if (!ranked.includes(next)) ranked.push(next);
+    }
+  };
+  rank({ year, mediaType: tmdbMediaType(type) });
+  rank({ year });
+
+  // Se prueba con los mejores por orden: si los detalles de uno fallan, se sigue con el siguiente.
+  for (const candidate of ranked.slice(0, 3)) {
+    mediaType = candidate.media_type || (candidate.first_air_date ? 'tv' : 'movie');
+    tmdbId = candidate.id;
+    matchedYear = resultYear(candidate);
+    try {
+      details = await getDetails(mediaType, tmdbId);
+      found = true;
+      break;
+    } catch {
+      continue;
+    }
+  }
+
+  if (found && year && matchedYear && Math.abs(matchedYear - year) > 1) {
+    // No se descarta —puede ser el único candidato— pero queda registrado para revisarlo.
+    console.warn(
+      `[enrich] ⚠ ${item.code} ${name}: catálogo ${year} vs TMDB ${matchedYear} (${mediaType}/${tmdbId})`
+    );
   }
 
   if (!found) {
@@ -180,17 +275,31 @@ async function enrichItem(item) {
     changed = true;
   }
 
-  console.log(`[enrich] ${item.code} ${item.name} → ${changed ? 'actualizado' : 'sin cambios'}`);
+  console.log(
+    `[enrich] ${item.code} ${item.name} (${year ?? 's/a'}) → TMDB ${matchedYear ?? 's/a'} · ${changed ? 'actualizado' : 'sin cambios'}`
+  );
   return { changed };
 }
 
 async function main() {
+  if (!TMDB_API_KEY) {
+    console.error(
+      '[dahem] ERROR: Falta TMDB_API_KEY en .env. Obtén una clave gratuita en themoviedb.org y añádela.'
+    );
+    process.exit(1);
+  }
+
+  // --force reprocesa también los ya enriquecidos: necesario para reparar fichas emparejadas con
+  // el criterio anterior, que ignoraba el año.
+  const force = process.argv.includes('--force');
   const catalog = readCatalog();
   const items = catalog.items || [];
 
-  // Filtrar solo los ítems que no están enriquecidos
-  const pendingItems = items.filter(item => item.enriched !== true);
-  console.log(`[dahem] Total: ${items.length} ítems, pendientes: ${pendingItems.length}`);
+  // Filtrar solo los ítems que no están enriquecidos (con --force, todos)
+  const pendingItems = force ? items : items.filter((item) => item.enriched !== true);
+  console.log(
+    `[dahem] Total: ${items.length} ítems, por procesar: ${pendingItems.length}${force ? ' (--force)' : ''}`
+  );
 
   let totalChanged = 0;
   let batchSize = 20;
@@ -199,7 +308,7 @@ async function main() {
   for (let i = 0; i < pendingItems.length; i++) {
     const item = pendingItems[i];
     try {
-      const result = await enrichItem(item);
+      const result = await enrichItem(item, { force });
       if (result.changed) {
         totalChanged++;
         changedInBatch++;
@@ -226,7 +335,10 @@ async function main() {
   console.log(`[dahem] Enriquecimiento completado. ${totalChanged} ítems actualizados.`);
 }
 
-main().catch((err) => {
-  console.error('[dahem] Error fatal:', err);
-  process.exit(1);
-});
+// Solo se ejecuta al invocarlo como script; al importarlo (tests) se exponen las funciones puras.
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch((err) => {
+    console.error('[dahem] Error fatal:', err);
+    process.exit(1);
+  });
+}

@@ -1,14 +1,17 @@
 ---
-// 404 personalizado (especificaciones §9.3): caso de un código de algo agregado tras el último build.
+// 404 personalizado (especificaciones §9.3): caso de un código de algo agregado tras el último
+// build. El service worker la usa además como respaldo cuando, sin conexión, se pide una ficha
+// que aún no está en caché: de ahí que el texto cubra los dos casos.
 import Base from '../layouts/Base.astro';
 ---
 <Base title="No encontrado — La Caja">
   <div class="min-h-[60vh] flex flex-col items-center justify-center text-center gap-4">
     <p class="text-6xl font-extrabold text-primary">404</p>
-    <h1 class="text-2xl font-bold">No encontramos ese audiovisual</h1>
+    <h1 class="text-2xl font-bold">No pudimos mostrar esa ficha</h1>
     <p class="opacity-70 max-w-md">
-      Puede que se haya agregado después de la última actualización del catálogo, o que el enlace
-      no sea correcto. Prueba a buscarlo por nombre o código.
+      Si estás sin conexión, solo puedes abrir las fichas que hayas visitado antes. Si tienes
+      conexión, puede que se haya agregado después de la última actualización del catálogo o que
+      el enlace no sea correcto: prueba a buscarlo por nombre o código.
     </p>
     <div class="flex gap-2">
       <a href="/" class="btn btn-ghost">Ir al inicio</a>
