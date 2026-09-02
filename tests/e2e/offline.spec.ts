@@ -125,6 +125,40 @@ test('los niveles de una serie (temporada y capítulo) se abren sin conexión', 
   }
 });
 
+test('los pósters de la biblioteca se ven sin conexión y no salen de TMDB', async ({ page, context }) => {
+  const remotas: string[] = [];
+  page.on('request', (req) => {
+    if (req.url().includes('image.tmdb.org')) remotas.push(req.url());
+  });
+
+  await page.goto('/');
+  await serviceWorkerReady(page);
+
+  // El precache incluye ~1.200 imágenes: se espera a que una del grid esté guardada.
+  await page.goto('/biblioteca');
+  const primerPoster = await page.locator('.grid.grid-cols-3 img').first().getAttribute('src');
+  expect(primerPoster, 'la isla debe apuntar a un asset local optimizado').toMatch(/^\/_astro\/.+\.(webp|avif)$/);
+  await expect
+    .poll(() => isPrecached(page, primerPoster!), {
+      timeout: 60_000,
+      message: `${primerPoster} no entró al precache`,
+    })
+    .toBe(true);
+
+  await context.setOffline(true);
+  remotas.length = 0;
+
+  await page.goto('/biblioteca');
+  const cargadas = await page
+    .locator('.grid.grid-cols-3 img')
+    .evaluateAll((els) =>
+      els.slice(0, 6).map((e) => (e as HTMLImageElement).complete && (e as HTMLImageElement).naturalWidth > 0),
+    );
+  expect(cargadas.length).toBeGreaterThan(0);
+  expect(cargadas.every(Boolean), 'algún póster del grid no se pintó offline').toBe(true);
+  expect(remotas, 'la isla siguió pidiendo imágenes a TMDB').toEqual([]);
+});
+
 test('una URL que no existía en el último build cae en el 404, no en el home', async ({ page, context }) => {
   await page.goto('/');
   await serviceWorkerReady(page);

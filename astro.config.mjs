@@ -20,13 +20,20 @@ export default defineConfig({
         // Precacheamos TODO el HTML generado, incluidas las ~600 paginas de detalle
         // (/p/{id}, /s/{id}, /s/{id}/{temporada}, /s/{id}/{temporada}/{capitulo}).
         // Es el unico modo de que el catalogo sea navegable sin conexion: una regla
-        // de runtime solo cachea lo que el usuario ya visito. Son ~600 ficheros de
-        // ~20 KB (comprimidos viajan ~2 MB), asi que el coste de instalacion es bajo.
-        // Las imagenes quedan FUERA del precache a proposito: los posters optimizados
-        // pesan decenas de MB y se cachean bajo demanda con la regla CacheFirst.
+        // de runtime solo cachea lo que el usuario ya visito.
+        //
+        // Los posters optimizados (_astro/*.webp) tambien entran: son la mayor parte
+        // del peso de la instalacion, asi que conviene mirar la linea "precache N
+        // entries (X KiB)" del log de build antes de cada despliegue. Van con hash de
+        // contenido en el nombre y `revision: null`, de modo que un despliegue nuevo
+        // solo re-descarga las imagenes que realmente cambiaron.
+        //
+        // Si la instalacion falla a medias (red movil inestable) el service worker no
+        // activa, pero lo ya guardado persiste: el siguiente `register()` reanuda desde
+        // donde iba en vez de empezar de cero.
         globPatterns: [
           '**/*.html',
-          '_astro/**/*.{js,css,woff2}',
+          '_astro/**/*.{js,css,woff2,webp,avif}',
           '*.{svg,png,ico,webmanifest}',
           '{search,library}-index.json',
           'icons/*.png',
@@ -52,7 +59,8 @@ export default defineConfig({
               precacheFallback: { fallbackURL: '/404' },
             },
           },
-          // 2. Imagenes (Cache First): posters optimizados y remotos, bajo demanda.
+          // 2. Imagenes (Cache First). Con los posters ya en el precache esta regla
+          //    solo cubre lo que llegue despues del ultimo build.
           {
             urlPattern: ({ request }) => request.destination === 'image',
             handler: 'CacheFirst',

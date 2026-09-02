@@ -4,8 +4,11 @@
 import Base from '../layouts/Base.astro';
 import LibraryGrid from '../features/catalog/ui/LibraryGrid.tsx';
 import { getCards, getFilterFacets } from '../features/catalog/logic/buildData';
+import { withLocalImages, POSTER_SIZE } from '../features/catalog/logic/cardImages';
 
-const cards = getCards();
+// La isla pinta <img> en cliente: se le pasan los pósters ya optimizados y locales
+// para que entren al precache del service worker (ver cardImages.ts).
+const cards = await withLocalImages(getCards(), POSTER_SIZE);
 const facets = getFilterFacets();
 ---
 <Base title="Biblioteca — La Caja">
