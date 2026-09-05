@@ -5155,7 +5155,7 @@
       ],
       "region": "España",
       "language": "Español",
-      "description": "When high school teacher Tomás finds the bloodied, dying mayoress of his hometown high up on his local cliffs, he not only becomes obsessed with the case but turns into its first suspect. Though solving the case is local cop Maite's job, Tomás doesn't care if his own private investigation gets in her way. Solving the case might just give Tomás' life the purpose he has been silently dreaming of for so long. Though clashing more than once, the two of them come close as can be to finding the murderer: Norma, Tomas' very own physiotherapist. She killed the mayoress in a fit of rage after finding out one of her many dark secrets - one that lies many years behind but one that has deeply affected her and her family. A twist of fate has it, however, that Norma remains undiscovered; her former fear and powerlessness turn to empowerment and confidence. Then a second murder stirs up the waters. Now an unlikely team, Maite and Tomás resume the hunt for a murderer who is closer than they imagine.",
+      "description": "Cuando el profesor de secundaria Tomás encuentra a la alcalde de su pueblo, sangrienta y agonizante, en lo alto de las rocas de su pueblo, se vuelve obsesivo con el caso y se convierte en el primer sospechoso. Si bien resolver el caso es el trabajo de la policía local Maite, Tomás no se preocupa si su propia investigación privada le hace camino. Resolver el caso podría darle a Tomás la finalidad que ha estado soñando en silencio durante tanto tiempo. Aunque se chocan más de una vez, los dos llegan a estar lo más cerca posible de encontrar al asesino: Norma, la fisioterapeuta de Tomas. Ella mató a la alcalde en un arrebato de ira después de descubrir uno de sus muchos secretos oscuros - uno que está muchos años detrás, pero uno que ha afectado profundamente a ella y su familia. Sin embargo, el destino se vuelve en su contra y Norma queda sin descubrir; su miedo y poderlessness se convierten en habilidad y confianza. Luego, un segundo asesinato agita las aguas. Ahora, un equipo impredecible, Maite y Tomás resumen la caza del asesino que está más cerca de lo que imaginan.",
       "imageUrl": "https://media.themoviedb.org/t/p/w500/1B8n8FngnghLlwLHKFAKV7y38Cg.jpg",
       "cast": [
         "Javier Cámara",
@@ -5171,7 +5171,8 @@
       "code": "S67",
       "metadata": {
         "enriched": true,
-        "genresEnriched": true
+        "genresEnriched": true,
+        "translated": true
       }
     },
     {
@@ -21848,41 +21849,40 @@
       "id": "04468975-8374-4375-9a1d-ef392236b24f",
       "type": "movie",
       "name": "La Bestia",
-      "enName": "The Beast",
-      "year": 2024,
-      "rating": 6.858,
+      "enName": "Beast",
+      "year": 2022,
+      "rating": 6.5,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Ciencia Ficción",
-        "Suspenso",
         "Crimen",
-        "Acción"
+        "Acción",
+        "Aventura",
+        "Drama",
+        "Horror"
       ],
-      "region": "Francia",
-      "language": "Francés",
-      "description": "El niño es un joven anónimo que saca una miserable vida en un club de lucha subterráneo donde, noche tras noche, vestido con una máscara de gorila, es brutalmente golpeado por peleadores más populares por dinero. Después de años de rabia reprimida, el niño encuentra una forma de infiltrarse en la enclave de la élite siniestra de la ciudad. A medida que su trauma de la infancia explota, sus misteriosamente cicatrizadas manos desatan una campaña explosiva de represalia para liquidar su deuda con los hombres que le tomaron todo.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/4lhR4L2vzzjl68P1zJyCH755Oz4.jpg",
+      "region": "US",
+      "language": "Inglés",
+      "description": "Un hombre recién viudo y sus dos hijas adolescentes viajan a un parque de caza en Sudáfrica. Sin embargo, su viaje hacia la curación pronto se convierte en una lucha por la supervivencia cuando un león famélico comienza a perseguirlos.",
+      "imageUrl": "https://media.themoviedb.org/t/p/w500/f18rGcLlawKjNC5KRh36S0mvRlY.jpg",
       "cast": [
-        "Dev Patel",
-        "Sikandar Kher",
-        "Makrand Deshpande",
-        "Pitobash",
-        "Vipin Sharma"
+        "Idris Elba",
+        "Leah Sava Jeffries",
+        "Iyana Halley",
+        "Sharlto Copley",
+        "Martin Munro"
       ],
       "trailers": [
-        "aqa3YTtwvaU",
-        "sLSlmb3B9J4",
-        "g8zxiB5Qhsc"
+        "oQMc7Sq36mI"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P455",
       "metadata": {
+        "genresEnriched": true,
         "enriched": true,
-        "translated": true,
-        "genresEnriched": true
+        "translated": true
       }
     },
     {
