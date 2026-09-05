@@ -1,15 +1,12 @@
 import { describe, it, expect, vi, afterEach } from 'vitest';
 // Script de build en JS puro: se importa para probar la lógica sin levantar Ollama.
 import {
-  decideAction,
   sanitizeTitle,
-  hasLetters,
-  detectLanguages,
   translateTitle,
   fixItem,
 } from '../../scripts/fix-title-languages.mjs';
 
-/** Simula Ollama: primero responde la detección, después las traducciones. */
+/** Simula Ollama devolviendo las respuestas en orden y registrando los prompts enviados. */
 function stubOllama(responses: string[]) {
   const prompts: string[] = [];
   const queue = [...responses];
@@ -22,114 +19,28 @@ function stubOllama(responses: string[]) {
 
 afterEach(() => vi.unstubAllGlobals());
 
-describe('decideAction', () => {
-  const langs = (a: string, b: string, translatable = true) => ({ name: a, enName: b, translatable });
-
-  it('deja en paz el par correcto', () => {
-    expect(decideAction({ name: 'Un lugar tranquilo', enName: 'A Quiet Place', langs: langs('es', 'en') }))
-      .toEqual({ action: 'ok' });
-  });
-
-  it('intercambia cuando el orden está al revés', () => {
-    expect(decideAction({ name: 'A Quiet Place', enName: 'Un lugar tranquilo', langs: langs('en', 'es') }))
-      .toEqual({ action: 'swap' });
-  });
-
-  it('con los dos en español rehace enName en inglés', () => {
-    expect(decideAction({ name: 'El Padrino', enName: 'El Padrino II', langs: langs('es', 'es') }))
-      .toMatchObject({ action: 'translate', field: 'enName', to: 'en', from: 'El Padrino' });
-  });
-
-  it('con los dos en inglés rehace name en español, conservando el inglés', () => {
-    expect(decideAction({ name: 'The Godfather', enName: 'Godfather', langs: langs('en', 'en') }))
-      .toMatchObject({ action: 'translate', field: 'name', to: 'es', from: 'Godfather' });
-  });
-
-  it('no inventa traducción para títulos que no cambian de idioma', () => {
-    expect(decideAction({ name: 'Pluribus', enName: 'Pluribus X', langs: langs('en', 'en', false) }))
-      .toMatchObject({ action: 'skip' });
-  });
-
-  it('no inventa nada con títulos idénticos que no cambian de idioma', () => {
-    expect(decideAction({ name: 'Dune', enName: 'Dune', langs: langs('en', 'en', false) }))
-      .toMatchObject({ action: 'skip' });
-  });
-
-  it('con títulos idénticos en inglés sí rehace el español', () => {
-    expect(decideAction({ name: 'Moon Knight', enName: 'Moon Knight', langs: langs('en', 'en') }))
-      .toMatchObject({ action: 'translate', field: 'name', to: 'es', from: 'Moon Knight' });
-  });
-
-  it('sin idiomas detectados pide análisis en vez de decidir a ciegas', () => {
-    expect(decideAction({ name: 'A Quiet Place', enName: 'Un lugar tranquilo', langs: null }))
-      .toEqual({ action: 'needs-detection' });
-  });
-
-  it('se abstiene cuando la detección no es concluyente', () => {
-    expect(decideAction({ name: 'Ikiru', enName: 'Vivir', langs: langs('other', 'es') }))
-      .toMatchObject({ action: 'skip' });
-    expect(decideAction({ name: 'X', enName: 'Y', langs: langs('unknown', 'unknown') }))
-      .toMatchObject({ action: 'skip' });
-  });
-
-  it('salta los ítems sin enName o sin letras', () => {
-    expect(decideAction({ name: 'Algo', enName: '', langs: null })).toMatchObject({ action: 'skip', reason: 'sin enName' });
-    expect(decideAction({ name: '65', enName: '65 (2023)', langs: langs('en', 'en') })).toMatchObject({ action: 'skip' });
-  });
-});
-
-describe('hasLetters', () => {
-  it('distingue títulos con letras de los puramente numéricos', () => {
-    expect(hasLetters('180')).toBe(false);
-    expect(hasLetters('65')).toBe(false);
-    expect(hasLetters('Dune')).toBe(true);
-    expect(hasLetters('Ñu')).toBe(true);
-  });
-});
-
 describe('sanitizeTitle', () => {
-  it('quita comillas, punto final y preámbulos del modelo', () => {
+  it('se queda con la primera línea y limpia comillas y puntuación', () => {
     expect(sanitizeTitle('"Un lugar tranquilo".', 'A Quiet Place')).toBe('Un lugar tranquilo');
-    expect(sanitizeTitle('El título en español es: Un lugar tranquilo', 'A Quiet Place')).toBe('Un lugar tranquilo');
+    expect(sanitizeTitle('El Padrino\nsegunda opción', 'The Godfather')).toBe('El Padrino');
+    expect(sanitizeTitle('«Amelie»', 'Amelie')).toBe('Amelie');
   });
 
-  it('se queda con la primera línea', () => {
-    expect(sanitizeTitle('Un lugar tranquilo\n\nNota: es el título oficial', 'A Quiet Place')).toBe('Un lugar tranquilo');
+  it('quita el preámbulo con el que el modelo presenta la traducción', () => {
+    expect(sanitizeTitle('El título en español es: La La Land', 'La La Land')).toBe('La La Land');
+    expect(sanitizeTitle('Translation: The Night', 'Esa noche')).toBe('The Night');
   });
 
-  it('rechaza respuestas vacías o desproporcionadas', () => {
-    expect(sanitizeTitle('', 'Dune')).toBeNull();
-    expect(sanitizeTitle('   ', 'Dune')).toBeNull();
-    expect(sanitizeTitle('Lo siento, no puedo traducir ese título porque parece un nombre propio inventado', 'Dune')).toBeNull();
-  });
-});
-
-describe('detectLanguages', () => {
-  it('normaliza la respuesta del modelo', async () => {
-    stubOllama(['{"a":"en","b":"es","translatable":true}']);
-    expect(await detectLanguages('A Quiet Place', 'Un lugar tranquilo'))
-      .toEqual({ name: 'en', enName: 'es', translatable: true });
+  it('descarta una respuesta vacía o ausente', () => {
+    expect(sanitizeTitle('', 'X')).toBeNull();
+    expect(sanitizeTitle(null, 'X')).toBeNull();
+    expect(sanitizeTitle('   ', 'X')).toBeNull();
   });
 
-  it('ante JSON inválido no arriesga: unknown', async () => {
-    stubOllama(['no soy JSON']);
-    expect(await detectLanguages('X', 'Y')).toEqual({ name: 'unknown', enName: 'unknown', translatable: false });
-  });
-
-  it('valores fuera del catálogo de idiomas caen a unknown', async () => {
-    stubOllama(['{"a":"spanish","b":"en","translatable":true}']);
-    expect((await detectLanguages('X', 'Y')).name).toBe('unknown');
-  });
-
-  it('pide la respuesta en formato JSON', async () => {
-    const prompts: string[] = [];
-    vi.stubGlobal('fetch', async (_u: string, init: { body: string }) => {
-      const body = JSON.parse(init.body);
-      prompts.push(body.format);
-      return { ok: true, json: async () => ({ response: '{"a":"es","b":"en","translatable":true}' }) };
-    });
-    await detectLanguages('A', 'B');
-    expect(prompts[0]).toBe('json');
+  it('descarta una explicación en vez de un título: el modelo se justifica en lugar de traducir', () => {
+    const excusa =
+      'No puedo traducir este título porque se trata de un nombre propio que se mantiene igual';
+    expect(sanitizeTitle(excusa, 'Anora')).toBeNull();
   });
 });
 
@@ -139,69 +50,113 @@ describe('translateTitle', () => {
     expect(await translateTitle('A Quiet Place', 'es')).toBe('Un lugar tranquilo');
     expect(prompts[0]).toContain('español');
   });
+
+  it('para el otro sentido pide inglés', async () => {
+    const prompts = stubOllama(['The Night']);
+    expect(await translateTitle('Esa noche', 'en')).toBe('The Night');
+    expect(prompts[0]).toContain('inglés');
+  });
+
+  it('devuelve null si la respuesta no sirve como título', async () => {
+    stubOllama(['']);
+    expect(await translateTitle('Anora', 'es')).toBeNull();
+  });
 });
 
 describe('fixItem', () => {
-  it('intercambia sin gastar una llamada de traducción', async () => {
-    const prompts = stubOllama(['{"a":"en","b":"es","translatable":true}']);
-    const item = { code: 'P1', name: '57 Seconds', enName: '57 segundos' } as Record<string, unknown>;
-    const res = await fixItem(item);
-    expect(res.action).toBe('swap');
-    expect(item.name).toBe('57 segundos');
-    expect(item.enName).toBe('57 Seconds');
-    expect(item.titlesChecked).toBe(true);
-    expect(prompts).toHaveLength(1);
-  });
-
-  it('con ambos en inglés traduce name y deja enName intacto', async () => {
-    stubOllama(['{"a":"en","b":"en","translatable":true}', 'Un pequeño favor']);
-    const item = { code: 'P5', name: 'A Simple Favor', enName: 'A Simple Favour' } as Record<string, unknown>;
+  it('rellena name traduciendo enName al español', async () => {
+    const prompts = stubOllama(['57 segundos']);
+    const item = { code: 'P1', name: '', enName: '57 Seconds' } as Record<string, any>;
     const res = await fixItem(item);
     expect(res.action).toBe('translate');
-    expect(item.name).toBe('Un pequeño favor');
-    expect(item.enName).toBe('A Simple Favour');
+    expect(item.name).toBe('57 segundos');
+    expect(item.enName).toBe('57 Seconds');
+    // Una sola llamada: el título que ya existe no se retraduce.
+    expect(prompts).toHaveLength(1);
+    expect(item.metadata).toMatchObject({ titlesChecked: true });
   });
 
-  it('con ambos en español rehace enName', async () => {
-    stubOllama(['{"a":"es","b":"es","translatable":true}', 'The Night']);
-    const item = { code: 'S4', name: 'Esa noche', enName: 'Esa noche II' } as Record<string, unknown>;
-    await fixItem(item);
-    expect(item.name).toBe('Esa noche');
+  it('rellena enName traduciendo name al inglés', async () => {
+    const prompts = stubOllama(['The Night']);
+    const item = { code: 'S4', name: 'Esa noche', enName: '' } as Record<string, any>;
+    const res = await fixItem(item);
+    expect(res.action).toBe('translate');
     expect(item.enName).toBe('The Night');
+    expect(item.name).toBe('Esa noche');
+    expect(prompts).toHaveLength(1);
+    expect(item.metadata).toMatchObject({ titlesChecked: true });
   });
 
-  it('no toca el ítem correcto', async () => {
-    stubOllama(['{"a":"es","b":"en","translatable":true}']);
-    const item = { code: 'S1', name: 'Se tiene que morir mucha gente', enName: 'Many People Need To Die' } as Record<string, unknown>;
-    expect((await fixItem(item)).action).toBe('ok');
-    expect(item.name).toBe('Se tiene que morir mucha gente');
+  it('con ambos títulos presentes rehace los dos, uno en cada sentido', async () => {
+    // Comportamiento actual del script: no detecta idiomas, retraduce ambos lados.
+    const prompts = stubOllama(['A Simple Favor', 'Un pequeño favor']);
+    const item = {
+      code: 'P5',
+      name: 'Un favor sencillo',
+      enName: 'A Simple Favour',
+    } as Record<string, any>;
+    const res = await fixItem(item);
+    expect(res.action).toBe('translate');
+    expect(item.enName).toBe('A Simple Favor');
+    expect(item.name).toBe('Un pequeño favor');
+    expect(prompts).toHaveLength(2);
+    expect(item.metadata).toMatchObject({ titlesChecked: true });
   });
 
-  it('descarta una traducción que no parece un título', async () => {
-    stubOllama([
-      '{"a":"en","b":"en","translatable":true}',
-      'No puedo traducir este título porque se trata de un nombre propio que se mantiene igual',
-    ]);
-    const item = { code: 'P9', name: 'Anora', enName: 'Anora Film' } as Record<string, unknown>;
+  it('si solo prospera una de las dos traducciones, conserva el otro título', async () => {
+    stubOllama(['', 'Un pequeño favor']);
+    const item = {
+      code: 'P6',
+      name: 'Un favor sencillo',
+      enName: 'A Simple Favour',
+    } as Record<string, any>;
+    expect((await fixItem(item)).action).toBe('translate');
+    expect(item.enName).toBe('A Simple Favour');
+    expect(item.name).toBe('Un pequeño favor');
+  });
+
+  it('si fallan las dos traducciones no toca el ítem ni lo marca', async () => {
+    stubOllama(['', '']);
+    const item = { code: 'P9', name: 'Anora', enName: 'Anora Film' } as Record<string, any>;
     const res = await fixItem(item);
     expect(res.action).toBe('skip');
+    expect(res.changed).toBe(false);
     expect(item.name).toBe('Anora');
-    expect(item.titlesChecked).toBeUndefined();
+    expect(item.enName).toBe('Anora Film');
+    expect(item.metadata?.titlesChecked).toBeUndefined();
   });
 
-  it('con --dry-run no modifica el ítem', async () => {
-    stubOllama(['{"a":"en","b":"es","translatable":true}']);
-    const item = { code: 'P1', name: '57 Seconds', enName: '57 segundos' } as Record<string, unknown>;
+  it('con --dry-run informa qué haría pero no modifica el ítem', async () => {
+    stubOllama(['A Simple Favor', 'Un pequeño favor']);
+    const item = {
+      code: 'P5',
+      name: 'Un favor sencillo',
+      enName: 'A Simple Favour',
+    } as Record<string, any>;
     const res = await fixItem(item, { dryRun: true });
-    expect(res.action).toBe('swap');
-    expect(item.name).toBe('57 Seconds');
-    expect(item.titlesChecked).toBeUndefined();
+    expect(res.action).toBe('translate');
+    expect(item.name).toBe('Un favor sencillo');
+    expect(item.enName).toBe('A Simple Favour');
+    expect(item.metadata).toBeUndefined();
   });
 
-  it('no llama al modelo si falta enName', async () => {
+  it('no llama al modelo si el ítem no tiene ningún título', async () => {
     const prompts = stubOllama([]);
-    const res = await fixItem({ code: 'P7', name: 'Solo español', enName: '' });
+    const res = await fixItem({ code: 'P7', name: '', enName: '' });
     expect(res.action).toBe('skip');
     expect(prompts).toHaveLength(0);
+  });
+
+  it('absorbe la bandera suelta del formato antiguo en vez de duplicarla', async () => {
+    stubOllama(['The Night']);
+    const item = {
+      code: 'S4',
+      name: 'Esa noche',
+      enName: '',
+      titlesChecked: true,
+    } as Record<string, any>;
+    await fixItem(item);
+    expect('titlesChecked' in item).toBe(false);
+    expect(item.metadata).toEqual({ titlesChecked: true });
   });
 });

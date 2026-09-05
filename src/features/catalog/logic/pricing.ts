@@ -19,6 +19,6 @@ export function priceFor(
   rate: Rate = DEFAULT_RATE,
 ): number {
   // Reutiliza la regla del dominio en vez de duplicarla.
-  const av = new Audiovisual(0, type, 'x', 2000, 0, 1, isPremiere);
+  const av = new Audiovisual('0', type, 'x', 2000, 0, 1, isPremiere);
   return av.price(rate) * units;
 }

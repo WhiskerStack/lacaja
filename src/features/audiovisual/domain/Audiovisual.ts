@@ -7,7 +7,8 @@ import type { AudiovisualDTO, AudiovisualType, Rate } from '../../common/domain/
  */
 export class Audiovisual {
   constructor(
-    public readonly id: number,
+    // String, igual que AudiovisualDTO.id: el catálogo pasó a identificadores UUID.
+    public readonly id: string,
     public readonly type: AudiovisualType,
     public readonly name: string,
     public readonly year: number,

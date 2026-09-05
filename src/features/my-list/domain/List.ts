@@ -1,4 +1,5 @@
 import { ListItem } from '../../../domains/ListItem';
+import type { ListItemDTO } from '../../common/domain/types';
 
 /**
  * "Mi lista" del usuario. Agregado con invariantes propios: total e invariante de espacio.
@@ -33,7 +34,7 @@ export class List {
     return Math.max(0, this.totalGb() - spaceGb);
   }
 
-  static fromJSON(items: { code: string; level: any; targetId: number; name: string; sizeGb: number; price: number }[]): List {
+  static fromJSON(items: ListItemDTO[]): List {
     return new List(items.map(ListItem.fromJSON));
   }
 

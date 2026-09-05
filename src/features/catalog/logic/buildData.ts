@@ -75,6 +75,28 @@ function altTitle(name: string, enName?: string): string | undefined {
   return alt;
 }
 
+/**
+ * Códigos por nivel (funcional §6.3.1): a partir del código del audiovisual ("S1122"),
+ * cada temporada es "S1122-3" y cada capítulo "S1122-3-10". El peso de la temporada es
+ * la suma de sus capítulos.
+ * Se exporta para poder probar la regla con datos de ejemplo: el catálogo real todavía
+ * no trae el desglose por temporada, así que no sirve como fuente para el test.
+ */
+export function toSeasonDTOs(code: string, rawSeasons: RawSeason[] = []): SeasonViewDTO[] {
+  return rawSeasons.map((s) => {
+    const seasonCode = `${code}-${s.number}`;
+    const episodes = s.episodes.map((e) => ({
+      id: e.id,
+      number: e.number,
+      sizeGb: e.sizeGb,
+      durationMin: e.durationMin,
+      code: `${seasonCode}-${e.number}`,
+    }));
+    const seasonSize = episodes.reduce((sum, e) => sum + e.sizeGb, 0);
+    return { id: s.id, number: s.number, sizeGb: seasonSize, code: seasonCode, episodes };
+  });
+}
+
 /** Hidrata un item crudo del JSON al DTO aplanado, calculando códigos y peso total. */
 function toItemDTO(r: RawItem): CatalogItemDTO {
   // El código guardado manda; si el sample no lo trae, se deriva del id (mismo formato).
@@ -83,18 +105,7 @@ function toItemDTO(r: RawItem): CatalogItemDTO {
   let totalSizeGb = r.sizeGb ?? 0;
 
   if (r.seasons?.length) {
-    seasons = r.seasons.map((s) => {
-      const seasonCode = `${code}-${s.number}`;
-      const episodes = s.episodes.map((e) => ({
-        id: e.id,
-        number: e.number,
-        sizeGb: e.sizeGb,
-        durationMin: e.durationMin,
-        code: `${seasonCode}-${e.number}`,
-      }));
-      const seasonSize = episodes.reduce((sum, e) => sum + e.sizeGb, 0);
-      return { id: s.id, number: s.number, sizeGb: seasonSize, code: seasonCode, episodes };
-    });
+    seasons = toSeasonDTOs(code, r.seasons);
     totalSizeGb = seasons.reduce((sum, s) => sum + s.sizeGb, 0);
   }
 

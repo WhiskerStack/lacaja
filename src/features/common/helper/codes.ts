@@ -10,7 +10,7 @@ export function typeLetter(type: AudiovisualType): string {
  * código del inventario físico (letra + número, sin relleno), de modo que el alta manual
  * y la importación del SearchEngine producen códigos homogéneos.
  */
-export function audiovisualCode(type: AudiovisualType, id: number): string {
+export function audiovisualCode(type: AudiovisualType, id: string | number): string {
   return `${typeLetter(type)}${id}`;
 }
 
