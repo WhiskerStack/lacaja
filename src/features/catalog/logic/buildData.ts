@@ -176,14 +176,29 @@ export function getCards(): CatalogCardDTO[] {
   return ITEMS.map(toCard);
 }
 
-/** Los N estrenos más recientes (carátula de Home, funcional §6.1.1). */
+/**
+ * Parte numérica del código de catálogo: "S101" → 101, "P0023" → 23.
+ * Como los códigos se asignan de forma incremental al dar de alta, ordenar por este
+ * número de mayor a menor equivale a "lo último agregado primero".
+ */
+export function codeNumber(code: string): number {
+  const n = Number.parseInt(code.replace(/^[A-Za-z]+/, ''), 10);
+  return Number.isNaN(n) ? 0 : n;
+}
+
+/** Comparador descendente por código (últimos agregados primero). */
+export function byCodeDesc(a: { code: string }, b: { code: string }): number {
+  return codeNumber(b.code) - codeNumber(a.code);
+}
+
+/** Los N destacados de la carátula de Home (funcional §6.1.1), del año más reciente al más antiguo. */
 export function getPremiereHighlights(limit = 5): CatalogItemDTO[] {
   return [...ITEMS]
     .sort((a, b) => {
-      // Estrenos primero, luego por rating y año.
+      // Estrenos primero; dentro de cada grupo, año descendente y, a igualdad, últimos agregados.
       if (a.isPremiere !== b.isPremiere) return a.isPremiere ? -1 : 1;
-      if (b.rating !== a.rating) return b.rating - a.rating;
-      return b.year - a.year;
+      if (b.year !== a.year) return b.year - a.year;
+      return byCodeDesc(a, b);
     })
     .slice(0, limit);
 }

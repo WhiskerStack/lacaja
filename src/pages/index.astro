@@ -8,6 +8,7 @@ import {
   getPremieres,
   getTopRated,
   getCards,
+  byCodeDesc,
 } from '../features/catalog/logic/buildData';
 import { withLocalImages, HERO_SIZE } from '../features/catalog/logic/cardImages';
 import { TYPE_LABEL_PLURAL } from '../features/catalog/types';
@@ -37,7 +38,7 @@ const TYPES: AudiovisualType[] = ['movie', 'series', 'anime'];
     {TYPES.map((t) => (
       <Rail
         title={TYPE_LABEL_PLURAL[t]}
-        cards={allCards.filter((c) => c.type === t).sort((a, b) => b.rating - a.rating)}
+        cards={allCards.filter((c) => c.type === t).sort(byCodeDesc)}
       />
     ))}
 
