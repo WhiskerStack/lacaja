@@ -33,7 +33,6 @@ const TYPES: AudiovisualType[] = ['movie', 'series', 'anime'];
 
   <div class="mt-6">
     <Rail title="Estrenos" cards={estrenos} />
-    <Rail title="Mejor votadas" cards={topRated.slice(0, 12)} />
 
     {TYPES.map((t) => (
       <Rail
@@ -41,6 +40,8 @@ const TYPES: AudiovisualType[] = ['movie', 'series', 'anime'];
         cards={allCards.filter((c) => c.type === t).sort(byCodeDesc)}
       />
     ))}
+
+    <Rail title="Mejor votadas" cards={topRated.slice(0, 12)} />
 
     {genreRows.map((r) => <Rail title={`Mejor votadas · ${r.g}`} cards={r.cards} />)}
   </div>
