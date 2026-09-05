@@ -5,7 +5,8 @@
 // Formato nivel 1 (especificaciones §4.4): diccionarios + tuplas posicionales.
 //   - search-index.json:  { v, items: [[code, title], ...] }            (autocomplete, minúsculo)
 //   - library-index.json: { v, genres, regions, languages,
-//                           items: [[code, title, year, gi, ri, li], ...] }  (filtros de Biblioteca)
+//                           items: [[code, title, year, type, gi[], ri, li], ...] }  (filtros de Biblioteca)
+//     `gi` es un ARREGLO de índices: un ítem puede tener varios géneros (v2 del formato).
 // Ambos se generan en el mismo pass desde la misma fuente, garantizando consistencia (§4.5).
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -37,9 +38,14 @@ function buildIndices() {
   const genres = catalog.genres ?? [];
   const regions = catalog.regions ?? [];
   const languages = catalog.languages ?? [];
-  const gi = (name) => Math.max(0, genres.indexOf(name));
   const ri = (name) => Math.max(0, regions.indexOf(name));
   const li = (name) => Math.max(0, languages.indexOf(name));
+  /** Índices de los géneros del ítem. Se descartan los que no estén en el diccionario
+   *  en lugar de colapsarlos al índice 0, que los haría pasar por el primer género. */
+  const gi = (item) => {
+    const names = Array.isArray(item.genres) ? item.genres : item.genre ? [item.genre] : [];
+    return names.map((n) => genres.indexOf(n)).filter((idx) => idx >= 0);
+  };
 
   // Solo el item completo entra al índice; no temporadas ni capítulos (funcional §6.4.2).
   const searchItems = items.map((it) => [itemCode(it), it.name]);
@@ -49,13 +55,14 @@ function buildIndices() {
     it.name,
     it.year,
     it.type,
-    gi(it.genre),
+    gi(it),
     ri(it.region),
     li(it.language),
   ]);
 
   const searchIndex = { v: 1, items: searchItems };
-  const libraryIndex = { v: 1, genres, regions, languages, items: libraryItems };
+  // v2: el campo de género pasó de índice único a arreglo de índices.
+  const libraryIndex = { v: 2, genres, regions, languages, items: libraryItems };
 
   mkdirSync(OUT_DIR, { recursive: true });
   writeFileSync(resolve(OUT_DIR, 'search-index.json'), JSON.stringify(searchIndex));

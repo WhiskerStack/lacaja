@@ -11,7 +11,7 @@ export interface SearchHit {
   title: string;
   year?: number;
   type?: AudiovisualType;
-  genre?: string;
+  genres?: string[];
 }
 
 /** Forma del search-index.json (tuplas posicionales, especificaciones §4.4). */
@@ -26,6 +26,7 @@ export interface LibraryIndexFile {
   genres: string[];
   regions: string[];
   languages: string[];
-  items: [string, string, number, AudiovisualType, number, number, number][];
-  // [code, title, year, type, genreIdx, regionIdx, languageIdx]
+  items: [string, string, number, AudiovisualType, number[], number, number][];
+  // [code, title, year, type, genreIdxs, regionIdx, languageIdx]
+  // genreIdxs es un arreglo: un ítem puede tener varios géneros (formato v2).
 }

@@ -17,9 +17,10 @@ const estrenos = getPremieres();
 const topRated = getTopRated();
 const allCards = getCards();
 
-// Filas "mejor votadas" por género para algunos géneros con contenido.
-const genreRows = ['Ciencia ficción', 'Drama', 'Animación', 'Acción']
-  .map((g) => ({ g, cards: topRated.filter((c) => c.genre === g) }))
+// Filas "mejor votadas" por género. Los nombres deben coincidir con el vocabulario del
+// catálogo (src/data/catalog.json → genres); un ítem puede aparecer en varias filas.
+const genreRows = ['Ciencia Ficción', 'Drama', 'Animado', 'Acción']
+  .map((g) => ({ g, cards: topRated.filter((c) => c.genres.includes(g)) }))
   .filter((r) => r.cards.length > 0);
 
 const TYPES: AudiovisualType[] = ['movie', 'series', 'anime'];

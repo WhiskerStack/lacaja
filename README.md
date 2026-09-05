@@ -71,12 +71,21 @@ y se hidratan con `fromJSON`/`toJSON` en los bordes. Stores guardan DTOs, no ins
 > **Nota**: Los scripts de sincronización y enriquecimiento requieren variables de entorno (ver `.env.example`).
 > `TMDB_API_KEY` es obligatoria para `enrich-catalog`; `OLLAMA_URL` y `OLLAMA_MODEL` son opcionales para traducciones.
 
+### Géneros
+
+Cada ítem del catálogo lleva `genres: string[]` (nunca vacío; como mínimo `['Sin género']`).
+`enrich-catalog` los completa desde TMDB mapeando por **ID numérico** de género, no por el nombre
+localizado, y los fusiona con los que ya trae el Excel. Ese enriquecimiento tiene su propio flag
+`genresEnriched`, independiente de `enriched`: sin él, los ítems marcados como enriquecidos antes
+de que existieran los géneros nunca volverían a consultarse.
+
 ## Índices de búsqueda
 
 `scripts/build-search-index.mjs` lee `src/data/catalog.json` y emite en `public/`:
 
 - `search-index.json` — `{ v, items: [[code, title], …] }` (autocomplete, minúsculo).
-- `library-index.json` — `{ v, genres, regions, languages, items: [[code, title, year, type, gi, ri, li], …] }`.
+- `library-index.json` — `{ v: 2, genres, regions, languages, items: [[code, title, year, type, gi, ri, li], …] }`.
+  `gi` es un **arreglo** de índices de género (un ítem puede tener varios); `ri`/`li` siguen siendo índices simples.
 
 Formato nivel 1 (diccionarios + tuplas posicionales). Solo entra el item completo, no temporadas ni capítulos.
 La búsqueda en cliente usa MiniSearch con `processTerm` que quita acentos (NFD) y fuzzy+prefix;

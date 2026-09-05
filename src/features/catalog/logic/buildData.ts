@@ -31,7 +31,9 @@ interface RawItem {
   sizeGb?: number;
   durationMin?: number;
   isPremiere: boolean;
-  genre: string;
+  /** Arreglo de géneros. `genre` (string) es el formato antiguo, aún tolerado al hidratar. */
+  genres?: string[];
+  genre?: string;
   region: string;
   language: string;
   description: string;
@@ -45,6 +47,13 @@ interface RawItem {
 }
 
 const catalog = raw as { items: RawItem[]; genres: string[]; regions: string[]; languages: string[] };
+
+/** Géneros normalizados del item crudo: acepta el arreglo nuevo y el `genre` string antiguo. */
+function toGenres(r: RawItem): string[] {
+  if (Array.isArray(r.genres) && r.genres.length) return r.genres;
+  if (r.genre) return [r.genre];
+  return ['Sin género'];
+}
 
 /** Hidrata un item crudo del JSON al DTO aplanado, calculando códigos y peso total. */
 function toItemDTO(r: RawItem): CatalogItemDTO {
@@ -81,7 +90,7 @@ function toItemDTO(r: RawItem): CatalogItemDTO {
     durationMin: r.durationMin,
     description: r.description,
     imageUrl: r.imageUrl,
-    genre: r.genre,
+    genres: toGenres(r),
     region: r.region,
     language: r.language,
     cast: r.cast ?? [],
@@ -124,7 +133,7 @@ export function toCard(i: CatalogItemDTO): CatalogCardDTO {
     year: i.year,
     rating: i.rating,
     imageUrl: i.imageUrl,
-    genre: i.genre,
+    genres: i.genres,
     isPremiere: i.isPremiere,
     totalSizeGb: i.totalSizeGb,
   };
@@ -157,12 +166,19 @@ export function getPremieres(): CatalogCardDTO[] {
   return getCards().filter((c) => c.isPremiere);
 }
 
-/** Sugerencias: mismo género, mayor rating, excluyendo el propio (funcional §6.2.5). */
+/**
+ * Sugerencias: comparten al menos un género, mayor rating, excluyendo el propio (funcional §6.2.5).
+ * Con géneros múltiples se ordena primero por cuántos comparten, para que un empate de rating
+ * no ponga por delante a un título que solo coincide en el género más genérico.
+ */
 export function getSuggestions(item: CatalogItemDTO, limit = 8): CatalogCardDTO[] {
+  const own = new Set(item.genres);
   return getCards()
-    .filter((c) => c.id !== item.id && c.genre === item.genre)
-    .sort((a, b) => b.rating - a.rating)
-    .slice(0, limit);
+    .map((c) => ({ card: c, shared: c.genres.filter((g) => own.has(g)).length }))
+    .filter((e) => e.card.id !== item.id && e.shared > 0)
+    .sort((a, b) => b.shared - a.shared || b.card.rating - a.card.rating)
+    .slice(0, limit)
+    .map((e) => e.card);
 }
 
 /** Catálogos de filtros para Biblioteca (funcional §6.5.2). */

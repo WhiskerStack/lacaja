@@ -93,6 +93,13 @@ const genreMap = {
   'Superheroes': 'Superhéroes',
   'Secuestro': 'Secuestro',
   'Drogas': 'Drogas',
+  'Western': 'Western',
+  // Variantes sucias detectadas en el dataset (acentos rotos, minúsculas, país en la
+  // columna de género). Sin esto quedan fuera del diccionario y no filtran en Biblioteca.
+  'Suspense': 'Suspenso',
+  'Ciencia ficción': 'Ciencia Ficción',
+  'Acci¢n': 'Acción',
+  'Uzbekistan': 'Sin género',
 };
 
 function normalizeRegion(region) {
@@ -105,6 +112,27 @@ function normalizeGenre(genre) {
   if (!genre) return 'Sin género';
   const trimmed = genre.trim();
   return genreMap[trimmed] || trimmed;
+}
+
+/**
+ * Normaliza la lista de géneros de un ítem: limpia, mapea, deduplica y garantiza
+ * al menos un valor. El Excel puede traer varios paréntesis de género por título.
+ */
+function normalizeGenres(rawGenres) {
+  const out = [];
+  for (const g of rawGenres || []) {
+    if (!g || !String(g).trim()) continue;
+    const name = normalizeGenre(String(g));
+    if (name && name !== 'Sin género' && !out.includes(name)) out.push(name);
+  }
+  return out.length ? out : ['Sin género'];
+}
+
+/** Géneros de un ítem del catálogo previo, tolerando el formato antiguo (`genre` string). */
+function itemGenres(item) {
+  if (Array.isArray(item.genres)) return item.genres;
+  if (item.genre) return [item.genre];
+  return [];
 }
 
 function parseItem(text) {
@@ -179,8 +207,8 @@ function parseItem(text) {
   // Limpiar extensiones de archivo
   spanishName = spanishName.replace(/\.(mp4|ts|mkv|avi|mov)$/, '').trim();
 
-  // Si no hay géneros, usar 'Sin género'
-  const mainGenre = genres.length > 0 ? normalizeGenre(genres[0]) : 'Sin género';
+  // Todos los paréntesis restantes son géneros; se conservan todos, no solo el primero.
+  const normalizedGenres = normalizeGenres(genres);
 
   // Normalizar región
   const normalizedRegion = normalizeRegion(region);
@@ -231,7 +259,7 @@ function parseItem(text) {
     rating: 0,
     sizeGb: 0,
     isPremiere: false,
-    genre: mainGenre,
+    genres: normalizedGenres,
     region: normalizedRegion,
     language: language,
     description: '',
@@ -265,7 +293,7 @@ function syncCatalogFromExcel() {
   for (const item of existingItems) {
     if (item.code) {
       itemsMap.set(item.code, item);
-      if (item.genre) genresSet.add(item.genre);
+      for (const g of itemGenres(item)) genresSet.add(g);
       if (item.region) regionsSet.add(item.region);
       if (item.language) languagesSet.add(item.language);
     }
@@ -319,7 +347,7 @@ function syncCatalogFromExcel() {
               totalItems++;
               nuevos++;
               // Añadir a conjuntos (para listas globales)
-              genresSet.add(item.genre);
+              for (const g of item.genres) genresSet.add(g);
               regionsSet.add(item.region);
               languagesSet.add(item.language);
             }
@@ -348,4 +376,10 @@ function syncCatalogFromExcel() {
   console.log(`[dahem] Catálogo sincronizado: ${itemsMap.size} ítems totales (${nuevos} nuevos) → ${OUTPUT}`);
 }
 
-syncCatalogFromExcel();
+// Las funciones puras se exportan para tests/unit/genres.test.ts.
+export { parseItem, normalizeGenres, normalizeGenre, itemGenres };
+
+// Solo se ejecuta como CLI (`node scripts/sync-catalog.mjs`), no al importarse.
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  syncCatalogFromExcel();
+}

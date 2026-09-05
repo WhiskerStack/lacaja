@@ -34,7 +34,9 @@
       "sizeGb": 1.4,
       "durationMin": 86,
       "isPremiere": false,
-      "genre": "Animación",
+      "genres": [
+        "Animación"
+      ],
       "region": "EE.UU.",
       "language": "Inglés",
       "description": "En plena Guerra Fría, un niño hace amistad con un gigantesco robot de hierro caído del cielo, mientras un agente del gobierno intenta destruirlo. Una fábula sobre la identidad, la amistad y la decisión de no ser un arma.",
@@ -58,7 +60,9 @@
       "sizeGb": 4.8,
       "durationMin": 166,
       "isPremiere": true,
-      "genre": "Ciencia ficción",
+      "genres": [
+        "Ciencia ficción"
+      ],
       "region": "EE.UU.",
       "language": "Inglés",
       "description": "El destino de Arrakis se decide en una guerra final por el control de la especia. Paul Atreides enfrenta el peso de su profecía mientras el universo conocido se reordena en torno a su nombre.",
@@ -83,7 +87,9 @@
       "sizeGb": 2.9,
       "durationMin": 118,
       "isPremiere": true,
-      "genre": "Suspenso",
+      "genres": [
+        "Suspenso"
+      ],
       "region": "España",
       "language": "Español",
       "description": "Una detective regresa a su pueblo natal para investigar una serie de desapariciones que el resto del país prefiere ignorar. El silencio de los vecinos esconde más de lo que dicen.",
@@ -104,7 +110,9 @@
       "sizeGb": 1.8,
       "durationMin": 99,
       "isPremiere": false,
-      "genre": "Comedia",
+      "genres": [
+        "Comedia"
+      ],
       "region": "EE.UU.",
       "language": "Inglés",
       "description": "Cuatro amigos planean el viaje perfecto de fin de curso y absolutamente nada sale como esperaban. Una comedia ligera sobre crecer sin querer hacerlo.",
@@ -127,7 +135,9 @@
       "sizeGb": 3.1,
       "durationMin": 131,
       "isPremiere": false,
-      "genre": "Drama",
+      "genres": [
+        "Drama"
+      ],
       "region": "Reino Unido",
       "language": "Inglés",
       "description": "Dos fareros quedan aislados por una tormenta interminable en una isla remota. La soledad y la culpa empiezan a borrar la línea entre lo real y lo imaginado.",
@@ -149,7 +159,9 @@
       "sizeGb": 3.6,
       "durationMin": 142,
       "isPremiere": false,
-      "genre": "Aventura",
+      "genres": [
+        "Aventura"
+      ],
       "region": "EE.UU.",
       "language": "Inglés",
       "description": "Una expedición busca una ciudad perdida en lo profundo de la selva amazónica, donde cada paso adelante cuesta más de lo que cualquiera estaba dispuesto a pagar.",
@@ -170,7 +182,9 @@
       "sizeGb": 4.2,
       "durationMin": 134,
       "isPremiere": true,
-      "genre": "Acción",
+      "genres": [
+        "Acción"
+      ],
       "region": "EE.UU.",
       "language": "Inglés",
       "description": "En una megaciudad gobernada por corporaciones, una mercenaria descubre que el contrato que aceptó borra la frontera entre sus recuerdos y los de su objetivo.",
@@ -191,7 +205,9 @@
       "year": 2021,
       "rating": 9.1,
       "isPremiere": false,
-      "genre": "Fantasía",
+      "genres": [
+        "Fantasía"
+      ],
       "region": "EE.UU.",
       "language": "Inglés",
       "description": "Siete casas nobles libran una guerra sin cuartel por un trono mientras una amenaza ancestral despierta en el norte. Política, traición y dragones en un mundo al borde del invierno.",
@@ -282,7 +298,9 @@
       "year": 2024,
       "rating": 8.8,
       "isPremiere": true,
-      "genre": "Animación",
+      "genres": [
+        "Animación"
+      ],
       "region": "Japón",
       "language": "Japonés",
       "description": "Un joven espadachín se une a un cuerpo de cazadores para vengar a su aldea, mientras descubre que el enemigo que persigue comparte más con él de lo que imaginaba.",
@@ -353,7 +371,9 @@
       "year": 2023,
       "rating": 7.4,
       "isPremiere": false,
-      "genre": "Drama",
+      "genres": [
+        "Drama"
+      ],
       "region": "España",
       "language": "Español",
       "description": "En un pueblo costero, dos familias rivales ven cómo un amor prohibido amenaza con derribar décadas de secretos, herencias y rencores enterrados bajo la arena.",
@@ -398,7 +418,9 @@
       "year": 2025,
       "rating": 7,
       "isPremiere": false,
-      "genre": "Comedia",
+      "genres": [
+        "Comedia"
+      ],
       "region": "Reino Unido",
       "language": "Inglés",
       "description": "Chefs aficionados compiten en retos imposibles bajo la mirada implacable de un jurado que no perdona ni una pizca de sal de más.",
@@ -437,7 +459,9 @@
       "year": 2026,
       "rating": 8.9,
       "isPremiere": true,
-      "genre": "Ciencia ficción",
+      "genres": [
+        "Ciencia ficción"
+      ],
       "region": "Corea del Sur",
       "language": "Coreano",
       "description": "La tripulación de la primera estación orbital coreana descubre una señal imposible justo cuando el contacto con la Tierra se corta. Aislados, deben decidir en quién confiar.",

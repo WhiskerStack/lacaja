@@ -37,7 +37,7 @@ export default function LibraryGrid({ cards, facets }: Props) {
   const filtered = useMemo(() => {
     let out = cards.filter((c) => {
       if (type !== 'all' && c.type !== type) return false;
-      if (genre && c.genre !== genre) return false;
+      if (genre && !c.genres.includes(genre)) return false;
       if (year && String(c.year) !== year) return false;
       return true;
     });

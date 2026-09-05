@@ -32,7 +32,8 @@ export interface CatalogItemDTO extends AudiovisualDTO {
   durationMin?: number;
   description: string;
   imageUrl: string;
-  genre: string;
+  /** Un audiovisual puede pertenecer a varios géneros. Nunca vacío: al menos ['Sin género']. */
+  genres: string[];
   region: string;
   language: string;
   cast: string[];
@@ -53,7 +54,7 @@ export interface CatalogCardDTO {
   year: number;
   rating: number;
   imageUrl: string;
-  genre: string;
+  genres: string[];
   isPremiere: boolean;
   totalSizeGb: number;
 }
