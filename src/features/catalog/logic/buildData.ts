@@ -191,9 +191,21 @@ export function byCodeDesc(a: { code: string }, b: { code: string }): number {
   return codeNumber(b.code) - codeNumber(a.code);
 }
 
-/** Los N destacados de la carátula de Home (funcional §6.1.1), del año más reciente al más antiguo. */
+/**
+ * Nota mínima para entrar en la carátula. El orden de la portada es por año, así que sin
+ * este filtro un título flojo del año en curso encabezaría el escaparate.
+ */
+export const MIN_HIGHLIGHT_RATING = 7;
+
+/**
+ * Los N destacados de la carátula de Home (funcional §6.1.1): de los títulos que superan
+ * MIN_HIGHLIGHT_RATING, los del año más reciente y, a igualdad de año, los últimos agregados.
+ */
 export function getPremiereHighlights(limit = 5): CatalogItemDTO[] {
-  return [...ITEMS]
+  const wellRated = ITEMS.filter((i) => i.rating >= MIN_HIGHLIGHT_RATING);
+  // Si el umbral dejara la carátula corta, se completa con el resto del catálogo.
+  const pool = wellRated.length >= limit ? wellRated : ITEMS;
+  return [...pool]
     .sort((a, b) => {
       // Estrenos primero; dentro de cada grupo, año descendente y, a igualdad, últimos agregados.
       if (a.isPremiere !== b.isPremiere) return a.isPremiere ? -1 : 1;
