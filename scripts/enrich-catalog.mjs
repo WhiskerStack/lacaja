@@ -13,6 +13,13 @@
 // —search/multi lo ignora—, y entre los candidatos se elige por cercanía al año antes que por
 // popularidad. Sin eso, títulos repetidos ("Dune", "Mufasa", cualquier remake) se enriquecían con
 // la versión más popular en vez de con la del catálogo.
+//
+// El país del catálogo (`region`) acota todavía más el emparejamiento. TMDB no admite filtrar la
+// búsqueda por país de origen, así que se aplica sobre los candidatos: en series ya viene en el
+// resultado (origin_country) y en películas hay que mirar los detalles (production_countries). Por
+// eso el país desempata dentro de la misma cercanía de año en vez de mandar sobre ella: la region
+// del dataset es orientativa (coproducciones, "EU" por Estados Unidos, valores basura) y descartar
+// por ella dejaría ítems sin enriquecer.
 
 import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
@@ -54,6 +61,71 @@ const TMDB_API_KEY = env.TMDB_API_KEY;
 
 const CATALOG_PATH = resolve(ROOT, 'src/data/catalog.json');
 const TMDB_IMAGE_BASE = 'https://image.tmdb.org/t/p/w500';
+
+// Region del catálogo → ISO 3166-1 alpha-2, que es como TMDB nombra los países. El dataset
+// escribe los países en castellano y con ruido: "EU" es Estados Unidos (no la Unión Europea),
+// conviven "EU" y "USA", y algunas filas mal parseadas dejaron un año en el campo. Lo que no
+// esté aquí (incluido "Desconocido") no se usa como criterio: sin país, el match se decide como
+// antes, por año y popularidad.
+export const REGION_TO_ISO = {
+  Alemania: 'DE',
+  Argentina: 'AR',
+  Australia: 'AU',
+  Brasil: 'BR',
+  Brazil: 'BR',
+  Canada: 'CA',
+  Canadá: 'CA',
+  'Corea del Sur': 'KR',
+  España: 'ES',
+  Estonia: 'EE',
+  'Estados Unidos': 'US',
+  EU: 'US',
+  Francia: 'FR',
+  Irlanda: 'IE',
+  Mexico: 'MX',
+  México: 'MX',
+  'Nueva Zelanda': 'NZ',
+  'Países Bajos': 'NL',
+  'Reino Unido': 'GB',
+  'República Dominicana': 'DO',
+  Rusia: 'RU',
+  Sudáfrica: 'ZA',
+  Suecia: 'SE',
+  Tailandia: 'TH',
+  Turquía: 'TR',
+  Uruguay: 'UY',
+  US: 'US',
+  USA: 'US',
+};
+
+/** País del ítem en ISO 3166-1, o null si la region no sirve para filtrar (vacía, un año, sin mapear). */
+export function regionToIso(region) {
+  if (region === null || region === undefined) return null;
+  const trimmed = String(region).trim();
+  if (!trimmed || /^\d+$/.test(trimmed)) return null;
+  return REGION_TO_ISO[trimmed] ?? null;
+}
+
+/**
+ * Países de un candidato o de sus detalles, en ISO 3166-1. Las series los traen en origin_country
+ * (también en el resultado de búsqueda); las películas, en production_countries de los detalles.
+ */
+export function countriesOf(source) {
+  if (!source) return [];
+  const production = (source.production_countries || []).map((c) => c.iso_3166_1);
+  return [...new Set([...production, ...(source.origin_country || [])].filter(Boolean))];
+}
+
+/**
+ * Coincidencia de país: true/false solo cuando hay dato que comparar, null si no se puede saber
+ * (sin país esperado, o candidato que no declara ninguno). Null es neutro: no premia ni castiga.
+ */
+export function countryMatches(source, expectedIso) {
+  if (!expectedIso) return null;
+  const countries = countriesOf(source);
+  if (countries.length === 0) return null;
+  return countries.includes(expectedIso);
+}
 
 // Géneros TMDB → vocabulario del catálogo. Se mapea por ID numérico (estable) y no por el
 // nombre localizado, que TMDB puede cambiar y además no coincide con nuestra nomenclatura
@@ -161,8 +233,13 @@ export function resultYear(result) {
  * cercano al del catálogo, y la popularidad solo desempata entre candidatos igual de cercanos
  * (la ficha del proveedor y TMDB discrepan a menudo en un año por estreno regional o por año de
  * producción). Sin año en el catálogo se ordena por popularidad, que es lo único disponible.
+ *
+ * Con `expectedIso` el país se cuela como desempate por delante de la popularidad, pero siempre
+ * por detrás del año: un candidato del país correcto gana a otro igual de cercano en año y más
+ * popular ("The Office" de 2005 estadounidense frente a la británica). Aquí solo hay dato de país
+ * en las series; en películas lo aplica enrichItem sobre los detalles.
  */
-export function pickBestMatch(results, { year, mediaType } = {}) {
+export function pickBestMatch(results, { year, mediaType, expectedIso } = {}) {
   const candidates = (results || []).filter((r) => {
     // search/multi devuelve también personas: nunca son un audiovisual.
     if (r.media_type === 'person') return false;
@@ -170,8 +247,17 @@ export function pickBestMatch(results, { year, mediaType } = {}) {
     return true;
   });
   if (candidates.length === 0) return null;
+
+  // Orden de país: primero los que coinciden, al final los que declaran otro; los que no
+  // declaran ninguno quedan en medio, sin premio ni castigo.
+  const byCountry = (r) => {
+    const match = countryMatches(r, expectedIso);
+    return match === null ? 0 : match ? -1 : 1;
+  };
   if (!year) {
-    return [...candidates].sort((a, b) => (b.popularity ?? 0) - (a.popularity ?? 0))[0];
+    return [...candidates].sort(
+      (a, b) => byCountry(a) - byCountry(b) || (b.popularity ?? 0) - (a.popularity ?? 0)
+    )[0];
   }
 
   // Distancia al año pedido; sin fecha, se trata como lejano pero no descartable.
@@ -179,10 +265,12 @@ export function pickBestMatch(results, { year, mediaType } = {}) {
     const y = resultYear(r);
     return y === null ? Number.MAX_SAFE_INTEGER : Math.abs(y - year);
   };
-  return [...candidates].sort((a, b) => {
-    const byYear = distance(a) - distance(b);
-    return byYear !== 0 ? byYear : (b.popularity ?? 0) - (a.popularity ?? 0);
-  })[0];
+  return [...candidates].sort(
+    (a, b) =>
+      distance(a) - distance(b) ||
+      byCountry(a) - byCountry(b) ||
+      (b.popularity ?? 0) - (a.popularity ?? 0)
+  )[0];
 }
 
 /** Llamada a TMDB con reintento ante 429. */
@@ -277,7 +365,9 @@ export async function enrichItem(item, { force = false } = {}) {
 
   if (force) setFlag(item, 'translated', false);
 
-  const { name, enName, year, type } = item;
+  const { name, enName, year, type, region } = item;
+  // País esperado del catálogo; null cuando la region no sirve para filtrar.
+  const expectedIso = regionToIso(region);
   const queries = [];
   if (enName && enName.trim()) queries.push(enName);
   if (name && name.trim()) queries.push(name);
@@ -308,21 +398,41 @@ export async function enrichItem(item, { force = false } = {}) {
       if (!ranked.includes(next)) ranked.push(next);
     }
   };
-  rank({ year, mediaType: tmdbMediaType(type) });
-  rank({ year });
+  rank({ year, mediaType: tmdbMediaType(type), expectedIso });
+  rank({ year, expectedIso });
 
   // Se prueba con los mejores por orden: si los detalles de uno fallan, se sigue con el siguiente.
+  // Con país esperado no se corta en el primero que responda: se siguen mirando los siguientes
+  // hasta encontrar uno del país correcto (en películas el país solo está en los detalles), y si
+  // ninguno coincide se conserva el primero, que sigue siendo el mejor por año y popularidad.
+  let countryMatched = false;
   for (const candidate of ranked.slice(0, 3)) {
-    mediaType = candidate.media_type || (candidate.first_air_date ? 'tv' : 'movie');
-    tmdbId = candidate.id;
-    matchedYear = resultYear(candidate);
+    const candidateMediaType =
+      candidate.media_type || (candidate.first_air_date ? 'tv' : 'movie');
+    let candidateDetails;
     try {
-      details = await getDetails(mediaType, tmdbId);
-      found = true;
-      break;
+      candidateDetails = await getDetails(candidateMediaType, candidate.id);
     } catch {
       continue;
     }
+
+    const matches = countryMatches(candidateDetails, expectedIso) === true;
+    if (!found || matches) {
+      mediaType = candidateMediaType;
+      tmdbId = candidate.id;
+      matchedYear = resultYear(candidate);
+      details = candidateDetails;
+      found = true;
+      countryMatched = matches;
+    }
+    if (!expectedIso || matches) break;
+  }
+
+  if (found && expectedIso && !countryMatched) {
+    // Como con el año: no se descarta —puede ser coproducción o el único candidato— pero se avisa.
+    console.warn(
+      `[enrich] ⚠ ${item.code} ${name}: catálogo ${region} (${expectedIso}) vs TMDB ${countriesOf(details).join('/') || 's/país'} (${mediaType}/${tmdbId})`
+    );
   }
 
   if (found && year && matchedYear && Math.abs(matchedYear - year) > 1) {

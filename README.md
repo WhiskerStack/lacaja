@@ -55,7 +55,7 @@ y se hidratan con `fromJSON`/`toJSON` en los bordes. Stores guardan DTOs, no ins
 |---|---|
 | `pnpm sync` | ejecuta `sync-catalog`, `enrich-catalog` y `build-search-index` en serie |
 | `pnpm sync-catalog` | lee archivos `.xlsx` de `dataset/` y genera `src/data/catalog.json` (evita duplicados por código) |
-| `pnpm enrich-catalog` | enriquece el catálogo con datos de TMDB (póster, descripción, reparto, tráiler, rating) |
+| `pnpm enrich-catalog` | enriquece el catálogo con datos de TMDB (póster, descripción, reparto, tráiler, rating); empareja por nombre + año + país |
 | `pnpm translate-descriptions` | traduce descripciones al español usando Ollama (requiere `OLLAMA_URL` y `OLLAMA_MODEL`) |
 | `pnpm build-search-index` | genera `public/search-index.json` y `public/library-index.json` desde `catalog.json` |
 | `pnpm check-enrichment` | reporta items sin enriquecer o enriquecidos sin imagen |
@@ -70,6 +70,22 @@ y se hidratan con `fromJSON`/`toJSON` en los bordes. Stores guardan DTOs, no ins
 
 > **Nota**: Los scripts de sincronización y enriquecimiento requieren variables de entorno (ver `.env.example`).
 > `TMDB_API_KEY` es obligatoria para `enrich-catalog`; `OLLAMA_URL` y `OLLAMA_MODEL` son opcionales para traducciones.
+
+### Emparejamiento con TMDB
+
+El match se acota por **nombre + año + país**. El año se consulta en el endpoint del tipo
+(`search/movie` / `search/tv`, los únicos que lo admiten: `search/multi` lo ignora) y ordena los
+candidatos por cercanía. El país sale de `region`, mapeada a ISO 3166-1 (`EU` y `USA` → `US`,
+`España` → `ES`, …); las regiones inservibles (`Desconocido`, vacías, o un año colado por filas mal
+parseadas) se ignoran y el match se decide como antes.
+
+TMDB no deja filtrar la búsqueda por país de origen, así que el país se aplica sobre los
+candidatos: en series ya viene en el resultado (`origin_country`) y en películas hay que pedir los
+detalles (`production_countries`), por eso con país esperado se miran hasta 3 candidatos en vez de
+quedarse con el primero. Desempata dentro de la misma cercanía de año, por delante de la
+popularidad —"The Office" 2005 estadounidense frente a la británica—, pero nunca por encima del
+año. Si ninguno coincide no se descarta nada (coproducciones, fichas incompletas): se enriquece con
+el mejor por año y se avisa por consola con `⚠`.
 
 ### Géneros
 

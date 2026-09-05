@@ -1,6 +1,14 @@
 import { describe, it, expect, vi, afterEach } from 'vitest';
 // Script de build en JS puro: se importa para probar el emparejamiento sin tocar la red.
-import { pickBestMatch, resultYear, searchTMDB, enrichItem } from '../../scripts/enrich-catalog.mjs';
+import {
+  pickBestMatch,
+  resultYear,
+  searchTMDB,
+  enrichItem,
+  regionToIso,
+  countriesOf,
+  countryMatches,
+} from '../../scripts/enrich-catalog.mjs';
 
 const movie = (id: number, title: string, date: string, popularity: number) => ({
   id,
@@ -76,6 +84,77 @@ describe('pickBestMatch', () => {
   it('devuelve null si no hay candidatos válidos', () => {
     expect(pickBestMatch([], { year: 2020 })).toBeNull();
     expect(pickBestMatch([{ id: 1, media_type: 'person' }], { year: 2020 })).toBeNull();
+  });
+});
+
+describe('regionToIso', () => {
+  it('mapea las regiones del dataset a ISO 3166-1', () => {
+    expect(regionToIso('EU')).toBe('US'); // "EU" es Estados Unidos en el dataset, no la Unión Europea
+    expect(regionToIso('USA')).toBe('US');
+    expect(regionToIso(' España ')).toBe('ES');
+    expect(regionToIso('Reino Unido')).toBe('GB');
+    expect(regionToIso('México')).toBe('MX');
+  });
+
+  it('ignora las regiones que no sirven para filtrar', () => {
+    expect(regionToIso('Desconocido')).toBeNull();
+    expect(regionToIso('2026')).toBeNull(); // años colados por filas mal parseadas del Excel
+    expect(regionToIso('')).toBeNull();
+    expect(regionToIso(undefined)).toBeNull();
+  });
+});
+
+describe('countriesOf / countryMatches', () => {
+  it('lee production_countries (películas) y origin_country (series) sin duplicar', () => {
+    expect(countriesOf({ production_countries: [{ iso_3166_1: 'US' }], origin_country: ['US', 'GB'] })).toEqual(['US', 'GB']);
+    expect(countriesOf({})).toEqual([]);
+  });
+
+  it('sin país esperado o sin país en TMDB no opina', () => {
+    expect(countryMatches({ origin_country: ['GB'] }, null)).toBeNull();
+    expect(countryMatches({}, 'US')).toBeNull();
+  });
+
+  it('distingue coincidencia de discrepancia', () => {
+    expect(countryMatches({ origin_country: ['US'] }, 'US')).toBe(true);
+    expect(countryMatches({ origin_country: ['GB'] }, 'US')).toBe(false);
+  });
+});
+
+describe('pickBestMatch con país', () => {
+  it('el país desempata entre candidatos del mismo año, por delante de la popularidad', () => {
+    const results = [
+      { ...tv(1, 'The Office', '2005-03-24', 900), origin_country: ['GB'] },
+      { ...tv(2, 'The Office', '2005-03-24', 10), origin_country: ['US'] },
+    ];
+    expect(pickBestMatch(results, { year: 2005 })?.id).toBe(1); // sin país: manda la popularidad
+    expect(pickBestMatch(results, { year: 2005, expectedIso: 'US' })?.id).toBe(2);
+  });
+
+  it('el año sigue mandando sobre el país', () => {
+    const results = [
+      { ...tv(1, 'X', '2020-01-01', 10), origin_country: ['GB'] },
+      { ...tv(2, 'X', '2010-01-01', 10), origin_country: ['US'] },
+    ];
+    expect(pickBestMatch(results, { year: 2020, expectedIso: 'US' })?.id).toBe(1);
+  });
+
+  it('el candidato sin país declarado queda entre el que coincide y el que no', () => {
+    const results = [
+      { ...tv(1, 'X', '2020-01-01', 10), origin_country: ['GB'] },
+      tv(2, 'X', '2020-01-01', 10),
+      { ...tv(3, 'X', '2020-01-01', 10), origin_country: ['US'] },
+    ];
+    expect(pickBestMatch(results, { year: 2020, expectedIso: 'US' })?.id).toBe(3);
+    expect(pickBestMatch(results, { year: 2020, expectedIso: 'FR' })?.id).toBe(2);
+  });
+
+  it('sin año en el catálogo el país manda sobre la popularidad', () => {
+    const results = [
+      { ...tv(1, 'X', '2020-01-01', 900), origin_country: ['GB'] },
+      { ...tv(2, 'X', '2010-01-01', 5), origin_country: ['US'] },
+    ];
+    expect(pickBestMatch(results, { expectedIso: 'US' })?.id).toBe(2);
   });
 });
 
@@ -230,4 +309,95 @@ describe('enrichItem', () => {
     await enrichItem(item);
     expect(item.imageUrl).toContain('p52');
   });
+
+  it('con region del catálogo elige el candidato del país correcto, no el más popular', async () => {
+    // Mismo título y mismo año: el país solo se ve en los detalles (películas), así que hay que
+    // mirar más allá del primer candidato que responda.
+    const paises: Record<number, string> = { 61: 'FR', 62: 'ES' };
+    vi.stubGlobal('fetch', async (url: string) => {
+      if (url.includes('/search/')) {
+        return {
+          ok: true,
+          json: async () => ({
+            results: [
+              { id: 61, title: 'La cima', release_date: '2022-05-01', popularity: 900 },
+              { id: 62, title: 'La cima', release_date: '2022-06-01', popularity: 5 },
+            ],
+          }),
+        };
+      }
+      const id = Number(url.match(/\/movie\/(\d+)/)?.[1]);
+      return {
+        ok: true,
+        json: async () => ({
+          poster_path: `/poster-${id}.jpg`,
+          overview: `Sinopsis de ${id}`,
+          vote_average: 7,
+          production_countries: [{ iso_3166_1: paises[id] }],
+          credits: { cast: [] },
+          videos: { results: [] },
+        }),
+      };
+    });
+
+    const item = { code: 'P0004', type: 'movie', name: 'La cima', year: 2022, region: 'España' } as Record<string, unknown>;
+    await enrichItem(item);
+    expect(item.imageUrl).toContain('poster-62');
+  });
+
+  it('si ningún candidato es del país esperado se queda con el mejor por año y avisa', async () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    vi.stubGlobal('fetch', async (url: string) => {
+      if (url.includes('/search/')) {
+        return {
+          ok: true,
+          json: async () => ({ results: [{ id: 71, title: 'Coproducción', release_date: '2022-01-01', popularity: 50 }] }),
+        };
+      }
+      return {
+        ok: true,
+        json: async () => ({
+          poster_path: '/poster-71.jpg',
+          overview: 'ok',
+          vote_average: 7,
+          production_countries: [{ iso_3166_1: 'FR' }],
+          credits: { cast: [] },
+          videos: { results: [] },
+        }),
+      };
+    });
+
+    const item = { code: 'P0005', type: 'movie', name: 'Coproducción', year: 2022, region: 'España' } as Record<string, unknown>;
+    await enrichItem(item);
+    expect(item.imageUrl).toContain('poster-71'); // no se descarta: mejor eso que dejarlo sin ficha
+    expect(warn).toHaveBeenCalled();
+    warn.mockRestore();
+  });
+
+  it('con region inservible no pide detalles de más candidatos que antes', async () => {
+    let detalles = 0;
+    vi.stubGlobal('fetch', async (url: string) => {
+      if (url.includes('/search/')) {
+        return {
+          ok: true,
+          json: async () => ({
+            results: [
+              { id: 81, title: 'X', release_date: '2020-01-01', popularity: 90 },
+              { id: 82, title: 'X', release_date: '2020-01-01', popularity: 10 },
+            ],
+          }),
+        };
+      }
+      detalles++;
+      return {
+        ok: true,
+        json: async () => ({ poster_path: '/p81.jpg', overview: 'ok', vote_average: 6, credits: { cast: [] }, videos: { results: [] } }),
+      };
+    });
+
+    const item = { code: 'P0006', type: 'movie', name: 'X', year: 2020, region: 'Desconocido' } as Record<string, unknown>;
+    await enrichItem(item);
+    expect(detalles).toBe(1);
+  });
 });
+
