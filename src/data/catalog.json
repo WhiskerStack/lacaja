@@ -19766,18 +19766,21 @@
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Drama",
-        "Animado",
-        "Música"
+        "Drama"
       ],
       "region": "España",
       "language": "Español",
-      "description": "Irma, una mujer originaria de una región indígena de México, emigra a la ciudad. A medida que navega por las calles de este nuevo entorno, se entabla un diálogo con ella misma. Con cada palabra, comienzan a surgir recuerdos de una vida pasada en la que Irma era una jagua que paseaba por la vasta región chinanteca.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/Bg6tRhsnr3uRUuBzTCVtMj1fh.jpg",
+      "description": "MANUEL MURRIETA está atormentado por el ruido del día a día, pero una sorpresa le hará ver las cosas de forma diferente.",
+      "imageUrl": "https://media.themoviedb.org/t/p/w500/6SEQ3Rs9BV3o3JpY784JmOZpfNm.jpg",
       "cast": [
-        "Lidia Rivera González"
+        "Manuel Andrés Murrieta",
+        "Brenda Mendoza García",
+        "Juan Manuel Ruíz García",
+        "Tulio Trebi"
       ],
-      "trailers": [],
+      "trailers": [
+        "nenALjRYJ7E"
+      ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
