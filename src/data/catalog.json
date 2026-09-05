@@ -4836,7 +4836,7 @@
       "name": "Nemesis",
       "enName": "Némesis",
       "year": 2026,
-      "rating": 8.904,
+      "rating": 7.697,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
@@ -4844,31 +4844,33 @@
         "Drama",
         "Comedia",
         "Ciencia Ficción",
-        "Fantasía"
+        "Fantasía",
+        "Acción",
+        "Aventura",
+        "Crimen"
       ],
       "region": "EU",
       "language": "Inglés",
-      "description": "Un villano del período Joseon condenado a morir abre los ojos en la moderna ciudad de Seúl — donde un heredero de una chaebol puede ser su última oportunidad para reescribir su destino.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/rYLQbyIvbEd0lF84iXrx7CbPcBB.jpg",
+      "description": "Un policía de la LAPD sin piedad se vuelve obsesivo con eliminar al ladrón maestro detrás de una serie de audaces robos — y solo uno puede salir adelante.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/NY7ZwSMw5PjoJdK2CObqiTj7Bm.jpg",
       "cast": [
-        "Im Ji-yeon",
-        "Heo Nam-jun",
-        "Jang Seung-jo",
-        "Kim Min-seok",
-        "Lee Se-hee"
+        "Matthew Law",
+        "Y'lan Noel",
+        "Cleopatra Coleman",
+        "Tre Hale",
+        "Domenick Lombardozzi"
       ],
       "trailers": [
-        "efj9rk9mCeo",
-        "tPAHynPDHbo"
+        "M9nc3simqAE"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 8,
       "code": "S63",
       "metadata": {
+        "genresEnriched": true,
         "enriched": true,
-        "translated": true,
-        "genresEnriched": true
+        "translated": true
       }
     },
     {
