@@ -1,10 +1,11 @@
 // Isla del buscador (funcional §6.4). Input con autocomplete (MiniSearch local o fallback API),
 // enlace "Solicítala" entre buscador y resultados, y lista con scroll infinito.
-import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'preact/hooks';
 import { useStore } from '@nanostores/preact';
 import { searchService } from '../../../app/container';
 import { $searchMode } from '../store';
 import { detailUrl, PLACEHOLDER_IMAGE } from '../../../shared/urls';
+import { patchSnapshot, readSnapshot, replaceUrl } from '../../../shared/nav-state';
 import { TYPE_LABEL } from '../../catalog/types';
 import type { CatalogCardDTO } from '../../catalog/types';
 import type { SearchHit } from '../types';
@@ -21,13 +22,30 @@ export default function SearchView({ cards }: Props) {
   const [query, setQuery] = useState('');
   const [hits, setHits] = useState<SearchHit[]>([]);
   const [shown, setShown] = useState(PAGE);
+  const [indexReady, setIndexReady] = useState(false);
   const debounceRef = useRef<number | undefined>(undefined);
   const sentinel = useRef<HTMLDivElement | null>(null);
+  /** Consulta recuperada del historial: solo ella conserva la paginación restaurada. */
+  const restoredQuery = useRef('');
 
   const byCode = useMemo(() => new Map(cards.map((c) => [c.code, c])), [cards]);
 
+  // Al volver atrás desde un detalle: la consulta se recupera de la URL (?q=) y la paginación
+  // del snapshot de esta entrada del historial. Entrar por el menú a /buscar arranca vacío.
+  useLayoutEffect(() => {
+    const q = new URLSearchParams(location.search).get('q') ?? '';
+    if (q) {
+      restoredQuery.current = q;
+      setQuery(q);
+    }
+    const snap = readSnapshot();
+    if (snap.shown && snap.shown > PAGE) setShown(snap.shown);
+  }, []);
+
   useEffect(() => {
-    void searchService.loadIndex();
+    // indexReady vuelve a lanzar la búsqueda: con una consulta restaurada, el primer intento
+    // ocurre antes de que el índice MiniSearch esté construido y devolvería cero resultados.
+    void searchService.loadIndex().then(() => setIndexReady(true));
   }, []);
 
   // Debounce diferenciado: 0ms local, 300ms api (especificaciones §4.3).
@@ -42,10 +60,23 @@ export default function SearchView({ cards }: Props) {
       }
       const results = await searchService.search(q, 60);
       setHits(results);
-      setShown(PAGE);
+      setShown((s) => (s > PAGE && q === restoredQuery.current ? s : PAGE));
     }, delay);
     return () => window.clearTimeout(debounceRef.current);
-  }, [query, mode]);
+  }, [query, mode, indexReady]);
+
+  // La consulta se refleja en la URL sin crear entradas de historial (un clic en un resultado
+  // debe volver aquí con un solo "atrás", no con uno por letra tecleada).
+  useEffect(() => {
+    const q = query.trim();
+    const target = q ? `${location.pathname}?q=${encodeURIComponent(q)}` : location.pathname;
+    // Idempotente: al restaurar, la URL ya es la correcta y no se reescribe.
+    if (target !== location.pathname + location.search) replaceUrl(target);
+  }, [query]);
+
+  useEffect(() => {
+    patchSnapshot({ shown });
+  }, [shown]);
 
   // Scroll infinito.
   useEffect(() => {
@@ -92,6 +123,7 @@ export default function SearchView({ cards }: Props) {
                 )}
                 <div class="card-body">
                   <p class="font-semibold">{hit.title}</p>
+                  {hit.alt && <p class="text-sm opacity-70">{hit.alt}</p>}
                   <p class="text-xs opacity-70">
                     <span class="font-mono">{hit.code}</span>
                     {card && ` · ${TYPE_LABEL[card.type]} · ${card.year}`}

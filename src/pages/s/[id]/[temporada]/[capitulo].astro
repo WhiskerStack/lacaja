@@ -26,6 +26,7 @@ if (!item || !seasonView || !ep) return Astro.redirect('/404');
   <DetailHero
     item={item}
     context={`Temporada ${season} · Capítulo ${episode}`}
+    backHref={`/s/${id}/${season}`}
     add={{
       code: ep.code,
       level: 'episode',

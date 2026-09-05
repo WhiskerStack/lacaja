@@ -2,12 +2,12 @@
   "version": 1,
   "genres": [
     "Acción",
-    "Drama",
-    "Ciencia ficción",
-    "Comedia",
-    "Fantasía",
     "Animación",
     "Aventura",
+    "Ciencia Ficción",
+    "Comedia",
+    "Drama",
+    "Fantasía",
     "Suspenso"
   ],
   "regions": [
@@ -61,7 +61,7 @@
       "durationMin": 166,
       "isPremiere": true,
       "genres": [
-        "Ciencia ficción"
+        "Ciencia Ficción"
       ],
       "region": "EE.UU.",
       "language": "Inglés",
@@ -460,7 +460,7 @@
       "rating": 8.9,
       "isPremiere": true,
       "genres": [
-        "Ciencia ficción"
+        "Ciencia Ficción"
       ],
       "region": "Corea del Sur",
       "language": "Coreano",

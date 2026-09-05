@@ -4,8 +4,10 @@
 import Base from '../layouts/Base.astro';
 import SearchView from '../features/search/ui/SearchView.tsx';
 import { getCards } from '../features/catalog/logic/buildData';
+import { withLocalImages, POSTER_SIZE } from '../features/catalog/logic/cardImages';
 
-const cards = getCards();
+// Igual que en biblioteca: la isla necesita rutas locales, no las de TMDB.
+const cards = await withLocalImages(getCards(), POSTER_SIZE);
 ---
 <Base title="Buscar — La Caja">
   <h1 class="text-2xl font-bold my-4">Buscar</h1>

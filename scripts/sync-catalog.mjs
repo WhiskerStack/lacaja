@@ -7,7 +7,7 @@
 
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { resolve, join } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { randomUUID } from 'node:crypto';
 import XLSX from 'xlsx';
 
@@ -379,7 +379,7 @@ function syncCatalogFromExcel() {
 // Las funciones puras se exportan para tests/unit/genres.test.ts.
 export { parseItem, normalizeGenres, normalizeGenre, itemGenres };
 
-// Solo se ejecuta como CLI (`node scripts/sync-catalog.mjs`), no al importarse.
-if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+// Solo se ejecuta al invocarlo como script; al importarlo (tests) se exponen las funciones puras.
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   syncCatalogFromExcel();
 }

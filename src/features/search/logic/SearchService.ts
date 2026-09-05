@@ -1,7 +1,7 @@
 // SearchService: implementa el modo loading|local|api (especificaciones §4) con fallback
 // a la API NestJS y timeout duro. Recibe sus dependencias por constructor (arquitectura §6.1):
 // el modo se carga de forma asíncrona con loadIndex() porque el índice MiniSearch llega por red.
-import MiniSearch from 'minisearch';
+import MiniSearch, { type SearchResult } from 'minisearch';
 import type { SearchHit, SearchIndexFile, SearchMode } from '../types';
 import { isCode } from '@/features/common/helper/codes';
 
@@ -44,13 +44,15 @@ export class SearchService {
       const res = await this.deps.fetchFn(this.deps.indexUrl, { signal: controller.signal });
       if (!res.ok) throw new Error(`index ${res.status}`);
       const data = (await res.json()) as SearchIndexFile;
-      const docs: SearchHit[] = data.items.map(([code, title]) => ({ code, title }));
+      const docs: SearchHit[] = data.items.map(([code, title, alt]) => ({ code, title, alt }));
+      // `alt` (título alternativo) también se indexa: muchos ítems se conocen por el otro
+      // título, y sin él la búsqueda no los encuentra. Pesa menos que el principal.
       const mini = new MiniSearch<SearchHit>({
-        fields: ['title', 'code'],
-        storeFields: ['code', 'title'],
+        fields: ['title', 'alt', 'code'],
+        storeFields: ['code', 'title', 'alt'],
         idField: 'code',
         processTerm,
-        searchOptions: { fuzzy: 0.2, prefix: true, boost: { title: 2 } },
+        searchOptions: { fuzzy: 0.2, prefix: true, boost: { title: 2, alt: 1.5 } },
       });
       mini.addAll(docs);
       this.index = mini;
@@ -86,13 +88,22 @@ export class SearchService {
         .search(upper, { prefix: true, fuzzy: false, fields: ['code'] })
         .filter((r) => (r.code as string).toUpperCase().startsWith(upper))
         .slice(0, limit)
-        .map((r) => ({ code: r.code as string, title: r.title as string }));
+        .map(toHit);
     }
     return this.index
       .search(q)
       .slice(0, limit)
-      .map((r) => ({ code: r.code as string, title: r.title as string }));
+      .map(toHit);
   }
+}
+
+/** Resultado de MiniSearch → SearchHit (los storeFields llegan sin tipar). */
+function toHit(r: SearchResult): SearchHit {
+  return {
+    code: r.code as string,
+    title: r.title as string,
+    alt: (r.alt as string | undefined) || undefined,
+  };
 }
 
 export { processTerm };

@@ -23,6 +23,7 @@ if (!item || !seasonView) return Astro.redirect('/404');
   <DetailHero
     item={item}
     context={`Temporada ${season}`}
+    backHref={`/s/${id}`}
     add={{
       code: seasonView.code,
       level: 'season',

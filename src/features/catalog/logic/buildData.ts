@@ -26,6 +26,8 @@ interface RawItem {
   code?: string;
   type: CatalogItemDTO['type'];
   name: string;
+  /** Título alternativo tal cual viene del backend (puede ser el original o el español). */
+  enName?: string;
   year: number;
   rating: number;
   sizeGb?: number;
@@ -55,6 +57,18 @@ function toGenres(r: RawItem): string[] {
   return ['Sin género'];
 }
 
+/** Clave de comparación de títulos: sin acentos, mayúsculas ni espacios de más. */
+function titleKey(title: string): string {
+  return title.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+/** Devuelve el título alternativo solo si aporta algo distinto al principal. */
+function altTitle(name: string, enName?: string): string | undefined {
+  const alt = enName?.trim();
+  if (!alt || titleKey(alt) === titleKey(name)) return undefined;
+  return alt;
+}
+
 /** Hidrata un item crudo del JSON al DTO aplanado, calculando códigos y peso total. */
 function toItemDTO(r: RawItem): CatalogItemDTO {
   // El código guardado manda; si el sample no lo trae, se deriva del id (mismo formato).
@@ -82,6 +96,7 @@ function toItemDTO(r: RawItem): CatalogItemDTO {
     id: r.id,
     type: r.type,
     name: r.name,
+    altName: altTitle(r.name, r.enName),
     year: r.year,
     rating: r.rating,
     sizeGb: r.sizeGb ?? 0,
@@ -130,6 +145,7 @@ export function toCard(i: CatalogItemDTO): CatalogCardDTO {
     code: i.code,
     type: i.type,
     name: i.name,
+    altName: i.altName,
     year: i.year,
     rating: i.rating,
     imageUrl: i.imageUrl,

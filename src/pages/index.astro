@@ -9,10 +9,12 @@ import {
   getTopRated,
   getCards,
 } from '../features/catalog/logic/buildData';
+import { withLocalImages, HERO_SIZE } from '../features/catalog/logic/cardImages';
 import { TYPE_LABEL_PLURAL } from '../features/catalog/types';
 import type { AudiovisualType } from '../features/catalog/types';
 
-const highlights = getPremiereHighlights(5);
+// El carrusel es una isla: reutiliza la misma variante que DetailHero (ver cardImages.ts).
+const highlights = await withLocalImages(getPremiereHighlights(5), HERO_SIZE);
 const estrenos = getPremieres();
 const topRated = getTopRated();
 const allCards = getCards();

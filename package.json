@@ -12,6 +12,7 @@
     "build-search-index": "node scripts/build-search-index.mjs",
     "find-duplicates": "node scripts/find-duplicates.mjs",
     "translate-descriptions": "node scripts/translate-descriptions.mjs",
+    "fix-title-languages": "node scripts/fix-title-languages.mjs",
     "disable-duplicates": "node scripts/disable-duplicates.mjs",
     "generate-pwa-icons": "node scripts/generate-pwa-icons.mjs",
     "dev": "astro dev",
