@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 // scripts/enrich-catalog.mjs
 // Enriquece el catálogo con datos de TMDB: póster, descripción, reparto, tráiler, rating y géneros.
-// Solo procesa ítems que no tengan enriched: true (con --force los reprocesa todos).
-// Los géneros llevan su propio flag (genresEnriched) porque se añadieron después de que el catálogo
-// quedara marcado con enriched: true; sin él ningún ítem existente volvería a pasar por TMDB.
+// Solo procesa ítems cuyo metadata.enriched no sea true (con --force los reprocesa todos).
+// Los géneros llevan su propio flag (metadata.genresEnriched) porque se añadieron después de que el
+// catálogo quedara marcado con enriched; sin él ningún ítem existente volvería a pasar por TMDB.
+// Las banderas de proceso viven agrupadas en item.metadata (ver scripts/lib/metadata.mjs).
 // Lee catalog.json, escribe los cambios y lo guarda periódicamente.
 // Necesita TMDB_API_KEY en .env
 //
@@ -16,6 +17,13 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import {
+  hasFlag,
+  setFlag,
+  setFlags,
+  normalizeItemMetadata,
+  normalizeCatalogMetadata,
+} from './lib/metadata.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -254,17 +262,20 @@ export function extractData(tmdbItem, details) {
 }
 
 // Procesar un ítem del catálogo.
-// Dos ejes independientes: el enriquecimiento general (enriched) y el de géneros
-// (genresEnriched). Un ítem ya enriquecido antes de que existieran los géneros vuelve a
+// Dos ejes independientes: el enriquecimiento general (metadata.enriched) y el de géneros
+// (metadata.genresEnriched). Un ítem ya enriquecido antes de que existieran los géneros vuelve a
 // consultarse, pero solo se le tocan los géneros.
 export async function enrichItem(item, { force = false } = {}) {
-  const needsFull = force || item.enriched !== true;
-  const needsGenres = force || item.genresEnriched !== true;
+  // Tolera ítems en formato antiguo (banderas sueltas en la raíz del ítem).
+  normalizeItemMetadata(item);
+
+  const needsFull = force || !hasFlag(item, 'enriched');
+  const needsGenres = force || !hasFlag(item, 'genresEnriched');
   if (!needsFull && !needsGenres) {
     return { changed: false };
   }
 
-  if (force) delete item.translated;
+  if (force) setFlag(item, 'translated', false);
 
   const { name, enName, year, type } = item;
   const queries = [];
@@ -324,8 +335,7 @@ export async function enrichItem(item, { force = false } = {}) {
   if (!found) {
     console.log(`[enrich] No encontrado: ${name} (${enName})`);
     // Marcar como procesado (aunque sin datos) para no repetir
-    item.enriched = true;
-    item.genresEnriched = true;
+    setFlags(item, ['enriched', 'genresEnriched']);
     return { changed: true };
   }
 
@@ -370,12 +380,11 @@ export async function enrichItem(item, { force = false } = {}) {
       delete item.genre;
       changed = true;
     }
-    item.genresEnriched = true;
+    setFlag(item, 'genresEnriched');
     changed = true;
   }
 
-  if (!item.enriched) {
-    item.enriched = true;
+  if (setFlag(item, 'enriched')) {
     changed = true;
   }
 
@@ -400,10 +409,13 @@ async function main() {
   const catalog = readCatalog();
   const items = catalog.items || [];
 
+  // Absorbe las banderas sueltas del formato antiguo antes de decidir qué está pendiente.
+  normalizeCatalogMetadata(catalog);
+
   // Pendientes: sin enriquecer, o aún sin pasar por el enriquecido de géneros (con --force, todos).
   const pendingItems = force
     ? items
-    : items.filter((item) => item.enriched !== true || item.genresEnriched !== true);
+    : items.filter((item) => !hasFlag(item, 'enriched') || !hasFlag(item, 'genresEnriched'));
   console.log(
     `[dahem] Total: ${items.length} ítems, por procesar: ${pendingItems.length}${force ? ' (--force)' : ''}`
   );
@@ -423,9 +435,7 @@ async function main() {
     } catch (err) {
       console.error(`[enrich] Error al procesar ${item.code}:`, err.message);
       // Si falla, lo marcamos como procesado para no repetir
-      if (!item.enriched || !item.genresEnriched) {
-        item.enriched = true;
-        item.genresEnriched = true;
+      if (setFlags(item, ['enriched', 'genresEnriched'])) {
         changedInBatch++;
       }
     }

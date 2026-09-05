@@ -5,6 +5,7 @@
 import type {
   CatalogCardDTO,
   CatalogItemDTO,
+  CatalogMetadata,
   SeasonViewDTO,
 } from '../types';
 import raw from '../../../data/catalog.json';
@@ -46,6 +47,11 @@ interface RawItem {
   seasonCount: number;
   episodeCount: number;
   isActive?: boolean;
+  /**
+   * Banderas de los pipelines de datos (scripts/). Se tipan aquí solo para describir
+   * el JSON: no se proyectan al DTO porque la vista no las necesita.
+   */
+  metadata?: CatalogMetadata;
 }
 
 const catalog = raw as { items: RawItem[]; genres: string[]; regions: string[]; languages: string[] };

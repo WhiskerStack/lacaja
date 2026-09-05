@@ -4,6 +4,23 @@ import type { AudiovisualDTO, AudiovisualType } from '@/features/common/domain/t
 
 export type { AudiovisualType };
 
+/**
+ * Metadatos de proceso del catálogo: banderas que dicen qué pipelines de datos ya
+ * corrieron sobre un ítem (enriquecimiento TMDB, traducción de la sinopsis,
+ * enriquecimiento de géneros, revisión de títulos). No describen al audiovisual,
+ * así que no viajan en CatalogItemDTO: solo los usan los scripts de scripts/.
+ */
+export interface CatalogMetadata {
+  /** Ya pasó por scripts/enrich-catalog.mjs (TMDB). */
+  enriched?: boolean;
+  /** Su descripción ya pasó por scripts/translate-descriptions.mjs. */
+  translated?: boolean;
+  /** Sus géneros ya se enriquecieron desde TMDB. */
+  genresEnriched?: boolean;
+  /** Sus títulos ya pasaron por scripts/fix-title-languages.mjs. */
+  titlesChecked?: boolean;
+}
+
 export interface EpisodeViewDTO {
   id: string;
   number: number;

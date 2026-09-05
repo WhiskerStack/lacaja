@@ -9,6 +9,7 @@
     "enrich-catalog": "node scripts/enrich-catalog.mjs",
     "sync-catalog": "node scripts/sync-catalog.mjs",
     "check-enrichment": "node scripts/check-enrichment.mjs",
+    "migrate-metadata": "node scripts/migrate-metadata.mjs",
     "build-search-index": "node scripts/build-search-index.mjs",
     "find-duplicates": "node scripts/find-duplicates.mjs",
     "translate-descriptions": "node scripts/translate-descriptions.mjs",

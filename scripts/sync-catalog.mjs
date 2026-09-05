@@ -10,6 +10,7 @@ import { resolve, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { randomUUID } from 'node:crypto';
 import XLSX from 'xlsx';
+import { emptyMetadata, normalizeItemMetadata } from './lib/metadata.mjs';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -270,6 +271,8 @@ function parseItem(text) {
     seasonCount: seasonInfo?.seasons || 1,
     episodeCount: seasonInfo?.episodes || 1,
     code: code,
+    // Banderas de los procesos del pipeline: vacío = todo pendiente.
+    metadata: emptyMetadata(),
   };
 
   // Añadir a conjuntos (se hará fuera)
@@ -291,6 +294,8 @@ function syncCatalogFromExcel() {
 
   // Poblar el mapa y conjuntos con los ítems existentes
   for (const item of existingItems) {
+    // Los ítems ya guardados pueden venir del formato antiguo (banderas en la raíz).
+    normalizeItemMetadata(item);
     if (item.code) {
       itemsMap.set(item.code, item);
       for (const g of itemGenres(item)) genresSet.add(g);

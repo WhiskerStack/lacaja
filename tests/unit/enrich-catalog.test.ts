@@ -156,7 +156,7 @@ describe('enrichItem', () => {
     const { changed } = await enrichItem(item);
     expect(changed).toBe(true);
     expect(item.imageUrl).toContain('poster-42');
-    expect(item.enriched).toBe(true);
+    expect(item.metadata).toMatchObject({ enriched: true });
   });
 
   it('no reprocesa lo ya enriquecido salvo con force', async () => {
@@ -166,7 +166,7 @@ describe('enrichItem', () => {
     // sí vuelve a TMDB, para completarle los géneros (ver el caso siguiente).
     const item = {
       code: 'P0002', type: 'movie', name: 'X', year: 2000,
-      enriched: true, genresEnriched: true,
+      metadata: { enriched: true, genresEnriched: true },
     };
     expect((await enrichItem(item)).changed).toBe(false);
     expect(fetchSpy).not.toHaveBeenCalled();
@@ -189,6 +189,8 @@ describe('enrichItem', () => {
         }),
       };
     });
+    // A propósito en formato antiguo (bandera suelta en la raíz): enrichItem debe
+    // absorberla a metadata en vez de volver a enriquecerlo todo.
     const item: Record<string, unknown> = {
       code: 'P0003', type: 'movie', name: 'X', year: 2000, enriched: true,
       genres: ['Acción'], imageUrl: 'original.jpg', description: 'sinopsis original', rating: 5,
@@ -196,7 +198,8 @@ describe('enrichItem', () => {
     const { changed } = await enrichItem(item);
     expect(changed).toBe(true);
     expect(item.genres).toEqual(['Acción', 'Drama', 'Suspenso']);
-    expect(item.genresEnriched).toBe(true);
+    expect(item.metadata).toMatchObject({ enriched: true, genresEnriched: true });
+    expect('enriched' in item).toBe(false);
     // Lo ya enriquecido no se toca: solo se completan los géneros.
     expect(item.imageUrl).toBe('original.jpg');
     expect(item.description).toBe('sinopsis original');

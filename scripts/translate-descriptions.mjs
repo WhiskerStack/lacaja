@@ -2,6 +2,7 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { hasFlag, setFlag, normalizeCatalogMetadata } from './lib/metadata.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -37,8 +38,12 @@ async function translateDescription(text) {
 async function main() {
   const catalog = JSON.parse(readFileSync(CATALOG_PATH, 'utf8'));
   const items = catalog.items || [];
+  // Absorbe las banderas sueltas del formato antiguo antes de decidir qué está pendiente.
+  normalizeCatalogMetadata(catalog);
+
   const toTranslate = items.filter(
-    (item) => !item.translated && item.description && item.description.trim() !== ''
+    (item) =>
+      !hasFlag(item, 'translated') && item.description && item.description.trim() !== ''
   );
 
   console.log(`📚 Total items: ${items.length}`);
@@ -51,7 +56,7 @@ async function main() {
       console.log(`🔄 [${processed + 1}/${toTranslate.length}] Traduciendo ${code} - ${item.name}`);
       const translated = await translateDescription(item.description);
       item.description = translated;
-      item.translated = true;
+      setFlag(item, 'translated');
       processed++;
 
       if (processed % SAVE_EVERY === 0) {
@@ -64,7 +69,7 @@ async function main() {
     } catch (err) {
       console.error(`❌ Error con ${code}:`, err.message);
       // Opcional: puedes marcar como fallido para no repetirlo en la siguiente ejecución
-      // item.translated = false; // si quieres reintentar luego
+      // setFlag(item, 'translated', false); // si quieres reintentar luego
     }
   }
 

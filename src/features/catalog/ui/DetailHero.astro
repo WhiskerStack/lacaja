@@ -25,6 +25,12 @@ interface Props {
   backHref?: string;
 }
 const { item, add, context, backHref = "/" } = Astro.props;
+// Los géneros van en su propia fila de chips: mezclados con el resto de metadatos, en
+// móvil la fila se rompía en varias líneas y los separadores "·" quedaban sueltos al
+// inicio. Se pintan con relleno tenue (badge-ghost) para no confundirlos con el badge
+// de contorno "Doblado al español" de la fila de arriba.
+// "Sin género" no le dice nada al usuario, así que la fila desaparece en ese caso.
+const genres = item.genres.filter((g) => g && g !== "Sin género");
 const limit = 240;
 const longDescription = item.description.length > limit;
 const hasImage = Boolean(item.imageUrl);
@@ -95,7 +101,6 @@ const imageSrc = hasImage ? item.imageUrl : PLACEHOLDER_IMAGE;
     <div class="flex flex-wrap gap-2 items-center text-sm mb-4">
       <span class="badge badge-primary">★ {formatRating(item.rating)}</span>
       <span class="opacity-90">{TYPE_LABEL[item.type]}</span>
-      {item.genres.map((g) => <span class="opacity-90">· {g}</span>)}
       <span class="opacity-90">· {item.year}</span>
       {
         item.durationMin ? (
@@ -112,6 +117,16 @@ const imageSrc = hasImage ? item.imageUrl : PLACEHOLDER_IMAGE;
       {item.isPremiere && <span class="badge badge-secondary">Estreno</span>}
       <span class="badge badge-outline">Doblado al español</span>
     </div>
+
+    {
+      genres.length > 0 && (
+        <ul class="flex flex-wrap gap-2 mb-4 list-none p-0 m-0">
+          {genres.map((genre) => (
+            <li class="badge badge-ghost badge-sm sm:badge-md">{genre}</li>
+          ))}
+        </ul>
+      )
+    }
 
     {longDescription ? (
       <details class="max-w-2xl mb-10 sm:mb-8 desc-details">

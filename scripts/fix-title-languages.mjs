@@ -15,6 +15,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { setFlag, normalizeItemMetadata, normalizeCatalogMetadata } from './lib/metadata.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -76,6 +77,9 @@ ${text}`;
  * name quede en español y enName en inglés.
  */
 export async function fixItem(item, { dryRun = false } = {}) {
+  // Tolera ítems en formato antiguo (banderas sueltas en la raíz del ítem).
+  if (!dryRun) normalizeItemMetadata(item);
+
   const name = item.name ?? '';
   const enName = item.enName ?? '';
 
@@ -88,7 +92,7 @@ export async function fixItem(item, { dryRun = false } = {}) {
     if (translated) {
       if (!dryRun) {
         item.name = translated;
-        item.titlesChecked = true;
+        setFlag(item, 'titlesChecked');
       }
       changed = true;
       details.push(`name = "${translated}" (desde enName)`);
@@ -102,7 +106,7 @@ export async function fixItem(item, { dryRun = false } = {}) {
     if (translated) {
       if (!dryRun) {
         item.enName = translated;
-        item.titlesChecked = true;
+        setFlag(item, 'titlesChecked');
       }
       changed = true;
       details.push(`enName = "${translated}" (desde name)`);
@@ -133,7 +137,7 @@ export async function fixItem(item, { dryRun = false } = {}) {
     if (!anyOk) {
       return { action: 'skip', reason: 'ambas traducciones fallaron', changed: false };
     }
-    if (!dryRun) item.titlesChecked = true;
+    if (!dryRun) setFlag(item, 'titlesChecked');
   }
   // Caso 4: ambos vacíos (no debería ocurrir)
   else {
@@ -156,6 +160,10 @@ async function main() {
 
   const catalog = JSON.parse(readFileSync(CATALOG_PATH, 'utf8'));
   const items = catalog.items || [];
+
+  // Absorbe las banderas sueltas del formato antiguo antes de empezar.
+  if (!dryRun) normalizeCatalogMetadata(catalog);
+
   const pending = items.slice(0, limit);
 
   console.log(`📚 Total: ${items.length} ítems · por revisar: ${pending.length}${dryRun ? ' (--dry-run: no se escribe nada)' : ''}`);
