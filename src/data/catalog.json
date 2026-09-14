@@ -33,25 +33,38 @@
     "Argentina",
     "Australia",
     "Brazil",
+    "Canada",
     "Canadá",
+    "China",
     "Corea del Sur",
+    "Cuba",
     "Desconocido",
     "EU",
     "España",
     "Estonia",
+    "France",
     "Francia",
+    "Germany",
+    "India",
     "Irlanda",
     "México",
     "Nueva Zelanda",
     "Países Bajos",
+    "Poland",
     "Reino Unido",
     "República Dominicana",
     "Rusia",
+    "Spain",
     "Sudáfrica",
     "Suecia",
+    "Switzerland",
     "Tailandia",
+    "Turkey",
     "Turquía",
+    "US",
     "USA",
+    "United Kingdom",
+    "United States",
     "Uruguay"
   ],
   "languages": [
@@ -24020,6 +24033,3048 @@
         "enriched": true,
         "translated": true,
         "genresEnriched": true
+      }
+    },
+    {
+      "id": "a8f49ae2-9679-415c-962d-bb821b61eabe",
+      "type": "series",
+      "name": "The man who fell to earth",
+      "enName": "El hombre que cayó a la Tierra",
+      "year": 2022,
+      "rating": 7.431,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Ciencia Ficción",
+        "Fantasía"
+      ],
+      "region": "EU",
+      "language": "Inglés",
+      "description": "An extraterrestrial alien arrives on Earth at a turning point in human evolution and must confront his own past to determine our future.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/p1aBjGkyG25ADy4xu69joNMV3eQ.jpg",
+      "cast": [
+        "Chiwetel Ejiofor",
+        "Naomie Harris",
+        "Annelle Olaleye",
+        "Clarke Peters",
+        "Bill Nighy"
+      ],
+      "trailers": [
+        "DBafeHPFJEM",
+        "iqM5UeQVRvI"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 8,
+      "code": "S113",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "e60efca1-df1a-4b8e-b14c-e6db92892e67",
+      "type": "series",
+      "name": "Something very bad is going to happen",
+      "enName": "Algo terrible está a punto de suceder",
+      "year": 2026,
+      "rating": 6.556,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Misterio"
+      ],
+      "region": "EU",
+      "language": "Inglés",
+      "description": "A bride has a feeling that something horrifying will happen at her wedding — and the closer to the altar she gets, the worse it becomes.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/tuj37DlqEqib8sTO4h3nHJeTAJ2.jpg",
+      "cast": [
+        "Camila Morrone",
+        "Adam DiMarco",
+        "Gus Birney",
+        "Jeff Wilbusch",
+        "Karla Crome"
+      ],
+      "trailers": [
+        "vMc_pWm7G7o"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 8,
+      "code": "S114",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "ed09857b-3327-4969-9f21-88f5379a773e",
+      "type": "series",
+      "name": "Toda la verdad de mis mentiras",
+      "enName": "Toda la verdad de mis mentiras",
+      "year": 2026,
+      "rating": 7.3,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Comedia"
+      ],
+      "region": "España",
+      "language": "Español",
+      "description": "Two roommates join a bachelorette road trip, where unspoken feelings ignite and shake up their entire friend group.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/2udseY0mzsvkytPcSL4Vp612M1D.jpg",
+      "cast": [
+        "Daniel Ibáñez",
+        "Itziar Manero",
+        "Brays Efe",
+        "Lucía de la Fuente",
+        "Clara Sans"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 5,
+      "code": "S115",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "d80fac1d-fdbb-4591-9db9-1a2a775f7152",
+      "type": "series",
+      "name": "Breathless",
+      "enName": "Respira",
+      "year": 2024,
+      "rating": 7.7,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama"
+      ],
+      "region": "España",
+      "language": "Español",
+      "description": "A passionate medical team is devoted to saving lives in a bustling public hospital where tensions — and romance — keep their pulses racing.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/s6qEnmFxRqQQhjPAZPNHlwPc75y.jpg",
+      "cast": [
+        "Manu Ríos",
+        "Borja Luna",
+        "Blanca Suárez",
+        "Najwa Nimri",
+        "Aitana Sánchez-Gijón"
+      ],
+      "trailers": [
+        "kFoDTm0heec"
+      ],
+      "seasons": [],
+      "seasonCount": 2,
+      "episodeCount": 16,
+      "code": "S116",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "78e57f19-2f13-4779-a308-dd3303afbcec",
+      "type": "series",
+      "name": "El refugio atómico",
+      "enName": "Billonaires Bunker",
+      "year": 2025,
+      "rating": 6.401,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Ciencia Ficción",
+        "Fantasía",
+        "Drama",
+        "Misterio"
+      ],
+      "region": "España",
+      "language": "Español",
+      "description": "When a group of billionaires takes shelter in a luxury bunker, an old feud between two families resurfaces amid an unprecedented global conflict.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/hNVb60dPG34wYjazGgFolJhqfxp.jpg",
+      "cast": [
+        "Pau Simon",
+        "Alícia Falcó",
+        "Miren Ibarguren",
+        "Joaquín Furriel",
+        "Natalia Verbeke"
+      ],
+      "trailers": [
+        "Ar68A3Kr-UM"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 8,
+      "code": "S117",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "eabbb484-894f-422a-a0c6-30cc9525b478",
+      "type": "series",
+      "name": "Masumiyet Muzesi",
+      "enName": "El Museo de la Inocencia",
+      "year": 2026,
+      "rating": 8.1,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama"
+      ],
+      "region": "Turquía",
+      "language": "Español",
+      "description": "In 1970s Istanbul, a man's forbidden love for a shop-girl evolves into a lifelong journey of obsession and longing.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/gdDPQ5vs7HdhoqUqV0DOgqUPcXU.jpg",
+      "cast": [
+        "Selahattin Paşalı",
+        "Eylül Lize Kandemir",
+        "Oya Unustası",
+        "Tilbe Saran",
+        "Bülent Emin Yarar"
+      ],
+      "trailers": [
+        "vyX2652ALn0"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 9,
+      "code": "S118",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "e014634d-6a3a-4512-b09c-c745e554ab5b",
+      "type": "series",
+      "name": "Arafta - Bound by Fate",
+      "enName": "En el limbo - Unidos por el destino",
+      "year": 2026,
+      "rating": 9.1,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Familiar"
+      ],
+      "region": "Turquía",
+      "language": "Español",
+      "description": "Ateş, a man haunted by childhood scars and consumed by rage, returns to destroy the family that shattered his life years ago. His weapon is not a sword, but a marriage: 187 days with Mercan, the daughter of his enemy. Mercan, already promised to Nezir, is thrust into a battle she never chose, while Ateş binds her to him believing she is the key to his revenge. Yet the woman he intends to destroy becomes the one who threatens to undo him. And in the shadows, Aslı – driven by jealousy, seizes every chance to tear them apart.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/4yYZoYgeNshoS2aODwUvCXIa8yn.jpg",
+      "cast": [
+        "İlsu Demirci",
+        "Emin Günenç",
+        "Aleyna Çalışkan",
+        "Serdar Yıldırım",
+        "Çagri Baylan"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 2,
+      "episodeCount": 100,
+      "code": "S119",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "df25f5a3-b014-400c-83b1-fc7f9797f1bd",
+      "type": "series",
+      "name": "Ágata y Lola",
+      "enName": "",
+      "year": 2026,
+      "rating": 9.4,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Misterio",
+        "Drama",
+        "Crimen"
+      ],
+      "region": "Spain",
+      "language": "Español",
+      "description": "",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/6rxfzU40Pisvqaa6FTxN7JeGNUr.jpg",
+      "cast": [
+        "Mireia Oriol",
+        "Eva Martín",
+        "Antonio Garrido",
+        "Eva Fernández",
+        "Francis Lorenzo"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 8,
+      "code": "S120",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "1a07cddd-705f-45b8-9df5-0b4bffb94b4e",
+      "type": "series",
+      "name": "Blood Sacrifice",
+      "enName": "Sacrificio de sangre",
+      "year": 2026,
+      "rating": 6.519,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Crimen",
+        "Misterio"
+      ],
+      "region": "Switzerland",
+      "language": "Español",
+      "description": "Following the brutal murder of two police officers, a tenacious detective reluctantly joins forces with his estranged ex-cop father to catch the killer.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/8iFUWLKBAWDrJ9rOunscgIDrGQ1.jpg",
+      "cast": [
+        "Jakob Oftebro",
+        "Peter Andersson",
+        "Electra Hallman",
+        "Alexander Abdallah",
+        "Henrik Norlén"
+      ],
+      "trailers": [
+        "YjgT9NMq3ww"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 5,
+      "code": "S121",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "904ed950-a6b1-4db9-910c-1249037ef31b",
+      "type": "series",
+      "name": "Szadz",
+      "enName": "Angel de la Muerte",
+      "year": 2020,
+      "rating": 6.593,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Crimen",
+        "Drama"
+      ],
+      "region": "Poland",
+      "language": "Español",
+      "description": "A small-town policewoman is chasing a vicious serial killer; at stake is first a country girl's life, and then her own life.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/lPTBeUmMBC9hhRwdOVxpeRQIVLq.jpg",
+      "cast": [
+        "Aleksandra Popławska",
+        "Maciej Stuhr",
+        "Bartosz Gelner",
+        "Piotr Trojan",
+        "Karolina Kominek"
+      ],
+      "trailers": [
+        "YkyWw8fAWRA"
+      ],
+      "seasons": [],
+      "seasonCount": 4,
+      "episodeCount": 28,
+      "code": "S122",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "c462ca74-da91-482d-9e8c-95c781b93e8a",
+      "type": "series",
+      "name": "Me atrevo a amarte",
+      "enName": "Me atrevo a amarte",
+      "year": 2025,
+      "rating": 7.588,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Familiar",
+        "Telenovela"
+      ],
+      "region": "México",
+      "language": "Español",
+      "description": "Me Atrevo a Amarte is a Mexican telenovela produced by Salvador Mejía Alejandre for TelevisaUnivision and originally broadcast on Las Estrellas from February 24 to June 22, 2025. Based on the Turkish series Asi (2007), created by Şebnem Çıtak and Gül Dirican, it was adapted by Enna Márquez, Julián Aguilar, and Carolina Mejía Lartilleux. Directed by Fernando Nesme, Claudia E. Aguilar, and Carolina Mejía Lartilleux, it stars Kimberly Dos Ramos, Rodrigo Guirao, Marlene Favela, Karyme Lozano, Horacio Pancheri, Christian de la Campa, and Mariluz Bermúdez.\n\nThe story follows Victoria Pérez-Soler, a young woman from a wealthy family who falls in love with Alejandro Sánchez-Guerra, a man from a rival family. Their romance is threatened by old grudges, secrets, betrayal, and family conflicts. As the truth about their pasts emerges, Victoria and Alejandro must overcome pain and resentment to fight for their love and bring peace between their families.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/zfCzimnUGds59md315HSA3l3Q1X.jpg",
+      "cast": [
+        "Kimberly Dos Ramos",
+        "Rodrigo Guirao Díaz",
+        "Marlene Favela",
+        "César Évora Díaz",
+        "Karyme Lozano"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 90,
+      "code": "S123",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "4f71aea6-e9e8-45b4-9805-27854c5ec981",
+      "type": "series",
+      "name": "Reyna Roja",
+      "enName": "Red Queen",
+      "year": 2024,
+      "rating": 7.04,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Misterio"
+      ],
+      "region": "Spain",
+      "language": "Español",
+      "description": "A gifted woman's intellect brings chance to lead covert European police force. But it backfires, costing her everything. Following murder at her home and kidnapped heiress, her ex-supervisor enlists a policeman's aid to reinstate her.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/lk7LVXYSOO5rReR2jzLo8Le3cO1.jpg",
+      "cast": [
+        "Victoria Luengo",
+        "Hovik Keuchkerian",
+        "Karmele Larrinaga",
+        "Vicenta N'Dongo",
+        "Àlex Brendemühl"
+      ],
+      "trailers": [
+        "dYIXNAAOdFU"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 7,
+      "code": "S124",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "d56d5c69-dc34-4d2c-a7ae-1f5c3115d467",
+      "type": "series",
+      "name": "El caso Asunta",
+      "enName": "The Asunta Case",
+      "year": 2024,
+      "rating": 7.268,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Crimen",
+        "Drama"
+      ],
+      "region": "Spain",
+      "language": "Español",
+      "description": "After two parents report that their 12-year-old daughter Asunta is missing, the investigation soon turns against them.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/3sGdiu1TPfPB01AAohlgVh1uf0q.jpg",
+      "cast": [
+        "Candela Peña",
+        "Tristán Ulloa",
+        "Carlos Blanco",
+        "María León",
+        "Francesc Orella"
+      ],
+      "trailers": [
+        "-w4Ilcm5oEg"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 6,
+      "code": "S125",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "e89c9d28-a9f2-49ba-bd17-fcaf00bee5bc",
+      "type": "series",
+      "name": "Entre aguas",
+      "enName": "Entre aguas",
+      "year": 2026,
+      "rating": 0,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Sin género"
+      ],
+      "region": "Cuba",
+      "language": "Español",
+      "description": "When Moses discovers the network taking control of the water supply, he must choose between staying in the business that lifted him out of poverty… or exposing it and facing the consequences. In a country thirsty for truth, Moses will have to decide what he’s willing to risk: his comfort, his family, or the lives of millions. And he’ll have to do it before the current pulls him under.  Between Two Waters is an environmental thriller about the planet’s most vital resource and the strategy of a powerful economic group determined to turn access to it into a multibillion-dollar business—no matter the cost.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/1sHXXkdwsKwrwSrfLmvCG9WL2EW.jpg",
+      "cast": [],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 80,
+      "code": "S126",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "20d7effc-740e-491c-a79b-ab7ba105c18c",
+      "type": "series",
+      "name": "Bendice a los  ángeles",
+      "enName": "Love is in the air",
+      "year": 2020,
+      "rating": 8.2,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Comedia"
+      ],
+      "region": "Turkey",
+      "language": "Español",
+      "description": "Eda, who ties all her hopes to her education, confronts Serkan Bolat, who cuts off her international education scholarship and leaves her with high school diploma. Serkan Bolat offers Eda to give her scholarship back if she pretends to be his fiance for two months. Although Eda rejects the offer of this man as she hates him, she has to accept it when the conditions change. While pretending to be engaged, Serkan and Eda begin to experience a passionate, challenging relationship that will make them forget all they know right. Because love is difficult. And that's why it's amazing.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/bE71f9A3eztjcd5JT3MmHB8MbzA.jpg",
+      "cast": [
+        "Hande Erçel",
+        "Kerem Bürsin",
+        "Evrim Doğan",
+        "Anıl İlter",
+        "Elçin Afacan"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 8,
+      "episodeCount": 1477,
+      "code": "S127",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "fc4119ec-3f5f-4a31-a198-b539a1553375",
+      "type": "series",
+      "name": "El juramento de una madre",
+      "enName": "Querida madre",
+      "year": 2022,
+      "rating": 7.367,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Telenovela"
+      ],
+      "region": "Turkey",
+      "language": "Español",
+      "description": "Zeynep is an innocent and beautiful girl who's very fond of her mother. One day, her mother Cemre dies in an accident. No one can bring themselves to tell Zeynep that her mother is dead. Zeynep was born with a heart condition and she is not strong enough to bear the news. When she was dying, Zeynep's mother is slandered so that Murat, who used to love her madly, now hates her deeply. Now that Asude, her grandmother has the perfect conditions to make Murat marry Melek, the woman she'd like to see as her daughter-in-law. The night that Zeynep finds out about her mother's death, she also finds out that Murat is to marry Melek and she has an attack. When Zeynep's heart is about to stop, a miracle happens. Zeynep comes across Nazli, who looks exactly like her mother.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/pPjyZWvaLzu2MRllG64p6eyQyre.jpg",
+      "cast": [
+        "Erol Gedik",
+        "Selin Sezgin",
+        "Gece Işık Demirel",
+        "Cansın Mısırlı",
+        "Serdar Yıldırım"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 4,
+      "episodeCount": 350,
+      "code": "S128",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "4d89c737-bf05-4c74-8aea-e4e6007468da",
+      "type": "series",
+      "name": "Cementerio  ",
+      "enName": "",
+      "year": 2026,
+      "rating": 7.415,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Crimen",
+        "Drama",
+        "Misterio"
+      ],
+      "region": "Turkey",
+      "language": "Español",
+      "description": "Police Commissioner Önem leads a special investigations unit that solves tough cases involving violence against women.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/ye6n3GdSaiSy81hiIRvf3vjVv1N.jpg",
+      "cast": [
+        "Birce Akalay",
+        "Olgun Toker",
+        "Şehsuvar Aktaş",
+        "Hakan Meriçliler",
+        "Sezgin Uzunbekiroğlu"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 20,
+      "code": "S129",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "4ca2fc53-b4b7-48fb-afc4-1e31f039ce31",
+      "type": "series",
+      "name": "El rostro de Analia",
+      "enName": "",
+      "year": 2026,
+      "rating": 4.4,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Crimen",
+        "Drama"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "El Rostro de Analía is a Spanish-language telenovela produced by the American-based television network Telemundo. It stars Elizabeth Gutiérrez, Martin Karpan, Maritza Rodríguez and Gabriel Porras, with the special appearance of Gaby Espino.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/mQJmZpHjKTsqt64PPGucObvU1gy.jpg",
+      "cast": [
+        "Elizabeth Gutiérrez",
+        "Martín Karpan",
+        "Maritza Rodríguez",
+        "Gaby Espino",
+        "Gabriel Porras"
+      ],
+      "trailers": [
+        "N6d09vspz-E"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 178,
+      "code": "S130",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "b4c94c17-a902-468e-a5c0-7a37d1d1e263",
+      "type": "series",
+      "name": "Alguien tiene que morir",
+      "enName": "El rostro de Analia",
+      "year": 2008,
+      "rating": 4.4,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Crimen",
+        "Drama"
+      ],
+      "region": "México",
+      "language": "Español",
+      "description": "El Rostro de Analía is a Spanish-language telenovela produced by the American-based television network Telemundo. It stars Elizabeth Gutiérrez, Martin Karpan, Maritza Rodríguez and Gabriel Porras, with the special appearance of Gaby Espino.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/mQJmZpHjKTsqt64PPGucObvU1gy.jpg",
+      "cast": [
+        "Elizabeth Gutiérrez",
+        "Martín Karpan",
+        "Maritza Rodríguez",
+        "Gaby Espino",
+        "Gabriel Porras"
+      ],
+      "trailers": [
+        "N6d09vspz-E"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 3,
+      "code": "S131",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "04c1ebb3-47e8-4849-b561-c87aeccafd3e",
+      "type": "series",
+      "name": "Atiye",
+      "enName": "Atiye",
+      "year": 2019,
+      "rating": 7.382,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Misterio",
+        "Drama",
+        "Ciencia Ficción",
+        "Fantasía"
+      ],
+      "region": "Turkey",
+      "language": "Español",
+      "description": "A painter in Istanbul embarks on a personal journey as she unearths universal secrets about an Anatolian archaeological site and its link to her past.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/lQasevgdY0sEc4KHWmIWAxxdM1J.jpg",
+      "cast": [
+        "Beren Saat",
+        "Mehmet Günsür",
+        "Melisa Şenolsun",
+        "Civan Canova",
+        "Tim Seyfi"
+      ],
+      "trailers": [
+        "qXE7MkPXicM"
+      ],
+      "seasons": [],
+      "seasonCount": 2,
+      "episodeCount": 16,
+      "code": "S132",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "83057c84-9e35-4195-9a2f-25bd75bfef0f",
+      "type": "series",
+      "name": "Doña bella",
+      "enName": "Dona Beja",
+      "year": 2026,
+      "rating": 7.1,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Telenovela"
+      ],
+      "region": "Brazil",
+      "language": "Español",
+      "description": "In imperial Brazil, a young woman stripped of her reputation is forced into exile from polite society. Recasting herself as Madam Beja, she builds an elite pleasure house that becomes a hub of political intrigue, economic power, and forbidden desire, using charm, intelligence, and ruthless strategy to bend the same men and institutions that once destroyed her.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/fB8khOzVqpQWhVfIXUQgCokP9XR.jpg",
+      "cast": [
+        "Grazi Massafera",
+        "David Junior",
+        "André Luiz Miranda",
+        "Pedro Fasanaro",
+        "Bianca Bin"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 40,
+      "code": "S133",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "43e7dfb0-1e80-47ee-b4e8-44ea639ce3eb",
+      "type": "series",
+      "name": "Blue eye Samurai",
+      "enName": "Samuraí de ojos azules",
+      "year": 2023,
+      "rating": 8.492,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Animado",
+        "Drama"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Driven by a dream of revenge against those who made her an outcast in Edo-period Japan, a young warrior cuts a bloody path toward her destiny.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/fXm3JT4WLQVnwukdvghtAblc1wc.jpg",
+      "cast": [
+        "Maya Erskine",
+        "George Takei",
+        "Masi Oka",
+        "Cary-Hiroyuki Tagawa",
+        "Brenda Song"
+      ],
+      "trailers": [
+        "3ciOn_4XFfE"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 8,
+      "code": "S134",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "447726c7-33d9-4567-986e-ccf97d9a2cad",
+      "type": "series",
+      "name": "Dune Prophecy",
+      "enName": "Duna la profecía",
+      "year": 2024,
+      "rating": 7.207,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Ciencia Ficción",
+        "Fantasía",
+        "Drama",
+        "Acción",
+        "Aventura"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Ten thousand years before the ascension of Paul Atreides, sisters Valya and Tula Harkonnen establish the fabled sect and female order that would become known as the Bene Gesserit to control the future of humankind.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/oWVohNsxkxA3u92EzRo8fTuXIS0.jpg",
+      "cast": [
+        "Emily Watson",
+        "Olivia Williams",
+        "Travis Fimmel",
+        "Jodhi May",
+        "Sarah-Sofie Boussnina"
+      ],
+      "trailers": [
+        "CzVHWNosS2o"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 6,
+      "code": "S135",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "d6724f79-021a-4d63-bede-a89bbe696d74",
+      "type": "series",
+      "name": "El cuerpo en llamas",
+      "enName": "El cuerpo en llamas",
+      "year": 2023,
+      "rating": 6.713,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Misterio"
+      ],
+      "region": "Spain",
+      "language": "Español",
+      "description": "When a police officer is murdered and set on fire, all eyes focus on two other agents: his girlfriend and her lover.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/ttUAM6vZ7IhLfEFeBtWKVom3LVQ.jpg",
+      "cast": [
+        "Úrsula Corberó",
+        "Quim Gutiérrez",
+        "José Manuel Poga",
+        "Isak Férriz",
+        "Eva Llorach"
+      ],
+      "trailers": [
+        "s7PujHSPPm4"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 8,
+      "code": "S136",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "f8332a3c-e6ca-4636-af54-78f3f6b0ac34",
+      "type": "series",
+      "name": "El olor de un niño",
+      "enName": "El olor de un niño",
+      "year": 2017,
+      "rating": 0,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Sin género"
+      ],
+      "region": "Turkey",
+      "language": "Español",
+      "description": "",
+      "imageUrl": "",
+      "cast": [],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 36,
+      "code": "S137",
+      "metadata": {
+        "enriched": true,
+        "genresEnriched": true
+      }
+    },
+    {
+      "id": "c4d0157a-2778-4436-a041-97ff38fc02cd",
+      "type": "series",
+      "name": "Mentiras pasajeras",
+      "enName": "Fleeting lies",
+      "year": 2023,
+      "rating": 6.5,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Comedia",
+        "Drama"
+      ],
+      "region": "Spain",
+      "language": "Español",
+      "description": "It follows Lucía an executive of a high-tech company who has fought to get as far away from her humble origins as possible. On the day of her promotion, she is accused of espionage and fired.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/etkB5WuxoVuZPs7FSHxfSUAP7lU.jpg",
+      "cast": [
+        "Elena Anaya",
+        "Pilar Castro",
+        "Hugo Silva",
+        "Quim Gutiérrez",
+        "Susi Sánchez"
+      ],
+      "trailers": [
+        "7s-2PxJrTHc"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 8,
+      "code": "S138",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "e385ba8f-8556-4d5b-a106-e1d6098ae3a3",
+      "type": "series",
+      "name": "El Internado",
+      "enName": "El Internado",
+      "year": 2007,
+      "rating": 8.175,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Acción",
+        "Aventura",
+        "Familiar"
+      ],
+      "region": "Spain",
+      "language": "Español",
+      "description": "El Internado Laguna Negra was a Spanish television drama-thriller focusing on the students of a fictional boarding school in a forest, where teenagers are sent by their parents to study. The boarding school is situated in a forest far from the city, on the outskirts on which macabre events occur. The series debut on 24 May 2007, and is a production of Antena 3. Although the show is recorded and produced in HD, it is only broadcast in SD. However, an HD Blu-ray Disc release has been announced.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/eijsq0ZTpQkjMXNkTI1R2v0hNjF.jpg",
+      "cast": [
+        "Marta Torné",
+        "Martiño Rivas",
+        "Raúl Fernández de Pablo",
+        "Yon González",
+        "Elena Furiase"
+      ],
+      "trailers": [
+        "6N9iInZ5ln8"
+      ],
+      "seasons": [],
+      "seasonCount": 7,
+      "episodeCount": 71,
+      "code": "S139",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "f57167d7-ab30-480f-94e8-3f634d6ef4bc",
+      "type": "series",
+      "name": "El Internado - Las Cumbres",
+      "enName": "El Internado - Las Cumbres",
+      "year": 2021,
+      "rating": 7.515,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Misterio"
+      ],
+      "region": "Spain",
+      "language": "Español",
+      "description": "In an inaccessible place between the mountains and isolated from the world, a school is located next to an old monastery. The students are rebellious and problematic young people who live under the strict and severe discipline imposed by the center to reintegrate them into society. The surrounding forest is home to ancient legends, threats that are still valid and that will immerse them in terrifying adventures.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/9KvN6eNNY9kbiWlZ8IS175xj4Ym.jpg",
+      "cast": [
+        "Albert Salazar",
+        "Joel Bosqued",
+        "Mina El Hammani",
+        "Claudia Riera",
+        "Daniela Rubio"
+      ],
+      "trailers": [
+        "sdytEqadkQY"
+      ],
+      "seasons": [],
+      "seasonCount": 3,
+      "episodeCount": 22,
+      "code": "S140",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "6157e45e-94c2-4974-b133-1b958482999d",
+      "type": "movie",
+      "name": "Tuner",
+      "enName": "Un talento único",
+      "year": 2026,
+      "rating": 7.6,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Crimen",
+        "Drama",
+        "Suspenso"
+      ],
+      "region": "Canadá",
+      "language": "Inglés",
+      "description": "A gifted piano tuner's meticulous skills for tuning pianos lead him to discover an unexpected aptitude for cracking safes, turning his life upside down.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/5OvA3i9wZs5jHu0DCrfmXlzAM67.jpg",
+      "cast": [
+        "Leo Woodall",
+        "Dustin Hoffman",
+        "Alisen Richmond-Peck",
+        "Ellyn Jameson",
+        "Tim Blair"
+      ],
+      "trailers": [
+        "HYxzyLVJORA",
+        "XiehvETTjTQ",
+        "zW1cRf5X8Hk",
+        "rdlOZhl-nSA"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P512",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "0131de81-5379-4369-b41d-77a5d0025dda",
+      "type": "movie",
+      "name": "­Boy",
+      "enName": "­Boy",
+      "year": 2017,
+      "rating": 4.7,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama"
+      ],
+      "region": "Reino Unido",
+      "language": "Inglés",
+      "description": "Two young men spend the night together after meeting the previous evening in a notorious gay club. The next day, however, the host wakes to find the boy he picked up bewildered and confused, unable remember his name or anything about his past. Lacking any type of identification or obvious clues, the boys begin to search for the truth among fragments of memories that may or may not prove reliable.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/eOBsUuK4qoW4S8Qm5hNZpno9mVi.jpg",
+      "cast": [
+        "Paul Act",
+        "Eduardo Longoria",
+        "Rodrigo Lopezcarranza",
+        "Luis Fernando Schivy",
+        "Xavier Loyá"
+      ],
+      "trailers": [
+        "BwHC0xbpWcw"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P513",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "51583fd2-2008-43fd-8931-3f0dcc49d12f",
+      "type": "movie",
+      "name": "Batman - Knightfall Part 1 - Knightfall",
+      "enName": "",
+      "year": 2026,
+      "rating": 9.171,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Animado",
+        "Acción",
+        "Aventura",
+        "Ciencia Ficción"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Arkham Asylum has been destroyed, and all its inmates have been unleashed upon Gotham City. As Batman races to round up some of his greatest enemies, he is pushed to his physical and mental limits and into a final confrontation with a new threat: the man called Bane!",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/360qdtu2hLnqMu8SVHMywn420w1.jpg",
+      "cast": [
+        "Anson Mount",
+        "Michael Mando",
+        "Pablo Schreiber",
+        "Jeff Bennett",
+        "Luis Bermudez"
+      ],
+      "trailers": [
+        "90HAqMk7qv0",
+        "9NApbwwm4aU"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P514",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "6592afd0-57f6-4548-bfcb-e1a9abad68c8",
+      "type": "movie",
+      "name": "Den hemmelige kvinde",
+      "enName": "Una mujer sin pasado",
+      "year": 2026,
+      "rating": 6.247,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Suspenso",
+        "Misterio"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "After discovering she has a family and a shipping empire, a woman with amnesia returns to a wealthy and seemingly perfect past to uncover why she left.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/5FC5vUHFz0fbJOd0bhyzJpCSLrc.jpg",
+      "cast": [
+        "Natalie Madueño",
+        "Claes Bang",
+        "Pål Sverre Hagen",
+        "Stina Ekblad",
+        "Ingrid Bolsø Berdal"
+      ],
+      "trailers": [
+        "FldeGkt4e4k"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P515",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "93449f9a-73e3-49c6-b36e-bb7f0c130f73",
+      "type": "movie",
+      "name": "Freefall",
+      "enName": "Caída libre",
+      "year": 2026,
+      "rating": 6.986,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Documental"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Following the highly publicized death of Boeing whistleblower John Barnett, the investigation continues into the once-iconic aviation giant, uncovering startling new revelations and insider accounts in the wake of a deepening corporate crisis..",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/oadqt3V5c8j5ZIbYkdfQLcWzI4C.jpg",
+      "cast": [
+        "John Barnett",
+        "Rob Turkewitz",
+        "Sam Mohawk",
+        "Roy Irvin",
+        "Sam Salehpour"
+      ],
+      "trailers": [
+        "7ZDSYBkcH2U"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P516",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "6518d921-2897-4547-b818-63f7ba68ece4",
+      "type": "movie",
+      "name": "Motor City",
+      "enName": "Motor City",
+      "year": 2026,
+      "rating": 6.3,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Suspenso",
+        "Crimen"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "In 1970s Detroit, John Miller falls for a local gangster's girl and lands in prison for a crime he didn't commit. With his life ruined, Miller plots revenge against the man who took his girl away.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/rKws4iqKhrzWHVLHnwtMnCpEHhF.jpg",
+      "cast": [
+        "Alan Ritchson",
+        "Ben Foster",
+        "Shailene Woodley",
+        "Lionel Boyce",
+        "Amar Chadha-Patel"
+      ],
+      "trailers": [
+        "t6RklhKu9os",
+        "JHMPxTWI4sQ"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P517",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "75118040-12f8-4400-9c3b-943c78859bfb",
+      "type": "movie",
+      "name": "Rememory",
+      "enName": "Rememory",
+      "year": 2017,
+      "rating": 6.077,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Ciencia Ficción",
+        "Drama",
+        "Misterio"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "The widow of a wise professor stumbles upon one of his inventions that's able to record and play a person's memory.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/qz3mvkpTOQOEqzxenvaaObOMarj.jpg",
+      "cast": [
+        "Peter Dinklage",
+        "Julia Ormond",
+        "Martin Donovan",
+        "Anton Yelchin",
+        "Henry Ian Cusick"
+      ],
+      "trailers": [
+        "n6ihJIjVGLo"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P518",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "42384abb-7166-474f-8249-fa690f06b1d8",
+      "type": "movie",
+      "name": "Revolt",
+      "enName": "Revolt",
+      "year": 2017,
+      "rating": 5.523,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Ciencia Ficción",
+        "Acción"
+      ],
+      "region": "Reino Unido",
+      "language": "Inglés",
+      "description": "The story of humankind's last stand against a cataclysmic alien invasion. Set in the war-ravaged African countryside, a U.S. soldier and a French foreign aid worker team up to survive the alien onslaught. Their bond will be tested as they search for refuge across a crumbling world.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/eM2zipCkAXhp0BZF2noDp7bRFgV.jpg",
+      "cast": [
+        "Lee Pace",
+        "Bérénice Marlohe",
+        "Jason Flemyng",
+        "Sibulele Gcilitshana",
+        "Wandile Molebatsi"
+      ],
+      "trailers": [
+        "IuhgTsDtYK0"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P519",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "98b7b90c-dc7a-4caa-ad08-06efa1063ede",
+      "type": "movie",
+      "name": "Slingshot",
+      "enName": "Destino -Titón",
+      "year": 2024,
+      "rating": 6.076,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Ciencia Ficción",
+        "Suspenso"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "An elite trio of astronauts aboard a years-long, possibly compromised mission to Saturn's moon, Titan, gears up for a highly dangerous slingshot manoeuvre that will either catapult them to Titan or into deep space.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/e6cCBe7DQOn9OFdFJ0eyVwSC8hR.jpg",
+      "cast": [
+        "Casey Affleck",
+        "Laurence Fishburne",
+        "Emily Beecham",
+        "Tomer Capone",
+        "David Morrissey"
+      ],
+      "trailers": [
+        "YxNGunBCDtk",
+        "tibvd41bhCg"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P520",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "df43a51b-8e93-4cb3-adfb-90cf9d325b65",
+      "type": "movie",
+      "name": "The Instigator",
+      "enName": "Los instigadores",
+      "year": 2024,
+      "rating": 6.132,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Crimen",
+        "Comedia"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Rory and Cobby are unlikely partners thrown together for a heist. But when it goes awry, they team up with an unusual accomplice — Rory's therapist — to outrun police, backward bureaucrats, and a vengeful crime boss.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/dnYWsIFDmygCjNg65rY3uBymx81.jpg",
+      "cast": [
+        "Matt Damon",
+        "Casey Affleck",
+        "Ving Rhames",
+        "Jack Harlow",
+        "Michael Stuhlbarg"
+      ],
+      "trailers": [
+        "X5oqpxi3U7M"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P521",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "9931b3fb-4862-4106-b343-4a20677cbefc",
+      "type": "movie",
+      "name": "The Titan",
+      "enName": "Titán",
+      "year": 1018,
+      "rating": 6.2,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Documental"
+      ],
+      "region": "Reino Unido",
+      "language": "Inglés",
+      "description": "The life and works of the great artist Michelangelo Buonarroti are shown against the historical background of his time. It begins with his earliest artworks, and follows his life and career as he achieves lasting fame. The documentary includes detailed looks at some of the artist's most renowned creations.  American heavily re-edited  version of the Swiss 1938 film Michelangelo: Das Leben eines Titanen, with new footage shot by Robert J. Flaherty added.  Preserved by the Academy Film Archive in 2005.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/hVd5fAJFnRU9rWg609mVszxF71R.jpg",
+      "cast": [
+        "Fredric March"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P522",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "a350eee8-94fb-4f32-bd40-71e557788f1e",
+      "type": "movie",
+      "name": "The Whisper Man",
+      "enName": "Susurran tu nombre",
+      "year": 2026,
+      "rating": 6.824,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Crimen",
+        "Drama",
+        "Suspenso"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "When his young son vanishes, a widower enlists help from his estranged father, a retired detective who put away the serial killer now linked to the case.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/ndRs5lADYm0PeVjuOxaMcInY0o2.jpg",
+      "cast": [
+        "Robert De Niro",
+        "Michelle Monaghan",
+        "Adam Scott",
+        "Acston Luca Porto",
+        "Michael Keaton"
+      ],
+      "trailers": [
+        "ZHRR-1CKYIQ"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P523",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "47319ccd-5a6e-48d8-8ab1-7010a89def26",
+      "type": "movie",
+      "name": "Todos los nombres de Dios",
+      "enName": "All the names of God",
+      "year": 2023,
+      "rating": 6.569,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Acción",
+        "Suspenso"
+      ],
+      "region": "Spain",
+      "language": "Español",
+      "description": "After being implicated in a terrorist attack, Santi, a taxi driver, is taken hostage by one of the perpetrators.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/n15gfcgwV0LVPSobrayZcFHcwN6.jpg",
+      "cast": [
+        "Luis Tosar",
+        "Inma Cuesta",
+        "Roberto Enríquez",
+        "Fernando Cayo",
+        "Nourdin Batán"
+      ],
+      "trailers": [
+        "87w5CR91iHA"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P524",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "a1941053-26ec-4d47-b444-3447f7191595",
+      "type": "movie",
+      "name": "El ser querido",
+      "enName": "The beloved",
+      "year": 2026,
+      "rating": 6.856,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama"
+      ],
+      "region": "Spain",
+      "language": "Español",
+      "description": "The acclaimed film director Esteban Martínez is a legend both for his films and for his past marked by violence and excess. For his new project, he offers his daughter Emilia a role under the pretext of helping her with her stalled acting career. Living together on set will foster a closeness they haven’t shared for years, but it will also reopen old wounds that never healed.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/whk02IOeEHz8KCYZGm3fF92zg0v.jpg",
+      "cast": [
+        "Javier Bardem",
+        "Victoria Luengo",
+        "Melina Matthews",
+        "Malena Villa",
+        "Mourad Ouani"
+      ],
+      "trailers": [
+        "2I5LLG2XBco"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P525",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "42f699b6-db77-4120-8ad8-0f350c0a0c60",
+      "type": "movie",
+      "name": "7 años",
+      "enName": "7 años",
+      "year": 2016,
+      "rating": 6.374,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama"
+      ],
+      "region": "Spain",
+      "language": "Español",
+      "description": "The drama is centered on four friends and business partners who in one evening are forced to find a way to save their company and themselves. The impossible decision they face is agreeing on who will be the one to sacrifice their freedom to save the others from personal and financial demise. It is a race against time that will put their friendship and sanity to the test. Who will take the fall?",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/rWPHFAVZFFVcPzy5HYMGS7beHjA.jpg",
+      "cast": [
+        "Paco León",
+        "Juan Pablo Raba",
+        "Àlex Brendemühl",
+        "Juana Acosta",
+        "Manuel Morón"
+      ],
+      "trailers": [
+        "l88tkhzVMa0"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P526",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "7ab48c84-fe31-4929-b0a7-74d4f1e7cb46",
+      "type": "movie",
+      "name": "53 Domingos",
+      "enName": "53 Sundays",
+      "year": 2026,
+      "rating": 5.92,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Comedia",
+        "Drama"
+      ],
+      "region": "Spain",
+      "language": "Español",
+      "description": "When three siblings agree to meet and discuss their aging father's future, their reunion spirals into bickering, bantering and reliving old grudges.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/olk6MkfHFWEpWmhQn6Mb4jNqspm.jpg",
+      "cast": [
+        "Javier Cámara",
+        "Carmen Machi",
+        "Javier Gutiérrez",
+        "Alexandra Jiménez",
+        "Ricardo Lacámara"
+      ],
+      "trailers": [
+        "WJ4x4b8iHsg"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P527",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "caf70df6-6a26-49c2-8637-3fc1f01bb498",
+      "type": "movie",
+      "name": "Affinity",
+      "enName": "Affinity",
+      "year": 2025,
+      "rating": 6.7,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Ciencia Ficción",
+        "Suspenso",
+        "Misterio"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Chilean martial-arts star Marko Zaror is Bruno, an ex-SEAL struggling with PTSD. He lives a life in fear of his demons until one day when he discovers a beautiful woman with no past of her own. Together they begin to build a life, but when she disappears, Bruno must return to his violent past if he’s going to save her from a shocking conspiracy.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/WKwQOPh2mQPRL12jSu2yFHk4A7.jpg",
+      "cast": [
+        "Marko Zaror",
+        "Brooke Ence",
+        "Jane Mirro",
+        "Louis Mandylor",
+        "Brahim Achabbakhe"
+      ],
+      "trailers": [
+        "0b-HSxyod0c"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P528",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "6f7db459-da10-4690-ae7e-5a21a067a7be",
+      "type": "movie",
+      "name": "Beast",
+      "enName": "La bestia",
+      "year": 2026,
+      "rating": 7.492,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Drama"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "MMA legend Patton James, now a commercial fisherman, is pulled back into the cage when his brother is in danger. Reuniting with his old coach Sammy, he commits to one final fight in one championship against the brutal champion Xavier Grau.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/7NrvUI3vnW8H3rD7ExKcTL7KRcQ.jpg",
+      "cast": [
+        "Daniel MacPherson",
+        "Luke Hemsworth",
+        "Russell Crowe",
+        "Mojean Aria",
+        "Kelly Gale"
+      ],
+      "trailers": [
+        "yJN2mJ4uOas"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P529",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "df4575da-df51-4ded-a702-aed553c8f072",
+      "type": "movie",
+      "name": "Before I Fall",
+      "enName": "Si no despierto",
+      "year": 2017,
+      "rating": 6.968,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Fantasía"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Samantha Kingston has everything. Then, everything changes. After one fateful night, she wakes up with no future at all. Trapped into reliving the same day over and over, she begins to question just how perfect her life really was.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/eowzonDJMCuNXoJGVkP9Z7oCmiM.jpg",
+      "cast": [
+        "Zoey Deutch",
+        "Kian Lawley",
+        "Halston Sage",
+        "Elena Kampouris",
+        "Jennifer Beals"
+      ],
+      "trailers": [
+        "ADj35gDqM90"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P530",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "518fed19-0fb1-4f33-9d2b-1fc1f3629a7f",
+      "type": "movie",
+      "name": "Chief of Station",
+      "enName": "Red de Traición",
+      "year": 2024,
+      "rating": 6.308,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Suspenso"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "After learning that the death of his wife was not an accident, a former CIA Station Chief is forced back into the espionage underworld, teaming up with an adversary to unravel a conspiracy that challenges everything he thought he knew.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/yndlj5aNPWAZ5ayJ4a2S37o98lq.jpg",
+      "cast": [
+        "Aaron Eckhart",
+        "Olga Kurylenko",
+        "Alex Pettyfer",
+        "Chris Petrovski",
+        "Laëtitia Eïdo"
+      ],
+      "trailers": [
+        "Krsu0mazuZ4"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P531",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "c2a6e95e-c2b9-4985-b121-e754a006a798",
+      "type": "movie",
+      "name": "Clash of the Thundermans",
+      "enName": "Furia de Thunderman",
+      "year": 2026,
+      "rating": 6.8,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Familiar",
+        "Acción"
+      ],
+      "region": "Canada",
+      "language": "Español",
+      "description": "When Chloe develops a destructive new superpower, the Hero League orders her to an elite boarding school for superheroes to learn control of her abilities. Faced with the prospect of sending Chloe away for years, the Thundermans split apart, with Phoebe, Barb and Billy taking her into hiding. Max, Hank, and Nora track their rogue family members, until the two factions face off against each other in a full-on battle for the Thundermans’ future.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/16oqRrWVzQm6qdGfBxvziZ2UiMT.jpg",
+      "cast": [
+        "Kira Kosarin",
+        "Jack Griffo",
+        "Maya Le Clark",
+        "Rosa Blasi",
+        "Chris Tallman"
+      ],
+      "trailers": [
+        "Tui9Jpmyb6Q"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P532",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "538bb2bd-901f-4897-aeb4-f47f189ac669",
+      "type": "movie",
+      "name": "Father Stu",
+      "enName": "El milagro del padre Stu",
+      "year": 2022,
+      "rating": 7.1,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "The true-life story of boxer-turned-priest. When an injury ends his amateur boxing career, Stuart Long moves to Los Angeles to find money and fame. While scraping by as a supermarket clerk, he meets Carmen, a Sunday school teacher who seems immune to his bad-boy charm. Determined to win her over, the longtime agnostic starts going to church to impress her. However, a motorcycle accident leaves him wondering if he can use his second chance to help others, leading to the surprising realization that he's meant to be a Catholic priest.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/pLAeWgqXbTeJ2gQtNvRmdIncYsk.jpg",
+      "cast": [
+        "Mark Wahlberg",
+        "Mel Gibson",
+        "Jacki Weaver",
+        "Teresa Ruiz",
+        "Malcolm McDowell"
+      ],
+      "trailers": [
+        "GTQ4ArOchf8",
+        "DHREzAdyCPs"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P533",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "3a28d8d0-459a-43d7-82ee-b9980377a2d8",
+      "type": "movie",
+      "name": "Gandheri",
+      "enName": "Gandheri",
+      "year": 2026,
+      "rating": 0,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Sin género"
+      ],
+      "region": "India",
+      "language": "Español",
+      "description": "",
+      "imageUrl": "",
+      "cast": [],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P534",
+      "metadata": {
+        "enriched": true,
+        "genresEnriched": true
+      }
+    },
+    {
+      "id": "31ae3d4d-e064-4186-88c8-1ae941e0c357",
+      "type": "movie",
+      "name": "Occupation",
+      "enName": "Ocupación",
+      "year": 2018,
+      "rating": 4.733,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Ciencia Ficción",
+        "Drama"
+      ],
+      "region": "Australia",
+      "language": "Inglés",
+      "description": "Town residents must band together after a devastating alien invasion. As they struggle to survive, they realize they must stay one step ahead of their attackers and work together for a chance to strike back.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/hr7MFQAmP30IJZP2FXKhPKbe8IW.jpg",
+      "cast": [
+        "Dan Ewing",
+        "Temuera Morrison",
+        "Stephanie Jacobsen",
+        "Rhiannon Fish",
+        "Jacqueline McKenzie"
+      ],
+      "trailers": [
+        "ImW9ijMIuoQ",
+        "95GAw9LptFE"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P535",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "43954b97-7a9a-460c-ab72-a37f4d79c6ce",
+      "type": "movie",
+      "name": "One battle after another",
+      "enName": "Una batalla tras otra",
+      "year": 2025,
+      "rating": 7.334,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Suspenso",
+        "Crimen",
+        "Comedia"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Washed-up revolutionary Bob exists in a state of stoned paranoia, surviving off-grid with his spirited, self-reliant daughter, Willa. When his evil nemesis resurfaces after 16 years and she goes missing, the former radical scrambles to find her, father and daughter both battling the consequences of his past.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/lbBWwxBht4JFP5PsuJ5onpMqugW.jpg",
+      "cast": [
+        "Leonardo DiCaprio",
+        "Sean Penn",
+        "Chase Infiniti",
+        "Benicio del Toro",
+        "Regina Hall"
+      ],
+      "trailers": [
+        "u6GVb4p7oD4",
+        "fw6vEdH4I-A",
+        "_qQLUxZAklQ",
+        "kQUPdVxZNPk",
+        "EDeHW1cvIkQ",
+        "hg8AGTyYMBA"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P536",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "6ff2e44d-9a1e-44d8-aa5e-aff8a98efd28",
+      "type": "movie",
+      "name": "Pandemonium",
+      "enName": "Pandemonium",
+      "year": 2024,
+      "rating": 0,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Terror",
+        "Ciencia Ficción",
+        "Crimen",
+        "Acción"
+      ],
+      "region": "France",
+      "language": "Español",
+      "description": "When a Forensic Cleaner comes across an unusual crime scene- something about the body defies explanation. Meanwhile, a rookie cop who first on scene becomes violently ill and butchers his entire family in the most cruel and clinical manner. As the Cleaner and police attempt to piece together the clues, a horrifying truth emerges: something is releasing a viral agent that warps the mind, turning those exposed into violent maniacs.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/pHNHSWDFrw5nl0NzKAnybxEc1qz.jpg",
+      "cast": [
+        "Constance Payne",
+        "Jon Devlin",
+        "Kevin Marshall",
+        "Craig Elliott Williams",
+        "Ezra Chancey"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P537",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "afea5dce-82e8-4951-8c68-b4e33f3f2f21",
+      "type": "movie",
+      "name": "Speak no Evil",
+      "enName": "No hables con extraños",
+      "year": 2024,
+      "rating": 7.1,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Terror",
+        "Suspenso"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "When an American family is invited to spend the weekend at the idyllic country estate of a charming British family they befriended on vacation, what begins as a dream holiday soon warps into a snarled psychological nightmare.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/dA4N6uWOnEMgbxXwFX7qX7adzs8.jpg",
+      "cast": [
+        "James McAvoy",
+        "Mackenzie Davis",
+        "Scoot McNairy",
+        "Aisling Franciosi",
+        "Alix West Lefler"
+      ],
+      "trailers": [
+        "iSIuxrjTMk0",
+        "et768NQ7dY8",
+        "FjzxI6uf8H8"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P538",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "e9ad734c-90f8-4dd4-ab0b-7da0297914cc",
+      "type": "movie",
+      "name": "The Artifice Girl",
+      "enName": "La chica artificial",
+      "year": 2023,
+      "rating": 6.72,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Ciencia Ficción",
+        "Suspenso",
+        "Misterio"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "A team of special agents discovers a revolutionary new computer program to bait and trap online predators. After teaming up with the program's troubled developer, they soon find that the AI is rapidly advancing beyond its original purpose.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/A3qrVjsBd4IZ3QWHMs2x1dwRxuX.jpg",
+      "cast": [
+        "Tatum Matthews",
+        "Franklin Ritch",
+        "Sinda Nichols",
+        "David Girard",
+        "Lance Henriksen"
+      ],
+      "trailers": [
+        "uwur0W5PpXE"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P539",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "15788d48-16cd-45a3-b965-595169ad6867",
+      "type": "movie",
+      "name": "The bad batch",
+      "enName": "The bad batch",
+      "year": 2017,
+      "rating": 5.256,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Terror",
+        "Ciencia Ficción",
+        "Suspenso",
+        "Romance"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "After being exiled to a fenced-off wasteland, Arlen is kidnapped by a group of cannibals and goes on a journey to reunite a missing girl with her father.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/7o14VaMphEIzPwzeW6FP3A6zb4W.jpg",
+      "cast": [
+        "Suki Waterhouse",
+        "Jason Momoa",
+        "Yolonda Ross",
+        "Keanu Reeves",
+        "Giovanni Ribisi"
+      ],
+      "trailers": [
+        "4aJeVSMaf20",
+        "1NrjKgwqNOU"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P540",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "ec48d9d7-6757-4008-afd2-a496822fe51c",
+      "type": "movie",
+      "name": "The brink of war",
+      "enName": "The brink of war",
+      "year": 2026,
+      "rating": 7.2,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Histórico"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "President Ronald Reagan races against time to salvage a deal with Soviet leader Mikhail Gorbachev that could dismantle nuclear arsenals—or ignite disaster. With pressure mounting on all sides, every word spoken brings the world closer to peace... or destruction.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/vCIQeQ2ynVqEjIvtbOXGnKtcgAX.jpg",
+      "cast": [
+        "Jeff Daniels",
+        "Jared Harris",
+        "J.K. Simmons",
+        "Hope Davis",
+        "Branka Katić"
+      ],
+      "trailers": [
+        "a-T0TlMN-RE"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P541",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "0c65ff2f-c0a6-4628-ba23-b44cbb44adc8",
+      "type": "movie",
+      "name": "The good nurse",
+      "enName": "El Angel de la Muerte",
+      "year": 2022,
+      "rating": 6.872,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Crimen",
+        "Misterio"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Suspicious that her colleague is responsible for a series of mysterious patient deaths, a nurse risks her own life to uncover the truth.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/rSq6cq0LCcbro10jbEaPTEb3WmW.jpg",
+      "cast": [
+        "Jessica Chastain",
+        "Eddie Redmayne",
+        "Nnamdi Asomugha",
+        "Kim Dickens",
+        "Malik Yoba"
+      ],
+      "trailers": [
+        "e0DQevX-GZs"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P542",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "f91875b5-a998-48d6-99de-b7be1f3b3d3c",
+      "type": "movie",
+      "name": "The Matian",
+      "enName": "Marte - The Matian",
+      "year": 2015,
+      "rating": 0,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Sin género"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "",
+      "imageUrl": "",
+      "cast": [],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P543",
+      "metadata": {
+        "enriched": true,
+        "genresEnriched": true
+      }
+    },
+    {
+      "id": "c30a6765-e809-462a-beff-1c46117dfd47",
+      "type": "movie",
+      "name": "The Runner",
+      "enName": "A la carrera",
+      "year": 2026,
+      "rating": 6.8,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Suspenso",
+        "Acción"
+      ],
+      "region": "United Kingdom",
+      "language": "Español",
+      "description": "Maia Marten, a brilliant London lawyer, has her life shattered by a single call on her morning run: her son has been taken. To get him back, she must keep running, obey every ruthless command, and trust no one-each second a test of how far a mother will go to save her child.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/uxCaBoYXsDC4A0SqTm3SISj0OwK.jpg",
+      "cast": [
+        "Gal Gadot",
+        "Damian Lewis",
+        "Rory Wilmot",
+        "Alfred Enoch",
+        "Phoenix Di Sebastiani"
+      ],
+      "trailers": [
+        "zz4rsZLcauY"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P544",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "aa77356c-7a3f-47b0-9064-0b45b96a77b9",
+      "type": "movie",
+      "name": "Animales",
+      "enName": "Animales",
+      "year": 2026,
+      "rating": 6.279,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Comedia",
+        "Suspenso"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Four couples sail the thin line between desire and search for authenticity, in a world where truth is as fragile as their relationships.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/9fbZdiOI9fRinl44mNm3CYgEtYR.jpg",
+      "cast": [
+        "Nashla Bogaert",
+        "Frank Perozo",
+        "Pamela Sued",
+        "David Maler",
+        "Camila Issa"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P545",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "99ef4e31-858c-48bd-b819-d0dee7a6bc81",
+      "type": "movie",
+      "name": "Camp Rock 3",
+      "enName": "Camp Rock 3",
+      "year": 2026,
+      "rating": 6.5,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Música",
+        "Comedia",
+        "Drama"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "When pop group Connect 3 returns to Camp Rock to search for an opening act for their reunion tour, rising tensions and fierce competition among campers test old friendships and spark unexpected romances.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/rS7byWK9cfPfdLeFNlRIaJxH9mN.jpg",
+      "cast": [
+        "Liamani Segura",
+        "Malachi Barton",
+        "Lumi Pollack",
+        "Hudson Stone",
+        "Casey Trotter"
+      ],
+      "trailers": [
+        "02-RDIZ5Rdw"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P546",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "e56eabf7-71bc-431b-bb0d-ac8fa8235d46",
+      "type": "movie",
+      "name": "Drawn Together",
+      "enName": "Enfrentados - Marfil",
+      "year": 2026,
+      "rating": 6.563,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Romance",
+        "Suspenso"
+      ],
+      "region": "Spain",
+      "language": "Español",
+      "description": "After a wealthy Spanish heiress is kidnapped, she falls into a dangerous attraction with the newly hired bodyguard assigned to protect her in a world full of deception.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/6rpvddXbaQPOi0fB2HKWbZ3uUSg.jpg",
+      "cast": [
+        "Ester Expósito",
+        "Hugo Diego Garcia",
+        "Pablo Molinero",
+        "Lluís Homar",
+        "Joaquín Ferreira"
+      ],
+      "trailers": [
+        "WlGzP8FvsfY",
+        "J_dWSteW_7Y"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P547",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "b48c6018-713d-44b2-aa0f-1d605e17f1fc",
+      "type": "movie",
+      "name": "El campeón",
+      "enName": "The Champion",
+      "year": 2024,
+      "rating": 7.25,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Histórico"
+      ],
+      "region": "Spain",
+      "language": "Español",
+      "description": "Claressa Shields, a high school junior from Flint, Michigan, aided by her tough-love coach, Jason Crutchfield, pushes past all limitations to become the first American woman to win an Olympic gold medal in boxing. But even at the pinnacle of success, Claressa has to reckon with the fact that not all dreams are created equal, and the real fight has only just begun.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/dMorkoCdZJ1xmKv0VAXcpUax6Ar.jpg",
+      "cast": [
+        "Ryan Destiny",
+        "Brian Tyree Henry",
+        "Oluniké Adeliyi",
+        "Kylee D. Allen",
+        "Emmanuel Igboke"
+      ],
+      "trailers": [
+        "KFyNvUmJzmE"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P548",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "10aa69c5-1d92-4a6b-8d47-2116e441bebb",
+      "type": "movie",
+      "name": "Everything everywhere all at once",
+      "enName": "Todo a la vez en todas partes",
+      "year": 2022,
+      "rating": 7.709,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Ciencia Ficción"
+      ],
+      "region": "Spain",
+      "language": "Español",
+      "description": "An aging Chinese immigrant is swept up in an insane adventure, where she alone can save what's important to her by connecting with the lives she could have led in other universes.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/u68AjlvlutfEIcpmbYpKcdi09ut.jpg",
+      "cast": [
+        "Michelle Yeoh",
+        "Stephanie Hsu",
+        "Ke Huy Quan",
+        "James Hong",
+        "Jamie Lee Curtis"
+      ],
+      "trailers": [
+        "wxN1T1uxQ2g"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P549",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "19311f42-5627-455b-8e57-73192ac9c654",
+      "type": "movie",
+      "name": "Fresa y Chocolate",
+      "enName": "Strawberry and Chocolate",
+      "year": 1993,
+      "rating": 7,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Comedia",
+        "Drama"
+      ],
+      "region": "Cuba",
+      "language": "Español",
+      "description": "In 1979 Cuba, flamboyant gay artist Diego attempts to seduce  straitlaced David, an idealistic young communist, and fails dismally. But David conspires to be \"friends\" with Diego so he can monitor the artist's subversive life for the state. As Diego and David discuss politics, individuality and personal expression in Castro's Cuba, a genuine friendship develops between the two.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/8riS2hGneWg78MHuhP7NqvLERRy.jpg",
+      "cast": [
+        "Jorge Perugorría",
+        "Vladimir Cruz",
+        "Mirta Ibarra",
+        "Francisco Gattorno",
+        "Joel Angelino"
+      ],
+      "trailers": [
+        "qWv7dKxWhz4"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P550",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "6f6ae763-acc2-44df-9d13-57986892d102",
+      "type": "movie",
+      "name": "LEGO Star Wars - The Mandalorian",
+      "enName": "LEGO Star Wars - The Mandalorian",
+      "year": 2026,
+      "rating": 6.8,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Animado",
+        "Ciencia Ficción",
+        "Aventura",
+        "Familiar",
+        "Acción"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "The Mandalorian and Grogu join their misfit allies for an epic party, celebrating their heroism. As friends regale the crowd with tales of their adventures, a pirate threat looms.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/x3HEvYXWOW6WHqsHmg2MUVy3SLm.jpg",
+      "cast": [
+        "Gavin Hammon",
+        "Amy Sedaris",
+        "Bill Burr",
+        "David Pasquesi",
+        "Katee Sackhoff"
+      ],
+      "trailers": [
+        "NEqBkXeEpkk"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P551",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "ed917279-7e29-408c-917f-504715fb6be2",
+      "type": "movie",
+      "name": "Los Domingos",
+      "enName": "Sundays",
+      "year": 2025,
+      "rating": 7.1,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "When Ainara announces that she wants to become a nun, chaos arises in her family. Is this a genuine desire or has she been influenced by the religious staff at her school? Or is this life-changing decision due to her father’s inattention and her mother’s absence?",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/3682SbY3rsNKsQzFpPUKrWdGmmx.jpg",
+      "cast": [
+        "Blanca Soroa",
+        "Patricia López Arnaiz",
+        "Miguel Garcés",
+        "Juan Minujín",
+        "Mabel Rivera"
+      ],
+      "trailers": [
+        "wZheAzHOLcM",
+        "FRwwy6W2xh8"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P552",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "646baf2d-e2af-4760-8b22-47dc325a08f4",
+      "type": "movie",
+      "name": "Mayday",
+      "enName": "Mayday",
+      "year": 2026,
+      "rating": 7.94,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Comedia"
+      ],
+      "region": "Canada",
+      "language": "Español",
+      "description": "When a U.S. Navy pilot on a top-secret mission during the Cold War gets trapped behind enemy lines, his only chance at survival is to form an alliance with an eccentric ex-KGB agent.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/hVXjX1jLZ1ljFSNGXpjJfbTUOa7.jpg",
+      "cast": [
+        "Ryan Reynolds",
+        "Kenneth Branagh",
+        "Marcin Dorociński",
+        "Maria Bakalova",
+        "David Morse"
+      ],
+      "trailers": [
+        "om5Un9X720M"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P553",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "cf87de6c-e351-40c7-b860-b397147a31a9",
+      "type": "movie",
+      "name": "Nobody",
+      "enName": "Nadie",
+      "year": 2021,
+      "rating": 7.865,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Suspenso"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Hutch Mansell, a suburban dad, overlooked husband, nothing neighbor — a \"nobody.\" When two thieves break into his home one night, Hutch's unknown long-simmering rage is ignited and propels him on a brutal path that will uncover dark secrets he fought to leave behind.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/oBgWY00bEFeZ9N25wWVyuQddbAo.jpg",
+      "cast": [
+        "Bob Odenkirk",
+        "Aleksey Serebryakov",
+        "Connie Nielsen",
+        "Christopher Lloyd",
+        "Michael Ironside"
+      ],
+      "trailers": [
+        "wZti8QKBWPo"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P554",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "89f2c07e-998f-48cf-bc7c-330fc302379b",
+      "type": "movie",
+      "name": "One night only",
+      "enName": "Una noche al a¤o",
+      "year": 2016,
+      "rating": 5.05,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Suspenso"
+      ],
+      "region": "China",
+      "language": "Español",
+      "description": "A husband with a perfect life cheats with his wife's sister, with extreme consequences befalling them all.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/itF3zi543LCOicdzAXIuyqBZ0yz.jpg",
+      "cast": [
+        "Brian J. White",
+        "Karrueche Tran",
+        "Angelique Pereira",
+        "Jarell Houston Jr.",
+        "Omar Gooding"
+      ],
+      "trailers": [
+        "4jFiaA32oJU"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P555",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "6d9f02b5-7c3f-446f-97c8-0bc1e87fc540",
+      "type": "movie",
+      "name": "PAW Patrol - The Dino Movie",
+      "enName": "La patrulla canino - La dino pel¡cula",
+      "year": 2026,
+      "rating": 7.421,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Animado",
+        "Aventura",
+        "Familiar",
+        "Fantasía",
+        "Comedia"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "The Paw Patrol lands on a mysterious dinosaur island after a storm, where they meet Rex, a stranded pup. When Humdinger's reckless mining triggers a volcano, the team faces their biggest rescue mission yet to save the island.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/qnin56Syy5rbG7KCaxWY7SPuy6p.jpg",
+      "cast": [
+        "Carter Young",
+        "Mckenna Grace",
+        "Terry Crews",
+        "Meredith MacNeill",
+        "Ron Pardo"
+      ],
+      "trailers": [
+        "xgI5iYmOf5Q"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P556",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "d2e953d3-3b9e-40a8-97e1-0e2dd59ca4fa",
+      "type": "movie",
+      "name": "Rage of Stars",
+      "enName": "la señal del apocalipsis",
+      "year": 2026,
+      "rating": 6.218,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Ciencia Ficción",
+        "Suspenso"
+      ],
+      "region": "Poland",
+      "language": "Español",
+      "description": "A story about a woman from the International Special Forces Unit, who has a premonition about the impending end of humanity.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/oLld47ZT1I3iecM3OWhIphohQUJ.jpg",
+      "cast": [
+        "Andrea Tivadar",
+        "Jord Knotter",
+        "Jack McEvoy",
+        "Elijah Rowen",
+        "Małgorzata Klara"
+      ],
+      "trailers": [
+        "F5bYhuO2Rkg"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P557",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "b0a4bbd4-9913-4836-acbd-4ed3292b4f41",
+      "type": "movie",
+      "name": "Risen",
+      "enName": "La invasión",
+      "year": 2021,
+      "rating": 4.968,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Ciencia Ficción",
+        "Drama",
+        "Suspenso",
+        "Terror"
+      ],
+      "region": "Australia",
+      "language": "Inglés",
+      "description": "Disaster unfolds when a meteor strikes a small town, turning the environment uninhabitable and killing everything in the surrounding area. Exobiologist Lauren Stone is called to find answers to the unearthly event. As she begins to uncover the truth, imminent danger awakens and it becomes a race against time to save mankind.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/1vdRDS0UYDlJNBqRSqUuhBHf6eb.jpg",
+      "cast": [
+        "Nicole Schalmo",
+        "Ken Welsh",
+        "Jack Campbell",
+        "Caroline McQuade",
+        "Kenneth Trujillo"
+      ],
+      "trailers": [
+        "gyb2wGcgxEM"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P558",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "be55186d-3492-4364-a030-6a1eb8b8d522",
+      "type": "movie",
+      "name": "Rosebush Pruning",
+      "enName": "Rosebush Pruning",
+      "year": 2026,
+      "rating": 6.167,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Comedia",
+        "Drama",
+        "Suspenso"
+      ],
+      "region": "Germany",
+      "language": "Español",
+      "description": "When an American heir living in a luxurious Spanish villa decides to move in with his girlfriend, his departure triggers a family collapse as his brother uncovers the truth behind their mother's tragic death.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/rsHEVjzxU8cxz1sm3vboj99daNv.jpg",
+      "cast": [
+        "Callum Turner",
+        "Riley Keough",
+        "Jamie Bell",
+        "Lukas Gage",
+        "Tracy Letts"
+      ],
+      "trailers": [
+        "rmHD9gZbF7A"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P559",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "8474ff43-2702-4862-947a-356de766fef2",
+      "type": "movie",
+      "name": "Sleeping Dogs",
+      "enName": "Sombras del pasado",
+      "year": 2024,
+      "rating": 6.998,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Misterio",
+        "Suspenso",
+        "Crimen",
+        "Drama"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Roy Freeman, an ex-homicide detective with a fractured memory, is forced to revisit a case he can't remember. As a man's life hangs in the balance on death row, Freeman must piece together the brutal evidence from a decade-old murder investigation, uncovering a sinister web of buried secrets and betrayals linking to his past. With only instincts to trust, he faces a chilling truth - sometimes, it's best to let sleeping dogs lie.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/5DwQhh1HvTo7edaOeMX49NUyZqy.jpg",
+      "cast": [
+        "Russell Crowe",
+        "Karen Gillan",
+        "Marton Csokas",
+        "Tommy Flanagan",
+        "Thomas M. Wright"
+      ],
+      "trailers": [
+        "cIkiM4Wb6s0",
+        "jlm1zyy8whg",
+        "KOI7cijBgWs"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P560",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "6e333818-eb79-431a-97d4-8647d9372ab4",
+      "type": "movie",
+      "name": "The Commuter",
+      "enName": "El pasajero",
+      "year": 2018,
+      "rating": 6.368,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Suspenso",
+        "Misterio"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "A businessman, on his daily commute home, gets unwittingly caught up in a criminal conspiracy that threatens not only his life but the lives of those around him.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/rDeGK6FIUfVcXmuBdEORPAGPMNg.jpg",
+      "cast": [
+        "Liam Neeson",
+        "Patrick Wilson",
+        "Sam Neill",
+        "Jonathan Banks",
+        "Vera Farmiga"
+      ],
+      "trailers": [
+        "g1RMoMrr3SM",
+        "BN4p7XhR16A",
+        "iQZL28DywEA",
+        "ysIwbu32fBY",
+        "aDshY43Ol2U"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P561",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "f98754b1-cec4-4ee3-9408-edd7702fe7cd",
+      "type": "movie",
+      "name": "The Idea of You",
+      "enName": "La idea de tenerte",
+      "year": 2024,
+      "rating": 7.242,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Música",
+        "Comedia",
+        "Romance",
+        "Drama"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "40-year-old single mom Solène begins an unexpected romance with 24-year-old Hayes Campbell, the lead singer of August Moon, the hottest boy band on the planet. As they begin a whirlwind romance, it isn't long before Hayes' superstar status poses unavoidable challenges to their relationship, and Solène soon discovers that life in the glare of his spotlight might be more than she bargained for.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/Y5P4Q3q8nrruZ9aD3wXeJS2Plg.jpg",
+      "cast": [
+        "Anne Hathaway",
+        "Nicholas Galitzine",
+        "Ella Rubin",
+        "Annie Mumolo",
+        "Reid Scott"
+      ],
+      "trailers": [
+        "pz6qx4n2Ewc"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P562",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "455157ee-d6a5-4eb2-b082-b963f8d3a57c",
+      "type": "movie",
+      "name": "The Kill Room",
+      "enName": "El arte de matar",
+      "year": 2023,
+      "rating": 5.9,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Comedia",
+        "Crimen"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "A hitman, his boss, an art dealer and a money-laundering scheme that accidentally turns the assassin into an overnight avant-garde sensation, one that forces her to play the art world against the underworld.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/ciEZWh4fkq394ToQBr91UDUK45O.jpg",
+      "cast": [
+        "Uma Thurman",
+        "Joe Manganiello",
+        "Samuel L. Jackson",
+        "Maya Hawke",
+        "Debi Mazar"
+      ],
+      "trailers": [
+        "ZCoMN3YUTp8",
+        "Kk89vbx_k3w"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P563",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "a0a61e65-cc28-415f-8db2-0205ef62d688",
+      "type": "movie",
+      "name": "The Muppet Show",
+      "enName": "El show de los Muppets",
+      "year": 2026,
+      "rating": 7.19,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Comedia",
+        "Familiar",
+        "Música"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Music, comedy, and a whole lot of chaos is bound to ensue when The Muppets once again take the stage of the original Muppet Theatre with their very special guest, Sabrina Carpenter!",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/tcwar1rL0neoLvnklL7DzYw7sN8.jpg",
+      "cast": [
+        "Bill Barretta",
+        "Dave Goelz",
+        "Eric Jacobson",
+        "Peter Linz",
+        "David Rudman"
+      ],
+      "trailers": [
+        "hSLE5Psfs6U"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P564",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "1a18fec2-49b3-403f-aeec-ac0ee1003670",
+      "type": "movie",
+      "name": "The Notebook",
+      "enName": "El diario de Noa",
+      "year": 2004,
+      "rating": 7.89,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "An epic love story centered around an older man who reads aloud to a woman with Alzheimer's. From a faded notebook, the old man's words bring to life the story about a couple who is separated by World War II, and is then passionately reunited, seven years later, after they have taken different paths.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/rNzQyW4f8B8cQeg7Dgj3n6eT5k9.jpg",
+      "cast": [
+        "Ryan Gosling",
+        "Rachel McAdams",
+        "Gena Rowlands",
+        "James Garner",
+        "Joan Allen"
+      ],
+      "trailers": [
+        "FC6biTjEyZw"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P565",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "30168408-d8ee-4966-a5fc-d38c869b5a86",
+      "type": "movie",
+      "name": "The Passenger",
+      "enName": "El Pasajero",
+      "year": 2026,
+      "rating": 7.302,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Terror",
+        "Suspenso"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "After a young couple witnesses a gruesome highway accident, they soon realize they did not leave the crash scene alone, as a demonic presence called the Passenger that won't stop until it claims them both turns their van life adventure into a nightmare.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/svrAzMTif4OmIjGJzC0W92d5O1o.jpg",
+      "cast": [
+        "Jacob Scipio",
+        "Lou Llobell",
+        "Melissa Leo",
+        "Joseph Lopez",
+        "Miles Fowler"
+      ],
+      "trailers": [
+        "eNIn8kW1kyE"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P566",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
+      }
+    },
+    {
+      "id": "4ba286de-16a7-4688-9a61-76ef983070a1",
+      "type": "movie",
+      "name": "Troll - World Tour",
+      "enName": "Troll 2 - Gira mundial",
+      "year": 2020,
+      "rating": 7.224,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Familiar",
+        "Animado",
+        "Comedia",
+        "Fantasía",
+        "Aventura",
+        "Música"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Queen Poppy and Branch make a surprising discovery — there are other Troll worlds beyond their own, and their distinct differences create big clashes between these various tribes. When a mysterious threat puts all of the Trolls across the land in danger, Poppy, Branch, and their band of friends must embark on an epic quest to create harmony among the feuding Trolls to unite them against certain doom.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/7W0G3YECgDAfnuiHG91r8WqgIOe.jpg",
+      "cast": [
+        "Anna Kendrick",
+        "Justin Timberlake",
+        "Ron Funches",
+        "Rachel Bloom",
+        "James Corden"
+      ],
+      "trailers": [
+        "08AExF6dETA",
+        "3cCoDDhFpmY",
+        "SyTg7RIn-X8"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P567",
+      "metadata": {
+        "genresEnriched": true,
+        "enriched": true
       }
     }
   ]
