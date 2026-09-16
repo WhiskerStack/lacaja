@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 1.1,
   "genres": [
     "Acción",
     "Animado",
@@ -21,7 +21,6 @@
     "Música",
     "Política",
     "Romance",
-    "Sin género",
     "Suspenso",
     "Telenovela",
     "Terror",
@@ -39,9 +38,9 @@
     "Corea del Sur",
     "Cuba",
     "Desconocido",
-    "EU",
     "España",
     "Estonia",
+    "EU",
     "France",
     "Francia",
     "Germany",
@@ -61,11 +60,11 @@
     "Tailandia",
     "Turkey",
     "Turquía",
-    "US",
-    "USA",
     "United Kingdom",
     "United States",
-    "Uruguay"
+    "Uruguay",
+    "US",
+    "USA"
   ],
   "languages": [
     "Alemán",
@@ -24189,8 +24188,8 @@
       ],
       "region": "Turquía",
       "language": "Español",
-      "description": "In 1970s Istanbul, a man's forbidden love for a shop-girl evolves into a lifelong journey of obsession and longing.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/gdDPQ5vs7HdhoqUqV0DOgqUPcXU.jpg",
+      "description": "En la Estambul de los años 70, el amor prohibido de un hombre por una dependienta se convierte en una espiral de obsesión y anhelo. Basada en la famosa novela de Orhan Pamuk.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/6VsG0NxlS4GKus408c91dO0f7EE.jpg",
       "cast": [
         "Selahattin Paşalı",
         "Eylül Lize Kandemir",
@@ -24206,8 +24205,10 @@
       "episodeCount": 9,
       "code": "S118",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -24225,7 +24226,7 @@
       ],
       "region": "Turquía",
       "language": "Español",
-      "description": "Ateş, a man haunted by childhood scars and consumed by rage, returns to destroy the family that shattered his life years ago. His weapon is not a sword, but a marriage: 187 days with Mercan, the daughter of his enemy. Mercan, already promised to Nezir, is thrust into a battle she never chose, while Ateş binds her to him believing she is the key to his revenge. Yet the woman he intends to destroy becomes the one who threatens to undo him. And in the shadows, Aslı – driven by jealousy, seizes every chance to tear them apart.",
+      "description": "Ateş, un hombre atormentado por cicatrices de la infancia y consumido por la rabia, regresa para destruir a la familia que destrozó su vida años atrás. Su arma no es una espada, sino un matrimonio: 187 días con Mercan, la hija de su enemigo. Mercan, ya prometida a Nezir, se ve empujada a una batalla que nunca eligió, mientras Ateş la ata a él creyendo que es la clave de su venganza. Sin embargo, la mujer que pretende destruir se convierte en quien amenaza con destruirlo a él. Y en las sombras, Aslı – impulsada por los celos, aprovecha cada oportunidad para separarlos.",
       "imageUrl": "https://image.tmdb.org/t/p/w500/4yYZoYgeNshoS2aODwUvCXIa8yn.jpg",
       "cast": [
         "İlsu Demirci",
@@ -24237,30 +24238,30 @@
       "trailers": [],
       "seasons": [],
       "seasonCount": 2,
-      "episodeCount": 100,
+      "episodeCount": 129,
       "code": "S119",
       "metadata": {
-        "genresEnriched": true,
-        "enriched": true
+        "enriched": true,
+        "genresEnriched": true
       }
     },
     {
       "id": "df25f5a3-b014-400c-83b1-fc7f9797f1bd",
       "type": "series",
       "name": "Ágata y Lola",
-      "enName": "",
+      "enName": "Ágata y Lola",
       "year": 2026,
-      "rating": 9.4,
+      "rating": 9.438,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Misterio",
+        "Crimen",
         "Drama",
-        "Crimen"
+        "Misterio"
       ],
       "region": "Spain",
       "language": "Español",
-      "description": "",
+      "description": "Lola es una inspectora de policía extrovertida, impulsiva y poco amiga de seguir las normas, que se encuentra con Ágata, una documentalista brillante y meticulosa que tiene síndrome del espectro autista. Ágata posee una memoria excepcional y un talento único para analizar expedientes criminales, mientras que Lola aporta la intuición, la experiencia en el terreno y la empatía con las víctimas.",
       "imageUrl": "https://image.tmdb.org/t/p/w500/6rxfzU40Pisvqaa6FTxN7JeGNUr.jpg",
       "cast": [
         "Mireia Oriol",
@@ -24269,14 +24270,17 @@
         "Eva Fernández",
         "Francis Lorenzo"
       ],
-      "trailers": [],
+      "trailers": [
+        "2SCdx1pnkL4"
+      ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 8,
       "code": "S120",
       "metadata": {
-        "genresEnriched": true,
-        "enriched": true
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true
       }
     },
     {
@@ -24285,18 +24289,18 @@
       "name": "Blood Sacrifice",
       "enName": "Sacrificio de sangre",
       "year": 2026,
-      "rating": 6.519,
+      "rating": 6.537,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Drama",
         "Crimen",
+        "Drama",
         "Misterio"
       ],
       "region": "Switzerland",
       "language": "Español",
-      "description": "Following the brutal murder of two police officers, a tenacious detective reluctantly joins forces with his estranged ex-cop father to catch the killer.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/8iFUWLKBAWDrJ9rOunscgIDrGQ1.jpg",
+      "description": "Tras el brutal asesinato de dos agentes de policía, un tenaz inspector se ve obligado a trabajar con su padre, un expolicía al que hace tiempo que no ve, para atrapar al asesino.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/whKEwZcYVM0kzKHsS8LtS5SyD1c.jpg",
       "cast": [
         "Jakob Oftebro",
         "Peter Andersson",
@@ -24305,15 +24309,17 @@
         "Henrik Norlén"
       ],
       "trailers": [
-        "YjgT9NMq3ww"
+        "mfl5gnq7XWg"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 5,
       "code": "S121",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -24322,7 +24328,7 @@
       "name": "Szadz",
       "enName": "Angel de la Muerte",
       "year": 2020,
-      "rating": 6.593,
+      "rating": 6.679,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
@@ -24331,8 +24337,8 @@
       ],
       "region": "Poland",
       "language": "Español",
-      "description": "A small-town policewoman is chasing a vicious serial killer; at stake is first a country girl's life, and then her own life.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/lPTBeUmMBC9hhRwdOVxpeRQIVLq.jpg",
+      "description": "Una joven es asesinada cerca de Opole. Las aterradoras mutilaciones corporales y las marcas dejadas en el lugar indican un asesinato ritual. El asunto está siendo tratado por la Comisaria Agnieszka Polkowska.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/jJzS3pkUie8mRIx146JOAG6pLzr.jpg",
       "cast": [
         "Aleksandra Popławska",
         "Maciej Stuhr",
@@ -24348,8 +24354,10 @@
       "episodeCount": 28,
       "code": "S122",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -24358,7 +24366,7 @@
       "name": "Me atrevo a amarte",
       "enName": "Me atrevo a amarte",
       "year": 2025,
-      "rating": 7.588,
+      "rating": 7.6,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
@@ -24368,13 +24376,13 @@
       ],
       "region": "México",
       "language": "Español",
-      "description": "Me Atrevo a Amarte is a Mexican telenovela produced by Salvador Mejía Alejandre for TelevisaUnivision and originally broadcast on Las Estrellas from February 24 to June 22, 2025. Based on the Turkish series Asi (2007), created by Şebnem Çıtak and Gül Dirican, it was adapted by Enna Márquez, Julián Aguilar, and Carolina Mejía Lartilleux. Directed by Fernando Nesme, Claudia E. Aguilar, and Carolina Mejía Lartilleux, it stars Kimberly Dos Ramos, Rodrigo Guirao, Marlene Favela, Karyme Lozano, Horacio Pancheri, Christian de la Campa, and Mariluz Bermúdez.\n\nThe story follows Victoria Pérez-Soler, a young woman from a wealthy family who falls in love with Alejandro Sánchez-Guerra, a man from a rival family. Their romance is threatened by old grudges, secrets, betrayal, and family conflicts. As the truth about their pasts emerges, Victoria and Alejandro must overcome pain and resentment to fight for their love and bring peace between their families.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/zfCzimnUGds59md315HSA3l3Q1X.jpg",
+      "description": "Durante tres generaciones, la familia Pérez-Soler ha sido dueña de una enorme hacienda en México, siendo una de las familias más poderosas. Su objetivo es mantener el éxito y para eso Valente y su hija Victoria trabajan muy duro para lograr mantener la tierra viva.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/rm14W5bFFvR0WxSC5QfBIfg8Riv.jpg",
       "cast": [
         "Kimberly Dos Ramos",
         "Rodrigo Guirao Díaz",
-        "Marlene Favela",
-        "César Évora Díaz",
+        "MARLENE FAVELA",
+        "César Évora",
         "Karyme Lozano"
       ],
       "trailers": [],
@@ -24383,8 +24391,10 @@
       "episodeCount": 90,
       "code": "S123",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -24403,8 +24413,8 @@
       ],
       "region": "Spain",
       "language": "Español",
-      "description": "A gifted woman's intellect brings chance to lead covert European police force. But it backfires, costing her everything. Following murder at her home and kidnapped heiress, her ex-supervisor enlists a policeman's aid to reinstate her.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/lk7LVXYSOO5rReR2jzLo8Le3cO1.jpg",
+      "description": "Antonia es la mujer más inteligente del mundo, lo que la convirtió en la Reina Roja de un proyecto policial secreto. Tras dejar el servicio por una tragedia personal, el policía Jon -fuerte, vasco, gay- revoluciona su vida y sus métodos en un emocionante caso doble, de secuestro y asesinato.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/kWp6VEXlh7mMxbIZyYHWfVHetts.jpg",
       "cast": [
         "Victoria Luengo",
         "Hovik Keuchkerian",
@@ -24413,15 +24423,16 @@
         "Àlex Brendemühl"
       ],
       "trailers": [
-        "dYIXNAAOdFU"
+        "bH1g07mBHGw"
       ],
       "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 7,
+      "seasonCount": 2,
+      "episodeCount": 8,
       "code": "S124",
       "metadata": {
-        "genresEnriched": true,
-        "enriched": true
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true
       }
     },
     {
@@ -24439,8 +24450,8 @@
       ],
       "region": "Spain",
       "language": "Español",
-      "description": "After two parents report that their 12-year-old daughter Asunta is missing, the investigation soon turns against them.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/3sGdiu1TPfPB01AAohlgVh1uf0q.jpg",
+      "description": "Cuando un matrimonio denuncia la desaparición de su hija de 12 años, la investigación no tarda en volverse contra ellos.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/mqVwu7nwNyYv6ehdVbRGCkLraUQ.jpg",
       "cast": [
         "Candela Peña",
         "Tristán Ulloa",
@@ -24449,15 +24460,17 @@
         "Francesc Orella"
       ],
       "trailers": [
-        "-w4Ilcm5oEg"
+        "ve9EAJ41zhU"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 6,
       "code": "S125",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -24470,12 +24483,17 @@
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Sin género"
+        "Familiar",
+        "Guerra",
+        "Intriga",
+        "Política",
+        "Romance",
+        "Western"
       ],
       "region": "Cuba",
       "language": "Español",
-      "description": "When Moses discovers the network taking control of the water supply, he must choose between staying in the business that lifted him out of poverty… or exposing it and facing the consequences. In a country thirsty for truth, Moses will have to decide what he’s willing to risk: his comfort, his family, or the lives of millions. And he’ll have to do it before the current pulls him under.  Between Two Waters is an environmental thriller about the planet’s most vital resource and the strategy of a powerful economic group determined to turn access to it into a multibillion-dollar business—no matter the cost.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/1sHXXkdwsKwrwSrfLmvCG9WL2EW.jpg",
+      "description": "Entre aguas” es una telenovela contemporánea que aborda temas como la venganza, la justicia, la ética, la discriminación y la realización personal. La historia sigue a dos socios, Yadrián y Jonathan, cuya relación se rompe cuando Jonathan cae en una trampa legal y culpa a Yadrián, iniciando una cadena de conflictos que involucra a su hermana Lía, quien termina enamorándose del supuesto culpable",
+      "imageUrl": "https://share.google/0jR9oIquqzgOsiXs4",
       "cast": [],
       "trailers": [],
       "seasons": [],
@@ -24483,8 +24501,10 @@
       "episodeCount": 80,
       "code": "S126",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -24497,13 +24517,13 @@
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Drama",
-        "Comedia"
+        "Comedia",
+        "Drama"
       ],
       "region": "Turkey",
       "language": "Español",
-      "description": "Eda, who ties all her hopes to her education, confronts Serkan Bolat, who cuts off her international education scholarship and leaves her with high school diploma. Serkan Bolat offers Eda to give her scholarship back if she pretends to be his fiance for two months. Although Eda rejects the offer of this man as she hates him, she has to accept it when the conditions change. While pretending to be engaged, Serkan and Eda begin to experience a passionate, challenging relationship that will make them forget all they know right. Because love is difficult. And that's why it's amazing.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/bE71f9A3eztjcd5JT3MmHB8MbzA.jpg",
+      "description": "Eda planea terminar sus estudios como arquitecta en el extranjero cuando Serkan Bolat, un joven empresario -y uno de los solteros más cotizados de Estambul-, se interpone en su camino cuando él decide cortar su financiación para los estudios a nivel internacional. Bolat le propone entonces un trato: si ella acepta pasar dos meses con él como si fuese su prometida, volverá a pagar sus estudios. Aunque Eda está convencida de odiarlo profundamente, a medida que pasan los días su relación comienza a cambiar.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/hkchSrpTMCEjdFBX5HU3IpyYXO4.jpg",
       "cast": [
         "Hande Erçel",
         "Kerem Bürsin",
@@ -24513,12 +24533,14 @@
       ],
       "trailers": [],
       "seasons": [],
-      "seasonCount": 8,
-      "episodeCount": 1477,
+      "seasonCount": 2,
+      "episodeCount": 52,
       "code": "S127",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -24536,7 +24558,7 @@
       ],
       "region": "Turkey",
       "language": "Español",
-      "description": "Zeynep is an innocent and beautiful girl who's very fond of her mother. One day, her mother Cemre dies in an accident. No one can bring themselves to tell Zeynep that her mother is dead. Zeynep was born with a heart condition and she is not strong enough to bear the news. When she was dying, Zeynep's mother is slandered so that Murat, who used to love her madly, now hates her deeply. Now that Asude, her grandmother has the perfect conditions to make Murat marry Melek, the woman she'd like to see as her daughter-in-law. The night that Zeynep finds out about her mother's death, she also finds out that Murat is to marry Melek and she has an attack. When Zeynep's heart is about to stop, a miracle happens. Zeynep comes across Nazli, who looks exactly like her mother.",
+      "description": "Cuenta la historia de Zeynep, una niña que sufre un ataque cardiaco cuando se entera que su madre ha fallecido en un accidente vehicular y que su padre Murat Aslan se casará con Betul. Pero su salud mejorará cuando conozca a Nazli, una mujer con un gran parecido a su madre. Para ello, Murat le propondrá a la mujer de que simule ser su esposa fallecida hasta que la pequeña sea sometida a una riesgosa operación.",
       "imageUrl": "https://image.tmdb.org/t/p/w500/pPjyZWvaLzu2MRllG64p6eyQyre.jpg",
       "cast": [
         "Erol Gedik",
@@ -24547,19 +24569,21 @@
       ],
       "trailers": [],
       "seasons": [],
-      "seasonCount": 4,
+      "seasonCount": 1,
       "episodeCount": 350,
       "code": "S128",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
       "id": "4d89c737-bf05-4c74-8aea-e4e6007468da",
       "type": "series",
       "name": "Cementerio",
-      "enName": "",
+      "enName": "Mezarlık",
       "year": 2026,
       "rating": 7.415,
       "sizeGb": 0,
@@ -24571,8 +24595,8 @@
       ],
       "region": "Turkey",
       "language": "Español",
-      "description": "Police Commissioner Önem leads a special investigations unit that solves tough cases involving violence against women.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/ye6n3GdSaiSy81hiIRvf3vjVv1N.jpg",
+      "description": "En un sótano oscuro, donde una unidad especial trabaja para resolver asesinatos de mujeres sin resolver, el Comisario Önem, tendrá que luchar contra los prejuicios masculinos que sustentan la violencia machista.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/p22xaH2ZpxhdJa1ZFF528Yk7AWc.jpg",
       "cast": [
         "Birce Akalay",
         "Olgun Toker",
@@ -24582,20 +24606,22 @@
       ],
       "trailers": [],
       "seasons": [],
-      "seasonCount": 1,
+      "seasonCount": 3,
       "episodeCount": 20,
       "code": "S129",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
       "id": "4ca2fc53-b4b7-48fb-afc4-1e31f039ce31",
       "type": "series",
       "name": "El rostro de Analia",
-      "enName": "",
-      "year": 2026,
+      "enName": "El Rostro de Analía",
+      "year": 2008,
       "rating": 4.4,
       "sizeGb": 0,
       "isPremiere": false,
@@ -24607,7 +24633,7 @@
       ],
       "region": "United States",
       "language": "Español",
-      "description": "El Rostro de Analía is a Spanish-language telenovela produced by the American-based television network Telemundo. It stars Elizabeth Gutiérrez, Martin Karpan, Maritza Rodríguez and Gabriel Porras, with the special appearance of Gaby Espino.",
+      "description": "Mariana Montiel es la joven y hermosa presidenta de ANGEL'S, la aerolínea para ejecutivos fundada por su padre. Ella ha sido muy hábil, astuta y sagaz en los negocios aunque en su vida sentimental la historia es completamente distinta, pues no ha sabido proteger lo que más quiere en el mundo: su propio matrimonio.",
       "imageUrl": "https://image.tmdb.org/t/p/w500/mQJmZpHjKTsqt64PPGucObvU1gy.jpg",
       "cast": [
         "Elizabeth Gutiérrez",
@@ -24624,17 +24650,19 @@
       "episodeCount": 178,
       "code": "S130",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
       "id": "b4c94c17-a902-468e-a5c0-7a37d1d1e263",
       "type": "series",
       "name": "Alguien tiene que morir",
-      "enName": "El rostro de Analia",
-      "year": 2008,
-      "rating": 4.4,
+      "enName": "Alguien tiene que morir",
+      "year": 2020,
+      "rating": 7.008,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
@@ -24645,25 +24673,27 @@
       ],
       "region": "México",
       "language": "Español",
-      "description": "El Rostro de Analía is a Spanish-language telenovela produced by the American-based television network Telemundo. It stars Elizabeth Gutiérrez, Martin Karpan, Maritza Rodríguez and Gabriel Porras, with the special appearance of Gaby Espino.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/mQJmZpHjKTsqt64PPGucObvU1gy.jpg",
+      "description": "En la España de los años 50, una pareja pide a su hijo que vuelva a casa desde México para conocer a su prometida. Para su sorpresa, este se presenta con un bailarín.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/rl8XJbQyylMaKSgWd3XDgedUQ1R.jpg",
       "cast": [
-        "Elizabeth Gutiérrez",
-        "Martín Karpan",
-        "Maritza Rodríguez",
-        "Gaby Espino",
-        "Gabriel Porras"
+        "Ernesto Alterio",
+        "Carmen Maura",
+        "Carlos Cuevas",
+        "Alejandro Speitzer",
+        "Cecilia Suárez"
       ],
       "trailers": [
-        "N6d09vspz-E"
+        "DghG1K6izto"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 3,
       "code": "S131",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -24676,15 +24706,15 @@
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Misterio",
-        "Drama",
         "Ciencia Ficción",
-        "Fantasía"
+        "Drama",
+        "Fantasía",
+        "Misterio"
       ],
       "region": "Turkey",
       "language": "Español",
-      "description": "A painter in Istanbul embarks on a personal journey as she unearths universal secrets about an Anatolian archaeological site and its link to her past.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/lQasevgdY0sEc4KHWmIWAxxdM1J.jpg",
+      "description": "Una pintora en Estambul se embarca en un viaje personal mientras descubre secretos universales sobre un sitio arqueológico de Anatolia y su vínculo con su pasado.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/pIoxxOAW7x59d5fRpoMuOzq9ALs.jpg",
       "cast": [
         "Beren Saat",
         "Mehmet Günsür",
@@ -24696,12 +24726,14 @@
         "qXE7MkPXicM"
       ],
       "seasons": [],
-      "seasonCount": 2,
-      "episodeCount": 16,
+      "seasonCount": 3,
+      "episodeCount": 24,
       "code": "S132",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -24719,8 +24751,8 @@
       ],
       "region": "Brazil",
       "language": "Español",
-      "description": "In imperial Brazil, a young woman stripped of her reputation is forced into exile from polite society. Recasting herself as Madam Beja, she builds an elite pleasure house that becomes a hub of political intrigue, economic power, and forbidden desire, using charm, intelligence, and ruthless strategy to bend the same men and institutions that once destroyed her.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/fB8khOzVqpQWhVfIXUQgCokP9XR.jpg",
+      "description": "Después de que un magistrado trastorna su futuro, Beja convierte su dolor en poder de seducción y desafía todas las convenciones del Brasil imperial.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/6H7Irh1lc1mYS0wL8so4LoI2CSS.jpg",
       "cast": [
         "Grazi Massafera",
         "David Junior",
@@ -24734,8 +24766,10 @@
       "episodeCount": 40,
       "code": "S133",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -24744,19 +24778,19 @@
       "name": "Blue eye Samurai",
       "enName": "Samuraí de ojos azules",
       "year": 2023,
-      "rating": 8.492,
+      "rating": 8.5,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
         "Acción",
-        "Aventura",
         "Animado",
+        "Aventura",
         "Drama"
       ],
       "region": "United States",
       "language": "Español",
-      "description": "Driven by a dream of revenge against those who made her an outcast in Edo-period Japan, a young warrior cuts a bloody path toward her destiny.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/fXm3JT4WLQVnwukdvghtAblc1wc.jpg",
+      "description": "La convirtieron en una paria en el Japón del periodo Edo. Ahora, una joven espadachina sedienta de venganza recorre un camino sangriento hacia su destino.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/e6SS2QGSXOb4ifmGvTVt27Pt0bd.jpg",
       "cast": [
         "Maya Erskine",
         "George Takei",
@@ -24765,15 +24799,17 @@
         "Brenda Song"
       ],
       "trailers": [
-        "3ciOn_4XFfE"
+        "eOJ5J-hV7_Y"
       ],
       "seasons": [],
-      "seasonCount": 1,
+      "seasonCount": 2,
       "episodeCount": 8,
       "code": "S134",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -24782,20 +24818,20 @@
       "name": "Dune Prophecy",
       "enName": "Duna la profecía",
       "year": 2024,
-      "rating": 7.207,
+      "rating": 7.21,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Ciencia Ficción",
-        "Fantasía",
-        "Drama",
         "Acción",
-        "Aventura"
+        "Aventura",
+        "Ciencia Ficción",
+        "Drama",
+        "Fantasía"
       ],
       "region": "United States",
       "language": "Español",
-      "description": "Ten thousand years before the ascension of Paul Atreides, sisters Valya and Tula Harkonnen establish the fabled sect and female order that would become known as the Bene Gesserit to control the future of humankind.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/oWVohNsxkxA3u92EzRo8fTuXIS0.jpg",
+      "description": "Ambientada 10.000 años antes de los acontecimientos de la novela Dune de 1965, la serie sigue a las hermanas Valya y Tula Harkonnen en su lucha contra las fuerzas que amenazan el futuro de la humanidad y en la creación de la legendaria secta conocida como las Bene Gesserit.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/kwWQHEBTL2TrUFcINqgLjSJdqIQ.jpg",
       "cast": [
         "Emily Watson",
         "Olivia Williams",
@@ -24804,15 +24840,17 @@
         "Sarah-Sofie Boussnina"
       ],
       "trailers": [
-        "CzVHWNosS2o"
+        "9Wq8mAxOeBg"
       ],
       "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 6,
+      "seasonCount": 2,
+      "episodeCount": 14,
       "code": "S135",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -24830,8 +24868,8 @@
       ],
       "region": "Spain",
       "language": "Español",
-      "description": "When a police officer is murdered and set on fire, all eyes focus on two other agents: his girlfriend and her lover.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/ttUAM6vZ7IhLfEFeBtWKVom3LVQ.jpg",
+      "description": "Encuentran a un oficial de policía muerto, con el cuerpo calcinado. Todas las sospechas recaen sobre otros dos agentes: su novia y el amante de ella. Inspirada en hechos reales.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/9owvb3SXwNB7I7lnf0Yffo4BJHv.jpg",
       "cast": [
         "Úrsula Corberó",
         "Quim Gutiérrez",
@@ -24847,35 +24885,45 @@
       "episodeCount": 8,
       "code": "S136",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
       "id": "f8332a3c-e6ca-4636-af54-78f3f6b0ac34",
       "type": "series",
       "name": "El olor de un niño",
-      "enName": "El olor de un niño",
+      "enName": "Evlat Kokusu",
       "year": 2017,
-      "rating": 0,
+      "rating": 7,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Sin género"
+        "Drama"
       ],
       "region": "Turkey",
       "language": "Español",
-      "description": "",
-      "imageUrl": "",
-      "cast": [],
+      "description": "Zeyno, enfermera en un hospital de Ámsterdam, descubre que está embarazada. Sueña despierta con un futuro ideal junto a su amor y su bebé, ignorando lo que viene.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/1TWlH9nQPGd1L5pVFdk8ANUEY3D.jpg",
+      "cast": [
+        "Hande Soral",
+        "Barış Kılıç",
+        "Sedef Avcı",
+        "Murat Han",
+        "Nail Kırmızıgül"
+      ],
       "trailers": [],
       "seasons": [],
       "seasonCount": 1,
-      "episodeCount": 36,
+      "episodeCount": 9,
       "code": "S137",
       "metadata": {
         "enriched": true,
-        "genresEnriched": true
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
       }
     },
     {
@@ -24893,8 +24941,8 @@
       ],
       "region": "Spain",
       "language": "Español",
-      "description": "It follows Lucía an executive of a high-tech company who has fought to get as far away from her humble origins as possible. On the day of her promotion, she is accused of espionage and fired.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/etkB5WuxoVuZPs7FSHxfSUAP7lU.jpg",
+      "description": "Lucía, una ejecutiva de una compañía de alta tecnología en tratamientos estéticos ha luchado para alejarse todo lo posible de su origen humilde, pero justo el día en que por fin debía recibir un más que merecido ascenso, es acusada de espionaje industrial y expulsada de su puesto de trabajo.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/fehHs3wK0wefw2hEuo8qnXpaNRt.jpg",
       "cast": [
         "Elena Anaya",
         "Pilar Castro",
@@ -24903,15 +24951,17 @@
         "Susi Sánchez"
       ],
       "trailers": [
-        "7s-2PxJrTHc"
+        "DdEwBlHhQjk"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 8,
       "code": "S138",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -24924,14 +24974,14 @@
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Drama",
         "Acción",
         "Aventura",
+        "Drama",
         "Familiar"
       ],
       "region": "Spain",
       "language": "Español",
-      "description": "El Internado Laguna Negra was a Spanish television drama-thriller focusing on the students of a fictional boarding school in a forest, where teenagers are sent by their parents to study. The boarding school is situated in a forest far from the city, on the outskirts on which macabre events occur. The series debut on 24 May 2007, and is a production of Antena 3. Although the show is recorded and produced in HD, it is only broadcast in SD. However, an HD Blu-ray Disc release has been announced.",
+      "description": "Marcos y Paula, dos hermanos gallegos cuyos padres han desaparecido en alta mar, ingresan en el internado Laguna Negra bajo la tutela de su director, Héctor de la Vega. Allí, pronto empezarán a suceder extraños acontecimientos y macabras muertes y parece que Paula, de apenas 6 años, está en el centro de todo cuanto pasa a su alrededor: un ser extraño que vaga por el bosque; personajes que no son quienes dicen ser o que saben más de lo que parece; desapariciones; animales mutantes; unos oscuros pasadizos donde se esconden la verdad, muertes, cadáveres y la aparición de la madre de Marcos y Paula. No solo se centra en esta parte, también hay muchas más historias dentro del Internado.",
       "imageUrl": "https://image.tmdb.org/t/p/w500/eijsq0ZTpQkjMXNkTI1R2v0hNjF.jpg",
       "cast": [
         "Marta Torné",
@@ -24941,15 +24991,17 @@
         "Elena Furiase"
       ],
       "trailers": [
-        "6N9iInZ5ln8"
+        "_KJkbLGKT8M"
       ],
       "seasons": [],
       "seasonCount": 7,
       "episodeCount": 71,
       "code": "S139",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -24967,8 +25019,8 @@
       ],
       "region": "Spain",
       "language": "Español",
-      "description": "In an inaccessible place between the mountains and isolated from the world, a school is located next to an old monastery. The students are rebellious and problematic young people who live under the strict and severe discipline imposed by the center to reintegrate them into society. The surrounding forest is home to ancient legends, threats that are still valid and that will immerse them in terrifying adventures.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/9KvN6eNNY9kbiWlZ8IS175xj4Ym.jpg",
+      "description": "En un colegio ubicado junto a un antiguo monasterio en un lugar inaccesible entre las montañas, los alumnos son chicos problemáticos y rebeldes que vivirán bajo la estricta y severa disciplina que impone el centro para reinsertarlos a la sociedad. El bosque circundante alberga antiguas leyendas, amenazas que siguen vigentes y que les sumergirán en aventuras trepidantes y terroríficas.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/zbJZWyIPaFvuWgrNrC6bGTTRCIx.jpg",
       "cast": [
         "Albert Salazar",
         "Joel Bosqued",
@@ -24977,15 +25029,16 @@
         "Daniela Rubio"
       ],
       "trailers": [
-        "sdytEqadkQY"
+        "L935nN6OxIs"
       ],
       "seasons": [],
       "seasonCount": 3,
       "episodeCount": 22,
       "code": "S140",
       "metadata": {
-        "genresEnriched": true,
-        "enriched": true
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true
       }
     },
     {
@@ -25510,7 +25563,7 @@
       ],
       "region": "Spain",
       "language": "Español",
-      "description": "The drama is centered on four friends and business partners who in one evening are forced to find a way to save their company and themselves. The impossible decision they face is agreeing on who will be the one to sacrifice their freedom to save the others from personal and financial demise. It is a race against time that will put their friendship and sanity to the test. Who will take the fall?",
+      "description": "Cuatro amigos fundadores de una exitosa empresa de diseño de aplicaciones tecnológicas son pillados desviando fondos a un paraíso fiscal. Un mediador tratará de ayudarles a decidir a quién echarán la culpa del fraude.",
       "imageUrl": "https://image.tmdb.org/t/p/w500/rWPHFAVZFFVcPzy5HYMGS7beHjA.jpg",
       "cast": [
         "Paco León",
@@ -25520,15 +25573,17 @@
         "Manuel Morón"
       ],
       "trailers": [
-        "l88tkhzVMa0"
+        "Kv2Ai_bhNzk"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P526",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -25537,7 +25592,7 @@
       "name": "53 Domingos",
       "enName": "53 Sundays",
       "year": 2026,
-      "rating": 5.92,
+      "rating": 5.921,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
@@ -25546,8 +25601,8 @@
       ],
       "region": "Spain",
       "language": "Español",
-      "description": "When three siblings agree to meet and discuss their aging father's future, their reunion spirals into bickering, bantering and reliving old grudges.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/olk6MkfHFWEpWmhQn6Mb4jNqspm.jpg",
+      "description": "Tres hermanos acuerdan reunirse para decidir el futuro de su padre, pero el encuentro se convierte en un sinfín de reproches, pullas y rencillas del pasado.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/nxUy4A5KFdNVjwqXoFRK8PqZ5vZ.jpg",
       "cast": [
         "Javier Cámara",
         "Carmen Machi",
@@ -25556,15 +25611,17 @@
         "Ricardo Lacámara"
       ],
       "trailers": [
-        "WJ4x4b8iHsg"
+        "Zvuvkf9qx4w"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P527",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -25579,12 +25636,12 @@
       "genres": [
         "Acción",
         "Ciencia Ficción",
-        "Suspenso",
-        "Misterio"
+        "Misterio",
+        "Suspenso"
       ],
       "region": "United States",
       "language": "Español",
-      "description": "Chilean martial-arts star Marko Zaror is Bruno, an ex-SEAL struggling with PTSD. He lives a life in fear of his demons until one day when he discovers a beautiful woman with no past of her own. Together they begin to build a life, but when she disappears, Bruno must return to his violent past if he’s going to save her from a shocking conspiracy.",
+      "description": "Un ex-SEAL con estrés postraumático rescata a una mujer y se enamora de ella, pero la pierde a manos de unos misteriosos secuestradores. Reúne a un equipo de élite para recuperarla, pero pronto descubre la espeluznante verdad: ha sido manipulada por un científico que está de luto por su esposa.",
       "imageUrl": "https://image.tmdb.org/t/p/w500/WKwQOPh2mQPRL12jSu2yFHk4A7.jpg",
       "cast": [
         "Marko Zaror",
@@ -25594,15 +25651,17 @@
         "Brahim Achabbakhe"
       ],
       "trailers": [
-        "0b-HSxyod0c"
+        "uBnJ15JmLv0"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P528",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -25611,7 +25670,7 @@
       "name": "Beast",
       "enName": "La bestia",
       "year": 2026,
-      "rating": 7.492,
+      "rating": 7.505,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
@@ -25620,8 +25679,8 @@
       ],
       "region": "United States",
       "language": "Español",
-      "description": "MMA legend Patton James, now a commercial fisherman, is pulled back into the cage when his brother is in danger. Reuniting with his old coach Sammy, he commits to one final fight in one championship against the brutal champion Xavier Grau.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/7NrvUI3vnW8H3rD7ExKcTL7KRcQ.jpg",
+      "description": "Con la ayuda de su antiguo entrenador, un campeón de MMA retirado e invicto regresa a la jaula para vengar la muerte de su hermano y resolver sus problemas financieros.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/3S32pzyZMoOJ3ADrnT2GbV4tiX4.jpg",
       "cast": [
         "Daniel MacPherson",
         "Luke Hemsworth",
@@ -25637,8 +25696,10 @@
       "episodeCount": 1,
       "code": "P529",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -25647,7 +25708,7 @@
       "name": "Before I Fall",
       "enName": "Si no despierto",
       "year": 2017,
-      "rating": 6.968,
+      "rating": 6.967,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
@@ -25656,8 +25717,8 @@
       ],
       "region": "United States",
       "language": "Español",
-      "description": "Samantha Kingston has everything. Then, everything changes. After one fateful night, she wakes up with no future at all. Trapped into reliving the same day over and over, she begins to question just how perfect her life really was.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/eowzonDJMCuNXoJGVkP9Z7oCmiM.jpg",
+      "description": "En principio el 12 de febrero es sólo otro día en la acomodada vida de la joven Sam, pero resulta que va a ser el último. Intentando revivir su último día durante un tiempo, Sam intentará desentrañar el misterio alrededor de su muerte... y descubrir todo lo que está en peligro de perder.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/2dQqy44rwCv8yrqPar1mRA8lcbg.jpg",
       "cast": [
         "Zoey Deutch",
         "Kian Lawley",
@@ -25666,15 +25727,17 @@
         "Jennifer Beals"
       ],
       "trailers": [
-        "ADj35gDqM90"
+        "VLNUuzBLUgw"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P530",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -25692,25 +25755,27 @@
       ],
       "region": "United States",
       "language": "Español",
-      "description": "After learning that the death of his wife was not an accident, a former CIA Station Chief is forced back into the espionage underworld, teaming up with an adversary to unravel a conspiracy that challenges everything he thought he knew.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/yndlj5aNPWAZ5ayJ4a2S37o98lq.jpg",
+      "description": "Después de enterarse de que la muerte de su esposa no fue un accidente, un exjefe de estación de la CIA se ve obligado a regresar al inframundo del espionaje, formando equipo con un adversario para desentrañar una conspiración que desafía todo lo que creía...",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/naYxXiVGudVNbJ3KgbG91Bg6xOQ.jpg",
       "cast": [
         "Aaron Eckhart",
-        "Olga Kurylenko",
+        "Ольга Куриленко",
         "Alex Pettyfer",
         "Chris Petrovski",
         "Laëtitia Eïdo"
       ],
       "trailers": [
-        "Krsu0mazuZ4"
+        "taeGC1TxKuI"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P531",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -25719,17 +25784,17 @@
       "name": "Clash of the Thundermans",
       "enName": "Furia de Thunderman",
       "year": 2026,
-      "rating": 6.8,
+      "rating": 6.906,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Familiar",
-        "Acción"
+        "Acción",
+        "Familiar"
       ],
       "region": "Canada",
       "language": "Español",
-      "description": "When Chloe develops a destructive new superpower, the Hero League orders her to an elite boarding school for superheroes to learn control of her abilities. Faced with the prospect of sending Chloe away for years, the Thundermans split apart, with Phoebe, Barb and Billy taking her into hiding. Max, Hank, and Nora track their rogue family members, until the two factions face off against each other in a full-on battle for the Thundermans’ future.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/16oqRrWVzQm6qdGfBxvziZ2UiMT.jpg",
+      "description": "Chloe, la hermana pequeña, desarrolla de repente un poder energético impredecible, y la Liga de Héroes exige enviarla a un internado de alta seguridad. La familia se divide: unos quieren entregarla por seguridad y otros deciden esconderla. Cuando la decana revela un plan oculto y peligroso, todos tendrán que unirse para salvarla y proteger la ciudad.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/7zgvtsSPFH4rnV4UEXt9aqNKzIB.jpg",
       "cast": [
         "Kira Kosarin",
         "Jack Griffo",
@@ -25745,8 +25810,10 @@
       "episodeCount": 1,
       "code": "P532",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -25763,8 +25830,8 @@
       ],
       "region": "United States",
       "language": "Español",
-      "description": "The true-life story of boxer-turned-priest. When an injury ends his amateur boxing career, Stuart Long moves to Los Angeles to find money and fame. While scraping by as a supermarket clerk, he meets Carmen, a Sunday school teacher who seems immune to his bad-boy charm. Determined to win her over, the longtime agnostic starts going to church to impress her. However, a motorcycle accident leaves him wondering if he can use his second chance to help others, leading to the surprising realization that he's meant to be a Catholic priest.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/pLAeWgqXbTeJ2gQtNvRmdIncYsk.jpg",
+      "description": "La historia real de un boxeador convertido en sacerdote. Cuando una lesión pone fin a su carrera como boxeador amateur, Stuart Long se muda a Los Ángeles en busca de dinero y fama. Mientras se las arregla como empleado de un supermercado, conoce a Carmen, una maestra de escuela dominical que parece inmune a su encanto de chico malo. Decidido a ganársela, el agnóstico de toda la vida comienza a ir a la iglesia para impresionarla. Sin embargo, un accidente de motocicleta lo deja preguntándose si puede usar su segunda oportunidad para ayudar a otros, lo que lo lleva a darse cuenta de que está destinado a ser un sacerdote católico.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/lBsefPeAY3nl8G88raSfxR5hPa4.jpg",
       "cast": [
         "Mark Wahlberg",
         "Mel Gibson",
@@ -25773,35 +25840,44 @@
         "Malcolm McDowell"
       ],
       "trailers": [
-        "GTQ4ArOchf8",
-        "DHREzAdyCPs"
+        "f-p516ykDRE"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P533",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
       "id": "3a28d8d0-459a-43d7-82ee-b9980377a2d8",
       "type": "movie",
-      "name": "Gandheri",
-      "enName": "Gandheri",
+      "name": "Gandhari",
+      "enName": "Gandhari",
       "year": 2026,
-      "rating": 0,
+      "rating": 5.4,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Sin género"
+        "Acción",
+        "Drama",
+        "Suspenso"
       ],
       "region": "India",
       "language": "Español",
-      "description": "",
-      "imageUrl": "",
-      "cast": [],
+      "description": "Sigue la incesante búsqueda de una madre para encontrar y rescatar a su hija secuestrada, y explora temas de venganza y redención en medio de su angustioso viaje.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/hCHei97aPYCCsh4vicz9X0wmdFV.jpg",
+      "cast": [
+        "Taapsee Pannu",
+        "Ishwak Singh",
+        "Mita Vashisht",
+        "Swastika Mukherjee",
+        "Chhaya Kadam"
+      ],
       "trailers": [],
       "seasons": [],
       "seasonCount": 1,
@@ -25809,7 +25885,9 @@
       "code": "P534",
       "metadata": {
         "enriched": true,
-        "genresEnriched": true
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
       }
     },
     {
@@ -25828,8 +25906,8 @@
       ],
       "region": "Australia",
       "language": "Inglés",
-      "description": "Town residents must band together after a devastating alien invasion. As they struggle to survive, they realize they must stay one step ahead of their attackers and work together for a chance to strike back.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/hr7MFQAmP30IJZP2FXKhPKbe8IW.jpg",
+      "description": "El film se centra en un grupo de civiles que ven como su pequeño pueblo en Australia es aniquilado por un abrumador ataque aéreo. El grupo se encuentra ahora entre los últimos supervivientes de una invasión extraterrestre a escala global. A medida que la humanidad cae bajo el ataque, formarán un pequeño ejército local para luchar contra las muy superiores fuerzas enemigas. En la vanguardia de la batalla por la Tierra, son nuestra última esperanza.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/iZAKMXiWAMusygBQYIFBW9hEb3u.jpg",
       "cast": [
         "Dan Ewing",
         "Temuera Morrison",
@@ -25838,16 +25916,17 @@
         "Jacqueline McKenzie"
       ],
       "trailers": [
-        "ImW9ijMIuoQ",
-        "95GAw9LptFE"
+        "oA7Y9mkU0HA"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P535",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -25856,18 +25935,18 @@
       "name": "One battle after another",
       "enName": "Una batalla tras otra",
       "year": 2025,
-      "rating": 7.334,
+      "rating": 7.336,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Suspenso",
+        "Comedia",
         "Crimen",
-        "Comedia"
+        "Suspenso"
       ],
       "region": "United States",
       "language": "Español",
-      "description": "Washed-up revolutionary Bob exists in a state of stoned paranoia, surviving off-grid with his spirited, self-reliant daughter, Willa. When his evil nemesis resurfaces after 16 years and she goes missing, the former radical scrambles to find her, father and daughter both battling the consequences of his past.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/lbBWwxBht4JFP5PsuJ5onpMqugW.jpg",
+      "description": "Un ex revolucionario, tras años apartado de la lucha, se ve obligado a volver a la acción para enfrentar a viejos enemigos en un ambiente cargado de tensión política, racismo y violencia militar... Adaptación modernizada de la novela 'Vineland', de Thomas Pynchon (1990), sobre los movimientos radicales de los años sesenta.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/iZ1499F6hYxDxiqioy8oSUaxipG.jpg",
       "cast": [
         "Leonardo DiCaprio",
         "Sean Penn",
@@ -25876,20 +25955,18 @@
         "Regina Hall"
       ],
       "trailers": [
-        "u6GVb4p7oD4",
-        "fw6vEdH4I-A",
-        "_qQLUxZAklQ",
-        "kQUPdVxZNPk",
-        "EDeHW1cvIkQ",
-        "hg8AGTyYMBA"
+        "U_wQ_20g8Jw",
+        "b2SSjY1cN7k"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P536",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -25898,25 +25975,26 @@
       "name": "Pandemonium",
       "enName": "Pandemonium",
       "year": 2024,
-      "rating": 0,
+      "rating": 5.574,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Terror",
+        "Acción",
         "Ciencia Ficción",
         "Crimen",
-        "Acción"
+        "Drama",
+        "Terror"
       ],
       "region": "France",
       "language": "Español",
-      "description": "When a Forensic Cleaner comes across an unusual crime scene- something about the body defies explanation. Meanwhile, a rookie cop who first on scene becomes violently ill and butchers his entire family in the most cruel and clinical manner. As the Cleaner and police attempt to piece together the clues, a horrifying truth emerges: something is releasing a viral agent that warps the mind, turning those exposed into violent maniacs.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/pHNHSWDFrw5nl0NzKAnybxEc1qz.jpg",
+      "description": "Nathan y Daniel quedan atrapados en un accidente de tráfico que los mata a ambos. Mientras se enfrentan a sus muertes, Nathan se enfrenta a su pasado y a las consecuencias de sus acciones. Ahora atrapado en el vacío infernal de Pandemonium, se encuentra con almas torturadas como Jeanne, una niña perturbada; Julia, una madre desconsolada; y Norghul, el guía del gran vacío. ¿Encontrará una manera de escapar del tormento que le espera por la eternidad?",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/6TmkF5px03IXglJwCnqCp3lymR7.jpg",
       "cast": [
-        "Constance Payne",
-        "Jon Devlin",
-        "Kevin Marshall",
-        "Craig Elliott Williams",
-        "Ezra Chancey"
+        "Arben Bajraktaraj",
+        "Ophélia Kolb",
+        "Manon Maindivide",
+        "Hugo Dillon",
+        "Sidwell Weber"
       ],
       "trailers": [],
       "seasons": [],
@@ -25924,8 +26002,10 @@
       "episodeCount": 1,
       "code": "P537",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -25938,13 +26018,13 @@
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Terror",
-        "Suspenso"
+        "Suspenso",
+        "Terror"
       ],
       "region": "United States",
       "language": "Español",
-      "description": "When an American family is invited to spend the weekend at the idyllic country estate of a charming British family they befriended on vacation, what begins as a dream holiday soon warps into a snarled psychological nightmare.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/dA4N6uWOnEMgbxXwFX7qX7adzs8.jpg",
+      "description": "Cuando una familia estadounidense va invitada a pasar un fin de semana en la idílica finca campestre de una encantadora familia británica que conocieron en unas vacaciones, lo que comienza como una escapada de ensueño pronto se convierte en una retorcida pesadilla psicológica.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/4rFJZjGPZjeOg8LpdeXpWB7uzJ1.jpg",
       "cast": [
         "James McAvoy",
         "Mackenzie Davis",
@@ -25953,17 +26033,18 @@
         "Alix West Lefler"
       ],
       "trailers": [
-        "iSIuxrjTMk0",
-        "et768NQ7dY8",
-        "FjzxI6uf8H8"
+        "B34IFHkBxcs",
+        "hq99V6sIcGA"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P538",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -25972,18 +26053,18 @@
       "name": "The Artifice Girl",
       "enName": "La chica artificial",
       "year": 2023,
-      "rating": 6.72,
+      "rating": 6.721,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
         "Ciencia Ficción",
-        "Suspenso",
-        "Misterio"
+        "Misterio",
+        "Suspenso"
       ],
       "region": "United States",
       "language": "Español",
-      "description": "A team of special agents discovers a revolutionary new computer program to bait and trap online predators. After teaming up with the program's troubled developer, they soon find that the AI is rapidly advancing beyond its original purpose.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/A3qrVjsBd4IZ3QWHMs2x1dwRxuX.jpg",
+      "description": "Cuando un vigilante de Internet desarrolla un nuevo programa de computadora revolucionario para combatir a los depredadores en línea, su rápido avance conduce a serias cuestiones de autonomía, opresión y lo que realmente significa ser humano.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/7OcSaD5ip2AP5pyi0AAEWUxWWot.jpg",
       "cast": [
         "Tatum Matthews",
         "Franklin Ritch",
@@ -25999,8 +26080,10 @@
       "episodeCount": 1,
       "code": "P539",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26014,15 +26097,15 @@
       "isPremiere": false,
       "genres": [
         "Acción",
-        "Terror",
         "Ciencia Ficción",
+        "Romance",
         "Suspenso",
-        "Romance"
+        "Terror"
       ],
       "region": "United States",
       "language": "Español",
-      "description": "After being exiled to a fenced-off wasteland, Arlen is kidnapped by a group of cannibals and goes on a journey to reunite a missing girl with her father.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/7o14VaMphEIzPwzeW6FP3A6zb4W.jpg",
+      "description": "Nos situamos en una sociedad post apocalíptica, en el desierto de Texas. Allí vive una comunidad caníbal con la que se encuentra Arlen, una desterrada solitaria que durante sus días en el desierto se hace amiga de una niña y su mascota. El líder de la comunidad se interesa por esta extraña pareja cambiando la vida de Arlen para siempre. El amor, la toma de decisiones y la búsqueda de la verdad serán algunas de las tantas cosas que tendrá que afrontar la protagonista.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/2afHImXsKbepjK4zmfHS8NwBpCk.jpg",
       "cast": [
         "Suki Waterhouse",
         "Jason Momoa",
@@ -26039,8 +26122,10 @@
       "episodeCount": 1,
       "code": "P540",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26049,7 +26134,7 @@
       "name": "The brink of war",
       "enName": "The brink of war",
       "year": 2026,
-      "rating": 7.2,
+      "rating": 7.152,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
@@ -26058,14 +26143,14 @@
       ],
       "region": "United States",
       "language": "Español",
-      "description": "President Ronald Reagan races against time to salvage a deal with Soviet leader Mikhail Gorbachev that could dismantle nuclear arsenals—or ignite disaster. With pressure mounting on all sides, every word spoken brings the world closer to peace... or destruction.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/vCIQeQ2ynVqEjIvtbOXGnKtcgAX.jpg",
+      "description": "Recrea la cumbre de 1986 entre los presidentes Ronald Reagan y Mijail Gorbachov en Islandia, durante la Guerra Fría. El presidente de Estados Unidos y el de la URSS se reunieron para intentar desescalar la amenaza de guerra nuclear entre los dos países.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/totNLyku4VKrCoBgN6JXU4d6y1l.jpg",
       "cast": [
         "Jeff Daniels",
         "Jared Harris",
         "J.K. Simmons",
         "Hope Davis",
-        "Branka Katić"
+        "Бранка Катић"
       ],
       "trailers": [
         "a-T0TlMN-RE"
@@ -26075,8 +26160,10 @@
       "episodeCount": 1,
       "code": "P541",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26085,18 +26172,18 @@
       "name": "The good nurse",
       "enName": "El Angel de la Muerte",
       "year": 2022,
-      "rating": 6.872,
+      "rating": 6.87,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Drama",
         "Crimen",
+        "Drama",
         "Misterio"
       ],
       "region": "United States",
       "language": "Español",
-      "description": "Suspicious that her colleague is responsible for a series of mysterious patient deaths, a nurse risks her own life to uncover the truth.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/rSq6cq0LCcbro10jbEaPTEb3WmW.jpg",
+      "description": "Sobrecargada de trabajo, una enfermera de la UCI se apoya en su nuevo y servicial compañero. Hasta que la muerte de una paciente empieza a hacerle sospechar de él.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/InAsct1iw71Uspf5MPFx9AF133.jpg",
       "cast": [
         "Jessica Chastain",
         "Eddie Redmayne",
@@ -26105,15 +26192,17 @@
         "Malik Yoba"
       ],
       "trailers": [
-        "e0DQevX-GZs"
+        "DiYvILPCz9c"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P542",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26122,25 +26211,38 @@
       "name": "The Matian",
       "enName": "Marte - The Matian",
       "year": 2015,
-      "rating": 0,
+      "rating": 7.708,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Sin género"
+        "Aventura",
+        "Ciencia Ficción",
+        "Drama"
       ],
       "region": "United States",
       "language": "Español",
-      "description": "",
-      "imageUrl": "",
-      "cast": [],
-      "trailers": [],
+      "description": "Un explorador espacial queda atrapado en Marte, luego de ser abandonado por los miembros de su tripulación, quienes pensaron que había muerto a consecuencia de una tormenta. Casi sin recursos y con solo su ingenio, intentará sobrevivir mientras la NASA, por un lado, y los miembros de su tripulación, por su propia cuenta, intentan rescatarlo.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/hBRK1izFxIH3Nh6vax4ssOHSHVd.jpg",
+      "cast": [
+        "Matt Damon",
+        "Jessica Chastain",
+        "Kristen Wiig",
+        "Jeff Daniels",
+        "Michael Peña"
+      ],
+      "trailers": [
+        "YunRU1tE1X4",
+        "TYzLCBh_S-I"
+      ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P543",
       "metadata": {
         "enriched": true,
-        "genresEnriched": true
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
       }
     },
     {
@@ -26149,17 +26251,17 @@
       "name": "The Runner",
       "enName": "A la carrera",
       "year": 2026,
-      "rating": 6.8,
+      "rating": 6.78,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Suspenso",
-        "Acción"
+        "Acción",
+        "Suspenso"
       ],
       "region": "United Kingdom",
       "language": "Español",
-      "description": "Maia Marten, a brilliant London lawyer, has her life shattered by a single call on her morning run: her son has been taken. To get him back, she must keep running, obey every ruthless command, and trust no one-each second a test of how far a mother will go to save her child.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/uxCaBoYXsDC4A0SqTm3SISj0OwK.jpg",
+      "description": "En el thriller psicológico A la carrera, Maia Marten, una brillante abogada londinense, ve cómo su vida se desmorona tras recibir una llamada durante su carrera matutina: han secuestrado a su hijo. Para recuperarlo, debe seguir corriendo, cumplir todas las órdenes despiadadas y no confiar en nadie. Cada segundo es una prueba de hasta dónde puede llegar una madre para salvar a su hijo.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/aBzKyfruwaUgU2qYYtMO7vC1Pv2.jpg",
       "cast": [
         "Gal Gadot",
         "Damian Lewis",
@@ -26168,15 +26270,17 @@
         "Phoenix Di Sebastiani"
       ],
       "trailers": [
-        "zz4rsZLcauY"
+        "A4ESt5_aHGQ"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P544",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26185,7 +26289,7 @@
       "name": "Animales",
       "enName": "Animales",
       "year": 2026,
-      "rating": 6.279,
+      "rating": 6.364,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
@@ -26194,7 +26298,7 @@
       ],
       "region": "United States",
       "language": "Español",
-      "description": "Four couples sail the thin line between desire and search for authenticity, in a world where truth is as fragile as their relationships.",
+      "description": "Un grupo de amigos que se conocen de toda la vida descubre que hay puertas que nunca se deben de abrir. Lo que empieza como un juego de deseo se convierte en una espiral de celos, mentiras y traiciones que arrasa con sus relaciones. Muy pronto entenderán que todos tenemos un lado animal.",
       "imageUrl": "https://image.tmdb.org/t/p/w500/9fbZdiOI9fRinl44mNm3CYgEtYR.jpg",
       "cast": [
         "Nashla Bogaert",
@@ -26209,8 +26313,10 @@
       "episodeCount": 1,
       "code": "P545",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26219,18 +26325,18 @@
       "name": "Camp Rock 3",
       "enName": "Camp Rock 3",
       "year": 2026,
-      "rating": 6.5,
+      "rating": 6.484,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Música",
         "Comedia",
-        "Drama"
+        "Drama",
+        "Música"
       ],
       "region": "United States",
       "language": "Español",
-      "description": "When pop group Connect 3 returns to Camp Rock to search for an opening act for their reunion tour, rising tensions and fierce competition among campers test old friendships and spark unexpected romances.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/rS7byWK9cfPfdLeFNlRIaJxH9mN.jpg",
+      "description": "Los Connect 3 buscan un nuevo artista para abrir sus conciertos. La competencia por el puesto desata rivalidades y romances, ya que todos luchan por destacar.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/lUGn8nzz0wU0zoApaex8WmwaCpT.jpg",
       "cast": [
         "Liamani Segura",
         "Malachi Barton",
@@ -26239,15 +26345,18 @@
         "Casey Trotter"
       ],
       "trailers": [
-        "02-RDIZ5Rdw"
+        "mLXBZArUEoM",
+        "t1q7V-e0InI"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P546",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26256,7 +26365,7 @@
       "name": "Drawn Together",
       "enName": "Enfrentados - Marfil",
       "year": 2026,
-      "rating": 6.563,
+      "rating": 6.646,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
@@ -26265,8 +26374,8 @@
       ],
       "region": "Spain",
       "language": "Español",
-      "description": "After a wealthy Spanish heiress is kidnapped, she falls into a dangerous attraction with the newly hired bodyguard assigned to protect her in a world full of deception.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/6rpvddXbaQPOi0fB2HKWbZ3uUSg.jpg",
+      "description": "Parte 1 de la saga Enfrentados. Marfil, hija de un poderoso empresario español, ve cómo su vida en Nueva York da un vuelco al ser secuestrada y liberada sin explicación. Su padre contrata a Sebastian Moore como guardaespaldas y, forzados a pasar cada minuto juntos, surgirá una irremediable atracción en un mundo donde nada es lo que parece. Basada en la novela de Mercedes Ron, saga Culpables",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/umlft1ztFbUcnHf960pXJocjpdv.jpg",
       "cast": [
         "Ester Expósito",
         "Hugo Diego Garcia",
@@ -26275,16 +26384,17 @@
         "Joaquín Ferreira"
       ],
       "trailers": [
-        "WlGzP8FvsfY",
-        "J_dWSteW_7Y"
+        "lc7LU9fhgG0"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P547",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26293,34 +26403,38 @@
       "name": "El campeón",
       "enName": "The Champion",
       "year": 2024,
-      "rating": 7.25,
+      "rating": 5.491,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
+        "Comedia",
         "Drama",
+        "Familiar",
         "Histórico"
       ],
       "region": "Spain",
       "language": "Español",
-      "description": "Claressa Shields, a high school junior from Flint, Michigan, aided by her tough-love coach, Jason Crutchfield, pushes past all limitations to become the first American woman to win an Olympic gold medal in boxing. But even at the pinnacle of success, Claressa has to reckon with the fact that not all dreams are created equal, and the real fight has only just begun.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/dMorkoCdZJ1xmKv0VAXcpUax6Ar.jpg",
+      "description": "Diego acaba de ser elegido mejor jugador joven europeo y a sus 20 años va camino de convertir a su equipo, el Atlético de Madrid, en campeón de Liga. Pero su carácter impulsivo y conflictivo hace que el Club, harto de sus excesos, contrate a Álex, un profesor de psicología retraído y solitario, para que mejore su conducta. Tanto a uno como al otro no les quedará más remedio que aprender a entenderse.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/pw38upiqFVNUzSLw4AHQZz0J0AC.jpg",
       "cast": [
-        "Ryan Destiny",
-        "Brian Tyree Henry",
-        "Oluniké Adeliyi",
-        "Kylee D. Allen",
-        "Emmanuel Igboke"
+        "Dani Rovira",
+        "Swit Eme",
+        "Pablo Chiapella",
+        "Luis Fernández",
+        "Cintia García"
       ],
       "trailers": [
-        "KFyNvUmJzmE"
+        "c1XvQJeGuO8"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P548",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26337,10 +26451,10 @@
         "Aventura",
         "Ciencia Ficción"
       ],
-      "region": "Spain",
+      "region": "United States",
       "language": "Español",
-      "description": "An aging Chinese immigrant is swept up in an insane adventure, where she alone can save what's important to her by connecting with the lives she could have led in other universes.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/u68AjlvlutfEIcpmbYpKcdi09ut.jpg",
+      "description": "Cuando una ruptura interdimensional altera la realidad, Evelyn, una inmigrante china en Estados Unidos, se ve envuelta en una aventura salvaje en la que sólo ella puede salvar el mundo. Perdida en los mundos infinitos del multiverso, esta heroína inesperada debe canalizar sus nuevos poderes para luchar contra los extraños y desconcertantes peligros del multiverso mientras el destino del mundo pende de un hilo.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/9R1zEZJkIah6GuLwFZWsuygn552.jpg",
       "cast": [
         "Michelle Yeoh",
         "Stephanie Hsu",
@@ -26349,15 +26463,17 @@
         "Jamie Lee Curtis"
       ],
       "trailers": [
-        "wxN1T1uxQ2g"
+        "UcTzHfkgkRI"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P549",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26375,8 +26491,8 @@
       ],
       "region": "Cuba",
       "language": "Español",
-      "description": "In 1979 Cuba, flamboyant gay artist Diego attempts to seduce  straitlaced David, an idealistic young communist, and fails dismally. But David conspires to be \"friends\" with Diego so he can monitor the artist's subversive life for the state. As Diego and David discuss politics, individuality and personal expression in Castro's Cuba, a genuine friendship develops between the two.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/8riS2hGneWg78MHuhP7NqvLERRy.jpg",
+      "description": "David es un comunista convencido, que estudia sociología en la Universidad de La Habana. Diego es un artista homosexual acosado por la homofobia del régimen castrista. A pesar de sus abismales diferencias, entre ambos surge una profunda amistad.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/2lIHeaWlnTgvfS5LWcvG2n8d4G0.jpg",
       "cast": [
         "Jorge Perugorría",
         "Vladimir Cruz",
@@ -26385,15 +26501,17 @@
         "Joel Angelino"
       ],
       "trailers": [
-        "qWv7dKxWhz4"
+        "neQX3mpG1j8"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P550",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26406,16 +26524,16 @@
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
+        "Acción",
         "Animado",
-        "Ciencia Ficción",
         "Aventura",
-        "Familiar",
-        "Acción"
+        "Ciencia Ficción",
+        "Familiar"
       ],
       "region": "United States",
       "language": "Español",
-      "description": "The Mandalorian and Grogu join their misfit allies for an epic party, celebrating their heroism. As friends regale the crowd with tales of their adventures, a pirate threat looms.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/x3HEvYXWOW6WHqsHmg2MUVy3SLm.jpg",
+      "description": "El Mandaloriano y Grogu se unen a sus aliados para celebrar una fiesta épica en homenaje a su heroísmo. Mientras los amigos entretienen al público con relatos de sus aventuras, se cierne sobre ellos la amenaza de unos piratas.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/6sUsn029xHGQxO8VAJXfYcHmKB7.jpg",
       "cast": [
         "Gavin Hammon",
         "Amy Sedaris",
@@ -26431,8 +26549,10 @@
       "episodeCount": 1,
       "code": "P551",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26449,8 +26569,8 @@
       ],
       "region": "United States",
       "language": "Español",
-      "description": "When Ainara announces that she wants to become a nun, chaos arises in her family. Is this a genuine desire or has she been influenced by the religious staff at her school? Or is this life-changing decision due to her father’s inattention and her mother’s absence?",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/3682SbY3rsNKsQzFpPUKrWdGmmx.jpg",
+      "description": "Ainara es una joven idealista y brillante de 17 años que, a priori, ha de decidir qué carrera universitaria estudiará. Sin embargo, la joven manifiesta que se siente cada vez más cerca de Dios y que está dispuesta a abrazar la vida de monja de clausura. La noticia pilla por sorpresa a toda la familia provocando un abismo y una prueba de fuego para todos.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/kwpDm6qtON8pLCSY0C8MltMofEE.jpg",
       "cast": [
         "Blanca Soroa",
         "Patricia López Arnaiz",
@@ -26459,16 +26579,17 @@
         "Mabel Rivera"
       ],
       "trailers": [
-        "wZheAzHOLcM",
-        "FRwwy6W2xh8"
+        "yyLrtKGQ5KA"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P552",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26477,7 +26598,7 @@
       "name": "Mayday",
       "enName": "Mayday",
       "year": 2026,
-      "rating": 7.94,
+      "rating": 7.976,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
@@ -26486,8 +26607,8 @@
       ],
       "region": "Canada",
       "language": "Español",
-      "description": "When a U.S. Navy pilot on a top-secret mission during the Cold War gets trapped behind enemy lines, his only chance at survival is to form an alliance with an eccentric ex-KGB agent.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/hVXjX1jLZ1ljFSNGXpjJfbTUOa7.jpg",
+      "description": "Cuando un piloto de la Marina estadounidense en misión ultrasecreta durante la Guerra Fría queda atrapado tras las líneas enemigas, su única oportunidad de sobrevivir es aliarse con un excéntrico exagente del KGB.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/naKQcM3HRuaISCtsSx5ibVMTbDu.jpg",
       "cast": [
         "Ryan Reynolds",
         "Kenneth Branagh",
@@ -26496,15 +26617,17 @@
         "David Morse"
       ],
       "trailers": [
-        "om5Un9X720M"
+        "PRFX_HL0nA8"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P553",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26513,7 +26636,7 @@
       "name": "Nobody",
       "enName": "Nadie",
       "year": 2021,
-      "rating": 7.865,
+      "rating": 7.864,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
@@ -26522,8 +26645,8 @@
       ],
       "region": "United States",
       "language": "Español",
-      "description": "Hutch Mansell, a suburban dad, overlooked husband, nothing neighbor — a \"nobody.\" When two thieves break into his home one night, Hutch's unknown long-simmering rage is ignited and propels him on a brutal path that will uncover dark secrets he fought to leave behind.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/oBgWY00bEFeZ9N25wWVyuQddbAo.jpg",
+      "description": "Hutch Mansell, un padre de familia que aguanta con resignación y sin defenderse los golpes de la vida. Un don nadie.  Una noche, cuando dos ladrones entran en su casa, Hutch decide no actuar y no trata de defenderse ni al él mismo ni a su familia, convencido de que solo así evitará una escalada de violencia. Tras el ataque, su hija adolescente Blake no oculta su decepción, y su esposa Becca se aleja todavía más.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/ddO5a3tMPpQutSDQO1bESgLWadB.jpg",
       "cast": [
         "Bob Odenkirk",
         "Aleksey Serebryakov",
@@ -26532,15 +26655,17 @@
         "Michael Ironside"
       ],
       "trailers": [
-        "wZti8QKBWPo"
+        "Mzrib73dVbc"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P554",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26549,23 +26674,25 @@
       "name": "One night only",
       "enName": "Una noche al a¤o",
       "year": 2016,
-      "rating": 5.05,
+      "rating": 6.583,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
+        "Comedia",
         "Drama",
+        "Romance",
         "Suspenso"
       ],
       "region": "China",
       "language": "Español",
-      "description": "A husband with a perfect life cheats with his wife's sister, with extreme consequences befalling them all.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/itF3zi543LCOicdzAXIuyqBZ0yz.jpg",
+      "description": "Dos extraños tratan de encontrar a alguien con quien acostarse en la única noche del año en la que es legal el sexo prematrimonial.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/85Fvq0lZ4hHTOj0KwAWfPlv8cFe.jpg",
       "cast": [
-        "Brian J. White",
-        "Karrueche Tran",
-        "Angelique Pereira",
-        "Jarell Houston Jr.",
-        "Omar Gooding"
+        "Monica Barbaro",
+        "Callum Turner",
+        "Maya Hawke",
+        "King Princess",
+        "Molly Ringwald"
       ],
       "trailers": [
         "4jFiaA32oJU"
@@ -26575,8 +26702,10 @@
       "episodeCount": 1,
       "code": "P555",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26585,20 +26714,20 @@
       "name": "PAW Patrol - The Dino Movie",
       "enName": "La patrulla canino - La dino pel¡cula",
       "year": 2026,
-      "rating": 7.421,
+      "rating": 7.7,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
         "Animado",
         "Aventura",
+        "Comedia",
         "Familiar",
-        "Fantasía",
-        "Comedia"
+        "Fantasía"
       ],
       "region": "United States",
       "language": "Español",
-      "description": "The Paw Patrol lands on a mysterious dinosaur island after a storm, where they meet Rex, a stranded pup. When Humdinger's reckless mining triggers a volcano, the team faces their biggest rescue mission yet to save the island.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/qnin56Syy5rbG7KCaxWY7SPuy6p.jpg",
+      "description": "Cuando una fuerte tormenta deja a la patrulla canina varada en una isla inexplorada llena de dinosaurios vivos, los cachorros deben unirse a su nuevo aliado, Rex, para detener al alcalde Humdinger antes de que la codicia de este provoque una catastrófica erupción volcánica.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/5aYdIHHt8WbtYzuhCSFfJC6NYHK.jpg",
       "cast": [
         "Carter Young",
         "Mckenna Grace",
@@ -26607,15 +26736,17 @@
         "Ron Pardo"
       ],
       "trailers": [
-        "xgI5iYmOf5Q"
+        "l08qv9mM4fQ"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P556",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26624,7 +26755,7 @@
       "name": "Rage of Stars",
       "enName": "la señal del apocalipsis",
       "year": 2026,
-      "rating": 6.218,
+      "rating": 6.516,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
@@ -26634,8 +26765,8 @@
       ],
       "region": "Poland",
       "language": "Español",
-      "description": "A story about a woman from the International Special Forces Unit, who has a premonition about the impending end of humanity.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/oLld47ZT1I3iecM3OWhIphohQUJ.jpg",
+      "description": "En un futuro caótico, Jemma, agente de una unidad especial internacional, sufre visiones inquietantes. Cuando niños desaparecen en todo el mundo, descubre un patrón ligado a una antigua profecía apocalíptica. Con el caos en aumento, deberá descifrar sus visiones para evitar una catástrofe global.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/vK9tTyWlVKlBGPTFp1e4WPGMJ7w.jpg",
       "cast": [
         "Andrea Tivadar",
         "Jord Knotter",
@@ -26651,8 +26782,10 @@
       "episodeCount": 1,
       "code": "P557",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26672,8 +26805,8 @@
       ],
       "region": "Australia",
       "language": "Inglés",
-      "description": "Disaster unfolds when a meteor strikes a small town, turning the environment uninhabitable and killing everything in the surrounding area. Exobiologist Lauren Stone is called to find answers to the unearthly event. As she begins to uncover the truth, imminent danger awakens and it becomes a race against time to save mankind.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/1vdRDS0UYDlJNBqRSqUuhBHf6eb.jpg",
+      "description": "Un meteorito cae en un pequeño pueblo, el aire se contamina y la gente empieza a morir. Lauren, una astrobióloga, es contratada para encontrar respuestas y resolver la crisis. En el lugar del impacto del meteorito, un árbol gigantesco está liberando esporas tóxicas, lo que hace sospechar que ha sido colocado allí para crear en la Tierra un entorno habitable para habitantes de otro mundo.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/4RpEPkJ6osoSNOMZy5F7MS5L551.jpg",
       "cast": [
         "Nicole Schalmo",
         "Ken Welsh",
@@ -26689,8 +26822,10 @@
       "episodeCount": 1,
       "code": "P558",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26699,7 +26834,7 @@
       "name": "Rosebush Pruning",
       "enName": "Rosebush Pruning",
       "year": 2026,
-      "rating": 6.167,
+      "rating": 6.207,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
@@ -26709,7 +26844,7 @@
       ],
       "region": "Germany",
       "language": "Español",
-      "description": "When an American heir living in a luxurious Spanish villa decides to move in with his girlfriend, his departure triggers a family collapse as his brother uncovers the truth behind their mother's tragic death.",
+      "description": "En una opulenta villa española, los hermanos estadounidenses Jack, Ed, Anna y Robert se regodean en el aislamiento y en su fortuna heredada. Cuando Jack, el hermano mayor y pieza clave de la familia, anuncia que se muda con su novia Martha, los lazos se agrietan y Ed se ve obligado a descubrir la verdad sobre la muerte de su madre. Las mentiras comienzan a desvelarse y el tejido familiar empieza a desintegrarse.",
       "imageUrl": "https://image.tmdb.org/t/p/w500/rsHEVjzxU8cxz1sm3vboj99daNv.jpg",
       "cast": [
         "Callum Turner",
@@ -26726,8 +26861,10 @@
       "episodeCount": 1,
       "code": "P559",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26736,19 +26873,19 @@
       "name": "Sleeping Dogs",
       "enName": "Sombras del pasado",
       "year": 2024,
-      "rating": 6.998,
+      "rating": 7,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Misterio",
-        "Suspenso",
         "Crimen",
-        "Drama"
+        "Drama",
+        "Misterio",
+        "Suspenso"
       ],
       "region": "United States",
       "language": "Español",
-      "description": "Roy Freeman, an ex-homicide detective with a fractured memory, is forced to revisit a case he can't remember. As a man's life hangs in the balance on death row, Freeman must piece together the brutal evidence from a decade-old murder investigation, uncovering a sinister web of buried secrets and betrayals linking to his past. With only instincts to trust, he faces a chilling truth - sometimes, it's best to let sleeping dogs lie.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/5DwQhh1HvTo7edaOeMX49NUyZqy.jpg",
+      "description": "Después de someterse a un tratamiento de vanguardia para el Alzheimer, un ex detective de homicidios vuelve a examinar un caso de hace una década que involucra el brutal asesinato de un profesor universitario, y es como si estuviera investigando el caso por primera vez.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/kDAgYPJ4qMDt2RbuYGmUocpWuPd.jpg",
       "cast": [
         "Russell Crowe",
         "Karen Gillan",
@@ -26757,17 +26894,17 @@
         "Thomas M. Wright"
       ],
       "trailers": [
-        "cIkiM4Wb6s0",
-        "jlm1zyy8whg",
-        "KOI7cijBgWs"
+        "owtnIwFw1Bw"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P560",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26776,18 +26913,18 @@
       "name": "The Commuter",
       "enName": "El pasajero",
       "year": 2018,
-      "rating": 6.368,
+      "rating": 6.367,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
         "Acción",
-        "Suspenso",
-        "Misterio"
+        "Misterio",
+        "Suspenso"
       ],
       "region": "United States",
       "language": "Español",
-      "description": "A businessman, on his daily commute home, gets unwittingly caught up in a criminal conspiracy that threatens not only his life but the lives of those around him.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/rDeGK6FIUfVcXmuBdEORPAGPMNg.jpg",
+      "description": "Durante su trayecto habitual de vuelta a casa en tren, un hombre de negocios felizmente casado comienza a hablar con una misteriosa pasajera. Pronto el hombre se verá envuelto en una conspiración criminal que amenaza con poner en peligro tanto su vida como la de sus seres más cercanos.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/nd7dKQ1Lpkzlvl4V29gEu2Kg3sX.jpg",
       "cast": [
         "Liam Neeson",
         "Patrick Wilson",
@@ -26796,19 +26933,17 @@
         "Vera Farmiga"
       ],
       "trailers": [
-        "g1RMoMrr3SM",
-        "BN4p7XhR16A",
-        "iQZL28DywEA",
-        "ysIwbu32fBY",
-        "aDshY43Ol2U"
+        "GxHM7YhIt_k"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P561",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26821,15 +26956,15 @@
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Música",
         "Comedia",
-        "Romance",
-        "Drama"
+        "Drama",
+        "Música",
+        "Romance"
       ],
       "region": "United States",
       "language": "Español",
-      "description": "40-year-old single mom Solène begins an unexpected romance with 24-year-old Hayes Campbell, the lead singer of August Moon, the hottest boy band on the planet. As they begin a whirlwind romance, it isn't long before Hayes' superstar status poses unavoidable challenges to their relationship, and Solène soon discovers that life in the glare of his spotlight might be more than she bargained for.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/Y5P4Q3q8nrruZ9aD3wXeJS2Plg.jpg",
+      "description": "Solène, madre soltera de 40 años, comienza un romance inesperado con Hayes Campbell, de 24 años, el cantante principal de August Moon, la banda de chicos más popular del planeta.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/y1WpsgfBA5GywXIuqLm9D4aQHNd.jpg",
       "cast": [
         "Anne Hathaway",
         "Nicholas Galitzine",
@@ -26838,15 +26973,17 @@
         "Reid Scott"
       ],
       "trailers": [
-        "pz6qx4n2Ewc"
+        "gY_mgZqumNM"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P562",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26864,8 +27001,8 @@
       ],
       "region": "United States",
       "language": "Español",
-      "description": "A hitman, his boss, an art dealer and a money-laundering scheme that accidentally turns the assassin into an overnight avant-garde sensation, one that forces her to play the art world against the underworld.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/ciEZWh4fkq394ToQBr91UDUK45O.jpg",
+      "description": "Un asesino a sueldo, su jefe, una comerciante de arte y un plan de blanqueo de dinero convierten accidentalmente de la noche a la mañana a este asesino en una sensación vanguardista, que hace que se enfrente al mundo del arte y a los bajos fondos.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/clLJMEzmjIiSOetXUfOKoGmVXbY.jpg",
       "cast": [
         "Uma Thurman",
         "Joe Manganiello",
@@ -26882,8 +27019,10 @@
       "episodeCount": 1,
       "code": "P563",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26902,8 +27041,8 @@
       ],
       "region": "United States",
       "language": "Español",
-      "description": "Music, comedy, and a whole lot of chaos is bound to ensue when The Muppets once again take the stage of the original Muppet Theatre with their very special guest, Sabrina Carpenter!",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/tcwar1rL0neoLvnklL7DzYw7sN8.jpg",
+      "description": "¡Vuelve \"El show de los Muppets\"! La rana Gustavo, la Señorita Peggy y el resto de los queridos Muppets regresan con un nuevo programa especial. La música, la comedia y el caos están garantizados cuando los Muppets se suban de nuevo al escenario del Teatro de los Muppets original con una invitada muy especial: ¡Sabrina Carpenter!",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/9UQB40mDmP9l5WsOTYs9FW0ItOI.jpg",
       "cast": [
         "Bill Barretta",
         "Dave Goelz",
@@ -26919,8 +27058,10 @@
       "episodeCount": 1,
       "code": "P564",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26929,17 +27070,17 @@
       "name": "The Notebook",
       "enName": "El diario de Noa",
       "year": 2004,
-      "rating": 7.89,
+      "rating": 7.888,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Romance",
-        "Drama"
+        "Drama",
+        "Romance"
       ],
       "region": "United States",
       "language": "Español",
-      "description": "An epic love story centered around an older man who reads aloud to a woman with Alzheimer's. From a faded notebook, the old man's words bring to life the story about a couple who is separated by World War II, and is then passionately reunited, seven years later, after they have taken different paths.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/rNzQyW4f8B8cQeg7Dgj3n6eT5k9.jpg",
+      "description": "En una residencia de ancianos, un hombre mayor lee a una mujer una historia de amor escrita en su viejo libro de notas. El libro cuenta la vida en los años 40 de Noah Calhoun y Allie Nelson, dos jóvenes adolescentes de Carolina del Norte que, a pesar de vivir en dos ambientes sociales muy diferentes, pasaron un verano idílico juntos y profundamente enamorados, antes de ser separados, primero por sus padres, y más tarde por la Segunda Guerra Mundial.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/gFCnDKfsZWzyv9sweizVC4EWn06.jpg",
       "cast": [
         "Ryan Gosling",
         "Rachel McAdams",
@@ -26955,8 +27096,10 @@
       "episodeCount": 1,
       "code": "P565",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -26965,23 +27108,23 @@
       "name": "The Passenger",
       "enName": "El Pasajero",
       "year": 2026,
-      "rating": 7.302,
+      "rating": 5.587,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Terror",
-        "Suspenso"
+        "Suspenso",
+        "Terror"
       ],
       "region": "United States",
       "language": "Español",
-      "description": "After a young couple witnesses a gruesome highway accident, they soon realize they did not leave the crash scene alone, as a demonic presence called the Passenger that won't stop until it claims them both turns their van life adventure into a nightmare.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/svrAzMTif4OmIjGJzC0W92d5O1o.jpg",
+      "description": "Un conductor de aeropuerto somalí-americano, en un intento desesperado por llegar a fin de mes, acepta transportar a un misterioso pasajero de Minneapolis a Chicago. Sin embargo, se da cuenta de que su pasajero no es quien parece, lo que le atrapa en una situación aterradora de la que no puede escapar.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/4li847oWaW00T7BUU7fguAHzVxi.jpg",
       "cast": [
-        "Jacob Scipio",
-        "Lou Llobell",
-        "Melissa Leo",
-        "Joseph Lopez",
-        "Miles Fowler"
+        "Djimon Hounsou",
+        "Kodi Smit-McPhee",
+        "Leigh-Ann Rose",
+        "Carolina Campos",
+        "Tegan Couchman"
       ],
       "trailers": [
         "eNIn8kW1kyE"
@@ -26991,8 +27134,9 @@
       "episodeCount": 1,
       "code": "P566",
       "metadata": {
-        "genresEnriched": true,
-        "enriched": true
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true
       }
     },
     {
@@ -27005,17 +27149,17 @@
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Familiar",
         "Animado",
-        "Comedia",
-        "Fantasía",
         "Aventura",
+        "Comedia",
+        "Familiar",
+        "Fantasía",
         "Música"
       ],
       "region": "United States",
       "language": "Español",
-      "description": "Queen Poppy and Branch make a surprising discovery — there are other Troll worlds beyond their own, and their distinct differences create big clashes between these various tribes. When a mysterious threat puts all of the Trolls across the land in danger, Poppy, Branch, and their band of friends must embark on an epic quest to create harmony among the feuding Trolls to unite them against certain doom.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/7W0G3YECgDAfnuiHG91r8WqgIOe.jpg",
+      "description": "En una aventura que les llevará más allá de todo lo que habían conocido, Poppy y Branch descubren que su tribu de Trolls es solo una de las seis que existen, que el resto están repartidas en seis reinos y consagradas a seis tipos distintos de música: funk, country, tecno, clásica, pop y rock. La reina Bárbara, miembro de la realeza del hard rock, y su padre, el Rey Metal, quieren acabar con el resto de géneros musicales e imponer el reinado del rock. Con el destino del mundo en juego, Poppy y Branch, junto con el resto de la pandilla — Grandullón, Chanelle, Satén, Cooper y Guy Diamante—, visitarán los demás reinos para unir a los Trolls contra los planes de Barb de eclipsarlos a todos.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/9GdgycCYq3vnxLHw5Ldah8JEjH4.jpg",
       "cast": [
         "Anna Kendrick",
         "Justin Timberlake",
@@ -27024,17 +27168,17 @@
         "James Corden"
       ],
       "trailers": [
-        "08AExF6dETA",
-        "3cCoDDhFpmY",
-        "SyTg7RIn-X8"
+        "6zaZFUqURFA"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P567",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -27043,7 +27187,7 @@
       "name": "Go team",
       "enName": "Gracias, equipo",
       "year": 2026,
-      "rating": 5.885,
+      "rating": 5.9,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
@@ -27148,7 +27292,7 @@
     {
       "id": "8740e8b3-6115-4eac-82d2-5203d42afb5a",
       "type": "movie",
-      "name": "Infierno bajo cero",
+      "name": "Contra las cuerdas",
       "enName": "In Cold Light",
       "year": 2026,
       "rating": 5.806,
