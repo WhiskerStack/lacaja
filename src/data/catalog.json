@@ -2893,7 +2893,7 @@
       "id": "51859b1b-3bda-435a-a85f-19223eb3e878",
       "type": "movie",
       "name": "Código 8",
-      "enName": "Code 8 ",
+      "enName": "Code 8",
       "year": 2016,
       "rating": 6.529,
       "sizeGb": 0,
@@ -4808,7 +4808,7 @@
     {
       "id": "23a5e827-40e8-4e17-9564-53cce4b17c15",
       "type": "movie",
-      "name": "Extraterritorial ",
+      "name": "Extraterritorial",
       "enName": "Extraterritorial",
       "year": 2025,
       "rating": 6.602,
@@ -6154,46 +6154,6 @@
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P80",
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true
-      }
-    },
-    {
-      "id": "c6a23231-ead1-4d3e-9a3c-7ea6ab7f9c31",
-      "type": "series",
-      "name": "El Periférico",
-      "enName": "The Peripheral",
-      "year": 2022,
-      "rating": 7.63,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Ciencia Ficción",
-        "Fantasía",
-        "Drama"
-      ],
-      "region": "EU",
-      "language": "Inglés",
-      "description": "Atorada en un pequeño pueblo de Appalachia, la única huida de una joven del estrés diario es jugar videojuegos de avanzada. Ella es tan buena jugadora que una compañía le envía un nuevo sistema de videojuegos para probarlo... pero tiene una sorpresa en store. Desbloquea todos sus sueños de encontrar un propósito, romance y glamour en lo que parece un juego... pero también pone en peligro a ella y su familia en peligro real.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/2e5NNQu9B1fXBNllRj8fzysCguP.jpg",
-      "cast": [
-        "Chloë Grace Moretz",
-        "Gary Carr",
-        "Jack Reynor",
-        "T'Nia Miller",
-        "Katie Leung"
-      ],
-      "trailers": [
-        "bRdkRQzcrrc",
-        "RSaWHbCSmRI"
-      ],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 8,
-      "code": "S80",
-      "isActive": false,
       "metadata": {
         "enriched": true,
         "translated": true,
@@ -10829,7 +10789,7 @@
       "id": "1b8a80c0-9ba0-4f57-aa45-cd6d9f633166",
       "type": "movie",
       "name": "Los hermanos Demolición o Equipo Demolición",
-      "enName": "The Wrecking Crew ",
+      "enName": "The Wrecking Crew",
       "year": 2026,
       "rating": 7.088,
       "sizeGb": 0,
@@ -16038,7 +15998,7 @@
     {
       "id": "e9c5ac97-b6b2-4b68-a145-7ef1795f7fad",
       "type": "movie",
-      "name": "Madagascar 1 ",
+      "name": "Madagascar 1",
       "enName": "Madagascar 1",
       "year": 2005,
       "rating": 6.929,
@@ -16276,7 +16236,7 @@
     {
       "id": "d1f3d05a-10e0-44c1-9405-b53b30c32aaf",
       "type": "movie",
-      "name": "Nato 0 El Origen Del Mal ",
+      "name": "Nato 0 El Origen Del Mal",
       "enName": "Nato 0  El Origen Del Mal",
       "year": 2023,
       "rating": 5.6,
@@ -24598,7 +24558,7 @@
     {
       "id": "4d89c737-bf05-4c74-8aea-e4e6007468da",
       "type": "series",
-      "name": "Cementerio  ",
+      "name": "Cementerio",
       "enName": "",
       "year": 2026,
       "rating": 7.415,
@@ -27075,6 +27035,556 @@
       "metadata": {
         "genresEnriched": true,
         "enriched": true
+      }
+    },
+    {
+      "id": "1530eab1-bca6-45b1-b2ae-807167c50dde",
+      "type": "movie",
+      "name": "Go team",
+      "enName": "Gracias, equipo",
+      "year": 2026,
+      "rating": 5.885,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Comedia"
+      ],
+      "region": "Spain",
+      "language": "Español",
+      "description": "Nos contará la historia de la empresa Tío Mochales, antaño reina indiscutible del queso español. Hoy es una empresa un poco oxidada pero empeñada en mantener la imagen. Su última gran idea: organizar un team building rural en el pueblo donde la empresa se fundó. Pero lo que debía ser un retiro para reconectar con los valores de siempre, se convierte en una encerrona cuando descubren que se vienen despidos, y muchos, seguida de una batalla campal de peloteo, traiciones y filtraciones",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/aVGaBCt8g0Q990jKW85wTJKotev.jpg",
+      "cast": [
+        "Alexandra Jiménez",
+        "Maribel Verdú",
+        "Pedro Casablanc",
+        "Raúl Tejón",
+        "Blanca Martínez"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P568",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "ace39d36-c3ec-460a-8342-e7fb9b34b4af",
+      "type": "movie",
+      "name": "Hungry",
+      "enName": "Hungry",
+      "year": 2026,
+      "rating": 7,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Suspenso",
+        "Terror"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Un grupo de turistas deben luchar por sus vidas contra un hipopótamo desbocado, que anda suelto tras perderse en los pantanos de Luisiana.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/t4X5HtZBtwNzbg9K5prABkC0nDJ.jpg",
+      "cast": [
+        "Madison Davenport",
+        "Tracey Bonner",
+        "Joaquim de Almeida",
+        "Michel Curiel",
+        "Samantha Coughlan"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P569",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "8b0b6c8e-ce63-4117-82bd-63217bc6dbb5",
+      "type": "movie",
+      "name": "Infierno bajo cero",
+      "enName": "Ice Skater",
+      "year": 2026,
+      "rating": 2,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Suspenso"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Atrapada en una placa de hielo a la deriva en el Ártico, una patinadora artística lucha por sobrevivir mientras el hielo se fragmenta y la arrastra hacia aguas abiertas. Sin posibilidad de rescate, cada minuto es una batalla contra el frío extremo, el hambre y el agotamiento.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/dQyyx00wZSiJlJEAT0oIo9NZVjn.jpg",
+      "cast": [
+        "Thea Sofie Loch Næss",
+        "Νίκος Κουκάς",
+        "Mimi Roivainen",
+        "Jasmin Simonen"
+      ],
+      "trailers": [
+        "yOFZdp58qOU"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P570",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "8740e8b3-6115-4eac-82d2-5203d42afb5a",
+      "type": "movie",
+      "name": "Infierno bajo cero",
+      "enName": "In Cold Light",
+      "year": 2026,
+      "rating": 5.806,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Crimen",
+        "Suspenso"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Ava intenta retomar su vida después de prisión, pero su gemela es asesinada y, al ser testigo del tiroteo, se ve obligada a huir para salvar su vida.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/itCHi0wHIoFARyS7EPmQt8pT7j.jpg",
+      "cast": [
+        "Maika Monroe",
+        "Troy Kotsur",
+        "Allan Hawco",
+        "Helen Hunt",
+        "Jesse Irving"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P571",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "1f95bba6-9373-47fb-bc62-45cc548b5d8d",
+      "type": "movie",
+      "name": "The Righteous",
+      "enName": "Los justos",
+      "year": 2026,
+      "rating": 5.778,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Comedia",
+        "Drama"
+      ],
+      "region": "Desconocido",
+      "language": "Español",
+      "description": "Nueve miembros de un jurado popular deliberan aislados un polémico caso de corrupción. Las pruebas son irrefutables, la opinión pública ya ha emitido su veredicto, nadie parece tener dudas... Hasta que reciben una oferta en secreto: cada integrante ganará un millón de euros si cambia su voto de culpable a inocente. Pero si quieren entrar en el juego, deberán alcanzar la unanimidad; algo que sacará a la luz las verdaderas causas pendientes de cada uno de los miembros del jurado.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/nPLz43WeOdalN8GLtNHLKCpus2O.jpg",
+      "cast": [
+        "Carmen Machi",
+        "Vito Sanz",
+        "Pilar Castro",
+        "Bruna Cusí",
+        "Ane Gabarain"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P572",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "182bdd40-746f-498a-8e94-9b927ca256f9",
+      "type": "movie",
+      "name": "Noche de los muertos vivientes",
+      "enName": "Night of the Living Dead",
+      "year": 2026,
+      "rating": 4.918,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Terror"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Remake de la película de terror de culto “La noche de los muertos vivientes” de George A. Romero de 1968. Tiene lugar durante un acontecimiento mundial en el que los muertos se alzan y vagan por la tierra como zombis. A medida que la civilización se derrumba, un pequeño grupo de supervivientes debe luchar para mantenerse con vida contra la creciente amenaza de los muertos vivientes.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/9MQDHgtd9Tv2Jws1Ox357chtMYK.jpg",
+      "cast": [
+        "Vivica A. Fox",
+        "Brittany Underwood",
+        "Robert Carradine",
+        "Dee Wallace",
+        "Eva Ceja"
+      ],
+      "trailers": [
+        "iOkwSz3LdlU"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P573",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "96d53498-f4d6-45f5-a329-4095bf5f6cbd",
+      "type": "movie",
+      "name": "Patrulla Nocturna",
+      "enName": "Night Patrol",
+      "year": 2026,
+      "rating": 4.927,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Misterio",
+        "Terror"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Un policía de Los Ángeles descubre que un grupo de trabajo local oculta un secreto que pone en peligro a los vecinos del barrio de su infancia.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/mCIgwwrafyA0oGrEBbjGfNft1B3.jpg",
+      "cast": [
+        "Jermaine Fowler",
+        "Justin Long",
+        "RJ Cyler",
+        "Freddie Gibbs",
+        "Phil Brooks"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P574",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "172c2793-dcb5-40a0-bc3e-d55d9b9066cd",
+      "type": "movie",
+      "name": "Una Milla: Capítulo Dos",
+      "enName": "One Mile: Chapter Two",
+      "year": 2026,
+      "rating": 6.682,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Crimen"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Un antiguo agente de las fuerzas especiales se ve obligado a regresar a una remota isla cuando la violenta y hermética comunidad contra la que luchó en el pasado secuestra a su hija en un acto de venganza. Lanzado a una caza implacable, se enfrenta a un enemigo que está preparado y anticipándose a todos sus movimientos.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/o8wSKL9hF1f4VRrGwnHQuxTBdef.jpg",
+      "cast": [
+        "Ryan Phillippe",
+        "Amélie Hoeferle",
+        "Sara Canning",
+        "Sage Linder",
+        "Beverley Elliott"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P575",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "5be24144-e881-41a3-8e2b-0a6df712ff1e",
+      "type": "movie",
+      "name": "Psycho Killer",
+      "enName": "Psycho Killer",
+      "year": 2026,
+      "rating": 6.591,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Crimen",
+        "Misterio",
+        "Terror"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Una agente de policía sigue la pista de un asesino después de que su marido, un patrullero de carretera, se convierta en una de sus víctimas.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/5xgxxmLivJXL8aF0HdZfpx8aAIo.jpg",
+      "cast": [
+        "Georgina Campbell",
+        "James Preston Rogers",
+        "Malcolm McDowell",
+        "Logan Miller",
+        "Grace Dove"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P576",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "c16dc79e-626a-4633-b3af-94121bf59429",
+      "type": "movie",
+      "name": "Quantum Supremacy",
+      "enName": "Quantum Supremacy",
+      "year": 2026,
+      "rating": 4,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Animado",
+        "Aventura",
+        "Ciencia Ficción"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "En un futuro amenazado por robots deshonestos y una IA todopoderosa, el Capitán Monroe y su tripulación corren para evitar la caída de la humanidad.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/gytLKZR6X3w8iwpgPuzILY77Wda.jpg",
+      "cast": [
+        "Cuba Gooding Jr.",
+        "Mike Ayiotis",
+        "Storm Watters",
+        "Andrew Helbig",
+        "Richie Ammons"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P577",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "56172862-dde8-46a3-bf40-a49d54f0fe58",
+      "type": "movie",
+      "name": "Cambio de roles",
+      "enName": "The Breadwinner",
+      "year": 2026,
+      "rating": 7.3,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Comedia",
+        "Familiar"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Una supermamá consigue un lucrativo contrato laboral y cambia los papeles con su marido, que es el sostén de la familia. Él lucha por adaptarse como padre que se queda en casa con sus tres hijas.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/fk3hT9buF7V4D9LLrXVHFdaHHDi.jpg",
+      "cast": [
+        "Nate Bargatze",
+        "Mandy Moore",
+        "Stella Grace Fitzgerald",
+        "Birdie Borria",
+        "Charlotte Ann Tucker"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P578",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "87413198-0033-491f-b227-747ebeb95bad",
+      "type": "movie",
+      "name": "El final de Oak Street",
+      "enName": "The End of Oak Street",
+      "year": 2026,
+      "rating": 6.576,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Ciencia Ficción",
+        "Misterio",
+        "Suspenso"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Después de que un misterioso fenómeno cósmico arranque Oak Street de su entorno suburbano y transporte a sus habitantes a un lugar desconocido, la familia Platt pronto descubre que su propia supervivencia depende de que permanezcan unidos mientras se orientan en un entorno que ya no reconocen.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/g9DUGw8ufetrwhCIrwq3h1NlpWO.jpg",
+      "cast": [
+        "Anne Hathaway",
+        "Ewan McGregor",
+        "Maisy Stella",
+        "Christian Convery",
+        "Jordan Alexa Davis"
+      ],
+      "trailers": [
+        "pKtm-_iOivI"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P579",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "8914887e-57a9-489f-aa50-6019b7bd8a75",
+      "type": "movie",
+      "name": "La odisea",
+      "enName": "The Odyssey",
+      "year": 2026,
+      "rating": 4.017,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Fantasía"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "El rey Odiseo regresa por fin a casa tras diez años de intensos combates y derramamiento de sangre en la guerra de Troya. Pero su arduo viaje para volver junto a su amada está plagado de monstruos peligrosos y pruebas arriesgadas, más traicioneras de lo que jamás hubiera imaginado.  Versión del estudio The Asylum, compañía de cine famosa por hacer películas de bajo coste que imitan títulos grandes de Hollywood para estrenarse a la vez.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/yMZZfzXzB5EolDIP9Z6kpW0SdFi.jpg",
+      "cast": [
+        "Myrom Kingery",
+        "Morgan Flanagan",
+        "Patrick Byrnes",
+        "Dominic Keating",
+        "Llana Barron"
+      ],
+      "trailers": [
+        "X9nUrOnHlz0"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P580",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "9b0a4faa-af64-4223-b337-89dd4de84f01",
+      "type": "movie",
+      "name": "Conexion Peligrosa",
+      "enName": "Wardriver",
+      "year": 2026,
+      "rating": 7.343,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Crimen",
+        "Suspenso"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Cole, un joven brillante que se gana la vida hackeando redes inalámbricas de cajeros automáticos desde su coche, solo ataca a corporaciones anónimas. Pero cuando un timador financiero le obliga a robar a una mujer atrapada en un imperio criminal, su siguiente movimiento podría salvarla, o hacer que ambos mueran.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/l4eMHiua2to9M9vmq5KjSCR2hec.jpg",
+      "cast": [
+        "Dane DeHaan",
+        "Sasha Calle",
+        "Mamoudou Athie",
+        "Jeffrey Donovan",
+        "William Belleau"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P581",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "63943742-ed2f-4114-ba66-386b4617e3e6",
+      "type": "movie",
+      "name": "Italiana",
+      "enName": "You, Me & Tuscany",
+      "year": 2026,
+      "rating": 7.4,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Comedia",
+        "Romance"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Anna, una joven que ha dejado atrás su sueño de ser chef, viaja impulsivamente a la Toscana tras conocer a Matteo, dueño de una villa vacía. Cuando la madre de él aparece inesperadamente, Anna finge ser su prometida. La mentira se complica aún más con la llegada de Michael, cuyo inesperado vínculo con Anna podría cambiarlo todo.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/f0Gip8ZwWySoVXuv7icSdP5B8U3.jpg",
+      "cast": [
+        "Halle Bailey",
+        "Regé-Jean Page",
+        "Lorenzo de Moor",
+        "Marco Calvani",
+        "Isabella Ferrari"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P582",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
       }
     }
   ]
