@@ -3,5 +3,25 @@
     "404": {
       "rewrite": "/404.html"
     }
-  }
+  },
+  "routes": [
+    {
+      "route": "/sw.js",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, must-revalidate"
+      }
+    },
+    {
+      "route": "/registerSW.js",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, must-revalidate"
+      }
+    },
+    {
+      "route": "/manifest.webmanifest",
+      "headers": {
+        "Cache-Control": "no-cache"
+      }
+    }
+  ]
 }

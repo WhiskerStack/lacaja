@@ -15,7 +15,7 @@ export default defineConfig({
     preact({ compat: false }),
     tailwind({ applyBaseStyles: false }),
     AstroPWA({
-      registerType: 'autoUpdate',
+      registerType: 'prompt',
       workbox: {
         // Precacheamos TODO el HTML generado, incluidas las ~600 paginas de detalle
         // (/p/{id}, /s/{id}, /s/{id}/{temporada}, /s/{id}/{temporada}/{capitulo}).
