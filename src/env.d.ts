@@ -19,3 +19,19 @@ declare module 'virtual:pwa-register' {
 
 // `lite-youtube-embed` no trae tipos: registra el custom element <lite-youtube> por efecto.
 declare module 'lite-youtube-embed';
+
+// Shims mínimos de `node:*` para los tests que leen el catálogo desde disco
+// (catalog-contract.test.ts). La app es SSG y no usa `node:*` en runtime, así que
+// evitamos instalar @types/node solo para tipar este import en TypeScript.
+// Si en el futuro se necesita más superficie, se amplía este bloque.
+declare module 'node:fs' {
+  export function readFileSync(path: string, encoding: BufferEncoding): string;
+  export function readFileSync(path: string): Buffer;
+}
+declare module 'node:path' {
+  export function resolve(...paths: string[]): string;
+  export function dirname(path: string): string;
+}
+declare module 'node:url' {
+  export function fileURLToPath(url: string | URL): string;
+}
