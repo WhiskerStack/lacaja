@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 // scripts/enrich-catalog.mjs
 // Enriquece el catálogo con datos de TMDB: póster, descripción, reparto, tráiler, rating y géneros.
 // Solo procesa ítems cuyo metadata.enriched no sea true (con --force los reprocesa todos).

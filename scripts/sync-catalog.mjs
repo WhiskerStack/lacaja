@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 // sync-catalog.mjs
 // Lee todos los archivos .xlsx en dataset/ y extrae cada ítem.
 // Genera src/data/catalog.json con UUIDs, año null si falta, y datos normalizados.

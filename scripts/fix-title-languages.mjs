@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 // scripts/fix-title-languages.mjs
 // Traduce títulos del catálogo con Ollama:
 // - Si falta name, traduce enName al español y lo pone en name.
