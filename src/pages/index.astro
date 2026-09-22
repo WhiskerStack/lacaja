@@ -1,45 +1,53 @@
 ---
-// Home (funcional §6.1): carátula full-width + filas de recomendados por clasificación/género.
+// Home (funcional §6.1): carátula full-width + filas por año. Las cinco primeras líneas son el
+// escaparate del 2026 y lo último agregado por categoría; a partir de ahí, mejor votadas por
+// género (mezclando series y películas).
 import Base from '../layouts/Base.astro';
 import HeroCarousel from '../features/catalog/ui/HeroCarousel.tsx';
 import Rail from '../features/catalog/ui/Rail.astro';
 import {
   getPremiereHighlights,
-  getPremieres,
   getTopRated,
-  getCards,
-  byCodeDesc,
+  getMoviesByYear,
+  getSeriesByYear,
+  getMoviesBeforeYear,
+  getSeriesBeforeYear,
 } from '../features/catalog/logic/buildData';
 import { withLocalImages, HERO_SIZE } from '../features/catalog/logic/cardImages';
-import { TYPE_LABEL_PLURAL } from '../features/catalog/types';
-import type { AudiovisualType } from '../features/catalog/types';
+
+const CURRENT_YEAR = 2026;
 
 // El carrusel es una isla: reutiliza la misma variante que DetailHero (ver cardImages.ts).
 const highlights = await withLocalImages(getPremiereHighlights(5), HERO_SIZE);
-const estrenos = getPremieres();
+
+// Línea 1: las cinco películas del 2026 más recientes (código más alto).
+const top2026Movies = getMoviesByYear(CURRENT_YEAR).slice(0, 5);
+// Línea 2: el resto de las películas del 2026.
+const more2026Movies = getMoviesByYear(CURRENT_YEAR).slice(5);
+// Línea 3: series del 2026.
+const series2026 = getSeriesByYear(CURRENT_YEAR);
+// Línea 4: películas previas al 2026 (catálogo histórico), "Últimas películas en La Caja".
+const latestMovies = getMoviesBeforeYear(CURRENT_YEAR);
+// Línea 5: series previas al 2026, "Últimas series en La Caja".
+const latestSeries = getSeriesBeforeYear(CURRENT_YEAR);
+
 const topRated = getTopRated();
-const allCards = getCards();
 
 // Filas "mejor votadas" por género. Los nombres deben coincidir con el vocabulario del
 // catálogo (src/data/catalog.json → genres); un ítem puede aparecer en varias filas.
 const genreRows = ['Ciencia Ficción', 'Drama', 'Animado', 'Acción']
   .map((g) => ({ g, cards: topRated.filter((c) => c.genres.includes(g)) }))
   .filter((r) => r.cards.length > 0);
-
-const TYPES: AudiovisualType[] = ['movie', 'series', 'anime'];
 ---
 <Base>
   <HeroCarousel client:load items={highlights} />
 
   <div class="mt-6">
-    <Rail title="Estrenos" cards={estrenos} />
-
-    {TYPES.map((t) => (
-      <Rail
-        title={TYPE_LABEL_PLURAL[t]}
-        cards={allCards.filter((c) => c.type === t).sort(byCodeDesc)}
-      />
-    ))}
+    <Rail title="Las 5 del 2026" cards={top2026Movies} />
+    <Rail title="Más películas 2026" cards={more2026Movies} />
+    <Rail title="Series 2026" cards={series2026} />
+    <Rail title="Últimas películas en La Caja" cards={latestMovies} />
+    <Rail title="Últimas series en La Caja" cards={latestSeries} />
 
     <Rail title="Mejor votadas" cards={topRated.slice(0, 12)} />
 

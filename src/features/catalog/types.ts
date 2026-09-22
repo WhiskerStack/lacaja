@@ -68,7 +68,7 @@ export interface CatalogItemDTO extends AudiovisualDTO {
   episodeCount: number,
 }
 
-/** Ítem ligero para grids/carruseles (foto, nombre, clasificación, año). */
+/** Ítem ligero para grids/carruseles (foto, nombre, clasificación, año, región). */
 export interface CatalogCardDTO {
   id: string;
   code: string;
@@ -80,6 +80,8 @@ export interface CatalogCardDTO {
   genres: string[];
   isPremiere: boolean;
   totalSizeGb: number;
+  /** País (región) de origen; usado para filtrar en Biblioteca. */
+  region: string;
   /** Título alternativo; ver CatalogItemDTO.altName. */
   altName?: string;
 }

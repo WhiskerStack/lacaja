@@ -1,5 +1,5 @@
 {
-  "version": 1.2,
+  "version": 1.3,
   "genres": [
     "Acción",
     "Animado",
@@ -31,7 +31,6 @@
     "Alemania",
     "Argentina",
     "Australia",
-    "Austria",
     "Brazil",
     "Canada",
     "Canadá",
@@ -39,9 +38,9 @@
     "Corea del Sur",
     "Cuba",
     "Desconocido",
-    "EU",
     "España",
     "Estonia",
+    "EU",
     "France",
     "Francia",
     "Germany",
@@ -61,11 +60,11 @@
     "Tailandia",
     "Turkey",
     "Turquía",
-    "US",
-    "USA",
     "United Kingdom",
     "United States",
-    "Uruguay"
+    "Uruguay",
+    "US",
+    "USA"
   ],
   "languages": [
     "Alemán",
@@ -1118,7 +1117,7 @@
         "Aventura",
         "Drama"
       ],
-      "region": "España",
+      "region": "2026",
       "language": "Español",
       "description": "Miembros de una expedición oceanográfica integrada por científicos y la Armada Española embarcan en el barco Pentonkontors para investigar y concienciar sobre los problemas de la isla de plástico ubicada en el Pacífico Sur. Es hora de afrontar la situación y la libertad del planeta. Es importante saber que la acogida para el personal militar es buena, para que puedan prepararse para su acogida y supervivencia para que puedan sobrevivir su vida diaria en el punto Nemo. Un lugar lleno de misterios y peligros acechantes.",
       "imageUrl": "https://image.tmdb.org/t/p/w500/pNFls7LsLpS7Dvyx4uFhoTWHWlF.jpg",
@@ -2026,7 +2025,7 @@
         "Fantasía",
         "Drama"
       ],
-      "region": "USA",
+      "region": "2026",
       "language": "Español",
       "description": "En un futuro arruinado y tóxico, miles de personas viven en un gran silo profundo en el subsuelo. Después de que su alguacil rompe una regla cardinal y morirán de manera misteriosa a los residentes, la ingeniera Juliette comienza a descubrir secretos chocantes y la verdad sobre el silo.",
       "imageUrl": "https://image.tmdb.org/t/p/w500/gMYZZvnkVNTqSVnVCphWbPXwWwb.jpg",
@@ -2491,7 +2490,7 @@
         "Aventura",
         "Drama"
       ],
-      "region": "USA",
+      "region": "2021",
       "language": "Español",
       "description": "Después de estrellarse en un planeta alienígena, la familia Robinson lucha contra todas las probabilidades para sobrevivir y escapar. Pero están rodeados de peligros ocultos.",
       "imageUrl": "https://image.tmdb.org/t/p/w500/y8NJnTXzb4rio9uvVYFVrXEMofU.jpg",
@@ -2567,7 +2566,7 @@
         "Fantasía",
         "Drama"
       ],
-      "region": "USA",
+      "region": "2023",
       "language": "Español",
       "description": "Después de aterrizar desde un vuelo turbulento pero rutinario, la tripulación y pasajeros del vuelo 828 de Montego Air descubren que han pasado cinco años en lo que parecía ser unos pocos horas. A medida que se vuelven claras sus nuevas realidades, se despliega un misterio más profundo y algunos de los pasajeros retornados pronto se dan cuenta de que pueden estar destinados a algo más grande de lo que nunca imaginaron posible.",
       "imageUrl": "https://image.tmdb.org/t/p/w500/eTemCphrglLKrXOsNRhYezHA7H9.jpg",
@@ -2641,7 +2640,7 @@
       "genres": [
         "Comedia"
       ],
-      "region": "España",
+      "region": "2026",
       "language": "Español",
       "description": "Pedro, Luis, Raúl y Santi son cuatro amigos que se sienten un poco perdidos en el nuevo mundo de mujeres empowered, cada uno tratando de ajustarse de manera desorganizada.",
       "imageUrl": "https://image.tmdb.org/t/p/w500/NqID21yImku6B7kq0oCQTxX2rm.jpg",
@@ -3015,7 +3014,7 @@
         "Ciencia Ficción",
         "Fantasía"
       ],
-      "region": "Austria",
+      "region": "2026",
       "language": "Español",
       "description": "Condenado por un crimen corporativo, el adulto Ted Templeton se vuelve de nuevo al Boss Baby para vivir en su tapadera con su hermano Tim, haciéndose pasar por uno de sus hijos.",
       "imageUrl": "https://image.tmdb.org/t/p/w500/18f8ASmigtrQTm8MARHD8Af47db.jpg",
@@ -3168,7 +3167,7 @@
         "Aventura",
         "Crimen"
       ],
-      "region": "Reino Unido",
+      "region": "2019",
       "language": "Español",
       "description": "¿Qué sucede cuando un hombre que cree que se ha retirado de MI6 es llamado de regreso a hacer un trabajo más para recuperar su vida, solo para descubrir que este trabajo puede significar que no tendrá vida que regresar a.",
       "imageUrl": "https://image.tmdb.org/t/p/w500/mJgUIqASiJg5nTp8SsKcqTzBpqk.jpg",
@@ -3473,7 +3472,7 @@
         "Drama",
         "Crimen"
       ],
-      "region": "USA",
+      "region": "2013",
       "language": "Español",
       "description": "Walter White, un profesor de química de Nuevo México, se diagnostica con cáncer de tercer grado y le dan un pronóstico de solo dos años de vida. Se llena de un sentido de temeridad y un deseo incesante de asegurar el futuro financiero de su familia a cualquier precio al entrar en el peligroso mundo de las drogas y el crimen.",
       "imageUrl": "https://image.tmdb.org/t/p/w500/anFx9aTOOYqgS3v7x3R84Kz67ly.jpg",
@@ -4460,7 +4459,7 @@
         "Fantasía",
         "Drama"
       ],
-      "region": "USA",
+      "region": "2025",
       "language": "Español",
       "description": "La historia de los que tienen y los que no tienen en un mundo en el que casi nada queda para tener. 200 años después del apocalipsis, los tranquilos habitantes de los refugios de lujo contra la contaminación nuclear son obligados a regresar al paisaje irradiado que sus antepasados abandonaron - y se sorprenden al descubrir que un universo increíblemente complejo, divertido y violento los espera.",
       "imageUrl": "https://image.tmdb.org/t/p/w500/c15BtJxCXMrISLVmysdsnZUPQft.jpg",
@@ -24227,7 +24226,7 @@
       ],
       "region": "Turquía",
       "language": "Español",
-      "description": "Ateş, un hombre atormentado por cicatrices de la infancia y consumido por la rabia, regresa para destruir a la familia que destrozó su vida años atrás. Su arma no es una espada, sino un matrimonio: 187 días con Mercan, la hija de su enemigo. Mercan, ya prometida a Nezir, se ve empujada a una batalla que nunca eligió, mientras Ateş la ata a él creyendo que es la clave de su venganza. Sin embargo, la mujer que pretende destruir se convierte en quien amenaza con destruirlo a él. Y en las sombras, Aslı – impulsada por los celos, aprovecha cada oportunidad para separarlos.",
+      "description": "Ateş, a man haunted by childhood scars and consumed by rage, returns to destroy the family that shattered his life years ago. His weapon is not a sword, but a marriage: 187 days with Mercan, the daughter of his enemy. Mercan, already promised to Nezir, is thrust into a battle she never chose, while Ateş binds her to him believing she is the key to his revenge. Yet the woman he intends to destroy becomes the one who threatens to undo him. And in the shadows, Aslı – driven by jealousy, seizes every chance to tear them apart.",
       "imageUrl": "https://image.tmdb.org/t/p/w500/4yYZoYgeNshoS2aODwUvCXIa8yn.jpg",
       "cast": [
         "İlsu Demirci",
@@ -24494,7 +24493,7 @@
       "region": "Cuba",
       "language": "Español",
       "description": "Entre aguas” es una telenovela contemporánea que aborda temas como la venganza, la justicia, la ética, la discriminación y la realización personal. La historia sigue a dos socios, Yadrián y Jonathan, cuya relación se rompe cuando Jonathan cae en una trampa legal y culpa a Yadrián, iniciando una cadena de conflictos que involucra a su hermana Lía, quien termina enamorándose del supuesto culpable",
-      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd_D14C6n4BpdDTqV1SC__NxEmDr8thfKxhtatSA1mJw&s",
+      "imageUrl": "/audiovisuals/S126.jpg",
       "cast": [],
       "trailers": [],
       "seasons": [],
@@ -27725,6 +27724,985 @@
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P582",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "07dd4964-4d64-41a6-a77c-3305208c910b",
+      "type": "movie",
+      "name": "Above & Below",
+      "enName": "Peligro en las profundidades",
+      "year": 2026,
+      "rating": 6.1,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Crimen",
+        "Suspenso"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Un grupo de amigos se embarca en unas vacaciones inolvidables. Lo que empieza como una aventura de fiestas y buceo, pronto se convierte en una pesadilla cuando son atacados por criminales en mar abierto.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/cuWx4QJugAnJdeZ7WYAdhxtXg2O.jpg",
+      "cast": [
+        "Laura Marano",
+        "Christina Ochoa",
+        "Mario Tardón",
+        "Antonio Banderas",
+        "Ramiro Alonso"
+      ],
+      "trailers": [
+        "xRke_DjFCQk"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P583",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "55db61c2-05e9-4d1e-a2ac-4f1a09783263",
+      "type": "movie",
+      "name": "Bajo tus pies",
+      "enName": "Bajo tus pies",
+      "year": 2026,
+      "rating": 5.019,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Terror"
+      ],
+      "region": "Spain",
+      "language": "Español",
+      "description": "Isabel se muda con sus dos hijos a un edificio muy prestigioso con un alquiler asequible, pero un sistema de admisión peculiar. Una vez aceptados e instalados en su nuevo hogar, tres vecinas ancianas que viven en el piso de abajo le darán un vuelco a sus vidas.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/fQTACeQLpFoMUqYitxY0DMzfQu9.jpg",
+      "cast": [
+        "Maribel Verdú",
+        "Sofía Otero",
+        "Erik Probanza",
+        "Urko Olazábal",
+        "Marcelo Galván"
+      ],
+      "trailers": [
+        "2f2IUUapOzA"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P584",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true
+      }
+    },
+    {
+      "id": "46b0ba72-84f7-4f88-8647-b9eb768573c8",
+      "type": "movie",
+      "name": "Before we go",
+      "enName": "Before We Go",
+      "year": 2014,
+      "rating": 6.741,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Comedia",
+        "Drama",
+        "Romance"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Una mujer pierde el tren de la 1:30 de Nueva York a Boston, tras lo cual un músico de la calle pasa la noche tratando de ayudarla a hacer que pueda volver a casa antes de que llegue su marido. A lo largo de la noche aprenden mucho el uno del otro y se enamoran.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/wdd6bdjNQalBadPWPLia4Je1JcS.jpg",
+      "cast": [
+        "Chris Evans",
+        "Alice Eve",
+        "Emma Fitzpatrick",
+        "John Cullum",
+        "Mark Kassen"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P585",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "c621b8f4-fb5b-4a59-8a6b-d607341b755c",
+      "type": "movie",
+      "name": "Crime101",
+      "enName": "Ruta de escape",
+      "year": 2026,
+      "rating": 7.021,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Crimen",
+        "Suspenso"
+      ],
+      "region": "United Kingdom",
+      "language": "Español",
+      "description": "Davis es un escurridizo ladrón cuyos atracos de alto riesgo tienen desconcertada a la policía. Davis está planeando su mayor golpe, con la esperanza de que sea el último, cuando se cruza en su camino Sharon, una desilusionada ejecutiva de seguros con la que se ve obligado a trabajar, y Orman un ladrón rival, con métodos mucho más inquietantes que los de Davis. A medida que se acerca el golpe multimillonario, el implacable teniente Lubesnik, se acerca a la operación, aumentando considerablemente el riesgo de lo que está en juego y difuminando la línea entre cazador y presa. Pronto, cada uno tendrá que aceptar el coste de sus decisiones asumiendo que no hay vuelta atrás.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/oUF0tTmbwlfkhiYSU5nXJccr5K0.jpg",
+      "cast": [
+        "Chris Hemsworth",
+        "Mark Ruffalo",
+        "Halle Berry",
+        "Barry Keoghan",
+        "Monica Barbaro"
+      ],
+      "trailers": [
+        "SNB3OnqyBRE",
+        "fx72CaxjqNA"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P586",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "d4f27efd-2335-4f43-a5cb-6a6e63ed73c4",
+      "type": "movie",
+      "name": "Idiana Jones and the Dial of Destiny",
+      "enName": "Indiana Jones y el dial del destino",
+      "year": 2023,
+      "rating": 6.494,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "El arqueólogo Indiana Jones deberá emprender otra aventura contra el tiempo para intentar recuperar un dial legendario que puede cambiar el curso de la historia. Acompañado por su ahijada, Jones pronto se encuentra enfrentándose a Jürgen Voller, un ex nazi que trabaja para la NASA.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/vb6NkmZbOtdNj4ZbmHwNsiyaHMc.jpg",
+      "cast": [
+        "Harrison Ford",
+        "Phoebe Waller-Bridge",
+        "Mads Mikkelsen",
+        "Boyd Holbrook",
+        "Olivier Richters"
+      ],
+      "trailers": [
+        "EVjvIL2joxQ",
+        "3Ms-DRDhdV4",
+        "9ShSKNr-PR0"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P587",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "f7847a7f-b0d0-4534-a514-80a0874f18a5",
+      "type": "movie",
+      "name": "Karate kid - Legends",
+      "enName": "Karate Kid: Legends",
+      "year": 2025,
+      "rating": 6.967,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Drama"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Tras una tragedia familiar, el prodigio del kung fu Li Fong se ve obligado a abandonar su hogar en Pekín y trasladarse a Nueva York con su madre. Li lucha por dejar atrás su pasado mientras intenta encajar con sus nuevos compañeros de clase y, aunque no quiere pelear, los problemas parecen encontrarle en todas partes. Cuando un nuevo amigo necesita su ayuda, Li se presenta a una competición de kárate, pero sus habilidades no son suficientes. El profesor de kung fu de Li, el Sr. Han, pide ayuda al Karate Kid original, Daniel LaRusso, y Li aprende una nueva forma de luchar, fusionando sus dos estilos en uno solo para el enfrentamiento definitivo de artes marciales. Nueva película de la saga \"Karate Kid\", conectada al universo de \"Cobra Kai\".",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/jP1OIX4KI7eFjxNpHyJff9VcBcP.jpg",
+      "cast": [
+        "Jackie Chan",
+        "Ben Wang",
+        "Joshua Jackson",
+        "Sadie Stanley",
+        "Ming-Na Wen"
+      ],
+      "trailers": [
+        "rL0Ec_v4zVw"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P588",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "09e9dafe-5a23-4c61-b4b1-0badf4cada45",
+      "type": "movie",
+      "name": "Kiki, el amor se hace",
+      "enName": "Kiki, el amor se hace",
+      "year": 2016,
+      "rating": 6.085,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Comedia",
+        "Romance"
+      ],
+      "region": "Spain",
+      "language": "Español",
+      "description": "Cinco historias de amor y curiosas filias sexuales coinciden en un calenturiento verano madrileño. Dacrifilia, Elifilia, Somnofilia y Harpaxofilia son algunas de las particulares formas de obtener placer que descubren nuestros protagonistas, pero para disfrutarlas tendrán que decidir cómo integrarlas en sus vidas. Sus sentimientos, sus miedos y sobre todo su sexualidad se transforman rompiendo tabúes, adentrándose en una etapa nueva, emocionante y libre donde no se reniega ni del placer ni del amor.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/jaikC3pKOswhU9LRmTAYh5Y6WB2.jpg",
+      "cast": [
+        "Natalia de Molina",
+        "Álex García",
+        "Jacobo Sánchez",
+        "Silvia Rey",
+        "Paco León"
+      ],
+      "trailers": [
+        "4KJHuu8Lxmk"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P589",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "36f1cdf6-fa82-4311-aa96-9ad1dd569a7a",
+      "type": "movie",
+      "name": "Kin",
+      "enName": "El legado",
+      "year": 2018,
+      "rating": 6.087,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Ciencia Ficción",
+        "Suspenso"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Perseguidos por un criminal vengativo y una banda de soldados sobrenaturales,​ un exconvicto recién liberado y su hermano adolescente adoptado se ven obligados a escapar con un arma de origen misterioso que es su única protección.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/tITskAtdV7hWjovUhNYLjkJc0J5.jpg",
+      "cast": [
+        "Myles Truitt",
+        "Jack Reynor",
+        "Dennis Quaid",
+        "Zoë Kravitz",
+        "James Franco"
+      ],
+      "trailers": [
+        "LMQc_luK1KE"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P590",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "0cf4a9e2-b4ea-4661-9333-087cd1b7b557",
+      "type": "movie",
+      "name": "Night of the hunted",
+      "enName": "Noche de caza",
+      "year": 2023,
+      "rating": 6.1,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Misterio",
+        "Suspenso",
+        "Terror"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Cuando una mujer desprevenida se detiene en una remota gasolinera en plena noche, se convierte en el juguete de un francotirador sociópata con una vendetta secreta. Para sobrevivir no sólo debe esquivar sus balas y luchar por su vida, sino también...",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/2KOVYMSb66ORodkoOmehUOxIXtd.jpg",
+      "cast": [
+        "Camille Rowe",
+        "Aleksandar Popovic",
+        "J. John Bieler",
+        "Jeremy Scippio",
+        "Brian Breiter"
+      ],
+      "trailers": [
+        "C0Sa_M5XtQI"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P591",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "6f1974e4-f933-4ed5-8293-6f97149ccfab",
+      "type": "movie",
+      "name": "Not Without Hope",
+      "enName": "A la deriva",
+      "year": 2025,
+      "rating": 6.77,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Suspenso"
+      ],
+      "region": "Desconocido",
+      "language": "Español",
+      "description": "A causa de una enorme tormenta, el barco de pesca de un grupo de amigos naufraga frente a la costa de México y quedan solos, varados en el mar y luchando por sobrevivir.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/3g1WuB4GI2NhoqS7XTpbB5EvfxK.jpg",
+      "cast": [
+        "Zachary Levi",
+        "Josh Duhamel",
+        "Quentin Plair",
+        "Terrence Terrell",
+        "Marshall Cook"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P592",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "0cf793c0-15cd-4875-bcb9-2badda9cb512",
+      "type": "movie",
+      "name": "Pose",
+      "enName": "Pose",
+      "year": 2026,
+      "rating": 5.854,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Suspenso"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Dos parejas llegan a una mansión rural que reservaron juntas sin saberlo, y descubren extraños sucesos durante su estancia.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/tISaeNWkqPYqSdANTTteewEMS5H.jpg",
+      "cast": [
+        "James McAvoy",
+        "Lucas Bravo",
+        "Leila Farzad",
+        "Almudena Amor",
+        "Aisling Franciosi"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P593",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "43d2181a-3f3a-4e3e-b21f-4ed3916a14c7",
+      "type": "movie",
+      "name": "R.I.P.D. 2 Rise of the damned",
+      "enName": "R.I.P.D. 2 - La revelación de los condenados",
+      "year": 2022,
+      "rating": 6.253,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Comedia",
+        "Fantasía"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Ambientada en el oeste americano de 1876, 'R.I.P.D.2: Rise of the Damed' es una secuela espiritual de 'R.I.P.D.' de 2013. El salvaje Oeste se ha ido al infierno, literalmente, y la única esperanza de salvación del mundo queda en manos del sheriff Roy Pulsipher cuando se convierte en agente del Departamento de Policía Mortal (R.I.P.D.), encargado de hacer cumplir la ley en el más allá. Si el viejo Oeste era salvaje cuando él estaba vivo, esperad a ver lo raro que se pone después de su muerte.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/oJJWjiMKExSi241NpKUqVIxWfH6.jpg",
+      "cast": [
+        "Jeffrey Donovan",
+        "Penelope Mitchell",
+        "Jake Choi",
+        "Richard Brake",
+        "Kerry Knuppe"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P594",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true
+      }
+    },
+    {
+      "id": "b62c6a66-2b58-4c99-b16a-c2d321c5155c",
+      "type": "movie",
+      "name": "R.I.P.D. Rest in peace departament",
+      "enName": "R.I.P.D. Departamento de policía mortal",
+      "year": 2013,
+      "rating": 5.864,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Comedia",
+        "Fantasía"
+      ],
+      "region": "Desconocido",
+      "language": "Español",
+      "description": "Aunque Nick es un policía que acaba de morir asesinado, es reclutado para trabajar con Roy, un agente que murió hace cientos de años. Ambos forman parte del “Rest In Peace Department”, que se encarga de perseguir a los demonios que habitan en el mundo de los vivos y de mandarlos al infierno. A Nick le cuesta hacerse a la idea de su condición de muerto, y no acepta estar alejado de su esposa, a la que envía reiteradas señales para que perciba su presencia. Al menos, gracias a su empleo post mortem, el joven agente podrá trabajar en el caso de su propio asesinato.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/l5o6H1ldC8xWAzSbfp4dPkJGA76.jpg",
+      "cast": [
+        "Jeff Bridges",
+        "Ryan Reynolds",
+        "Kevin Bacon",
+        "Mary-Louise Parker",
+        "Stephanie Szostak"
+      ],
+      "trailers": [
+        "YfTKJ-tm_vE"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P595",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "8cca929a-9084-42e3-9fbc-27451a01ce5d",
+      "type": "movie",
+      "name": "Rich Flu",
+      "enName": "La fiebre de los ricos",
+      "year": 2024,
+      "rating": 5.272,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Ciencia Ficción",
+        "Suspenso"
+      ],
+      "region": "Spain",
+      "language": "Español",
+      "description": "Un virus mortal empieza a infectar a las personas más ricas del mundo justo cuando Laura está en su etapa profesional más exitosa y en ascenso. El virus solo parece afectar al principio a los multimillonarios, pero pronto se expande hasta abarcar riquezas más modestas, lo cual obliga a todo el mundo a deshacerse de sus fortunas. El problema es que ya no queda nadie a quien venderlas...",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/g5SPCvrkoiSvl6YiFLPOUln22Su.jpg",
+      "cast": [
+        "Mary Elizabeth Winstead",
+        "Rafe Spall",
+        "Lorraine Bracco",
+        "Dixie Egerickx",
+        "César Domboy"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P596",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "06142ca1-d7dc-4c9b-b476-ee22e4002925",
+      "type": "movie",
+      "name": "Teenage sex and death at camp Miasma",
+      "enName": "Adolescencia, sexo y muerte en campamento Miasma",
+      "year": 2026,
+      "rating": 6.5,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Comedia",
+        "Romance",
+        "Terror"
+      ],
+      "region": "Desconocido",
+      "language": "Español",
+      "description": "Tras años de secuelas cutres y un fandom en declive, la franquicia slasher 'Camp Miasma' es puesta en manos de una joven y entusiasta directora para que la resucite. Pero cuando visita a la estrella de la película original, una actriz que ahora vive recluida y envuelta en misterio, las dos caen en una espiral de sangre, deseo, miedo y delirio.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/8UTCpwvHxWPllCJ7YnaCbffmYyD.jpg",
+      "cast": [
+        "Hannah Einbinder",
+        "Gillian Anderson",
+        "Amanda Fix",
+        "Arthur Conti",
+        "Eva Victor"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P597",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "1a1eaa04-b7ee-4f22-ab84-ac8b2cc244ab",
+      "type": "movie",
+      "name": "The mummy",
+      "enName": "La momia",
+      "year": 2017,
+      "rating": 5.521,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Fantasía",
+        "Suspenso",
+        "Terror"
+      ],
+      "region": "Desconocido",
+      "language": "Español",
+      "description": "A pesar de estar enterrada en una tumba en lo más profundo del desierto, una antigua princesa (Sofia Boutella) cuyo destino le fue arrebatado injustamente, se despierta en la época actual, trayendo consigo una maldición que ha crecido hasta límites insospechados con el paso de miles de años.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/6JEbMNds0ZRBD5AYcIIhCqRVgQU.jpg",
+      "cast": [
+        "Tom Cruise",
+        "Annabelle Wallis",
+        "Sofia Boutella",
+        "Jake Johnson",
+        "Courtney B. Vance"
+      ],
+      "trailers": [
+        "SIp4Z8blj_8",
+        "3pya5jLyj6c"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P598",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "e461bb90-5b28-4e58-bbc7-974875b0758f",
+      "type": "movie",
+      "name": "The protege",
+      "enName": "La Protegida",
+      "year": 2021,
+      "rating": 6.551,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Crimen",
+        "Suspenso"
+      ],
+      "region": "Desconocido",
+      "language": "Español",
+      "description": "Cuando no era más que una niña, Ana (Maggie Q) fue rescatada por Moody (Samuel L. Jackson), un legendario asesino, su mentor y figura paterna. Tras 20 años, Ana se ha convertido en una de las mejores asesinas a sueldo del mundo.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/IRdFT8ikE5HDWwQjEpZqnY9o7P.jpg",
+      "cast": [
+        "Maggie Q",
+        "Samuel L. Jackson",
+        "Michael Keaton",
+        "David Rintoul",
+        "Patrick Malahide"
+      ],
+      "trailers": [
+        "2HPq92n7i7I"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P599",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "b383bdb5-ac19-47a2-953d-6a22c4cf77f0",
+      "type": "movie",
+      "name": "Going in Style",
+      "enName": "Un golpe con estilo",
+      "year": 2017,
+      "rating": 6.7,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Comedia",
+        "Crimen"
+      ],
+      "region": "Desconocido",
+      "language": "Español",
+      "description": "Willie, Joe y Al son tres amigos jubilados a los que el sistema les ha congelado su plan de pensiones. Desesperados porque no pueden pagar las facturas, están decididos a recuperar su dinero. Los tres ancianos deciden entonces arriesgarlo todo y embarcarse en un temerario plan que consiste en atracar al mismísimo banco que se quedó con su dinero.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/a1whsOKBYQuDI8tWSy8SrrvPiXZ.jpg",
+      "cast": [
+        "Morgan Freeman",
+        "Michael Caine",
+        "Alan Arkin",
+        "Ann-Margret",
+        "John Ortiz"
+      ],
+      "trailers": [
+        "K6tK6d2Hqws"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P600",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "354adc85-1d83-4517-aa6b-dcb944fca145",
+      "type": "series",
+      "name": "Lupin",
+      "enName": "Lupin",
+      "year": 2021,
+      "rating": 7.683,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Crimen",
+        "Drama",
+        "Misterio"
+      ],
+      "region": "Desconocido",
+      "language": "Español",
+      "description": "Inspirado por las aventuras de Arsène Lupin, el ladrón de guante blanco Assane Diop se propone vengar la injusticia sufrida por su padre a manos de una familia rica.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/gZ2ocZUwqVetPz9AvVVhzrFrpPA.jpg",
+      "cast": [
+        "Omar Sy"
+      ],
+      "trailers": [
+        "yX5Py7lL5dw"
+      ],
+      "seasons": [],
+      "seasonCount": 3,
+      "episodeCount": 27,
+      "code": "S141",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "8e1cb0d0-2142-4963-ba82-aea6ba99692d",
+      "type": "series",
+      "name": "The Pitt",
+      "enName": "The Pitt",
+      "year": 2025,
+      "rating": 8.732,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "The Pitt ofrece una visión realista de los retos a los que se enfrenta el personal sanitario en los Estados Unidos de hoy, visto a través de la lente de los héroes de primera línea que trabajan en un hospital de la actualidad en Pittsburgh, Pensilvania.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/kvFSpESyBZMjaeOJDx7RS3P1jey.jpg",
+      "cast": [
+        "Noah Wyle",
+        "Patrick Ball",
+        "Katherine LaNasa",
+        "Supriya Ganesh",
+        "Fiona Dourif"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 2,
+      "episodeCount": 30,
+      "code": "S142",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "52bc2399-6507-48b9-b297-281285db87b3",
+      "type": "series",
+      "name": "Pura sangre",
+      "enName": "Pura sangre",
+      "year": 2026,
+      "rating": 5.2,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Misterio"
+      ],
+      "region": "Spain",
+      "language": "Español",
+      "description": "En La Galana, la finca familiar de los marqueses de Monteclaro, el más valioso semental aparece envenenado junto a varios potros de la cuadra. Este suceso sacude la aparente tranquilidad de la familia y desencadena una investigación que amenaza con destapar una compleja trama de secretos enterrados, lealtades cruzadas, tensiones económicas y heridas sin cerrar.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/7XeKdFxONDzITjPLD1ySGJ637M6.jpg",
+      "cast": [
+        "Ángela Molina",
+        "Pep Munné",
+        "Amaia Salamanca",
+        "Aitor Luna",
+        "Blanca Romero"
+      ],
+      "trailers": [
+        "QuYWQVqGEZE"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 8,
+      "code": "S143",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "a33302c5-9227-4c0c-bdbc-2b28f875f74d",
+      "type": "series",
+      "name": "El Jardinero",
+      "enName": "El jardinero",
+      "year": 2025,
+      "rating": 6.764,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Crimen",
+        "Drama"
+      ],
+      "region": "Spain",
+      "language": "Español",
+      "description": "La madre de Elmer usó la falta de sentimientos de su hijo para convertirlo en sicario. Pero cuando él se enamora de su próxima víctima, su tapadera de apacibles jardineros titubea.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/fbsK458pPJ8It2OreFtTzSdvT4H.jpg",
+      "cast": [
+        "Álvaro Rico",
+        "Cecilia Suárez",
+        "Catalina Sopelana",
+        "María Vázquez",
+        "Francis Lorenzo"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 6,
+      "code": "S144",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "f09be53d-0612-4941-8ea9-e564aa209c58",
+      "type": "series",
+      "name": "Romi",
+      "enName": "Romi",
+      "year": 2025,
+      "rating": 6.2,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Drama",
+        "Misterio"
+      ],
+      "region": "Spain",
+      "language": "Español",
+      "description": "Romina es discapacitada auditiva con implante coclear y detective privada. Trabaja mano a mano con su nueva compañera en prácticas, Nerea, y no duda en bordear la ley, ni en aprovecharse de su madre: jefa de investigación criminal de la Ertzaintza. Ésta debe hacer frente a un caso del pasado que amenaza con sacar a la luz los secretos ligados a la sordera de Romi y a la muerte de su padre.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/3EjcmpGFVJ9tAIVEM0mqVGTLdEH.jpg",
+      "cast": [
+        "María Cerezuela",
+        "Natalia Millán",
+        "Edurne Azkarate",
+        "Unax Ugalde",
+        "Elena Irureta"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 8,
+      "code": "S145",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "46b992a2-c333-4137-8d16-4364a2297dd5",
+      "type": "series",
+      "name": "Legado",
+      "enName": "Legado",
+      "year": 2025,
+      "rating": 5.917,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama"
+      ],
+      "region": "Spain",
+      "language": "Español",
+      "description": "Tras una grave enfermedad, un magnate de los medios de comunicación descubre que la gerencia de sus hijos amenaza con destruir su querido emporio… y hará lo que sea para salvarlo.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/bxhjI3tiTBa8Zub8LKMGIZrvYMy.jpg",
+      "cast": [
+        "Jose Coronado",
+        "Belén Cuesta",
+        "Diego Martín",
+        "Natalia Huarte",
+        "Gustavo Salmerón"
+      ],
+      "trailers": [
+        "UKfLu1Ocnlw"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 8,
+      "code": "S146",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "43008b60-b626-4eb0-8345-2f7b1ba44204",
+      "type": "series",
+      "name": "Weiss & Morales",
+      "enName": "Weiss & Morales",
+      "year": 2025,
+      "rating": 4.9,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Crimen"
+      ],
+      "region": "Spain",
+      "language": "Español",
+      "description": "Cuando un crimen es cometido en las Islas Canarias y afecta a la comunidad alemana, el sargento de la guardia civil española Raúl Morales y la agente de la BKA alemana Nina Weiss se verán obligados a trabajar juntos. Una colaboración que no agrada a ninguno, pues pondrá en evidencia sus diferencias. Pero, a pesar de ello, encontrarán la manera de resolver cada uno de los casos que se les presenten.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/ofcFK6Cuw13ta4XljTNTQctcaqj.jpg",
+      "cast": [
+        "Katia Fellin",
+        "Miguel Ángel Silvestre",
+        "Margarita Broich",
+        "Mariam Hernández",
+        "Iria Santana"
+      ],
+      "trailers": [
+        "JT-tB_Odyq8"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 4,
+      "code": "S147",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "cd0f8f34-8680-4521-830f-4f38b344f853",
+      "type": "series",
+      "name": "Neagley",
+      "enName": "Neagley",
+      "year": 2026,
+      "rating": 7.961,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Crimen",
+        "Drama",
+        "Misterio"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Llega un nuevo capítulo del universo de REACHER. Frances Neagley, investigadora privada en Chicago y antigua compañera militar de Jack Reacher en la Unidad de Investigaciones Especiales 110 del Ejército, emprende una implacable búsqueda de justicia cuando descubre que un amigo muy querido del pasado ha muerto en un sospechoso accidente.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/cHXJPFDqKYY0fQZZVEMLFspfwI0.jpg",
+      "cast": [
+        "Maria Sten",
+        "Greyston Holt",
+        "Adeline Rudolph",
+        "Matthew Del Negro",
+        "Damon Herriman"
+      ],
+      "trailers": [
+        "1ZUUjfsfvpw"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 8,
+      "code": "S148",
       "metadata": {
         "enriched": true,
         "translated": true,

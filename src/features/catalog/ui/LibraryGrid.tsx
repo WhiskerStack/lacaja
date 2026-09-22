@@ -1,4 +1,4 @@
-// Isla de Biblioteca (funcional §6.5): chips de tipo, panel de filtros (año/género/región/idioma),
+// Isla de Biblioteca (funcional §6.5): chips de tipo, panel de filtros (año/género/país),
 // ordenar por, grid de 3 columnas con scroll infinito. Los controles van en una barra pegajosa
 // bajo el navbar. Recibe el catálogo completo por props (SSG).
 //
@@ -15,7 +15,6 @@ import type { AudiovisualType, CatalogCardDTO } from '../types';
 interface Facets {
   genres: string[];
   regions: string[];
-  languages: string[];
   years: number[];
 }
 interface Props {
@@ -31,7 +30,6 @@ interface Filters {
   type: AudiovisualType | 'all';
   genre: string;
   region: string;
-  language: string;
   year: string;
   sort: SortKey;
 }
@@ -39,7 +37,6 @@ const DEFAULTS: Filters = {
   type: 'all',
   genre: '',
   region: '',
-  language: '',
   year: '',
   sort: 'rating',
 };
@@ -48,8 +45,7 @@ const DEFAULTS: Filters = {
 const PARAM: Record<keyof Filters, string> = {
   type: 'tipo',
   genre: 'genero',
-  region: 'region',
-  language: 'idioma',
+  region: 'pais',
   year: 'anio',
   sort: 'orden',
 };
@@ -58,11 +54,13 @@ function filtersFromUrl(search: string): Filters {
   const p = new URLSearchParams(search);
   const type = p.get(PARAM.type) as AudiovisualType | 'all' | null;
   const sort = p.get(PARAM.sort) as SortKey | null;
+  // Compatibilidad: la URL anterior usaba ?region=...; el parámetro nuevo es ?pais=, pero
+  // aceptamos el viejo para que un enlace compartido antes del cambio siga funcionando.
+  const region = p.get(PARAM.region) ?? p.get('region') ?? DEFAULTS.region;
   return {
     type: type && (type === 'all' || TYPES.includes(type)) ? type : DEFAULTS.type,
     genre: p.get(PARAM.genre) ?? DEFAULTS.genre,
-    region: p.get(PARAM.region) ?? DEFAULTS.region,
-    language: p.get(PARAM.language) ?? DEFAULTS.language,
+    region,
     year: p.get(PARAM.year) ?? DEFAULTS.year,
     sort: sort && ['rating', 'year', 'name'].includes(sort) ? sort : DEFAULTS.sort,
   };
@@ -82,7 +80,7 @@ export default function LibraryGrid({ cards, facets }: Props) {
   const [showFilters, setShowFilters] = useState(false);
   const [shown, setShown] = useState(PAGE);
   const sentinel = useRef<HTMLDivElement | null>(null);
-  const { type, genre, region, language, year, sort } = filters;
+  const { type, genre, region, year, sort } = filters;
 
   // Restauración al volver atrás. En hidratación no se puede leer la URL (el HTML viene del SSG),
   // así que se aplica en un layout effect: se pinta ya con el estado correcto, sin parpadeo.
@@ -93,13 +91,13 @@ export default function LibraryGrid({ cards, facets }: Props) {
     if (snap.filtersOpen) setShowFilters(true);
   }, []);
 
-  // El idioma/región no están en CatalogCardDTO; se filtran por género/tipo/año/orden aquí.
-  // (library-index.json lleva esos ejes para una versión cliente más completa.)
+  // Filtros aplicados al set de cards: tipo, género, año, país (región) y orden.
   const filtered = useMemo(() => {
     let out = cards.filter((c) => {
       if (type !== 'all' && c.type !== type) return false;
       if (genre && !c.genres.includes(genre)) return false;
       if (year && String(c.year) !== year) return false;
+      if (region && c.region !== region) return false;
       return true;
     });
     out = out.sort((a, b) => {
@@ -108,7 +106,7 @@ export default function LibraryGrid({ cards, facets }: Props) {
       return a.name.localeCompare(b.name, 'es');
     });
     return out;
-  }, [cards, type, genre, year, sort]);
+  }, [cards, type, genre, year, region, sort]);
 
   useEffect(() => {
     patchSnapshot({ shown, filtersOpen: showFilters });
@@ -132,7 +130,7 @@ export default function LibraryGrid({ cards, facets }: Props) {
   }
 
   function reset() {
-    patch({ genre: '', region: '', language: '', year: '' });
+    patch({ genre: '', region: '', year: '' });
   }
 
   const visible = filtered.slice(0, shown);
@@ -172,7 +170,7 @@ export default function LibraryGrid({ cards, facets }: Props) {
         </div>
 
         {showFilters && (
-          <div class="card bg-base-200 p-4 mb-3 grid sm:grid-cols-4 gap-3">
+          <div class="card bg-base-200 p-4 mb-3 grid sm:grid-cols-3 gap-3">
             <select class="select select-sm select-bordered" value={year} onChange={(e) => patch({ year: (e.target as HTMLSelectElement).value })}>
               <option value="">Año (todos)</option>
               {facets.years.map((y) => <option key={y} value={String(y)}>{y}</option>)}
@@ -182,14 +180,10 @@ export default function LibraryGrid({ cards, facets }: Props) {
               {facets.genres.map((g) => <option key={g} value={g}>{g}</option>)}
             </select>
             <select class="select select-sm select-bordered" value={region} onChange={(e) => patch({ region: (e.target as HTMLSelectElement).value })}>
-              <option value="">Región (todas)</option>
+              <option value="">País (todos)</option>
               {facets.regions.map((r) => <option key={r} value={r}>{r}</option>)}
             </select>
-            <select class="select select-sm select-bordered" value={language} onChange={(e) => patch({ language: (e.target as HTMLSelectElement).value })}>
-              <option value="">Idioma (todos)</option>
-              {facets.languages.map((l) => <option key={l} value={l}>{l}</option>)}
-            </select>
-            <div class="sm:col-span-4 flex gap-2">
+            <div class="sm:col-span-3 flex gap-2">
               <button type="button" class="btn btn-sm btn-primary" onClick={() => setShowFilters(false)}>Aplicar</button>
               <button type="button" class="btn btn-sm btn-ghost" onClick={reset}>Resetear</button>
             </div>

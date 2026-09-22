@@ -169,11 +169,35 @@ export function toCard(i: CatalogItemDTO): CatalogCardDTO {
     genres: i.genres,
     isPremiere: i.isPremiere,
     totalSizeGb: i.totalSizeGb,
+    region: i.region,
   };
 }
 
 export function getCards(): CatalogCardDTO[] {
   return ITEMS.map(toCard);
+}
+
+/** Películas del año indicado, ordenadas por código descendente (últimas agregadas primero). */
+export function getMoviesByYear(year: number): CatalogCardDTO[] {
+  return getCards().filter((c) => c.type === 'movie' && c.year === year).sort(byCodeDesc);
+}
+
+/** Series del año indicado, ordenadas por código descendente (últimas agregadas primero). */
+export function getSeriesByYear(year: number): CatalogCardDTO[] {
+  return getCards().filter((c) => c.type === 'series' && c.year === year).sort(byCodeDesc);
+}
+
+/**
+ * Películas de años distintos al indicado, ordenadas por código descendente.
+ * Usado para "Últimas películas en La Caja": todo lo anterior a la temporada 2026.
+ */
+export function getMoviesBeforeYear(year: number): CatalogCardDTO[] {
+  return getCards().filter((c) => c.type === 'movie' && c.year !== year).sort(byCodeDesc);
+}
+
+/** Series de años distintos al indicado, ordenadas por código descendente. */
+export function getSeriesBeforeYear(year: number): CatalogCardDTO[] {
+  return getCards().filter((c) => c.type === 'series' && c.year !== year).sort(byCodeDesc);
 }
 
 /**
@@ -246,7 +270,6 @@ export function getFilterFacets() {
   return {
     genres: catalog.genres,
     regions: catalog.regions,
-    languages: catalog.languages,
     years: [...new Set(ITEMS.map((i) => i.year))].sort((a, b) => b - a),
   };
 }
