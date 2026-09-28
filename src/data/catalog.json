@@ -1,5 +1,5 @@
 {
-  "version": 1.3,
+  "version": 1.4,
   "genres": [
     "Acción",
     "Animado",
@@ -2213,7 +2213,7 @@
       "name": "Breathe",
       "enName": "Respira",
       "year": 2024,
-      "rating": 5.92,
+      "rating": 5.639,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
@@ -2224,18 +2224,17 @@
       ],
       "region": "USA",
       "language": "Inglés",
-      "description": "En la década de 1930 en Oklahoma, entre las terribles tormentas de polvo de la región, una mujer está convencida de que una presencia siniestra amenaza a su familia.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/cRTDtSjv2RMCokS6naed4RBsuQT.jpg",
+      "description": "El suministro de aire es escaso en un futuro cercano, lo que obliga a una madre y una hija a luchar para sobrevivir cuando dos extraños llegan desesperados por un refugio oxigenado.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/oujEGO5eXnP8PsFRPJHZfUzlKFK.jpg",
       "cast": [
-        "Sarah Paulson",
-        "Amiah Miller",
-        "Annaleigh Ashford",
-        "Alona Jane Robbins",
-        "Ebon Moss-Bachrach"
+        "Jennifer Hudson",
+        "Milla Jovovich",
+        "Quvenzhané Wallis",
+        "Common",
+        "Sam Worthington"
       ],
       "trailers": [
-        "JNdz0EhDbbc",
-        "534HBQRfFJc"
+        "zylvCqNTAiQ"
       ],
       "seasons": [],
       "seasonCount": 1,
@@ -2244,7 +2243,8 @@
       "metadata": {
         "enriched": true,
         "translated": true,
-        "genresEnriched": true
+        "genresEnriched": true,
+        "titlesChecked": true
       }
     },
     {
@@ -3633,48 +3633,6 @@
       }
     },
     {
-      "id": "91cf334a-541d-4d7a-bfe1-c7095ea38729",
-      "type": "movie",
-      "name": "Depredador Badlans",
-      "enName": "Tierras salvajes",
-      "year": null,
-      "rating": 7.829,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Ciencia Ficción",
-        "Acción",
-        "Aventura"
-      ],
-      "region": "EU",
-      "language": "Inglés",
-      "description": "Expulsado de su tribu, un joven depredador encuentra un aliado inesperado en un androide dañado y se embarca en un peligroso viaje en busca del adversario supremo.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/pHpq9yNUIo6aDoCXEBzjSolywgz.jpg",
-      "cast": [
-        "Elle Fanning",
-        "Dimitrius Schuster-Koloamatangi",
-        "Ravi Narayan",
-        "Michael Homick",
-        "Stefan Grube"
-      ],
-      "trailers": [
-        "LkBqjfg8TGM",
-        "9PgcAIgpwPA",
-        "cDL3Zjdz514",
-        "43R9l7EkJwE"
-      ],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 1,
-      "code": "P48",
-      "isActive": false,
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true
-      }
-    },
-    {
       "id": "4c78f7b4-d48d-44b8-b6ac-8d05c890b43b",
       "type": "series",
       "name": "1899",
@@ -4055,46 +4013,6 @@
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P53",
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true
-      }
-    },
-    {
-      "id": "941c095d-7f5a-4c46-bf27-6e84e58cbb6f",
-      "type": "series",
-      "name": "Paradise",
-      "enName": "Paradise",
-      "year": 2025,
-      "rating": 7.536,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Thriller",
-        "Crimen",
-        "Drama"
-      ],
-      "region": "EU",
-      "language": "Inglés",
-      "description": "La tranquilidad en una comunidad serena y próspera, habitada por algunos de los individuos más prominentes del mundo, explota cuando se produce un asesinato sorprendente y se desencadena una investigación de alto riesgo.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/l8RqfhqEk04W5sSOjQ9zeWU1DyM.jpg",
-      "cast": [
-        "Sterling K. Brown",
-        "Julianne Nicholson",
-        "Sarah Shahi",
-        "Nicole Brydon Bloom",
-        "Krys Marshall"
-      ],
-      "trailers": [
-        "QsjSIwQr7yw",
-        "tCObCpYScdE"
-      ],
-      "seasons": [],
-      "seasonCount": 2,
-      "episodeCount": 16,
-      "code": "S53",
-      "isActive": false,
       "metadata": {
         "enriched": true,
         "translated": true,
@@ -4766,45 +4684,6 @@
       }
     },
     {
-      "id": "92e1b8ae-b0f1-402d-92e5-32b582fbc57f",
-      "type": "series",
-      "name": "Esa noche",
-      "enName": "That night",
-      "year": 2026,
-      "rating": 6.709,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Thriller",
-        "Crimen",
-        "Drama",
-        "Misterio"
-      ],
-      "region": "España",
-      "language": "Español",
-      "description": "Cuando una joven, ingenua madre soltera se ve envuelta en un asesinato durante un retiro en una isla, sus hermanas corren a ayudar. Pero sólo empeoran las cosas.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/xOB3odcE8pbTPK0FHzfwgRTneoS.jpg",
-      "cast": [
-        "Clara Galle",
-        "Claudia Salas",
-        "Paula Usero",
-        "Null García",
-        "Raidher Díaz"
-      ],
-      "trailers": [
-        "wTdgPOqKkH0"
-      ],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 6,
-      "code": "S62",
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true
-      }
-    },
-    {
       "id": "23a5e827-40e8-4e17-9564-53cce4b17c15",
       "type": "movie",
       "name": "Extraterritorial",
@@ -5159,12 +5038,11 @@
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Crimen",
-        "Animado",
-        "Comedia",
         "Acción",
         "Aventura",
         "Ciencia Ficción",
+        "Comedia",
+        "Crimen",
         "Fantasía"
       ],
       "region": "España",
@@ -5185,8 +5063,8 @@
       "code": "S67",
       "metadata": {
         "enriched": true,
-        "genresEnriched": true,
-        "translated": true
+        "translated": true,
+        "genresEnriched": true
       }
     },
     {
@@ -5904,9 +5782,9 @@
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Thriller",
         "Acción",
-        "Suspenso"
+        "Suspenso",
+        "Thriller"
       ],
       "region": "EU",
       "language": "Inglés",
@@ -5927,7 +5805,6 @@
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P77",
-      "isActive": false,
       "metadata": {
         "enriched": true,
         "translated": true,
@@ -6010,45 +5887,6 @@
       }
     },
     {
-      "id": "4102c6a1-c054-4814-b58e-a5239abca0a7",
-      "type": "series",
-      "name": "El Cuco de Crital",
-      "enName": "The Crystal Cuckoo",
-      "year": 2025,
-      "rating": 6.607,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Misterio",
-        "Drama",
-        "Crimen"
-      ],
-      "region": "España",
-      "language": "Español",
-      "description": "Con la esperanza de aprender más sobre su donante de corazón, un joven médico llega a una pequeña comunidad en la montaña donde décadas de tragedias misteriosas han plagado al pueblo.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/tsY3Kl793m2sXTMkQTajz0EOqCl.jpg",
-      "cast": [
-        "Catalina Sopelana",
-        "Itziar Ituño",
-        "Álex García",
-        "Ivan Massagué",
-        "Tomás del Estal"
-      ],
-      "trailers": [
-        "4EHtcpgZM2E"
-      ],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 6,
-      "code": "S78",
-      "isActive": false,
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true
-      }
-    },
-    {
       "id": "b640f0e0-940f-406d-826f-6b780272fa81",
       "type": "movie",
       "name": "Infinite Summer",
@@ -6078,46 +5916,6 @@
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P79",
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true
-      }
-    },
-    {
-      "id": "b6fe96c9-fd18-4d8d-bcb0-5b3122f9a0a8",
-      "type": "series",
-      "name": "El largo río de las almas",
-      "enName": "Long Bright Rive",
-      "year": 2025,
-      "rating": 6.954,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Thriller",
-        "Drama",
-        "Crimen",
-        "Misterio"
-      ],
-      "region": "EU",
-      "language": "Inglés",
-      "description": "Un oficial de policía patrulla un vecindario de Filadelfia afectado por la crisis de opioides. Cuando comienzan una serie de asesinatos en el vecindario, Mickey se da cuenta de que su historia personal podría estar relacionada con el caso.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/tQHOmmDXtDSsmXn55GcdtSOLMAc.jpg",
-      "cast": [
-        "Amanda Seyfried",
-        "Nicholas Pinnock",
-        "Ashleigh Cummings",
-        "Callum Vinson",
-        "John Doman"
-      ],
-      "trailers": [
-        "1TmXdzid-JA"
-      ],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 8,
-      "code": "S79",
-      "isActive": false,
       "metadata": {
         "enriched": true,
         "translated": true,
@@ -6195,46 +5993,6 @@
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P81",
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true
-      }
-    },
-    {
-      "id": "0d2da3fb-9c0b-4b51-890c-24a52bcc0a72",
-      "type": "series",
-      "name": "El problema de los 3 cuerpos",
-      "enName": "3 Body Problem",
-      "year": 2024,
-      "rating": 7.493,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Ciencia Ficción",
-        "Fantasía",
-        "Misterio",
-        "Drama"
-      ],
-      "region": "EU",
-      "language": "Inglés",
-      "description": "A lo largo de continentes y décadas, cinco amigos brillantes hacen descubrimientos que dejan estupefactos, mientras las leyes de la ciencia se desatan y surge una amenaza existencial.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/ykZ7hlShkdRQaL2aiieXdEMmrLb.jpg",
-      "cast": [
-        "Jovan Adepo",
-        "Rosalind Chao",
-        "Liam Cunningham",
-        "Eiza González",
-        "Jess Hong"
-      ],
-      "trailers": [
-        "SdvzhCL7vIA"
-      ],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 8,
-      "code": "S81",
-      "isActive": false,
       "metadata": {
         "enriched": true,
         "translated": true,
@@ -11489,8 +11247,8 @@
       "isPremiere": false,
       "genres": [
         "Drama",
-        "Terror",
-        "Suspenso"
+        "Suspenso",
+        "Terror"
       ],
       "region": "EU",
       "language": "Inglés",
@@ -11514,7 +11272,8 @@
       "metadata": {
         "enriched": true,
         "translated": true,
-        "genresEnriched": true
+        "genresEnriched": true,
+        "titlesChecked": true
       }
     },
     {
@@ -11663,49 +11422,6 @@
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P193",
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true
-      }
-    },
-    {
-      "id": "19b99f36-8293-405e-9dce-d268f836490c",
-      "type": "movie",
-      "name": "Presa",
-      "enName": "Predator Badlands",
-      "year": 2025,
-      "rating": 7.829,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Suspenso",
-        "Acción",
-        "Ciencia Ficción",
-        "Aventura"
-      ],
-      "region": "Alemania",
-      "language": "Alemán",
-      "description": "Expulsado de su clan, un joven Predador encuentra un aliado inesperado en un androida dañado y emprende un peligroso viaje en busca del adversario definitivo.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/pHpq9yNUIo6aDoCXEBzjSolywgz.jpg",
-      "cast": [
-        "Elle Fanning",
-        "Dimitrius Schuster-Koloamatangi",
-        "Ravi Narayan",
-        "Michael Homick",
-        "Stefan Grube"
-      ],
-      "trailers": [
-        "LkBqjfg8TGM",
-        "9PgcAIgpwPA",
-        "cDL3Zjdz514",
-        "43R9l7EkJwE"
-      ],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 1,
-      "code": "P194",
-      "isActive": false,
       "metadata": {
         "enriched": true,
         "translated": true,
@@ -12752,46 +12468,6 @@
       }
     },
     {
-      "id": "dfa432b6-e36d-4fcd-af4d-e39d2a18a717",
-      "type": "movie",
-      "name": "Enterramos a los muertos",
-      "enName": "We bury the dead",
-      "year": 2026,
-      "rating": 6.095,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Horror",
-        "Terror",
-        "Suspenso"
-      ],
-      "region": "Australia",
-      "language": "Inglés",
-      "description": "Después de un desastre militar catastrófico que reanimó a los muertos, Ava busca a su marido desaparecido en un mundo cada vez más hostil.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/xZqo0yPARmyF8TACVNyaOACkYWG.jpg",
-      "cast": [
-        "Daisy Ridley",
-        "Brenton Thwaites",
-        "Mark Coles Smith",
-        "Matt Whelan",
-        "Chloe Hurst"
-      ],
-      "trailers": [
-        "YmPyNvrzF0A",
-        "iE-W-wEJJqw"
-      ],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 1,
-      "code": "P222",
-      "isActive": false,
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true
-      }
-    },
-    {
       "id": "6df8ff47-c516-4985-95b0-3d5fe42af699",
       "type": "movie",
       "name": "Alita - Battle Angel",
@@ -13022,45 +12698,6 @@
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P228",
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true
-      }
-    },
-    {
-      "id": "5d3b2aa1-09ec-49c3-8c8b-d4b8b3485d6d",
-      "type": "movie",
-      "name": "Extraterritorial",
-      "enName": "Extraterritorial",
-      "year": 2025,
-      "rating": 6.602,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Thriller",
-        "Suspenso",
-        "Acción"
-      ],
-      "region": "Alemania",
-      "language": "Alemán",
-      "description": "Cuando su hijo desaparece dentro de una consulada de Estados Unidos, la ex soldado de élite Sara hace todo lo que está en su poder para encontrarlo — y descubre una conspiración oscura.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/micQGmD3K7Ni0wzyaSgBKGxrFWn.jpg",
-      "cast": [
-        "Jeanne Goursaud",
-        "Dougray Scott",
-        "Lera Abova",
-        "Emanuel Fellmer",
-        "Annabelle Mandeng"
-      ],
-      "trailers": [
-        "tlLsFEDHtWs"
-      ],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 1,
-      "code": "P229",
-      "isActive": false,
       "metadata": {
         "enriched": true,
         "translated": true,
@@ -13356,8 +12993,8 @@
       "genres": [
         "Animado",
         "Aventura",
-        "Familiar",
         "Comedia",
+        "Familiar",
         "Fantasía"
       ],
       "region": "EU",
@@ -13379,7 +13016,6 @@
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P237",
-      "isActive": false,
       "metadata": {
         "enriched": true,
         "translated": true,
@@ -13769,40 +13405,6 @@
         "translated": true,
         "genresEnriched": true,
         "titlesChecked": true
-      }
-    },
-    {
-      "id": "ffa04b9b-9791-40c1-a8fc-fa0cbc60d0f2",
-      "type": "movie",
-      "name": "The gold trail",
-      "enName": "The gold trail",
-      "year": 2024,
-      "rating": 7.042,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Animado",
-        "Acción",
-        "Drama"
-      ],
-      "region": "Países Bajos",
-      "language": "Español",
-      "description": "Fafner, un anti-héroe mercenario, desciende sobre una ciudad destrozada por la guerra, sin cesar en su búsqueda de una pista de monedas que lo llevará hacia su ineludible destino.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/qY68xehCZJcDNqZJ0gTo2DqraJi.jpg",
-      "cast": [
-        "Mario Castañeda",
-        "Jakora Xochitl"
-      ],
-      "trailers": [],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 1,
-      "code": "P248",
-      "isActive": false,
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true
       }
     },
     {
@@ -14831,83 +14433,6 @@
       }
     },
     {
-      "id": "be48ac84-ddf3-4b16-86e1-02e0a63718d1",
-      "type": "movie",
-      "name": "Arguill",
-      "enName": "Argylle Agente secreto",
-      "year": 2024,
-      "rating": 5.982,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Thriller",
-        "Acción",
-        "Aventura",
-        "Comedia"
-      ],
-      "region": "Reino Unido",
-      "language": "Inglés",
-      "description": "Cuando los argumentos de las novelas de espionaje ficticias del autor recluso Elly Conway comienzan a reflejar las acciones encubiertas de una organización de espionaje real, las tranquilas noches en casa se convierten en cosa del pasado.  Acompañada por su gato Alfie y Aidan, un espía alérgico a los gatos, Elly recorre el mundo para mantenerse un paso por delante de los asesinos mientras la línea entre el mundo ficticio de Conway y el real comienza a desdibujarse.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/siduVKgOnABO4WH4lOwPQwaGwJp.jpg",
-      "cast": [
-        "Henry Cavill",
-        "Bryce Dallas Howard",
-        "Sam Rockwell",
-        "Bryan Cranston",
-        "Catherine O'Hara"
-      ],
-      "trailers": [
-        "Sy6eNs3EW3E"
-      ],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 1,
-      "code": "P275",
-      "isActive": false,
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true
-      }
-    },
-    {
-      "id": "14d3f2ee-c440-4452-9837-3f035db336b1",
-      "type": "movie",
-      "name": "Bajo un volcan",
-      "enName": "Bajo un volcán",
-      "year": 2025,
-      "rating": 6.31,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Drama",
-        "Romance",
-        "Aventura"
-      ],
-      "region": "España",
-      "language": "Español",
-      "description": "Mientras un volcán amenaza con la isla norte de Tenerife, la chispa entre un científico decidido y un piloto disciplinado somete a prueba su capacidad para resolver la crisis.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/8joWkrzM7ss1t8JZlBffavbg4hg.jpg",
-      "cast": [
-        "William Levy",
-        "Maggie Civantos",
-        "Adriana Torrebejano",
-        "Fabiola Guajardo",
-        "Elia Galera"
-      ],
-      "trailers": [],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 1,
-      "code": "P276",
-      "isActive": false,
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true
-      }
-    },
-    {
       "id": "ebea5df0-5035-4955-86d3-75671ead2aec",
       "type": "movie",
       "name": "Bhooth Blangla",
@@ -14938,47 +14463,6 @@
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P277",
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true
-      }
-    },
-    {
-      "id": "31e87220-2dd0-4638-b37c-5e8e276571df",
-      "type": "movie",
-      "name": "Blade Runner 2049-",
-      "enName": "Blade Runner 2049",
-      "year": 2017,
-      "rating": 7.604,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Ciencia Ficción",
-        "Drama"
-      ],
-      "region": "EU",
-      "language": "Inglés",
-      "description": "Treinta años después de los eventos de la primera película, un nuevo cazarrecompensas, el oficial de la LAPD K, desentierra un secreto largo enterrado que tiene el potencial de sumir lo que queda de la sociedad en caos. El descubrimiento de K lo lleva en una búsqueda para encontrar a Rick Deckard, un ex cazarrecompensas de la LAPD que ha estado desaparecido durante 30 años.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg",
-      "cast": [
-        "Ryan Gosling",
-        "Harrison Ford",
-        "Ana de Armas",
-        "Dave Bautista",
-        "Robin Wright"
-      ],
-      "trailers": [
-        "geFtxCSz8xI",
-        "Icx4xul9LEE",
-        "dZOaI_Fn5o4",
-        "gCcx85zbxz4"
-      ],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 1,
-      "code": "P278",
-      "isActive": false,
       "metadata": {
         "enriched": true,
         "translated": true,
@@ -15097,48 +14581,6 @@
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P281",
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true
-      }
-    },
-    {
-      "id": "2d6d751e-c0d5-4540-8dbd-12f9109d3419",
-      "type": "movie",
-      "name": "Ex-Machina",
-      "enName": "Ex-Machina",
-      "year": 2014,
-      "rating": 7.571,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Ciencia Ficción",
-        "Drama"
-      ],
-      "region": "Reino Unido",
-      "language": "Inglés",
-      "description": "Caleb, un codificador en la empresa de internet más grande del mundo, gana un concurso para pasar una semana en una retirada de montaña privada que pertenece a Nathan, el CEO recluso de la empresa. Pero cuando Caleb llega a la ubicación remota, descubre que deberá participar en un experimento extraño y fascinante en el que deberá interactuar con la primera verdadera inteligencia artificial del mundo, alojada en el cuerpo de una bella robot niña.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/dmJW8IAKHKxFNiUnoDR7JfsK7Rp.jpg",
-      "cast": [
-        "Domhnall Gleeson",
-        "Alicia Vikander",
-        "Oscar Isaac",
-        "Sonoya Mizuno",
-        "Corey Johnson"
-      ],
-      "trailers": [
-        "sDkEF7Db7Gw",
-        "hEcB7T-C0g8",
-        "bggUmgeMCdc",
-        "gXUHo8ZgWJw",
-        "s-HiQ9K2uf4"
-      ],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 1,
-      "code": "P282",
-      "isActive": false,
       "metadata": {
         "enriched": true,
         "translated": true,
@@ -16500,44 +15942,6 @@
       }
     },
     {
-      "id": "17a00bad-6319-4e46-9d9a-3280877edf15",
-      "type": "movie",
-      "name": "Gentes que conocemos en vacaciones",
-      "enName": "People We Meet on Vacation",
-      "year": 2026,
-      "rating": 6.975,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Romance",
-        "Comedia"
-      ],
-      "region": "EU",
-      "language": "Inglés",
-      "description": "Poppy es una espíritu libre. Alex ama un plan. Después de años de vacaciones de verano, estos amigos opuestos a nivel polar se preguntan si podrían ser una pareja romántica perfecta.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/peG6482ALJQ9Tbvv2P38BquVk0f.jpg",
-      "cast": [
-        "Emily Bader",
-        "Tom Blyth",
-        "Sarah Catherine Hook",
-        "Jameela Jamil",
-        "Miles Heizer"
-      ],
-      "trailers": [
-        "m1C9DTOUH5s"
-      ],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 1,
-      "code": "P318",
-      "isActive": false,
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true
-      }
-    },
-    {
       "id": "12b7e53f-9d72-4d7c-9861-acf169ad27d2",
       "type": "movie",
       "name": "Plan de Familia",
@@ -17001,46 +16405,6 @@
       }
     },
     {
-      "id": "c6fe2135-6119-48f2-904d-cf3ee59e8b9c",
-      "type": "movie",
-      "name": "Secret Heatquartes",
-      "enName": "El cuartel secreto",
-      "year": 2022,
-      "rating": 6.349,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Acción",
-        "Comedia",
-        "Ciencia Ficción",
-        "Familiar"
-      ],
-      "region": "EU",
-      "language": "Inglés",
-      "description": "Mientras pasean después de la escuela, Charlie y sus amigos descubren la sede del superhéroe más poderoso del mundo escondida debajo de su hogar. Cuando los villanos atacan, deben unirse para defender la sede y salvar al mundo.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/v6mvk0YC4o0PUdq82IbNRjIEEv3.jpg",
-      "cast": [
-        "Owen Wilson",
-        "Michael Peña",
-        "Walker Scobell",
-        "Momona Tamada",
-        "Keith L. Williams"
-      ],
-      "trailers": [
-        "OjIz3knndzo"
-      ],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 1,
-      "code": "P331",
-      "isActive": false,
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true
-      }
-    },
-    {
       "id": "61406d82-9526-4b2c-829e-8f8e46ad22de",
       "type": "movie",
       "name": "Shooter",
@@ -17237,46 +16601,6 @@
       }
     },
     {
-      "id": "480ba6ea-f47b-4ddf-a4a9-806f578f1aaa",
-      "type": "movie",
-      "name": "Avanpost",
-      "enName": "The Blackoutp - La invasión",
-      "year": 2019,
-      "rating": 6.489,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Thriller",
-        "Suspenso",
-        "Ciencia Ficción",
-        "Acción"
-      ],
-      "region": "Rusia",
-      "language": "Ruso",
-      "description": "El contacto entre la mayoría de las ciudades de la Tierra ha sido cortado. Una pequeña zona circular en Europa del Este aún tiene electricidad, y quizás incluso se está informando de vida en el espacio. Lo que las fuerzas militares encuentran fuera del círculo es sorprendente.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/avl9MEQhtvokNnzoWepkmHBZ2ss.jpg",
-      "cast": [
-        "Lukerya Ilyashenko",
-        "Pyotr Fyodorov",
-        "Svetlana Ivanova",
-        "Aleksey Chadov",
-        "Kseniya Kutepova"
-      ],
-      "trailers": [
-        "hrHIbnPZ96Q"
-      ],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 1,
-      "code": "P337",
-      "isActive": false,
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true
-      }
-    },
-    {
       "id": "e9af3c76-f31d-44ac-b45f-0399bf8dfd97",
       "type": "movie",
       "name": "El Cuervo",
@@ -17460,46 +16784,6 @@
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P342",
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true
-      }
-    },
-    {
-      "id": "d302bac7-d23a-4778-8bc4-9f38d0059f20",
-      "type": "movie",
-      "name": "El Botín",
-      "enName": "The Rip",
-      "year": 2026,
-      "rating": 7.089,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Thriller",
-        "Acción",
-        "Suspenso",
-        "Crimen"
-      ],
-      "region": "EU",
-      "language": "Inglés",
-      "description": "La confianza se desgasta cuando un equipo de policías de Miami descubre millones de dólares en efectivo dentro de una casa de oculta deteriorada, poniendo en duda a todos — y a todo —.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/4wsYWH73Hb1B6noGIFaRQSAkuXj.jpg",
-      "cast": [
-        "Matt Damon",
-        "Ben Affleck",
-        "Teyana Taylor",
-        "Steven Yeun",
-        "Catalina Sandino Moreno"
-      ],
-      "trailers": [
-        "yeR5bcbRPak"
-      ],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 1,
-      "code": "P343",
-      "isActive": false,
       "metadata": {
         "enriched": true,
         "translated": true,
@@ -18058,45 +17342,6 @@
       }
     },
     {
-      "id": "af8db2f8-91eb-48ed-a8c4-8974afff73b0",
-      "type": "movie",
-      "name": "Infiltrate",
-      "enName": "Dura de Matar",
-      "year": 2026,
-      "rating": 10,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Thriller",
-        "Acción",
-        "Suspenso"
-      ],
-      "region": "Canadá",
-      "language": "Inglés",
-      "description": "En una ciudad dominada por la delincuencia, la agente del gobierno Lily Chen se ve obligada a elegir entre su deber y su familia cuando su esposo es secuestrado, y se la obliga a asesinar a criminales de alto nivel para salvarlo. A medida que se adentra en el inframundo del crimen, la incesante búsqueda de Lily de la justicia descompone una red de corrupción, llegando a una decisión final que cambiará su mundo para siempre.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/8Cw8GF9wG63kF8pRRXwOx2kXGt.jpg",
-      "cast": [
-        "Orphée Ladouceur-Nguyen",
-        "Alain Moussi",
-        "Tim Rozon",
-        "Finn McCager Higgins",
-        "Lisa Berry"
-      ],
-      "trailers": [
-        "dzVz0KqqwGE"
-      ],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 1,
-      "code": "P358",
-      "isActive": false,
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true
-      }
-    },
-    {
       "id": "e866e926-221e-49ec-916e-a8f9b490ae72",
       "type": "movie",
       "name": "Jungle Beat-The Movie",
@@ -18609,46 +17854,6 @@
       }
     },
     {
-      "id": "be8dd51a-c152-4cdb-8f23-94a4461a6a8a",
-      "type": "movie",
-      "name": "Central Intelligente",
-      "enName": "Un espía y medio",
-      "year": 2016,
-      "rating": 6.416,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Comedia",
-        "Acción"
-      ],
-      "region": "EU",
-      "language": "Inglés",
-      "description": "Calvin Joyner, un contable apacible cuyo brillo en la escuela secundaria ya es cosa del pasado, se reconecta con un amigo torpe de la escuela secundaria a través de Facebook. Después de encontrarse, la vida monótona de Calvin toma un giro emocionante y inesperado cuando se ve lanzado al mundo del espionaje internacional.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/hXQVMbRNpf7c93e8clMY4W5DRm6.jpg",
-      "cast": [
-        "Dwayne Johnson",
-        "Kevin Hart",
-        "Amy Ryan",
-        "Danielle Nicolet",
-        "Jason Bateman"
-      ],
-      "trailers": [
-        "J_8OsnCTRx8",
-        "MxEw3elSJ8M",
-        "QrgXU1zHfFI"
-      ],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 1,
-      "code": "P372",
-      "isActive": false,
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true
-      }
-    },
-    {
       "id": "2d5db9ed-001e-400a-9dc7-30b20c044157",
       "type": "movie",
       "name": "Mátate, Amor",
@@ -18682,42 +17887,6 @@
         "enriched": true,
         "translated": true,
         "genresEnriched": true
-      }
-    },
-    {
-      "id": "b0bfa378-8352-4f99-994d-1d5832856041",
-      "type": "movie",
-      "name": "El fantasma de mi mujer",
-      "enName": "My Wife, Murderer",
-      "year": 2026,
-      "rating": 4.8,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Comedia"
-      ],
-      "region": "España",
-      "language": "Español",
-      "description": "La vida perfecta de Fernando con su esposa María y su amante Julia se derrumba cuando Julia afirma que accidentalmente mató a María. Después de informar que María está desaparecida, Fernando recibe una llamada de ella - y su pesadilla comienza.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/c2eVAJ8wMtk8bRGiEAPQH3id8nq.jpg",
-      "cast": [
-        "Javier Rey",
-        "Loreto Mauleón",
-        "María Hervás",
-        "Marco Cáceres",
-        "Leander Vyvey"
-      ],
-      "trailers": [],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 1,
-      "code": "P374",
-      "isActive": false,
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true,
-        "titlesChecked": true
       }
     },
     {
@@ -19493,47 +18662,6 @@
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P394",
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true
-      }
-    },
-    {
-      "id": "4a325bad-97e1-44ef-9355-749cb2dbae39",
-      "type": "movie",
-      "name": "Get Out",
-      "enName": "Dejame Salir",
-      "year": 2017,
-      "rating": 7.625,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Terror",
-        "Misterio",
-        "Suspenso"
-      ],
-      "region": "EU",
-      "language": "Inglés",
-      "description": "Chris y su novia Rose van a pasar el fin de semana con los padres de ella en la zona rural. Al principio, Chris interpreta el comportamiento demasiado acomodante de la familia como intentos nerviosos de hacer frente a la relación interracial de su hija, pero a medida que avanza el fin de semana, una serie de descubrimientos cada vez más perturbadores lo llevan a una verdad que nunca podría haber imaginado.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/tFXcEccSQMf3lfhfXKSU9iRBpa3.jpg",
-      "cast": [
-        "Daniel Kaluuya",
-        "Allison Williams",
-        "Catherine Keener",
-        "Bradley Whitford",
-        "Caleb Landry Jones"
-      ],
-      "trailers": [
-        "gsB70ZRY-hI",
-        "Lc9pZmkNf34",
-        "sRfnevzM9kQ"
-      ],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 1,
-      "code": "P395",
-      "isActive": false,
       "metadata": {
         "enriched": true,
         "translated": true,
@@ -22090,44 +21218,6 @@
       }
     },
     {
-      "id": "2ac1f617-a993-483d-af2c-dff2c761b3ef",
-      "type": "movie",
-      "name": "Objetos",
-      "enName": "Objects",
-      "year": 2022,
-      "rating": 6.029,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Intriga",
-        "Misterio",
-        "Suspenso"
-      ],
-      "region": "España",
-      "language": "Español",
-      "description": "Mario, un trabajador en el departamento de \"perdido y encontrado\", encuentra una maleta con un bebé muerto dentro.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/7hrSRxsd7nZ7Myg7SpvxJ7EWItO.jpg",
-      "cast": [
-        "Álvaro Morte",
-        "Eugenia Suárez",
-        "Verónica Echegui",
-        "Daniel Aráoz",
-        "Andy Gorostiaga"
-      ],
-      "trailers": [],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 1,
-      "code": "P462",
-      "isActive": false,
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true,
-        "titlesChecked": true
-      }
-    },
-    {
       "id": "8afc4b5b-d07a-4bf9-a1c2-ca62f2966be9",
       "type": "movie",
       "name": "Obsession",
@@ -22196,47 +21286,6 @@
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P464",
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true
-      }
-    },
-    {
-      "id": "820157e3-7b71-4804-a7be-8faac2c23196",
-      "type": "movie",
-      "name": "Los aeronautas",
-      "enName": "The Areonauts",
-      "year": 2019,
-      "rating": 6.806,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Aventura",
-        "Drama",
-        "Romance"
-      ],
-      "region": "Reino Unido",
-      "language": "Inglés",
-      "description": "En 1862, el piloto de globo audaz Amelia Wren se une al pionero meteorólogo James Glaisher para avanzar el conocimiento humano sobre el tiempo y volar más alto que nadie en la historia. Mientras rompen récords y avanzan la descubrimiento científico, su viaje hasta el borde de la existencia ayuda a la pareja poco probable a encontrar su lugar en el mundo que han dejado muy abajo de ellos. Pero enfrentan desafíos físicos y emocionales en el aire tenue, ya que el ascenso se convierte en una lucha por la supervivencia.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/kZHnblqmTBUBgzYBIxWIz9txsEi.jpg",
-      "cast": [
-        "Eddie Redmayne",
-        "Felicity Jones",
-        "Tom Courtenay",
-        "Phoebe Fox",
-        "Himesh Patel"
-      ],
-      "trailers": [
-        "QBQYHz6skJ0",
-        "vmsBuG1eY8w",
-        "Rm4VnwCtQO8"
-      ],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 1,
-      "code": "P465",
-      "isActive": false,
       "metadata": {
         "enriched": true,
         "translated": true,
@@ -23068,46 +22117,6 @@
         "enriched": true,
         "translated": true,
         "genresEnriched": true
-      }
-    },
-    {
-      "id": "3cadd28b-4f1f-45fa-b930-71d1e573817b",
-      "type": "movie",
-      "name": "Los tigres",
-      "enName": "Tigers",
-      "year": 2025,
-      "rating": 6.162,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Drama",
-        "Suspenso",
-        "Crimen"
-      ],
-      "region": "España",
-      "language": "Español",
-      "description": "Antonio y Estrella son hermanos que se dedican al buceo. Él trabaja en obras marítimas, ella estudia la vida submarina y le asiste. Su precaria economía podría mejorar después de encontrar cocaína escondida en el casco de un barco anclado en Huelva.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/5X4VLfrBSvHas5VnzivaLl7PoFM.jpg",
-      "cast": [
-        "Antonio de la Torre",
-        "Bárbara Lennie",
-        "Joaquín Núñez",
-        "Jesús del Moral",
-        "César Vicente"
-      ],
-      "trailers": [
-        "Pczmpo6WZhg"
-      ],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 1,
-      "code": "P488",
-      "isActive": false,
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true,
-        "titlesChecked": true
       }
     },
     {
@@ -24000,7 +23009,7 @@
       "name": "The man who fell to earth",
       "enName": "El hombre que cayó a la Tierra",
       "year": 2022,
-      "rating": 7.431,
+      "rating": 7.42,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
@@ -24009,7 +23018,7 @@
       ],
       "region": "EU",
       "language": "Inglés",
-      "description": "An extraterrestrial alien arrives on Earth at a turning point in human evolution and must confront his own past to determine our future.",
+      "description": "Un extraterrestre llega a la Tierra en un punto de inflexión en la evolución humana y debe enfrentarse a su propio pasado para determinar nuestro futuro.",
       "imageUrl": "https://image.tmdb.org/t/p/w500/p1aBjGkyG25ADy4xu69joNMV3eQ.jpg",
       "cast": [
         "Chiwetel Ejiofor",
@@ -24024,11 +23033,13 @@
       ],
       "seasons": [],
       "seasonCount": 1,
-      "episodeCount": 8,
+      "episodeCount": 10,
       "code": "S113",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -24037,7 +23048,7 @@
       "name": "Something very bad is going to happen",
       "enName": "Algo terrible está a punto de suceder",
       "year": 2026,
-      "rating": 6.556,
+      "rating": 6.573,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
@@ -24046,8 +23057,8 @@
       ],
       "region": "EU",
       "language": "Inglés",
-      "description": "A bride has a feeling that something horrifying will happen at her wedding — and the closer to the altar she gets, the worse it becomes.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/tuj37DlqEqib8sTO4h3nHJeTAJ2.jpg",
+      "description": "Una novia presiente que algo terrible ocurrirá en su boda... y cuanto más se acerca al altar, peor se vuelve todo.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/6a89uiHWkYE2DQvZfTAP8HrzGUT.jpg",
       "cast": [
         "Camila Morrone",
         "Adam DiMarco",
@@ -24063,8 +23074,10 @@
       "episodeCount": 8,
       "code": "S114",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -24077,13 +23090,13 @@
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Drama",
-        "Comedia"
+        "Comedia",
+        "Drama"
       ],
       "region": "España",
       "language": "Español",
-      "description": "Two roommates join a bachelorette road trip, where unspoken feelings ignite and shake up their entire friend group.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/2udseY0mzsvkytPcSL4Vp612M1D.jpg",
+      "description": "Dos compañeros de piso se apuntan a una despedida de soltera en caravana, donde afloran sentimientos que dejan huella en todos sus amigos.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/dAISEl3uXtw64jlkTCm1H1XnQ4W.jpg",
       "cast": [
         "Daniel Ibáñez",
         "Itziar Manero",
@@ -24091,14 +23104,18 @@
         "Lucía de la Fuente",
         "Clara Sans"
       ],
-      "trailers": [],
+      "trailers": [
+        "QET2gy8nb6o"
+      ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 5,
       "code": "S115",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -24115,8 +23132,8 @@
       ],
       "region": "España",
       "language": "Español",
-      "description": "A passionate medical team is devoted to saving lives in a bustling public hospital where tensions — and romance — keep their pulses racing.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/s6qEnmFxRqQQhjPAZPNHlwPc75y.jpg",
+      "description": "Un apasionado equipo médico se entrega a salvar vidas en un hospital público desbordado, en el que las tensiones —y el amor— aceleran las pulsaciones.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/7kCGAnGKJyPlyc4rSn6FSTo59zh.jpg",
       "cast": [
         "Manu Ríos",
         "Borja Luna",
@@ -24125,15 +23142,17 @@
         "Aitana Sánchez-Gijón"
       ],
       "trailers": [
-        "kFoDTm0heec"
+        "O93T1cISj1Q"
       ],
       "seasons": [],
-      "seasonCount": 2,
+      "seasonCount": 3,
       "episodeCount": 16,
       "code": "S116",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -24142,19 +23161,19 @@
       "name": "El refugio atómico",
       "enName": "Billonaires Bunker",
       "year": 2025,
-      "rating": 6.401,
+      "rating": 6.415,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
         "Ciencia Ficción",
-        "Fantasía",
         "Drama",
+        "Fantasía",
         "Misterio"
       ],
       "region": "España",
       "language": "Español",
-      "description": "When a group of billionaires takes shelter in a luxury bunker, an old feud between two families resurfaces amid an unprecedented global conflict.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/hNVb60dPG34wYjazGgFolJhqfxp.jpg",
+      "description": "Tras refugiarse en un búnker de lujo para millonarios, dos familias deben hacer frente a la herida que las separó mientras crece la amenaza de un conflicto global sin precedentes.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/sSaPOors7XFNRtP9qsIZ7oeLgkh.jpg",
       "cast": [
         "Pau Simon",
         "Alícia Falcó",
@@ -24163,15 +23182,16 @@
         "Natalia Verbeke"
       ],
       "trailers": [
-        "Ar68A3Kr-UM"
+        "BPsqqp-WDPw"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 8,
       "code": "S117",
       "metadata": {
-        "genresEnriched": true,
-        "enriched": true
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true
       }
     },
     {
@@ -25057,35 +24077,33 @@
       ],
       "region": "Canadá",
       "language": "Inglés",
-      "description": "A gifted piano tuner's meticulous skills for tuning pianos lead him to discover an unexpected aptitude for cracking safes, turning his life upside down.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/5OvA3i9wZs5jHu0DCrfmXlzAM67.jpg",
+      "description": "Las meticulosas habilidades de un talentoso afinador de pianos le llevan a descubrir una inesperada aptitud para abrir cajas fuertes, lo que pone su vida patas arriba.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/9cKbuFsddhNR6C8ZshNWqqVj3di.jpg",
       "cast": [
         "Leo Woodall",
         "Dustin Hoffman",
-        "Alisen Richmond-Peck",
-        "Ellyn Jameson",
-        "Tim Blair"
+        "Havana Rose Liu",
+        "ליאור רז",
+        "Tovah Feldshuh"
       ],
       "trailers": [
-        "HYxzyLVJORA",
-        "XiehvETTjTQ",
-        "zW1cRf5X8Hk",
-        "rdlOZhl-nSA"
+        "Wsowmyxuirs"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P512",
       "metadata": {
-        "genresEnriched": true,
-        "enriched": true
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true
       }
     },
     {
       "id": "0131de81-5379-4369-b41d-77a5d0025dda",
       "type": "movie",
-      "name": "­Boy",
-      "enName": "­Boy",
+      "name": "Le Corset",
+      "enName": "Iron Boy",
       "year": 2017,
       "rating": 4.7,
       "sizeGb": 0,
@@ -25093,8 +24111,8 @@
       "genres": [
         "Drama"
       ],
-      "region": "Reino Unido",
-      "language": "Inglés",
+      "region": "Francia",
+      "language": "Español",
       "description": "Two young men spend the night together after meeting the previous evening in a notorious gay club. The next day, however, the host wakes to find the boy he picked up bewildered and confused, unable remember his name or anything about his past. Lacking any type of identification or obvious clues, the boys begin to search for the truth among fragments of memories that may or may not prove reliable.",
       "imageUrl": "https://image.tmdb.org/t/p/w500/eOBsUuK4qoW4S8Qm5hNZpno9mVi.jpg",
       "cast": [
@@ -25112,29 +24130,29 @@
       "episodeCount": 1,
       "code": "P513",
       "metadata": {
-        "genresEnriched": true,
-        "enriched": true
+        "enriched": true,
+        "genresEnriched": true
       }
     },
     {
       "id": "51583fd2-2008-43fd-8931-3f0dcc49d12f",
       "type": "movie",
       "name": "Batman - Knightfall Part 1 - Knightfall",
-      "enName": "",
+      "enName": "Batman: Knightfall Part 1: Knightfall",
       "year": 2026,
-      "rating": 9.171,
+      "rating": 9.159,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Animado",
         "Acción",
+        "Animado",
         "Aventura",
         "Ciencia Ficción"
       ],
       "region": "United States",
       "language": "Español",
-      "description": "Arkham Asylum has been destroyed, and all its inmates have been unleashed upon Gotham City. As Batman races to round up some of his greatest enemies, he is pushed to his physical and mental limits and into a final confrontation with a new threat: the man called Bane!",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/360qdtu2hLnqMu8SVHMywn420w1.jpg",
+      "description": "Cuando el misterioso gigante conocido únicamente como Bane libera a toda la galería de villanos de Batman del Manicomio de Arkham, el Cruzado Encapuchado se ve llevado al límite de su resistencia física y mental.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/fXvnylD29aoKx4ai3wBlHRXMSVp.jpg",
       "cast": [
         "Anson Mount",
         "Michael Mando",
@@ -25151,8 +24169,10 @@
       "episodeCount": 1,
       "code": "P514",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -25161,18 +24181,18 @@
       "name": "Den hemmelige kvinde",
       "enName": "Una mujer sin pasado",
       "year": 2026,
-      "rating": 6.247,
+      "rating": 6.411,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
         "Drama",
-        "Suspenso",
-        "Misterio"
+        "Misterio",
+        "Suspenso"
       ],
       "region": "United States",
       "language": "Español",
-      "description": "After discovering she has a family and a shipping empire, a woman with amnesia returns to a wealthy and seemingly perfect past to uncover why she left.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/5FC5vUHFz0fbJOd0bhyzJpCSLrc.jpg",
+      "description": "Tras descubrir que tiene familia y un imperio naviero, una mujer con amnesia vuelve a su pasado acomodado y aparentemente perfecto para entender por qué lo abandonó.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/yOtIiIqKVlg5QH0pF88kJSI6c6K.jpg",
       "cast": [
         "Natalie Madueño",
         "Claes Bang",
@@ -25188,8 +24208,10 @@
       "episodeCount": 1,
       "code": "P515",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -25198,7 +24220,7 @@
       "name": "Freefall",
       "enName": "Caída libre",
       "year": 2026,
-      "rating": 6.986,
+      "rating": 7,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
@@ -25206,8 +24228,8 @@
       ],
       "region": "United States",
       "language": "Español",
-      "description": "Following the highly publicized death of Boeing whistleblower John Barnett, the investigation continues into the once-iconic aviation giant, uncovering startling new revelations and insider accounts in the wake of a deepening corporate crisis..",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/oadqt3V5c8j5ZIbYkdfQLcWzI4C.jpg",
+      "description": "En este documental, un alarmante testimonio de un informante afirma que la cultura de recortes y encubrimientos de Boeing provocó fallos de seguridad aérea mortales.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/wDxu2TejJAfvWdu8jOFZMPqisI5.jpg",
       "cast": [
         "John Barnett",
         "Rob Turkewitz",
@@ -25223,8 +24245,10 @@
       "episodeCount": 1,
       "code": "P516",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -25233,18 +24257,18 @@
       "name": "Motor City",
       "enName": "Motor City",
       "year": 2026,
-      "rating": 6.3,
+      "rating": 6.2,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
         "Acción",
-        "Suspenso",
-        "Crimen"
+        "Crimen",
+        "Suspenso"
       ],
       "region": "United States",
       "language": "Español",
-      "description": "In 1970s Detroit, John Miller falls for a local gangster's girl and lands in prison for a crime he didn't commit. With his life ruined, Miller plots revenge against the man who took his girl away.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/rKws4iqKhrzWHVLHnwtMnCpEHhF.jpg",
+      "description": "En el Detroit de los años 70, el romántico de clase trabajadora John Miller es incriminado por un despiadado gángster tras enamorarse de su novia. Tras pasar años en prisión, regresa con una única misión: vengarse.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/9CatrE52P66ODUQmrMlBO7L0D5c.jpg",
       "cast": [
         "Alan Ritchson",
         "Ben Foster",
@@ -25253,16 +24277,17 @@
         "Amar Chadha-Patel"
       ],
       "trailers": [
-        "t6RklhKu9os",
-        "JHMPxTWI4sQ"
+        "Grtc-UXlu7Y"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P517",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -25271,7 +24296,7 @@
       "name": "Rememory",
       "enName": "Rememory",
       "year": 2017,
-      "rating": 6.077,
+      "rating": 6.069,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
@@ -25281,8 +24306,8 @@
       ],
       "region": "United States",
       "language": "Español",
-      "description": "The widow of a wise professor stumbles upon one of his inventions that's able to record and play a person's memory.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/qz3mvkpTOQOEqzxenvaaObOMarj.jpg",
+      "description": "Gordon Dunn, un pionero y afamado científico, es encontrado muerto justo después de revelar su nuevo trabajo: una máquina capaz de extraer, grabar y reproducir las emociones de las personas.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/gDtnR2IEnxMN9q24irkN52hHBpU.jpg",
       "cast": [
         "Peter Dinklage",
         "Julia Ormond",
@@ -25298,8 +24323,10 @@
       "episodeCount": 1,
       "code": "P518",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -25308,17 +24335,17 @@
       "name": "Revolt",
       "enName": "Revolt",
       "year": 2017,
-      "rating": 5.523,
+      "rating": 5.518,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Ciencia Ficción",
-        "Acción"
+        "Acción",
+        "Ciencia Ficción"
       ],
       "region": "Reino Unido",
       "language": "Inglés",
-      "description": "The story of humankind's last stand against a cataclysmic alien invasion. Set in the war-ravaged African countryside, a U.S. soldier and a French foreign aid worker team up to survive the alien onslaught. Their bond will be tested as they search for refuge across a crumbling world.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/eM2zipCkAXhp0BZF2noDp7bRFgV.jpg",
+      "description": "La historia de la última resistencia de la humanidad contra una invasión alienígena cataclísmica. En el campo africano devastado por la guerra, un soldado estadounidense y un trabajador de ayuda exterior francés se unen para sobrevivir al ataque alienígena. Su vínculo será probado mientras buscan refugio en un mundo que se desmorona.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/yzfbHfjiptqFVax4D05N0whjcBF.jpg",
       "cast": [
         "Lee Pace",
         "Bérénice Marlohe",
@@ -25334,17 +24361,19 @@
       "episodeCount": 1,
       "code": "P519",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
       "id": "98b7b90c-dc7a-4caa-ad08-06efa1063ede",
       "type": "movie",
       "name": "Slingshot",
-      "enName": "Destino -Titón",
+      "enName": "Destino -Titán",
       "year": 2024,
-      "rating": 6.076,
+      "rating": 6.074,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
@@ -25353,13 +24382,13 @@
       ],
       "region": "United States",
       "language": "Español",
-      "description": "An elite trio of astronauts aboard a years-long, possibly compromised mission to Saturn's moon, Titan, gears up for a highly dangerous slingshot manoeuvre that will either catapult them to Titan or into deep space.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/e6cCBe7DQOn9OFdFJ0eyVwSC8hR.jpg",
+      "description": "Un astronauta lucha por mantener el control sobre la realidad a bordo de una importante misión hacia Titán, la luna de Saturno. En lo profundo del universo, una tripulación de tres hombres avanza hacia el borde de nuestro sistema solar, una misión que es la única esperanza de la humanidad para resolver una terrible crisis energética.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/bY05Rz6Ger7MMxD59DcBvveV1R2.jpg",
       "cast": [
         "Casey Affleck",
         "Laurence Fishburne",
         "Emily Beecham",
-        "Tomer Capone",
+        "תומר קאפון",
         "David Morrissey"
       ],
       "trailers": [
@@ -25371,8 +24400,10 @@
       "episodeCount": 1,
       "code": "P520",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -25381,17 +24412,17 @@
       "name": "The Instigator",
       "enName": "Los instigadores",
       "year": 2024,
-      "rating": 6.132,
+      "rating": 6.139,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Crimen",
-        "Comedia"
+        "Comedia",
+        "Crimen"
       ],
       "region": "United States",
       "language": "Español",
-      "description": "Rory and Cobby are unlikely partners thrown together for a heist. But when it goes awry, they team up with an unusual accomplice — Rory's therapist — to outrun police, backward bureaucrats, and a vengeful crime boss.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/dnYWsIFDmygCjNg65rY3uBymx81.jpg",
+      "description": "Rory, un padre desesperado, y Cobby, un expresidiario, se ven obligados a aliarse para cometer un atraco. Cuando todo se tuerce, hacen equipo con un cómplice inesperado, la psicóloga de Rory, para escapar de la policía, unos funcionarios corruptos y un capo vengativo.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/zDWHsjfdsvZZkMWo1u1Ep7Y77FQ.jpg",
       "cast": [
         "Matt Damon",
         "Casey Affleck",
@@ -25400,15 +24431,16 @@
         "Michael Stuhlbarg"
       ],
       "trailers": [
-        "X5oqpxi3U7M"
+        "G0PgpOLBjpk"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P521",
       "metadata": {
-        "genresEnriched": true,
-        "enriched": true
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true
       }
     },
     {
@@ -25416,28 +24448,37 @@
       "type": "movie",
       "name": "The Titan",
       "enName": "Titán",
-      "year": 1018,
-      "rating": 6.2,
+      "year": 2018,
+      "rating": 5.329,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Documental"
+        "Ciencia Ficción",
+        "Documental",
+        "Suspenso"
       ],
       "region": "Reino Unido",
       "language": "Inglés",
-      "description": "The life and works of the great artist Michelangelo Buonarroti are shown against the historical background of his time. It begins with his earliest artworks, and follows his life and career as he achieves lasting fame. The documentary includes detailed looks at some of the artist's most renowned creations.  American heavily re-edited  version of the Swiss 1938 film Michelangelo: Das Leben eines Titanen, with new footage shot by Robert J. Flaherty added.  Preserved by the Academy Film Archive in 2005.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/hVd5fAJFnRU9rWg609mVszxF71R.jpg",
+      "description": "En un futuro cercano, una familia de militares decide tomar parte en un revolucionario experimento de evolución genética y exploración espacial que trata de acelerar el desarrollo genético del ser humano con un objetivo: poder relocalizar a la humanidad en otro planeta y así evitar su extinción.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/d4NxL8amp4X1uUwtZfmyVYoBjTU.jpg",
       "cast": [
-        "Fredric March"
+        "Sam Worthington",
+        "Taylor Schilling",
+        "Tom Wilkinson",
+        "Agyness Deyn",
+        "Nathalie Emmanuel"
       ],
-      "trailers": [],
+      "trailers": [
+        "14sB8SYWiiA"
+      ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P522",
       "metadata": {
-        "genresEnriched": true,
-        "enriched": true
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true
       }
     },
     {
@@ -25446,7 +24487,7 @@
       "name": "The Whisper Man",
       "enName": "Susurran tu nombre",
       "year": 2026,
-      "rating": 6.824,
+      "rating": 6.86,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
@@ -25456,8 +24497,8 @@
       ],
       "region": "United States",
       "language": "Español",
-      "description": "When his young son vanishes, a widower enlists help from his estranged father, a retired detective who put away the serial killer now linked to the case.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/ndRs5lADYm0PeVjuOxaMcInY0o2.jpg",
+      "description": "Tras la desaparición de su hijo, un viudo pide ayuda a su distanciado padre, un inspector jubilado que encarceló al asesino en serie relacionado con el caso.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/63n3rBWRs9Bvlo0nJ8oP2ayuusA.jpg",
       "cast": [
         "Robert De Niro",
         "Michelle Monaghan",
@@ -25466,15 +24507,17 @@
         "Michael Keaton"
       ],
       "trailers": [
-        "ZHRR-1CKYIQ"
+        "zTOmwZRmVBs"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P523",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -25487,14 +24530,14 @@
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
-        "Drama",
         "Acción",
+        "Drama",
         "Suspenso"
       ],
       "region": "Spain",
       "language": "Español",
-      "description": "After being implicated in a terrorist attack, Santi, a taxi driver, is taken hostage by one of the perpetrators.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/n15gfcgwV0LVPSobrayZcFHcwN6.jpg",
+      "description": "Tras verse implicado en un atentado terrorista, Santi, un taxista, es tomado como rehén por uno de los autores.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/y1OIPQA0UIFzm68uCdwZF2L3W0M.jpg",
       "cast": [
         "Luis Tosar",
         "Inma Cuesta",
@@ -25503,15 +24546,18 @@
         "Nourdin Batán"
       ],
       "trailers": [
-        "87w5CR91iHA"
+        "NoEd8WDFcZE",
+        "-fnU_sOTMfg"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P524",
       "metadata": {
+        "enriched": true,
+        "translated": true,
         "genresEnriched": true,
-        "enriched": true
+        "titlesChecked": true
       }
     },
     {
@@ -25520,7 +24566,7 @@
       "name": "El ser querido",
       "enName": "The beloved",
       "year": 2026,
-      "rating": 6.856,
+      "rating": 6.876,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
@@ -25528,8 +24574,8 @@
       ],
       "region": "Spain",
       "language": "Español",
-      "description": "The acclaimed film director Esteban Martínez is a legend both for his films and for his past marked by violence and excess. For his new project, he offers his daughter Emilia a role under the pretext of helping her with her stalled acting career. Living together on set will foster a closeness they haven’t shared for years, but it will also reopen old wounds that never healed.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/whk02IOeEHz8KCYZGm3fF92zg0v.jpg",
+      "description": "Un aclamado director de cine y su hija, una actriz sin éxito, ruedan juntos una película tras años de distanciamiento y un pasado difícil del que ninguno de los dos ha querido hablar.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/LdKLipXCdKHNXxUxn8l7UTdnXJ.jpg",
       "cast": [
         "Javier Bardem",
         "Victoria Luengo",
@@ -25538,15 +24584,16 @@
         "Mourad Ouani"
       ],
       "trailers": [
-        "2I5LLG2XBco"
+        "1Mwa_qonGyA"
       ],
       "seasons": [],
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P525",
       "metadata": {
-        "genresEnriched": true,
-        "enriched": true
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true
       }
     },
     {
@@ -28039,45 +27086,6 @@
       }
     },
     {
-      "id": "0cf4a9e2-b4ea-4661-9333-087cd1b7b557",
-      "type": "movie",
-      "name": "Night of the hunted",
-      "enName": "Noche de caza",
-      "year": 2023,
-      "rating": 6.1,
-      "sizeGb": 0,
-      "isPremiere": false,
-      "genres": [
-        "Misterio",
-        "Suspenso",
-        "Terror"
-      ],
-      "region": "United States",
-      "language": "Español",
-      "description": "Cuando una mujer desprevenida se detiene en una remota gasolinera en plena noche, se convierte en el juguete de un francotirador sociópata con una vendetta secreta. Para sobrevivir no sólo debe esquivar sus balas y luchar por su vida, sino también...",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/2KOVYMSb66ORodkoOmehUOxIXtd.jpg",
-      "cast": [
-        "Camille Rowe",
-        "Aleksandar Popovic",
-        "J. John Bieler",
-        "Jeremy Scippio",
-        "Brian Breiter"
-      ],
-      "trailers": [
-        "C0Sa_M5XtQI"
-      ],
-      "seasons": [],
-      "seasonCount": 1,
-      "episodeCount": 1,
-      "code": "P591",
-      "metadata": {
-        "enriched": true,
-        "translated": true,
-        "genresEnriched": true,
-        "titlesChecked": true
-      }
-    },
-    {
       "id": "6f1974e4-f933-4ed5-8293-6f97149ccfab",
       "type": "movie",
       "name": "Not Without Hope",
@@ -28703,6 +27711,346 @@
       "seasonCount": 1,
       "episodeCount": 8,
       "code": "S148",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "0ad26790-d7fc-4492-ae91-69754fd766f4",
+      "type": "series",
+      "name": "Euphoria",
+      "enName": "Euphoria",
+      "year": 2019,
+      "rating": 8.275,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Una reflexión sobre la adolescencia a través de un grupo de estudiantes de instituto que tienen que hacer frente a temas recurrentes de su edad, como la droga, el sexo y la violencia.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/6Sdm5XwdCnspdEF8fTFx6UJrl7o.jpg",
+      "cast": [
+        "Zendaya",
+        "Hunter Schafer",
+        "Sydney Sweeney",
+        "Jacob Elordi",
+        "Alexa Demie"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 3,
+      "episodeCount": 24,
+      "code": "S149",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "691a77a5-33b0-4f1f-8a14-4002b0b91b3e",
+      "type": "movie",
+      "name": "Balls Up",
+      "enName": "Balls Up - Con un par",
+      "year": 2026,
+      "rating": 5.858,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Comedia"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Los ejecutivos de marketing Brad y Elijah lanzan un audaz patrocinio de preservativos de cobertura total directamente a la Copa del Mundo. Después de que su ebria celebración en Brasil desencadene un escándalo mundial, deberán huir de hinchas furiosos, delincuentes y funcionarios sedientos de poder para salvar sus carreras y volver a casa con vida.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/50V1E3NE3UDFmq0fhMpByx1b4Ka.jpg",
+      "cast": [
+        "Mark Wahlberg",
+        "Paul Walter Hauser",
+        "Sacha Baron Cohen",
+        "Benjamin Bratt",
+        "Luciano Szafir"
+      ],
+      "trailers": [
+        "-iCK7qQBaKs"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P601",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "58f31756-409e-4f94-a7c5-9dea176745ad",
+      "type": "movie",
+      "name": "Bokeh",
+      "enName": "Bokeh",
+      "year": 2017,
+      "rating": 5.413,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Ciencia Ficción",
+        "Drama",
+        "Suspenso"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Una joven pareja estadounidense pasa una estancia romántica en Islandia. Al despertar, se dan cuenta de que la humanidad ha desaparecido de la faz de la Tierra. Tendrán que sobrevivir en medio de esta misteriosa situación a la vez que reconsideran todo lo que saben sobre ellos mismos y acerca del mundo.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/cedeEgSeKpsFZH9z9LgWbEqILlW.jpg",
+      "cast": [
+        "Maika Monroe",
+        "Matt O'Leary",
+        "Arnar Jónsson",
+        "Gunnar Helgason",
+        "Berglind Rós Sigurôardóttir"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P602",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "bda89bbf-e6c8-48c2-a0ad-9fc1cae4855e",
+      "type": "movie",
+      "name": "One last shot",
+      "enName": "Un último disparo",
+      "year": 2026,
+      "rating": 7.7,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Suspenso"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "El Navy Seal Jake Harris debe evitar que un equipo de mercenarios, dirigido por su excamarada desilusionado, inhabilite la red de defensa antimisiles de Estados Unidos.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/opmrLPrV2GPSazjWbX2PhkLjxBe.jpg",
+      "cast": [
+        "Scott Adkins",
+        "Steven Cree",
+        "Hannah Ware",
+        "Dolph Lundgren",
+        "ケイン・コスギ"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P603",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "f76ff9be-617b-45b1-b9bf-34ec370c837b",
+      "type": "movie",
+      "name": "Radius",
+      "enName": "Zona mortal",
+      "year": 2017,
+      "rating": 6.499,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Suspenso",
+        "Terror"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Liam se despierta de un accidente de coche sin recordar quién es. Mientras se dirige a la ciudad para buscar ayuda, sólo encuentra cadáveres, todos con extraños ojos pálidos. La primera evaluación de Liam es que un virus está presente en el aire, pero pronto descubre la horrible verdad: cualquier persona que se encuentre dentro de un radio de 50 pies de él muere instantáneamente.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/mQxDiidE8NYBCnEBuKjw54EE7BC.jpg",
+      "cast": [
+        "Diego Klattenhoff",
+        "Charlotte Sullivan",
+        "Brett Donahue",
+        "Bradley Sawatzky",
+        "Nazariy Demkowicz"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P604",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "06dfe0fc-0dda-46f2-9ab9-36f5e6b5ce1a",
+      "type": "movie",
+      "name": "The creator",
+      "enName": "The Creator",
+      "year": 2023,
+      "rating": 7,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Ciencia Ficción"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "En medio de una guerra futura entre la raza humana y las fuerzas de la inteligencia artificial, Joshua, un duro ex-agente de las fuerzas especiales que llora la desaparición de su esposa, es reclutado para cazar y matar al Creador, el escurridizo arquitecto de la IA avanzada que ha desarrollado una misteriosa arma con el poder de acabar con la guerra... y con la propia humanidad.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/kf8MQ2HfBHWFriUjKCmrFH8vSIa.jpg",
+      "cast": [
+        "John David Washington",
+        "Madeleine Yuna Voyles",
+        "Gemma Chan",
+        "Allison Janney",
+        "Ken Watanabe"
+      ],
+      "trailers": [
+        "Cws_5o2hN-Y",
+        "1yI_pFPEcI4",
+        "H1MRJrnREXE",
+        "8qRFxRoy_Fs",
+        "XAjf55_ALoM"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P605",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "c742d5c9-48cd-4f37-b688-5ffd8cd38bb1",
+      "type": "movie",
+      "name": "The hitmans bodyguard",
+      "enName": "El otro guardaespaldas",
+      "year": 2017,
+      "rating": 6.896,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Comedia",
+        "Crimen",
+        "Suspenso"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "El prestigioso guardaespaldas Michael Bryce (Ryan Reynolds) recibe un nuevo cliente: un asesino a sueldo, Darius Kincaid (Samuel L. Jackson), que debe testificar en un juicio en La Haya contra un cruel dictador (Gary Oldman).",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/uT29bkqVszT8r6DhC9lTuOx6rK.jpg",
+      "cast": [
+        "Ryan Reynolds",
+        "Samuel L. Jackson",
+        "Gary Oldman",
+        "Salma Hayek Pinault",
+        "Élodie Yung"
+      ],
+      "trailers": [
+        "itWr1vz1zOo"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P606",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "5a6a23d0-d92c-4725-8053-f88c998e8513",
+      "type": "movie",
+      "name": "The love hypothesis",
+      "enName": "La hipótesis del amor",
+      "year": 2026,
+      "rating": 8.3,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Comedia",
+        "Romance"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Olive es una brillante estudiante de doctorado. Cuando descubre que su mejor amiga, Ahn, se ha enamorado de Jeremy, el chico que a ella le gustaba, Olive besa impulsivamente al intimidante profesor Adam Carlsen para demostrar que lo ha superado. El beso les lleva a ambos a mantener una relación falsa con reglas, límites y un acuerdo mutuamente beneficioso. Pero cuando su acuerdo empieza a difuminarse entre la ficción y la realidad, Olive se ve obligada a poner a prueba su hipótesis: que quizá el amor sí merezca la pena.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/ylrSdW6fZYwaInYH6WAqvIEnSiV.jpg",
+      "cast": [
+        "Lili Reinhart",
+        "Tom Bateman",
+        "Rachel Marsh",
+        "Jaboukie Young-White",
+        "Nicholas Duvernay"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P607",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "a82d0220-a4dd-4744-9fad-d07c6ee5e986",
+      "type": "movie",
+      "name": "To catch a killer",
+      "enName": "Misántropo",
+      "year": 2023,
+      "rating": 6.84,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Crimen",
+        "Drama",
+        "Suspenso"
+      ],
+      "region": "United States",
+      "language": "Español",
+      "description": "Baltimore, la noche de Año Nuevo. Un feroz ataque producido por un único hombre deja un saldo de 29 muertos y ni una sola pista. Eleanor Falco (Shailene Woodley), una retraída pero talentosa mujer policía de bajo rango, es reclutada por el agente especial del FBI Geoffrey Lammark (Ben Mendelsohn) para integrar el equipo a cargo de la identificación y captura del homicida.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/tfjxw4nBFe7DlOMujBBcDnRb6KR.jpg",
+      "cast": [
+        "Shailene Woodley",
+        "Ben Mendelsohn",
+        "Jovan Adepo",
+        "Ralph Ineson",
+        "Richard Zeman"
+      ],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P608",
       "metadata": {
         "enriched": true,
         "translated": true,
