@@ -15,67 +15,105 @@ export default defineConfig({
     preact({ compat: false }),
     tailwind({ applyBaseStyles: false }),
     AstroPWA({
-      registerType: 'prompt',
+      // autoUpdate: el SW nuevo se activa solo (skipWaiting + clients.claim) y el
+      // script de Base.astro recarga la pestaña al recibir controllerchange.
+      // Con 'prompt' el SW se quedaba en estado `waiting` esperando un botón que
+      // casi nadie pulsa, así que la app seguía sirviendo el HTML viejo.
+      registerType: 'autoUpdate',
       workbox: {
-        // Precacheamos TODO el HTML generado, incluidas las ~600 paginas de detalle
-        // (/p/{id}, /s/{id}, /s/{id}/{temporada}, /s/{id}/{temporada}/{capitulo}).
-        // Es el unico modo de que el catalogo sea navegable sin conexion: una regla
-        // de runtime solo cachea lo que el usuario ya visito.
+        // Solo precacheamos lo que NO tiene hash en el nombre y por tanto necesita
+        // revisión explícita de Workbox:
+        //   - **/*.html            → ~600 páginas (Home, /p/*, /s/*, /s/*/*, ...)
+        //   - search/library-index → índices JSON de búsqueda y filtros
+        //   - favicon / icons / manifest → PWA shell
         //
-        // Los posters optimizados (_astro/*.webp) tambien entran: son la mayor parte
-        // del peso de la instalacion, asi que conviene mirar la linea "precache N
-        // entries (X KiB)" del log de build antes de cada despliegue. Van con hash de
-        // contenido en el nombre y `revision: null`, de modo que un despliegue nuevo
-        // solo re-descarga las imagenes que realmente cambiaron.
-        //
-        // Si la instalacion falla a medias (red movil inestable) el service worker no
-        // activa, pero lo ya guardado persiste: el siguiente `register()` reanuda desde
-        // donde iba en vez de empezar de cero.
+        // Los assets de /_astro/* (bundles JS, CSS, fuentes, pósters optimizados)
+        // tienen hash de contenido en el nombre (main.a1b2c3.js, poster.4f5e.webp).
+        // Esos NO van aquí: se sirven con `Cache-Control: immutable` 1 año desde
+        // staticwebapp.config.json y se cachean con la regla runtime de abajo.
+        // Si los precacheáramos, cada build re-descargaría ~1.200 pósters y ~50
+        // bundles aunque el HTML no hubiera cambiado, y la instalación del SW en
+        // móvil tardaría minutos (a mitad, el navegador la mata y nunca activa).
         globPatterns: [
           '**/*.html',
-          '_astro/**/*.{js,css,woff2,webp,avif}',
-          '*.{svg,png,ico,webmanifest}',
           '{search,library}-index.json',
+          '*.{svg,png,ico,webmanifest}',
           'icons/*.png',
         ],
-        // @vite-pwa/astro inyecta `navigateFallback: '/'` cuando la opcion no aparece,
+
+        // @vite-pwa/astro inyecta `navigateFallback: '/'` cuando la opción no aparece,
         // y registra esa NavigationRoute ANTES de runtimeCaching. Resultado: cualquier
-        // navegacion que no estuviera precacheada devolvia el HTML del home (el bug de
+        // navegación que no estuviera precacheada devolvía el HTML del home (el bug de
         // "los detalles me llevan al inicio") y dejaba muertas todas las reglas de
-        // navegacion de abajo. Con la clave presente y sin valor no se registra la ruta
+        // navegación de abajo. Con la clave presente y sin valor no se registra la ruta
         // y el control vuelve a runtimeCaching.
         navigateFallback: undefined,
+
         cleanupOutdatedCaches: true,
+
         runtimeCaching: [
-          // 1. Navegaciones (paginas). El precache resuelve todo lo que existia en el
-          //    ultimo build; esta regla solo entra para URLs nuevas: intenta red, cae al
-          //    cache y, si no hay nada, muestra el 404 precacheado.
+          // 1. Assets con hash de contenido (_astro/**). CacheFirst puro: el nombre
+          //    del fichero ES la versión, así que un deploy nuevo cambia el nombre y
+          //    el SW simplemente guarda una entrada nueva. La vieja se queda huérfana
+          //    hasta que la expira el `expiration`. No hay invalidación manual.
+          //
+          //    `cacheableResponse.statuses: [0, 200]` incluye 0 porque las imágenes
+          //    cross-origin sin CORS devuelven respuestas opacas (status 0) y sin
+          //    esto Workbox las descarta.
+          {
+            urlPattern: /\/_astro\/.+/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'dahem-assets',
+              expiration: {
+                maxEntries: 4000,
+                maxAgeSeconds: 60 * 60 * 24 * 365, // 1 año, igual que el header HTTP
+              },
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
+
+          // 2. Navegaciones (páginas). El precache cubre todo el HTML del último
+          //    build (revisionado por Workbox). Para URLs nuevas (un ítem agregado
+          //    después del build) o HTML modificado, NetworkFirst con timeout de 3s:
+          //    si la red va lenta, sirve lo cacheado en lugar de bloquear la
+          //    navegación. Si la URL no está en ninguna caché y no hay red, cae al
+          //    404 precacheado.
           {
             urlPattern: ({ request }) => request.mode === 'navigate',
-            handler: 'StaleWhileRevalidate',
+            handler: 'NetworkFirst',
             options: {
-              cacheName: 'dahem-html',
-              expiration: { maxEntries: 50, maxAgeSeconds: 60 * 60 * 24 * 30 },
+              cacheName: 'dahem-html-runtime',
+              networkTimeoutSeconds: 3,
+              expiration: { maxEntries: 100, maxAgeSeconds: 60 * 60 * 24 * 30 },
               precacheFallback: { fallbackURL: '/404' },
             },
           },
-          // 2. Imagenes (Cache First). Con los posters ya en el precache esta regla
-          //    solo cubre lo que llegue despues del ultimo build.
-          {
-            urlPattern: ({ request }) => request.destination === 'image',
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'dahem-images',
-              expiration: { maxEntries: 1500, maxAgeSeconds: 60 * 60 * 24 * 90 },
-            },
-          },
-          // 3. Indices de busqueda (Stale While Revalidate)
+
+          // 3. Índices de búsqueda. StaleWhileRevalidate: se sirve el índice cacheado
+          //    al instante y se revalida en segundo plano. El índice cambia poco,
+          //    así que el SW lo actualiza sin penalizar la primera pintura.
           {
             urlPattern: /\/(search|library)-index.*\.json$/,
             handler: 'StaleWhileRevalidate',
             options: { cacheName: 'dahem-search-index' },
           },
-          // 4. API (Network Only)
+
+          // 4. Imágenes que NO vienen de _astro (placeholders locales, TMDB si algo
+          //    se escapa del optimizador de astro:assets). CacheFirst porque son
+          //    inmutables en la práctica (mismo URL = mismo contenido).
+          {
+            urlPattern: ({ request }) => request.destination === 'image',
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'dahem-images',
+              expiration: { maxEntries: 2000, maxAgeSeconds: 60 * 60 * 24 * 90 },
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
+
+          // 5. API (futuro backend NestJS). NetworkOnly: nunca cachear respuestas
+          //    de datos dinámicos.
           {
             urlPattern: ({ url }) => url.pathname.startsWith('/api'),
             handler: 'NetworkOnly',
@@ -101,7 +139,7 @@ export default defineConfig({
             purpose: 'maskable',
           },
           { src: '/favicon.svg', sizes: 'any', type: 'image/svg+xml' },
-        ]
+        ],
       },
     }),
   ],
@@ -111,10 +149,5 @@ export default defineConfig({
       { protocol: 'https', hostname: 'images.unsplash.com' },
       { protocol: 'https', hostname: 'dummyimage.com' },
     ],
-  },
-  vite: {
-    define: {
-      __DAHEM_BUILD__: JSON.stringify(new Date().toISOString()),
-    },
-  },
+  }
 });

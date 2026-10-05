@@ -21,6 +21,7 @@
     "preview": "astro preview",
     "test": "vitest run",
     "test:e2e": "playwright test",
+    "test:e2e:update": "playwright test --config=playwright.update.config.ts",
     "lint": "astro check"
   },
   "dependencies": {

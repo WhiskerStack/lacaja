@@ -8,6 +8,10 @@ import ToastHost from "../app/ui/ToastHost.tsx";
 import Drawer from "../features/my-list/ui/Drawer.tsx";
 import SubmissionModal from "../features/submission/ui/SubmissionModal.tsx";
 
+declare const __DAHEM_BUILD__: string;
+const buildMarker =
+  typeof __DAHEM_BUILD__ !== "undefined" ? __DAHEM_BUILD__ : "dev";
+
 interface Props {
   title?: string;
   description?: string;
@@ -28,6 +32,7 @@ const pathname = Astro.url.pathname;
 <html lang="es" data-theme="dahemdark">
   <head>
     <meta charset="UTF-8" />
+    <meta name="build-marker" content={buildMarker} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#0b0f17" />
@@ -61,13 +66,17 @@ const pathname = Astro.url.pathname;
     <script is:inline>
       (() => {
         const root = document.documentElement;
-        const header = document.querySelector('header.navbar');
+        const header = document.querySelector("header.navbar");
         const sync = () => {
-          root.style.setProperty('--navbar-h', (header ? header.offsetHeight : 0) + 'px');
+          root.style.setProperty(
+            "--navbar-h",
+            (header ? header.offsetHeight : 0) + "px",
+          );
         };
         sync();
-        if (header && 'ResizeObserver' in window) new ResizeObserver(sync).observe(header);
-        else window.addEventListener('resize', sync);
+        if (header && "ResizeObserver" in window)
+          new ResizeObserver(sync).observe(header);
+        else window.addEventListener("resize", sync);
       })();
     </script>
 
@@ -77,116 +86,58 @@ const pathname = Astro.url.pathname;
       installNavRestore();
     </script>
 
-    <!-- Registro del service worker (soporte offline + actualización de versión).
-         Hay que hacerlo a mano: vite-plugin-pwa inyecta su script con el hook
-         transformIndexHtml de Vite, y Astro no pasa por ahí las páginas que
-         genera, así que sin esto la PWA se instala pero no cachea nada.
+    <!-- Registro del service worker (autoUpdate).
 
-         Sobre actualizaciones: `registerType` en astro.config.mjs decide la
-         estrategia.
+         vite-plugin-pwa inyecta su script con el hook transformIndexHtml de Vite,
+         y Astro no pasa por ahí las páginas que genera: hay que registrarlo a mano.
+         Sin esto la PWA se instala pero no cachea nada.
 
-           'autoUpdate'  → el SW nuevo se activa solo (skipWaiting + clients.claim).
-                           Aquí recargamos la pestaña al recibir `controllerchange`,
-                           porque sin ese reload el usuario sigue viendo el JS/HTML
-                           viejo aunque el SW ya esté actualizado.
+         Flujo con registerType: 'autoUpdate' (ver astro.config.mjs):
 
-           'prompt'      → el SW nuevo queda en estado `waiting`. `onNeedRefresh` se
-                           dispara y mostramos un banner con "Actualizar"; al
-                           pulsarlo se llama a updateSW(true), que hace skipWaiting
-                           y recarga.
+           1. El navegador detecta un sw.js nuevo → lo instala en background.
+           2. El SW nuevo precachea solo el HTML cuyo revision cambió (manifest de
+              Workbox). Los _astro/* NO están en el precache: viven en el HTTP
+              cache con `Cache-Control: immutable` 1 año (staticwebapp.config.json)
+              y en `dahem-assets` vía la regla runtime.
+           3. skipWaiting + clients.claim → el SW nuevo toma el control.
+           4. `controllerchange` se dispara y recargamos la pestaña para que el
+              usuario vea el HTML y los bundles nuevos.
 
-         En ambos modos el listener de `controllerchange` garantiza que la pestaña
-         no se quede con la versión vieja. El flag `refreshing` evita doble reload.
+         El flag `refreshing` evita doble reload si el evento se dispara más de
+         una vez durante el ciclo de activación.
 
-         Nota: no usamos pushToast aquí porque este <script> y la isla ToastHost
-         son bundles separados; el atom de nanostores sería una instancia distinta
-         y el toast nunca aparecería. El banner se pinta con DOM puro. -->
+         Comprobación periódica de update: los móviles (sobre todo iOS en modo
+         standalone) throttlean el chequeo automático del SW. Forzamos `reg.update()`
+         cada hora y también al volver a primer plano, que es cuando el usuario
+         realmente va a interactuar con la app. -->
     <script>
       import { registerSW } from "virtual:pwa-register";
 
+      const hadController = Boolean(navigator.serviceWorker.controller);
       let refreshing = false;
       if ("serviceWorker" in navigator) {
         navigator.serviceWorker.addEventListener("controllerchange", () => {
-          if (refreshing) return;
+          // Sin controller previo = primera instalación (clients.claim nos controla
+          // ahora, pero el HTML ya es el nuevo): no recargamos.
+          // Con controller previo = reemplazo de SW: el HTML servido puede ser viejo,
+          // recargamos para que el usuario vea los bundles nuevos.
+          if (!hadController || refreshing) return;
           refreshing = true;
           window.location.reload();
         });
       }
 
-      const updateSW = registerSW({
+      registerSW({
         immediate: true,
-        onNeedRefresh() {
-          // Solo se llama con registerType: 'prompt'. Con 'autoUpdate' esta rama
-          // nunca se ejecuta y el controllerchange de arriba hace el trabajo.
-          showUpdateBanner(() => {
-            refreshing = true; // evita que controllerchange recargue de nuevo
-            updateSW(true);
-          });
-        },
         onOfflineReady() {
-          // Primer arranque offline listo. Opcional: mostrar solo la primera vez.
+          // Primer arranque offline listo. Opcional: mostrar un toast la primera
+          // vez que el catálogo queda disponible sin conexión.
+        },
+        onRegisterError(err) {
+          console.error("[pwa] registro del SW falló:", err);
         },
       });
 
-      /**
-       * Banner fijo abajo con botón "Actualizar". DOM puro a propósito: este
-       * script corre en su propio bundle y no comparte el atom de toasts con la
-       * isla ToastHost, así que pushToast no funcionaría aquí.
-       */
-      function showUpdateBanner(onAccept: () => void) {
-        if (document.getElementById("dahem-update-banner")) return;
-        const banner = document.createElement("div");
-        banner.id = "dahem-update-banner";
-        banner.setAttribute("role", "status");
-        banner.setAttribute("aria-live", "polite");
-        banner.style.cssText = [
-          "position:fixed",
-          "left:50%",
-          "bottom:1rem",
-          "transform:translateX(-50%)",
-          "z-index:9999",
-          "display:flex",
-          "align-items:center",
-          "gap:.75rem",
-          "padding:.625rem .75rem .625rem 1rem",
-          "background:#111827",
-          "color:#e5e7eb",
-          "border:1px solid #1c2230",
-          "border-radius:.75rem",
-          "box-shadow:0 10px 30px rgba(0,0,0,.45)",
-          "font:500 .875rem/1.2 Inter,system-ui,sans-serif",
-          "max-width:calc(100vw - 2rem)",
-        ].join(";");
-
-        const msg = document.createElement("span");
-        msg.textContent = "Hay una versión nueva disponible.";
-        banner.appendChild(msg);
-
-        const accept = document.createElement("button");
-        accept.type = "button";
-        accept.textContent = "Actualizar";
-        accept.style.cssText = [
-          "background:#e11d48",
-          "color:#fff",
-          "border:0",
-          "border-radius:.5rem",
-          "padding:.375rem .75rem",
-          "font:600 .8125rem/1 Inter,system-ui,sans-serif",
-          "cursor:pointer",
-        ].join(";");
-        accept.addEventListener("click", () => {
-          banner.remove();
-          onAccept();
-        });
-        banner.appendChild(accept);
-
-        document.body.appendChild(banner);
-      }
-
-      // Comprobación periódica de update: los móviles (sobre todo iOS en modo
-      // standalone) throttlean el chequeo automático del SW. Forzamos una
-      // comprobación cada hora y también al volver a primer plano, que es
-      // cuando el usuario realmente va a interactuar con la app.
       navigator.serviceWorker?.ready
         .then((reg) => {
           const check = () => reg.update().catch(() => {});
