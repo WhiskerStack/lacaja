@@ -4,6 +4,7 @@
   "private": true,
   "description": "Landing público de Dahem: catálogo audiovisual de consulta (Astro SSG + islas Preact).",
   "type": "module",
+  "packageManager": "pnpm@12.15.0",
   "scripts": {
     "sync": "node scripts/sync-catalog.mjs && node scripts/enrich-catalog.mjs && node scripts/build-search-index.mjs",
     "enrich-catalog": "node scripts/enrich-catalog.mjs",
