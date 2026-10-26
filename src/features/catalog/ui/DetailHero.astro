@@ -6,7 +6,7 @@ import AddToListButton from "./AddToListButton.tsx";
 import { formatDuration, formatRating, truncate } from "../../../shared/format";
 import { TYPE_LABEL } from "../types";
 import type { CatalogItemDTO } from "../types";
-import { PLACEHOLDER_IMAGE } from "@/shared/urls";
+import { PLACEHOLDER_IMAGE, withBase } from "@/shared/urls";
 
 interface Props {
   item: CatalogItemDTO;
@@ -24,7 +24,7 @@ interface Props {
   /** Destino del botón "Atrás" cuando no hay historial propio (enlace compartido). */
   backHref?: string;
 }
-const { item, add, context, backHref = "/" } = Astro.props;
+const { item, add, context, backHref = withBase("/") } = Astro.props;
 // Los géneros van en su propia fila de chips: mezclados con el resto de metadatos, en
 // móvil la fila se rompía en varias líneas y los separadores "·" quedaban sueltos al
 // inicio. Se pintan con relleno tenue (badge-ghost) para no confundirlos con el badge

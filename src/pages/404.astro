@@ -3,6 +3,7 @@
 // build. El service worker la usa además como respaldo de navegación: como todas las fichas del
 // último build están precacheadas, aquí solo caen las URLs que no existían al compilar.
 import Base from '../layouts/Base.astro';
+import { withBase } from '../shared/urls';
 ---
 <Base title="No encontrado — La Caja">
   <div class="min-h-[60vh] flex flex-col items-center justify-center text-center gap-4">
@@ -13,8 +14,8 @@ import Base from '../layouts/Base.astro';
       no sea correcto. Prueba a buscarlo por nombre o código.
     </p>
     <div class="flex gap-2">
-      <a href="/" class="btn btn-ghost">Ir al inicio</a>
-      <a href="/buscar" class="btn btn-primary">Buscar</a>
+      <a href={withBase("/")} class="btn btn-ghost">Ir al inicio</a>
+      <a href={withBase("/buscar")} class="btn btn-primary">Buscar</a>
     </div>
   </div>
 </Base>

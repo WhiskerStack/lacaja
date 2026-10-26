@@ -5,6 +5,7 @@ import { $drawerOpen, openDrawer } from '../../features/my-list/store';
 import { useList } from '../../features/my-list/ui/useList';
 import { $list } from '../../features/my-list/store';
 import { isActivePath } from './nav';
+import { withBase } from '../../shared/urls';
 
 const NAV = [
   { href: '/', label: 'Inicio', Icon: Home },
@@ -30,7 +31,7 @@ export default function BottomBar({ pathname = '/' }: Props) {
         return (
           <a
             key={href}
-            href={href}
+            href={withBase(href)}
             aria-label={label}
             aria-current={active ? 'page' : undefined}
             class={active ? 'active text-primary' : ''}

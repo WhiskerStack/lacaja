@@ -4,13 +4,14 @@ import { db } from './db';
 import { ListService } from '../features/my-list/logic/ListService';
 import { SearchService } from '../features/search/logic/SearchService';
 import { SubmissionService } from '@/features/submission/logic/SubmissionService';
+import { withBase } from '@/shared/urls';
 
 // Mi lista: Dexie por constructor (testeable con un fake de Table).
 export const listService = new ListService(db.listItems, db.meta);
 
 // Search: el índice se carga aparte (loadIndex es asíncrono, arquitectura §6.2).
 export const searchService = new SearchService({
-  indexUrl: '/search-index.json',
+  indexUrl: withBase('/search-index.json'),
   fetchFn: (...args) => fetch(...args),
   timeoutMs: 12000,
 });

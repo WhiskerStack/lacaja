@@ -1,5 +1,6 @@
 // Helper de navegación compartido por el navbar y la botonera inferior: decide qué
 // enlace corresponde a la página actual para resaltarlo (funcional §5.2).
+// Ambas rutas llegan sin el `base` del sitio (el layout lo quita con stripBase).
 
 /** Quita la barra final salvo en la raíz, para que "/buscar/" y "/buscar" coincidan. */
 function normalize(path: string): string {

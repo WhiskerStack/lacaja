@@ -8,6 +8,8 @@ export default defineConfig({
   webServer: {
     command: 'pnpm build && pnpm preview --port 4321',
     url: 'http://localhost:4321',
+    // Los e2e navegan a rutas raíz (/buscar...), así que se compila sin el base de Pages.
+    env: { BASE_PATH: '/' },
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,
   },

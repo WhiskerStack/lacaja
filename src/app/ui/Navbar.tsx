@@ -4,6 +4,7 @@ import { $drawerOpen, openDrawer } from '../../features/my-list/store';
 import { useList } from '../../features/my-list/ui/useList';
 import { pushToast } from '../stores/toast';
 import { isActivePath } from './nav';
+import { withBase } from '../../shared/urls';
 
 const NAV = [
   { href: '/', label: 'Inicio' },
@@ -59,7 +60,7 @@ export default function Navbar({ pathname = '/' }: Props) {
   return (
     <header class="navbar bg-base-200 sticky top-0 z-50 border-b border-base-300">
       <div class="navbar-start">
-        <a href="/" class="btn btn-ghost text-xl font-bold gap-2">
+        <a href={withBase('/')} class="btn btn-ghost text-xl font-bold gap-2">
           <Clapperboard class="text-primary" size={24} aria-hidden /> La Caja
         </a>
       </div>
@@ -70,7 +71,7 @@ export default function Navbar({ pathname = '/' }: Props) {
             const active = isActivePath(n.href, pathname);
             return (
               <li key={n.href}>
-                <a href={n.href} class={active ? 'active font-semibold' : ''} aria-current={active ? 'page' : undefined}>
+                <a href={withBase(n.href)} class={active ? 'active font-semibold' : ''} aria-current={active ? 'page' : undefined}>
                   {n.label}
                 </a>
               </li>

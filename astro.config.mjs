@@ -4,11 +4,15 @@ import preact from '@astrojs/preact';
 import tailwind from '@astrojs/tailwind';
 import AstroPWA from '@vite-pwa/astro';
 
-const SITE = process.env.SITE ?? 'https://WhiskerStack.github.io/lacaja';
+const SITE = process.env.SITE ?? 'https://WhiskerStack.github.io';
+// GitHub Pages sirve el repo en /lacaja/. Todo enlace interno debe pasar por `withBase`
+// (src/shared/urls.ts); BASE_PATH=/ lo desactiva (p. ej. e2e o un dominio propio).
+const BASE = (process.env.BASE_PATH ?? '/lacaja/').replace(/\/?$/, '/');
 
 // https://astro.build/config
 export default defineConfig({
   site: SITE,
+  base: BASE,
   output: 'static', // SSG puro
   trailingSlash: 'ignore',
   integrations: [
@@ -86,7 +90,7 @@ export default defineConfig({
               cacheName: 'dahem-html-runtime',
               networkTimeoutSeconds: 3,
               expiration: { maxEntries: 100, maxAgeSeconds: 60 * 60 * 24 * 30 },
-              precacheFallback: { fallbackURL: '/404' },
+              precacheFallback: { fallbackURL: `${BASE}404` },
             },
           },
 
@@ -125,20 +129,21 @@ export default defineConfig({
         short_name: 'La Caja',
         description: 'Catálogo de consulta de audiovisuales. Arma tu lista y envíala a Lacaja123.',
         lang: 'es',
-        start_url: '/',
+        start_url: BASE,
+        scope: BASE,
         display: 'standalone',
         background_color: '#0b0f17',
         theme_color: '#0b0f17',
         icons: [
-          { src: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' },
-          { src: '/icons/icon-512.png', sizes: '512x512', type: 'image/png' },
+          { src: `${BASE}icons/icon-192.png`, sizes: '192x192', type: 'image/png' },
+          { src: `${BASE}icons/icon-512.png`, sizes: '512x512', type: 'image/png' },
           {
-            src: '/icons/icon-512-maskable.png',
+            src: `${BASE}icons/icon-512-maskable.png`,
             sizes: '512x512',
             type: 'image/png',
             purpose: 'maskable',
           },
-          { src: '/favicon.svg', sizes: 'any', type: 'image/svg+xml' },
+          { src: `${BASE}favicon.svg`, sizes: 'any', type: 'image/svg+xml' },
         ],
       },
     }),

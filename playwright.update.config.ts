@@ -13,6 +13,7 @@ export default defineConfig({
     command:
       'pnpm build && mv dist dist-a && DAHEM_BUILD_TAG=b pnpm build && mv dist dist-b && node tests/e2e/fixtures/build-switch-server.mjs dist-a dist-b 4322',
     url: 'http://localhost:4322',
+    env: { BASE_PATH: '/' },
     reuseExistingServer: !process.env.CI,
     timeout: 300_000,
   },

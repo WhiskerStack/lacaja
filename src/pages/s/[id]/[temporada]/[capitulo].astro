@@ -4,6 +4,7 @@ import Base from '../../../../layouts/Base.astro';
 import DetailHero from '../../../../features/catalog/ui/DetailHero.astro';
 import EpisodicNav from '../../../../features/catalog/ui/EpisodicNav.astro';
 import { getEpisodic, getById } from '../../../../features/catalog/logic/buildData';
+import { seasonUrl, withBase } from '../../../../shared/urls';
 
 export function getStaticPaths() {
   return getEpisodic().flatMap((e) =>
@@ -20,13 +21,13 @@ const { id, season, episode } = Astro.props as { id: string; season: number; epi
 const item = getById(id);
 const seasonView = item?.seasons?.find((s) => s.number === season);
 const ep = seasonView?.episodes.find((x) => x.number === episode);
-if (!item || !seasonView || !ep) return Astro.redirect('/404');
+if (!item || !seasonView || !ep) return Astro.redirect(withBase('/404'));
 ---
 <Base title={`${item.name} · T${season}E${episode} — La Caja`} description={item.description}>
   <DetailHero
     item={item}
     context={`Temporada ${season} · Capítulo ${episode}`}
-    backHref={`/s/${id}/${season}`}
+    backHref={seasonUrl(id, season)}
     add={{
       code: ep.code,
       level: 'episode',
