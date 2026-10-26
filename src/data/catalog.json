@@ -34,6 +34,7 @@
     "Alemania",
     "Argentina",
     "Australia",
+    "Bélgica",
     "Brazil",
     "Canadá",
     "China",
@@ -50,6 +51,7 @@
     "Irlanda",
     "Italia",
     "Japón",
+    "Letonia",
     "México",
     "Nueva Zelanda",
     "Países Bajos",
@@ -31015,6 +31017,2083 @@
       "seasonCount": 1,
       "episodeCount": 1,
       "code": "P673",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "6fbbd71a-dd2c-4b0d-880b-6576902444e0",
+      "type": "movie",
+      "name": "The Running Man",
+      "enName": "El sobreviviente",
+      "year": 2025,
+      "rating": 6.7,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Ciencia Ficción",
+        "Suspenso"
+      ],
+      "region": "Reino Unido",
+      "language": "Español",
+      "description": "En una América distópica en el año 2025, Ben Richards participa en el violento reality show \"The Running Man\" con el fin de ganar suficiente dinero para revivir a su hija gravemente enferma.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/5WYxFamHLqroV0TilEw0RqBPzqG.jpg",
+      "cast": [
+        "Glen Powell",
+        "Colman Domingo",
+        "Lee Pace",
+        "Josh Brolin",
+        "William H. Macy"
+      ],
+      "trailers": [
+        "gDzch_4Mi68",
+        "8QSuBE5vyng"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P674",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "07ef83b6-a2f4-43b1-966e-b913e0165ec1",
+      "type": "movie",
+      "name": "Luther the fallen sun",
+      "enName": "Luther: Cae la noche",
+      "year": 2023,
+      "rating": 6.6,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Crimen",
+        "Misterio",
+        "Suspenso"
+      ],
+      "region": "Reino Unido",
+      "language": "Español",
+      "description": "Atormentado por un caso sin resolver, el brillante pero caído en desgracia inspector londinense John Luther se fuga de la cárcel para intentar atrapar a un sádico asesino en serie... Largometraje inspirado en la serie de televisión \"Luther\".",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/eCvBFo3jjKViSuhcsOdVbcsFCq4.jpg",
+      "cast": [
+        "Idris Elba",
+        "Cynthia Erivo",
+        "Andy Serkis",
+        "Dermot Crowley",
+        "Thomas Coombes"
+      ],
+      "trailers": [
+        "ogs3C6iKHDo"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P675",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true
+      }
+    },
+    {
+      "id": "32b7d5bf-0995-4d1f-b512-d727bd43c091",
+      "type": "movie",
+      "name": "Silent Night",
+      "enName": "Noche de paz",
+      "year": 2023,
+      "rating": 6.1,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Crimen",
+        "Drama",
+        "Suspenso"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Es Nochebuena y un padre es testigo de la muerte de su hijo cuando este queda atrapado en un fuego cruzado entre bandas. Roto de dolor y sin voz, debido a una herida profunda que afecta a sus cuerdas vocales, decidirá someterse a un estricto entrenamiento para vengar su muerte.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/pea7Wjf7c7siaXrlzLD7XYXubbI.jpg",
+      "cast": [
+        "Joel Kinnaman",
+        "Kid Cudi",
+        "Harold Torres",
+        "Catalina Sandino Moreno",
+        "Valeria Santaella"
+      ],
+      "trailers": [
+        "H5XgIFHcrog"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P676",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "b9149830-14c6-459a-9599-bf4fd4d0405f",
+      "type": "movie",
+      "name": "Silent Night, Deadly Night",
+      "enName": "Noche de Paz, Noche de Muerte",
+      "year": 2025,
+      "rating": 6.369,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Suspenso",
+        "Terror"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Un niño presencia el asesinato de sus padres por de hombre disfrazado de Papá Noel. Años más tarde, ya adulto, se pone él mismo un disfraz de Papá Noel y se embarca en una violenta búsqueda de venganza contra los responsables.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/ecpETxTPyVFai17hMMoFGy1ruLO.jpg",
+      "cast": [
+        "Rohan Campbell",
+        "Ruby Modine",
+        "Mark Acheson",
+        "David Lawrence Brown",
+        "David Tomlinson"
+      ],
+      "trailers": [
+        "O8uiMiY52UY"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P677",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "3d01fcc9-c595-4b95-863b-405a764fa1ea",
+      "type": "movie",
+      "name": "Flow",
+      "enName": "Flow, un mundo que salvar",
+      "year": 2024,
+      "rating": 8.1,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Animado",
+        "Aventura",
+        "Familiar",
+        "Fantasía"
+      ],
+      "region": "Letonia",
+      "language": "Español",
+      "description": "En un mundo al borde del colapso, un gato solitario pierde su hogar por una inundación y encuentra refugio en un barco con otras especies. Juntos, deberán superar diferencias y desafíos mientras navegan por un misterioso paisaje sumergido.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/337MqZW7xii2evUDVeaWXAtopff.jpg",
+      "cast": [],
+      "trailers": [
+        "P75HKQWAtNw"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P678",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "b37767c7-272b-4d78-a622-77391be9885d",
+      "type": "movie",
+      "name": "Al otro barrio",
+      "enName": "Al otro barrio",
+      "year": 2024,
+      "rating": 6.1,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Comedia"
+      ],
+      "region": "España",
+      "language": "Español",
+      "description": "Intentar engañar a Hacienda ha sido una opción demasiado tentadora para Andrés (Quim Gutiérrez), pero no contaba con que le acabaran pillando. Y eso es exactamente lo que le ha sucedido. Además de la multa millonaria que le ha caído encima, ahora debe trasladar sus oficinas al barrio de Los Caños, en el extrarradio más marginal de la capital, o eso le parece a él. Pero es que Andrés estaba aprovechándose de una jugosa subvención por tener allí su sede, sin que hubiese puesto jamás los pies en el barrio. A regañadientes, él y sus empleados se trasladan a Los Caños y aquello no es tan malo como esperaban… Es peor.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/wNNCIduqMy8EJo6Rbl8U0cpdWZI.jpg",
+      "cast": [
+        "Quim Gutiérrez",
+        "Sara Sálamo",
+        "María de Nati",
+        "Javier Herrera",
+        "Hamza Zaidi"
+      ],
+      "trailers": [
+        "YrpHMCUdVdI"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P679",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "681dbd57-8bf2-49d8-8508-fee64d9a78cb",
+      "type": "movie",
+      "name": "Paul",
+      "enName": "Paul",
+      "year": 2011,
+      "rating": 6.8,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Aventura",
+        "Ciencia Ficción",
+        "Comedia"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Un viajero espacial muy listillo llamado Paul (SETH ROGEN, The Green Hornet, Lío embarazoso) lleva sesenta años encerrado en una base militar ultrasecreta, aconsejando a los líderes mundiales acerca de otros alienígenas. Cuando empieza a darse cuenta de que ya no es tan útil y de que la mesa de disección se acerca peligrosamente, Paul decide escapar en la primera autocaravana que se detiene cerca de la base militar en el Área 51. Por suerte para él, en dicha autocaravana van dos terrícolas perfectamente dispuestos a rescatar y albergar a un alienígena con problemas.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/e57pNjhWbRos9BTvgeUYUzB8VfO.jpg",
+      "cast": [
+        "Simon Pegg",
+        "Nick Frost",
+        "Seth Rogen",
+        "Jason Bateman",
+        "Kristen Wiig"
+      ],
+      "trailers": [
+        "ZIlrPjJeW3k"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P680",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "4a9cb104-cd56-48fd-8c88-88dac4d74daf",
+      "type": "movie",
+      "name": "Horton hears a who",
+      "enName": "Horton",
+      "year": 2008,
+      "rating": 6.526,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Animado",
+        "Aventura",
+        "Comedia",
+        "Familiar",
+        "Fantasía"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Horton no es sólo un bondadoso y torpón elefante, sino tambíen es el único animal capaz de oir a una microscópica comunidad aislada en una mota de polvo, lo que provocará que sus vecinos le tomen por loco e intenten destruir la mota de polvo en la que el pueblo de Villaquien vive en pacífica armonía. Horton está dispuesto a ayudar a los habitantes de Villaquién cuya frágil existencia pende de un hilo.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/fU3Yqieroalzt3iIIT0oTjQpFsS.jpg",
+      "cast": [
+        "Jim Carrey",
+        "Steve Carell",
+        "Carol Burnett",
+        "Will Arnett",
+        "Seth Rogen"
+      ],
+      "trailers": [
+        "NPREAnDsEVM"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P681",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "2259b9fe-b90f-4057-a788-f2fb8cebef6e",
+      "type": "movie",
+      "name": "Sonic the Hedgehog",
+      "enName": "Sonic: La película",
+      "year": 2020,
+      "rating": 7.3,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Ciencia Ficción",
+        "Comedia",
+        "Familiar"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Sonic, el descarado erizo azul basado en la famosa serie de videojuegos de Sega, vivirá aventuras y desventuras cuando conoce a su amigo humano y policía, Tom Wachowski. Sonic y Tom unirán sus fuerzas para tratar de detener los planes del malvado Dr. Robotnik, que intenta atrapar a Sonic con el fin de emplear sus inmensos poderes para dominar el mundo.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/rK25c71fYVi0Bv7RrTChK7NAQjC.jpg",
+      "cast": [
+        "Ben Schwartz",
+        "James Marsden",
+        "Tika Sumpter",
+        "Jim Carrey",
+        "Natasha Rothwell"
+      ],
+      "trailers": [
+        "XPqAai3WBag"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P682",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "71cff20c-b62e-4148-b837-2074d3b3b96c",
+      "type": "movie",
+      "name": "Sonic the Hedgehog 2",
+      "enName": "Sonic 2: La película",
+      "year": 2022,
+      "rating": 7.4,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Comedia",
+        "Familiar"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Después de establecerse en Green Hills, Sonic se muere por demostrar que tiene madera de auténtico héroe. La prueba de fuego llega con el retorno del malvado Robotnik, en esta ocasión con un nuevo compinche, Knuckles, en busca de una esmeralda que tiene el poder de destruir civilizaciones. Sonic forma equipo con su propio compañero de fatigas, Tails, y juntos se lanzan a una aventura que les llevará por todo el mundo en busca de la preciada piedra para evitar que caiga en manos equivocadas.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/sJiHVM0A3OXDVxl4Z6a7ihMPHfm.jpg",
+      "cast": [
+        "Ben Schwartz",
+        "James Marsden",
+        "Tika Sumpter",
+        "Colleen O'Shaughnessey",
+        "Idris Elba"
+      ],
+      "trailers": [
+        "cF5uf8a2Xds"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P683",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "d7d9ca02-a200-4f25-aab4-f3fe32254e9a",
+      "type": "movie",
+      "name": "Sonic the Hedgehog 3",
+      "enName": "Sonic 3: La película",
+      "year": 2024,
+      "rating": 7.598,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Ciencia Ficción",
+        "Comedia",
+        "Familiar"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Sonic, Knuckles y Tails se reúnen para enfrentarse a un nuevo y poderoso adversario, Shadow, un misterioso villano cuyos poderes no se parecen a nada de lo que nuestros héroes han conocido hasta ahora. Con sus facultades superadas en todos los sentidos, el Equipo Sonic tendrá que establecer una insólita alianza con la esperanza de detener a Shadow y proteger el planeta.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/3aDWCRXLYOCuxjrjiPfLd79tcI6.jpg",
+      "cast": [
+        "Ben Schwartz",
+        "Jim Carrey",
+        "Keanu Reeves",
+        "Idris Elba",
+        "Colleen O'Shaughnessey"
+      ],
+      "trailers": [
+        "2YJXP8CKrNE",
+        "TBd2xLdeNdk"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P684",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "9df42f07-439c-48f1-b9b2-3ef2e78f9aab",
+      "type": "movie",
+      "name": "Ozzy",
+      "enName": "Ozzy",
+      "year": 2016,
+      "rating": 6.1,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Animado",
+        "Familiar"
+      ],
+      "region": "España",
+      "language": "Español",
+      "description": "La idílica vida de Ozzy, un simpático y pacífico beagle que se ha criado entre algodones junto a la familia Martin, va a dar un vuelco. Cuando su familia no puede llevarle a un largo viaje lejos de su hogar, le depositan en lo que creen que es el mejor balneario canino, Blue Creek. Pero la perfecta estampa del lugar resulta ser una fachada urdida por su villano propietario, y otro destino bien distinto aguarda a Ozzy: éste irá pronto a parar al verdadero Blue Creek, una cárcel para perros, habitada en su mayoría por duros chuchos callejeros y donde prevalece la ley del más fuerte. Allí dentro Ozzy tendrá que esquivar el peligro, encontrar fuerzas donde no creía tenerlas y aprender a apoyarse en Chester, Fronky y Doc, los nuevos amigos que le acompañarán en esta aventura para intentar regresar sano y salvo.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/74GSfa2Bj3pCxRCtWpe1xYJ9vXh.jpg",
+      "cast": [
+        "Guillermo Romero",
+        "Dani Rovira",
+        "José Mota",
+        "Carlos Areces",
+        "Michelle Jenner"
+      ],
+      "trailers": [
+        "i20aQZXhyoY"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P685",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "344dc672-546f-467c-953c-38082c076640",
+      "type": "movie",
+      "name": "Last Signal",
+      "enName": "Sin señal",
+      "year": 2022,
+      "rating": 7.565,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Aventura",
+        "Ciencia Ficción",
+        "Drama",
+        "Familiar"
+      ],
+      "region": "Rusia",
+      "language": "Español",
+      "description": "Futuro cercano. Lera Arabova es una niña de 15 años que vive con su familia en Vladivostok. El padre de Lera ha estado trabajando en la estación espacial en órbita \"Mira\" durante muchos años y durante mucho tiempo perdió el contacto con su hija, convirtiéndose solo en una voz en el teléfono. Después de que una lluvia de meteoritos golpee la ciudad, Lera solo tiene una oportunidad de salvar a sus seres queridos y a la ciudad de un nuevo desastre. Su padre la ayuda en esto: a través de los sistemas de vigilancia satelital y el teléfono, aprovecha cada oportunidad para enviar un mensaje a su hija, observando desde arriba desde la estación cada paso.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/g1g6hCYtuRuf9ZJISDmCKjXffSs.jpg",
+      "cast": [
+        "Анатолий Белый",
+        "Дарья Мороз",
+        "Вероника Устимова",
+        "Максим Лагашкин",
+        "Евгений Егоров"
+      ],
+      "trailers": [
+        "oDn1y4M-crE"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P686",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "d14c0fc1-f4b8-4b3d-bca1-d0acddd9fe62",
+      "type": "movie",
+      "name": "Spies in Disguise",
+      "enName": "Espías con disfraz",
+      "year": 2019,
+      "rating": 7.5,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Animado",
+        "Aventura",
+        "Comedia",
+        "Familiar"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Puede decirse que el superespía Lance Sterling y el científico Walter Beckett no tienen nada que ver entre sí: Lance es relajado, educado y caballeroso. Walter lo opuesto. Lo que le falta a Walter de habilidades sociales lo compensa con una dosis extra de ingenio e inventiva, con los que crea fascinantes artilugios que Lance usa en sus épicas misiones. Pero cuando los acontecimientos sorprenden con un giro inesperado, Walter y Lance tendrán que confiar el uno en el otro… Y todo el mundo estará en peligro.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/j2xcicPNXzNex47EYOfw45Dl1o0.jpg",
+      "cast": [
+        "Will Smith",
+        "Tom Holland",
+        "Ben Mendelsohn",
+        "Rashida Jones",
+        "Karen Gillan"
+      ],
+      "trailers": [
+        "GDAp7l4OJiU",
+        "_hdyOD65tl0",
+        "KJv08YJHT8w"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P687",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "af4e0ba4-2e99-482f-a534-ccf589d43936",
+      "type": "movie",
+      "name": "Monsters vs Aliens",
+      "enName": "Monstruos contra alienígenas",
+      "year": 2009,
+      "rating": 6.272,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Animado",
+        "Aventura",
+        "Ciencia Ficción",
+        "Familiar"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Cuando la californiana Susan Murphy es golpeada accidentalmente por un meteorito lleno de mugre espacial en el día de su boda, crece misteriosamente hasta alcanzar más de 15 metros de altura. Los militares entran en acción y Susan es capturada y llevada a unas instalaciones gubernamentales secretas. Allí, la rebautizan como Genórmica y la retienen junto a un variopinto grupo de monstruos: el doctor Cucaracha, brillante pero con cabeza de insecto, el bravucón mitad mono mitad pez, el Eslabón Perdido, el gelatinoso e indestructible B.O.B., y la larva de más de 100 metros llamada Insectosaurio. Sin embargo, su confinamiento se acaba cuando un misterioso robot alienígena aterriza y empieza a arrasarlo todo. En un momento de desesperación, al Presidente le convencen de que reclute al abigarrado grupo de monstruos para luchar contra los alienígenas y salvar al mundo de la destrucción inminente.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/pNRkYUevzL34QyeKRMe7MjvDj20.jpg",
+      "cast": [
+        "Reese Witherspoon",
+        "Seth Rogen",
+        "Hugh Laurie",
+        "Rainn Wilson",
+        "Will Arnett"
+      ],
+      "trailers": [
+        "f4aW9jfY8D8"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P688",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "ef4c657f-ca67-46d2-96a6-e7aba5c44a43",
+      "type": "movie",
+      "name": "Deep Cover",
+      "enName": "Deep Cover: Actores encubiertos",
+      "year": 2025,
+      "rating": 6.721,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Comedia",
+        "Crimen"
+      ],
+      "region": "Reino Unido",
+      "language": "Español",
+      "description": "Kat es una profesora de teatro de improvisación que empieza a preguntarse si ha dejado pasar su oportunidad de triunfar. Cuando un policía encubierto le ofrece el papel de su vida, Kat recluta a dos de sus alumnos para infiltrarse en el mundo criminal londinense haciéndose pasar por peligrosos delincuentes.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/dpLNAIU8AjAxw39fZfSDt2AiwMs.jpg",
+      "cast": [
+        "Bryce Dallas Howard",
+        "Orlando Bloom",
+        "Nick Mohammed",
+        "Paddy Considine",
+        "Sonoya Mizuno"
+      ],
+      "trailers": [
+        "rDJ37GvyLTg"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P689",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "3858ddfd-5017-4599-99ad-83446b55fb89",
+      "type": "movie",
+      "name": "Insidious",
+      "enName": "Insidious: Fuera del más allá",
+      "year": 2026,
+      "rating": 7.536,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Suspenso",
+        "Terror"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "La saga de terror vuelve a sus raíces sobrenaturales. Una nueva protagonista se enfrenta a misteriosas apariciones que van mucho más allá de los fenómenos de embrujamiento clásicos. El mal encuentra nuevos caminos en la realidad. Un trío de acechadores se infiltra en un tranquilo suburbio obligando a una nueva familia a entrar en el plano astral, donde descubren una aterradora verdad: el Más Allá está sangrando en el mundo real",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/uIMddTcnM9P6PrJiDjsXIeYp902.jpg",
+      "cast": [
+        "Amelia Eve",
+        "Island Austin",
+        "Brandon Perea",
+        "Lin Shaye",
+        "Maisie Richardson-Sellers"
+      ],
+      "trailers": [
+        "qAv9sb9DmJQ"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P690",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "fad9bd09-2cf3-4a82-8c1f-cf64d29dd49a",
+      "type": "movie",
+      "name": "Spider-man - Brand  new day",
+      "enName": "Spider-Man: Brand New Day",
+      "year": 2026,
+      "rating": 8.305,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Ciencia Ficción"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Han pasado cuatro años desde los acontecimientos de No Way Home, y Peter Parker ahora es un adulto que vive completamente solo, ha desaparecido voluntariamente de las vidas y recuerdos de quienes ama. Combatiendo el crimen en una Nueva York que ya no conoce su nombre, se ha dedicado por completo a proteger su ciudad—un Spider-Man a tiempo completo—, pero a medida que aumentan las exigencias sobre él, la presión desencadena una evolución física que amenaza su existencia, al mismo tiempo que un extraño nuevo patrón de crímenes da lugar a una de las amenazas más poderosas a las que se ha enfrentado.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/9g0sEFhmvmK4nGhXj8DHuv2noYI.jpg",
+      "cast": [
+        "Tom Holland",
+        "Sadie Sink",
+        "Tramell Tillman",
+        "Zendaya",
+        "Jacob Batalon"
+      ],
+      "trailers": [
+        "o8EccyRIwQQ",
+        "owfWVJoxXR4"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P691",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "b1fdfd3f-19fb-42a8-a872-8128c0bb5c28",
+      "type": "movie",
+      "name": "The Killer",
+      "enName": "The Killer",
+      "year": 2024,
+      "rating": 6.3,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Crimen",
+        "Suspenso"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Zee es una temida asesina a sueldo conocida como “la Reina de los Muertos”, pero cuando se niega a asesinar a una joven ciega, se encuentra perseguida tanto por sus colegas criminales como por un decidido detective de policía.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/6PCnxKZZIVRanWb710pNpYVkCSw.jpg",
+      "cast": [
+        "Nathalie Emmanuel",
+        "Omar Sy",
+        "Sam Worthington",
+        "Diana Silvers",
+        "Saïd Taghmaoui"
+      ],
+      "trailers": [
+        "LLnD2jD1SDY"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P692",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true
+      }
+    },
+    {
+      "id": "35af27ae-03fc-481d-b007-018d0692b7a8",
+      "type": "movie",
+      "name": "Despicable Me-4",
+      "enName": "Gru 4. Mi villano favorito",
+      "year": 2024,
+      "rating": 6.966,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Animado",
+        "Ciencia Ficción",
+        "Comedia",
+        "Familiar"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Gru, Lucy y las niñas -Margo, Edith y Agnes- dan la bienvenida a un nuevo miembro en la familia: Gru Junior, que parece llegar con el propósito de ser un suplicio para su padre. Gru tendrá que enfrentarse en esta ocasión a su nueva némesis Maxime Le Mal y su sofisticada y malévola novia Valentina, lo que obligará a la familia a tener que darse a la fuga. Cuarta entrega de 'Gru, mi villano favorito'.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/b6JX0fBne5yPFNBtdp4Imi3CpiE.jpg",
+      "cast": [
+        "Steve Carell",
+        "Kristen Wiig",
+        "Will Ferrell",
+        "Sofía Vergara",
+        "Miranda Cosgrove"
+      ],
+      "trailers": [
+        "zUFt9_WOoPc",
+        "ulPKDcGwxUg"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P693",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "c9d2cd63-cbdf-4b10-903d-4546398e81bc",
+      "type": "movie",
+      "name": "Three Thousand Years of Longing",
+      "enName": "Tres mil años esperándote",
+      "year": 2022,
+      "rating": 6.872,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Fantasía",
+        "Romance"
+      ],
+      "region": "Desconocido",
+      "language": "Español",
+      "description": "La Dra. en literatura Alithea Binnie (Tilda Swinton) parece estar feliz con su vida aunque se enfrenta al mundo con cierto escepticismo. De repente, se encuentra con un genio (Idris Elba) que ofrece concederle tres deseos a cambio de su libertad. En un principio, Alithea se niega a aceptar la oferta ya que sabe que todos los cuentos sobre conceder deseos acaban mal. El genio defiende su posición contándole diversas historias fantásticas de su pasado. Finalmente, ella se deja persuadir y pedirá un deseo que sorprenderá a ambos.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/edbQazMpjkp0iQZjvvQWVb3IstJ.jpg",
+      "cast": [
+        "Tilda Swinton",
+        "Idris Elba",
+        "Erdil Yaşaroğlu",
+        "Sabrina Elba",
+        "Sarah Houbolt"
+      ],
+      "trailers": [
+        "sTl4L3xj2x0",
+        "v93cgX_bhHw"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P694",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "321d23ab-3794-462d-a505-e0679c3fcc32",
+      "type": "movie",
+      "name": "Alarum",
+      "enName": "Doble espionaje",
+      "year": 2025,
+      "rating": 5.574,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Crimen",
+        "Suspenso"
+      ],
+      "region": "Desconocido",
+      "language": "Español",
+      "description": "Un matrimonio de espías, en el punto de mira de una red de inteligencia internacional, no se detendrá ante nada para obtener un activo crítico. Joe y Lara son agentes que viven fuera de la red y cuyo tranquilo retiro en una estación invernal salta por los aires cuando miembros de la vieja guardia sospechan que ambos pueden haberse unido a un equipo de élite de espías deshonestos, conocido como Alarum.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/chIQxgimGbIFnuFsLqpcoTbsH9.jpg",
+      "cast": [
+        "Scott Eastwood",
+        "Sylvester Stallone",
+        "Willa Fitzgerald",
+        "Mike Colter",
+        "D.W. Moffett"
+      ],
+      "trailers": [
+        "afOyS-whn3M"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P695",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "bd1ced97-fc50-4d6e-8a24-86b318a6c209",
+      "type": "movie",
+      "name": "Cosmic Sin",
+      "enName": "Cosmic Sin",
+      "year": 2021,
+      "rating": 3.964,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Ciencia Ficción"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "En una sociedad futurista, un grupo de científicos y guerreros debe unirse para proteger a su especie de una raza alienígena hostil que ha llegado al planeta con el poder de infectar y controlar a los humanos a su antojo.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/hlsWhrPTixbNDA8vFY6c7dcSYxg.jpg",
+      "cast": [
+        "Bruce Willis",
+        "Adelaide Kane",
+        "Frank Grillo",
+        "Lochlyn Munro",
+        "Costas Mandylor"
+      ],
+      "trailers": [
+        "ZXdA6dimUiA"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P696",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "bd0aa1c3-9bca-41d5-810e-b395bec545cd",
+      "type": "movie",
+      "name": "Resident Evil",
+      "enName": "Resident Evil: El huésped maldito",
+      "year": 2002,
+      "rating": 6.682,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Ciencia Ficción",
+        "Terror"
+      ],
+      "region": "Reino Unido",
+      "language": "Español",
+      "description": "En un centro clandestino de investigación genética -con fines militares- de una poderosa multinacional se produce un brote vírico que contamina todo el edificio. Para contener la fuga el ordenador que controla el centro sella toda la instalación y, en un principio se cree que mueren todos los empleados, pero en realidad se han convertido en feroces zombis...",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/nlAi9cw2uLZ9hHwhzCMOG6TZMHc.jpg",
+      "cast": [
+        "Milla Jovovich",
+        "Michelle Rodríguez",
+        "Eric Mabius",
+        "James Purefoy",
+        "Martin Crewes"
+      ],
+      "trailers": [
+        "B8Htt3yx-fo"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P697",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "ba9d7ca2-55b8-48ab-ba80-7aa152b150a4",
+      "type": "movie",
+      "name": "Stolen girl",
+      "enName": "Sin rastro",
+      "year": 2025,
+      "rating": 6.361,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Suspenso"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "El mundo de una madre decidida, Mara, se viene abajo cuando su ex marido, Karim, secuestra a su hija pequeña, Amina, y huye a Oriente Medio. Desesperada por traer a su hija a casa, Mara forma equipo con Robeson, un enigmático ex marine y especialista en secuestros de niños. Su misión les lleva a Beirut, donde se ven envueltos en una traicionera red de espionaje internacional, traición y corrupción. Cuando el tiempo se agota, Mara se enfrenta a la decisión más difícil de su vida: recuperar a su hija o dejarla atrás por su propia seguridad.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/fFKcNfjOUbfaC8hPuiMxJ8PAudy.jpg",
+      "cast": [
+        "Kate Beckinsale",
+        "Scott Eastwood",
+        "Jordan Duvigneau",
+        "Matt Craven",
+        "Nowar Yusuf"
+      ],
+      "trailers": [
+        "sJXZiprr4EA"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P698",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "67f31985-5fa1-4c55-9473-59befd1490e5",
+      "type": "movie",
+      "name": "Stuber Express",
+      "enName": "Locos al volante",
+      "year": 2019,
+      "rating": 6.587,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Comedia"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "La vida de un apacible conductor de Uber, Stu (Kumail Nanjiani), cambia repentinamente cuando se sube a su vehículo un pasajero (Dave Bautista) que resulta ser un policía que sigue la pista a un brutal asesino. Stu se ve obligado a luchar por salvar la vida, protagonizando una misión en la que nunca pidió participar, y cuyo principal objetivo tiene claro desde que descubre lo que está sucediendo: obtener las cinco estrellas de calificación en este movido viaje.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/3SCb7NfYOrKNMnfCn0LjOPQEVgb.jpg",
+      "cast": [
+        "Dave Bautista",
+        "Kumail Nanjiani",
+        "Mira Sorvino",
+        "Natalie Morales",
+        "Iko Uwais"
+      ],
+      "trailers": [
+        "JIx2dg52Eiw"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P699",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "98b7a57c-70ef-4b23-bb2c-c632668d2bb5",
+      "type": "movie",
+      "name": "The lord of the Rings - The war of the Rohirrim",
+      "enName": "El señor de los anillos: La guerra de los Rohirrim",
+      "year": 2024,
+      "rating": 6.5,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Animado",
+        "Aventura",
+        "Fantasía"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Explora la \"historia no contada\" del Abismo de Helm, cientos de años antes de la mítica batalla, y de su fundador, Helm Hammerhand, Rey de Rohan.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/gg4QxJhVeuLmu7WCpUjq2bfbted.jpg",
+      "cast": [
+        "Brian Cox",
+        "Gaia Wise",
+        "Luke Pasqualino",
+        "Laurence Ubong Williams",
+        "Lorraine Ashbourne"
+      ],
+      "trailers": [
+        "Of3vYRcsOtI"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P700",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "6287ea65-fd2f-497c-a642-058c5951cc02",
+      "type": "movie",
+      "name": "Tomb Raider",
+      "enName": "Tomb Raider",
+      "year": 2018,
+      "rating": 6.362,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Fantasía"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Tras la desaparición de su padre, Lara vive una vida imprudente y despreocupada. Cuando la policía la arresta después de provocar un accidente de tráfico,  Ana Miller, la socia de negocios de su progenitor, deposita su fianza y le advierte que si no reclama la herencia de éste,  se liquidarán todos sus bienes.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/1GK1Qyt5SZeRCimVfqG0Wcynth0.jpg",
+      "cast": [
+        "Alicia Vikander",
+        "Dominic West",
+        "Walton Goggins",
+        "Daniel Wu",
+        "Kristin Scott Thomas"
+      ],
+      "trailers": [
+        "1fM_WoZmVFE",
+        "phsWSladwOI"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P701",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "2bfc1462-ed13-49e4-b66a-58c2460660e6",
+      "type": "series",
+      "name": "Lanterns",
+      "enName": "Linternas",
+      "year": 2026,
+      "rating": 8.323,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Ciencia Ficción",
+        "Drama",
+        "Fantasía",
+        "Misterio"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Sigue al nuevo recluta John Stewart y al legendario Linterna Hal Jordan, dos policías intergalácticos que se ven envueltos en un oscuro misterio terrestre mientras investigan un asesinato en el corazón de Estados Unidos. Esto les lleva a misterios y ajustes de cuentas más oscuros.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/20ZcwtRQ4zMczKg3eBcIpC3FAuW.jpg",
+      "cast": [
+        "Kyle Chandler",
+        "Aaron Pierre",
+        "Kelly Macdonald"
+      ],
+      "trailers": [
+        "-b78KhjNeHQ"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 8,
+      "code": "S157",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "7149031a-407c-4bfa-8a23-fed31e0cfd5e",
+      "type": "series",
+      "name": "Murderbot",
+      "enName": "Matabot",
+      "year": 2025,
+      "rating": 7.304,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Ciencia Ficción",
+        "Comedia",
+        "Drama",
+        "Fantasía"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "En un futuro tecnológico, un robot de seguridad rebelde consigue en secreto voluntad propia. Para no llamar la atención, se une a regañadientes a una nueva misión. Debe proteger a unos científicos en un planeta peligroso... aunque solo quiere ver culebrones.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/ntZB7o2CONuXtjPctRVRsiIZvxj.jpg",
+      "cast": [
+        "Alexander Skarsgård",
+        "Noma Dumezweni",
+        "David Dastmalchian",
+        "Sabrina Wu",
+        "Akshay Khanna"
+      ],
+      "trailers": [
+        "vEioDeOiqEs"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 10,
+      "code": "S158",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "5fca8295-079b-4d54-bcc9-29be26f71584",
+      "type": "movie",
+      "name": "Animals",
+      "enName": "Animales",
+      "year": 2026,
+      "rating": 7.133,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Suspenso"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "El secuestro de su hijo obliga a un candidato a la alcaldía de Los Ángeles y a su mujer a reunir el dinero del rescate y a tomar decisiones que podrían destruir sus vidas.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/hhycOr6ji35RMGHnstHN4UKAvR4.jpg",
+      "cast": [
+        "Ben Affleck",
+        "Kerry Washington",
+        "Gillian Anderson",
+        "Steven Yeun",
+        "Adriana Paz"
+      ],
+      "trailers": [
+        "tr663Bu3Whk"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P702",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "ede84e45-eec9-45aa-9010-ff1b8cc361a6",
+      "type": "movie",
+      "name": "Captive State",
+      "enName": "Nación cautiva",
+      "year": 2019,
+      "rating": 5.7,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Aventura",
+        "Ciencia Ficción",
+        "Suspenso"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "En un barrio de Chicago, casi una década después de una ocupación por una fuerza extraterrestre, 'Nación cautiva' explora las vidas de ambos lados del conflicto: los colaboracionistas y los disidentes. Hace 10 años, los aliens arrebataron el planeta a los humanos. Hoy, un grupo de rebeldes intentará comenzar a recuperarlo.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/5yM3xePGxx3vc0bEqvOdZnywjYC.jpg",
+      "cast": [
+        "John Goodman",
+        "Ashton Sanders",
+        "Jonathan Majors",
+        "Vera Farmiga",
+        "Kevin Dunn"
+      ],
+      "trailers": [
+        "govmL4T_4IU"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P703",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "f0a8d3b2-37de-47e5-a1ba-a6d90f63b86f",
+      "type": "movie",
+      "name": "Fall 2 - Deadpoint",
+      "enName": "Vértigo - Punto muerto",
+      "year": 2026,
+      "rating": 7.2,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Suspenso"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Tras perder a su intrépida hermana Shiloh, Jax, profundamente dolida, emprende una peligrosa escalada con Luce, una vieja amiga de Shiloh, para honrar su memoria. Mientras caminan sobre la cuerda floja por los peligrosos tablones del monte Kwan, un aterrador desprendimiento de rocas les deja varados a 1.500 metros de altura. En medio de vértigos, verdades oscuras y giros crueles, Jax debe enfrentarse a sus miedos más profundos para luchar por la supervivencia y el final.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/ccBIyg1ITvuCDr4eMeEH0ZgNh4t.jpg",
+      "cast": [
+        "Harriet Slater",
+        "Arsema Thomas",
+        "Tom Brittney",
+        "Virginia Gardner",
+        "สหจักร บุญธนกิจ"
+      ],
+      "trailers": [
+        "6ESEtbv0J8M"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P704",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "c821ca62-4ba7-471d-ab91-22db72483253",
+      "type": "movie",
+      "name": "Matchbox the movie",
+      "enName": "Matchbox: La película",
+      "year": 2026,
+      "rating": 7.643,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Comedia"
+      ],
+      "region": "Desconocido",
+      "language": "Español",
+      "description": "Varios amigos de la infancia se reúnen y el reencuentro se sale de madre cuando acaban metidos en un peligroso complot internacional y se ven obligados a salvar el mundo.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/ev2GnYar3LUyui8sOu4gqeMXvLi.jpg",
+      "cast": [
+        "John Cena",
+        "Jessica Biel",
+        "Sam Richardson",
+        "Arturo Castro",
+        "Teyonah Parris"
+      ],
+      "trailers": [
+        "4x2ZfYax9io"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P705",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "a0d5b474-3beb-49fe-b87e-64233e1727df",
+      "type": "movie",
+      "name": "Project Silence",
+      "enName": "탈출: 프로젝트 사일런스",
+      "year": 2024,
+      "rating": 6.809,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Ciencia Ficción",
+        "Suspenso",
+        "Terror"
+      ],
+      "region": "Corea del Sur",
+      "language": "Español",
+      "description": "Debido al repentino deterioro de las condiciones meteorológicas, la visibilidad en el puente del aeropuerto se ve gravemente afectada, lo que deja a las personas atrapadas y en riesgo de que el puente se derrumbe debido a una serie de colisiones en cadena y explosiones. En medio del caos, los sujetos caninos \"Echo\" del experimento militar \"Proyecto Silencio\", que estaban siendo transportados en secreto, se liberan y todos los supervivientes humanos se convierten en blanco de ataques implacables.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/aqIvKfKuKeGmnqMDPQLnE6BBlCV.jpg",
+      "cast": [
+        "Lee Sun-kyun",
+        "Ju Ji-hoon",
+        "김희원",
+        "문성근",
+        "예수정"
+      ],
+      "trailers": [
+        "UggixRWrzeY"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P706",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "94084327-bb3a-451c-8c6b-dab71dde8031",
+      "type": "movie",
+      "name": "Reptile",
+      "enName": "Reptiles",
+      "year": 2023,
+      "rating": 6.7,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Crimen",
+        "Drama",
+        "Misterio",
+        "Suspenso"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Un intrépido detective descubre una compleja red de engaños mientras indaga en la verdad que se esconde tras el brutal asesinato de una joven agente inmobiliaria.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/1x0d4S5rWsnzXHEI7ddThaQeLmQ.jpg",
+      "cast": [
+        "Benicio del Toro",
+        "Justin Timberlake",
+        "Alicia Silverstone",
+        "Michael Pitt",
+        "Ato Essandoh"
+      ],
+      "trailers": [
+        "eXXeVU6hcag"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P707",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "ae3be2f7-2cd5-4d18-890c-5b4fe3947490",
+      "type": "movie",
+      "name": "The little things",
+      "enName": "Pequeños detalles",
+      "year": 2021,
+      "rating": 6.359,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Crimen",
+        "Drama",
+        "Suspenso"
+      ],
+      "region": "Desconocido",
+      "language": "Español",
+      "description": "Joe 'Deke' Deacon, ayudante de sheriff del condado de Kern, es enviado a Los Angeles para lo que debería ser un caso rápido de recopilación de evidencias. Sin embargo, se ve involucrado en la búsqueda de un asesino en serie que aterroriza a la ciudad. Encabezando la investigación se encuentra el sargento del departamento del sheriff de Los Angeles, Jim Baxter, quien, impresionado por el instinto policial de Deke, le ayuda de manera extraoficial. Pero mientras siguen la pista al asesino, Baxter desconoce que la investigación desentierra partes del pasado de Deke que sacan a la luz secretos más peligrosos que el propio caso.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/1PFWQXh3yt5vQTY9upvqsyFNZk8.jpg",
+      "cast": [
+        "Denzel Washington",
+        "Rami Malek",
+        "Jared Leto",
+        "Chris Bauer",
+        "Michael Hyatt"
+      ],
+      "trailers": [
+        "GovsRD2NA0M"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P708",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true
+      }
+    },
+    {
+      "id": "518fba9b-1deb-4461-a102-c0d45776a422",
+      "type": "movie",
+      "name": "V/H/S/Mixtape",
+      "enName": "V/H/S/Mixtape",
+      "year": 2026,
+      "rating": 3.4,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Música",
+        "Suspenso",
+        "Terror"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Película episódica de la serie VHS con temática musical.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/uS8yoiA6NfsuYeOTbVfpem8Ib9.jpg",
+      "cast": [
+        "Mike Derks",
+        "Michael Bishop",
+        "Brad Roberts",
+        "Casey Orr",
+        "Bob Gorman"
+      ],
+      "trailers": [
+        "sGy4E5D02-U"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P709",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "4656b7a4-83c3-43ca-907f-473f84e46729",
+      "type": "series",
+      "name": "Below",
+      "enName": "Bajo la superficie",
+      "year": 2026,
+      "rating": 7.386,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Misterio"
+      ],
+      "region": "Canadá",
+      "language": "Español",
+      "description": "Una misteriosa criatura marina siembra el terror en un pequeño pueblo de Terranova y un curtido pescador y su familia se convierten en la única esperanza de sus vecinos.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/mieCT53TaHGVVRdeq8Bx3VwtgIW.jpg",
+      "cast": [
+        "Josh Hartnett",
+        "Mackenzie Davis",
+        "Charlie Heaton",
+        "Ruby Stokes",
+        "Kaleb Horn"
+      ],
+      "trailers": [
+        "fOpmBZOZGus"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 6,
+      "code": "S159",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "f7e0dfc2-d9bf-4acd-9712-0db4ed7cf751",
+      "type": "movie",
+      "name": "Ad Vitam",
+      "enName": "Ad Vitam",
+      "year": 2025,
+      "rating": 6.22,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Crimen",
+        "Drama"
+      ],
+      "region": "Bélgica",
+      "language": "Español",
+      "description": "Tras un ataque contra él y su mujer en casa, un exagente de élite se ve atrapado en una persecución letal relacionada con su propio y doloroso pasado.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/3ZqM7bLNmHdyj658gqtifrV5afl.jpg",
+      "cast": [
+        "Guillaume Canet",
+        "Alexis Manenti",
+        "Stéphane Caillard",
+        "Nassim Lyes",
+        "Zita Hanrot"
+      ],
+      "trailers": [
+        "AoePRtrurXQ"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P710",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "f11fc29d-f231-46fc-86d7-c2a22c6aca3c",
+      "type": "movie",
+      "name": "Arrival",
+      "enName": "La llegada",
+      "year": 2016,
+      "rating": 7.636,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Ciencia Ficción",
+        "Drama",
+        "Misterio"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Unas misteriosas naves espaciales aterrizan por todo el mundo. Un equipo, liderado por la lingüista Louise Banks, intenta descifrar el motivo de su visita. A medida que la humanidad se tambalea al borde de la guerra, Louise y su equipo luchan contra el tiempo, llegando a poner en peligro su vida y, muy posiblemente, la del resto de la humanidad.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/tbVITeytclB4JKx2LxxasrCCmZx.jpg",
+      "cast": [
+        "Amy Adams",
+        "Jeremy Renner",
+        "Forest Whitaker",
+        "Michael Stuhlbarg",
+        "Mark O'Brien"
+      ],
+      "trailers": [
+        "uWs5lsWXLbo"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P711",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "c9a3c746-42e5-4a6b-92ac-b905c1c4ef93",
+      "type": "movie",
+      "name": "Bad Boys - For Life",
+      "enName": "Bad Boys for Life",
+      "year": 2020,
+      "rating": 7.104,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Crimen",
+        "Suspenso"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "El Departamento de Policía de Miami y su equipo de élite AMMO intentan derribar a Armando Armas, jefe de un cartel de la droga. Armando es un asesino de sangre fría con una naturaleza viciosa y contaminante. Él está comprometido con el trabajo del cartel y es enviado por su madre Isabel, para matar a Mike.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/zXYARspjKpwN9vAOp2F9MF3NWa1.jpg",
+      "cast": [
+        "Will Smith",
+        "Martin Lawrence",
+        "Vanessa Hudgens",
+        "Alexander Ludwig",
+        "Charles Melton"
+      ],
+      "trailers": [
+        "a217119R3tE",
+        "bbqWBZEjSO8"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P712",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "f7d33b78-c481-45c5-bac0-d18aec78ab87",
+      "type": "movie",
+      "name": "Bad Boys - Ride or Die",
+      "enName": "Bad Boys: Ride or Die",
+      "year": 2024,
+      "rating": 7.308,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Comedia",
+        "Crimen"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Los policías más famosos del mundo regresan con su icónica mezcla de acción al límite y comedia escandalosa, pero esta vez con un giro inesperado: ¡Los mejores de Miami se dan a la fuga! Cuarta entrega de la saga 'Dos policías rebeldes'.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/53y0ETa1TGdVrMEVx7oLW86ay8r.jpg",
+      "cast": [
+        "Will Smith",
+        "Martin Lawrence",
+        "Vanessa Hudgens",
+        "Alexander Ludwig",
+        "Paola Nuñez"
+      ],
+      "trailers": [
+        "ULlFzofpV6w",
+        "LOZqqEXURzg"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P713",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "a6b3c8e3-deef-4058-8a57-f32379d297d7",
+      "type": "movie",
+      "name": "Cleaner",
+      "enName": "Cleaner: Rescate vertical",
+      "year": 2025,
+      "rating": 6.623,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Suspenso"
+      ],
+      "region": "Reino Unido",
+      "language": "Español",
+      "description": "Después de que un grupo de activistas se apodere de la gala anual de una compañía energética para denunciar su corrupción, su justa causa es secuestrada por un extremista dispuesto a asesinar a las 300 personas presentes en el edificio para transmitir su mensaje anárquico. Una ex soldado convertida en limpiacristales, suspendida 50 pisos en el exterior del rascacielos londinense, es la encargada de intentar salvar a los que están atrapados dentro, incluido su hermano pequeño.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/c01Y0dVtHiG8tvIiYRkpX0wcESA.jpg",
+      "cast": [
+        "Daisy Ridley",
+        "Taz Skylar",
+        "Clive Owen",
+        "Flavia Watson",
+        "Ray Fearon"
+      ],
+      "trailers": [
+        "A53pDs5-ga8"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P714",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "2773a7d8-7f62-4ceb-831b-db018449f12f",
+      "type": "movie",
+      "name": "Furiosa - A Mad Max Saga",
+      "enName": "Furiosa: De la saga Mad Max",
+      "year": 2024,
+      "rating": 7.4,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Ciencia Ficción"
+      ],
+      "region": "Desconocido",
+      "language": "Español",
+      "description": "En un mundo postapocalíptico donde todo ha perdido su valor, los pocos supervivientes se guían por la ley del más fuerte. Sin aprecio por la vida, lo único que despierta un brutal interés es la gasolina, sinónimo de poder y objetivo de bandas armadas hasta los dientes y sin escrúpulos. En este contexto conoceremos la  historia de la arrebatadoramente despiadada, salvaje y joven Furiosa, quien cae en manos de una horda de motoristas y debe sobrevivir a muchas pruebas mientras reúne los medios para encontrar el camino de vuelta a casa. Precuela de 'Mad Max: Furia en la carretera' (2015).",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/tGHUlykWn9V2IIQ4ZaATIAq9VLB.jpg",
+      "cast": [
+        "Anya Taylor-Joy",
+        "Chris Hemsworth",
+        "Tom Burke",
+        "Alyla Browne",
+        "George Shevtsov"
+      ],
+      "trailers": [
+        "52dKmsFt6Ek",
+        "S3Vx7TZ0yZw"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P715",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "9a5a45af-8aeb-4349-865d-3b74028d3f21",
+      "type": "movie",
+      "name": "How to train your Dragon",
+      "enName": "Cómo entrenar a tu dragón",
+      "year": 2025,
+      "rating": 7.9,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Familiar",
+        "Fantasía"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "En la escarpada isla de Mema, donde vikingos y dragones han sido enemigos acérrimos durante generaciones, Hipo se desmarca desafiando siglos de tradición cuando entabla amistad con Desdentao, un temido dragón Furia Nocturna. Su insólito vínculo revela la verdadera naturaleza de los dragones y desafía los cimientos de la sociedad vikinga.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/9Zr7ZyiMpgMhhxJQi1tQJp9LGho.jpg",
+      "cast": [
+        "Mason Thames",
+        "Nico Parker",
+        "Gerard Butler",
+        "Nick Frost",
+        "Gabriel Howell"
+      ],
+      "trailers": [
+        "Ns6ZEpQ1xS0",
+        "EQZ2goKveoQ"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P716",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "c94161e5-14a1-4c41-8ec1-76ec6a45f5c3",
+      "type": "movie",
+      "name": "Kill Command",
+      "enName": "Comando Kill",
+      "year": 2016,
+      "rating": 5.7,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Ciencia Ficción",
+        "Suspenso",
+        "Terror"
+      ],
+      "region": "Reino Unido",
+      "language": "Español",
+      "description": "En un futuro más cercano de lo que se cree, un equipo élite de marines es enviado a una isla remota para llevar acabo un entrenamiento avanzado, pero lo que no saben es que las comunicaciones están cortadas y han sido aislados. Van acompañados de Mill, una misteriosa programadora híbrida entre humano y maquina cuyo cerebro está conectado a un ordenador. Cuando llegan allí descubren que no se trata de un entrenamiento normal, pues se convierten en el objetivo de unos aterradores robots militares. Los marines tendrán que sobrevivir como sea mientras intentan descubrir quién es Mills en realidad y qué es lo que pretende.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/hwWy9XmQw4QcDyNocWW8Mi0E0fs.jpg",
+      "cast": [
+        "Vanessa Kirby",
+        "Thure Lindhardt",
+        "David Ajala",
+        "Tom McKay",
+        "Deborah Rosan"
+      ],
+      "trailers": [
+        "5CqxBjPH654"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P717",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "8e1d8c8c-ef0d-47a1-8094-eaae19613e16",
+      "type": "movie",
+      "name": "Practical Magic 2",
+      "enName": "Prácticamente magia 2",
+      "year": 2026,
+      "rating": 6.338,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Comedia",
+        "Fantasía",
+        "Romance"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Las hermanas Owens deben enfrentarse a la oscura maldición que amenaza con desintegrar a su familia de una vez por todas.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/cQjtzBXcTMzHqvo7zmpJvcBFRdC.jpg",
+      "cast": [
+        "Sandra Bullock",
+        "Nicole Kidman",
+        "Joey King",
+        "Maisie Williams",
+        "Xolo Maridueña"
+      ],
+      "trailers": [
+        "UOmntM7mHI8"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P718",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true
+      }
+    },
+    {
+      "id": "2b9cd34c-5c64-4474-9033-253ab03e2b19",
+      "type": "movie",
+      "name": "Spectral",
+      "enName": "Spectral",
+      "year": 2016,
+      "rating": 6.581,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Ciencia Ficción",
+        "Suspenso"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Esta historia de ciencia ficción / thriller se centra en un equipo de operaciones especiales enviado para luchar contra unos seres sobrenaturales.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/5yprxs7ZyBr58RsTQJrKCVmqk8X.jpg",
+      "cast": [
+        "James Badge Dale",
+        "Emily Mortimer",
+        "Gonzalo Menendez",
+        "Max Martini",
+        "Ryan Robbins"
+      ],
+      "trailers": [
+        "WBz5KyUhIMQ"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P719",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "b3616def-0fc5-4a09-ac67-b8a5b0a6d8cb",
+      "type": "movie",
+      "name": "Stillwater",
+      "enName": "Cuestión de sangre",
+      "year": 2021,
+      "rating": 6.635,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Crimen",
+        "Drama",
+        "Suspenso"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Bill Baker (Matt Damon) es un rudo operario de una plataforma petrolera estadounidense que viaja a Marsella para visitar a su hija, en prisión por un asesinato que afirma no haber cometido. Lejos de casa, las cosas no serán nada fáciles para un padre dispuesto a todo para demostrar la inocencia de su hija.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/6UecisHYDLsRGc9XWx057accTfR.jpg",
+      "cast": [
+        "Matt Damon",
+        "Camille Cottin",
+        "Abigail Breslin",
+        "Lilou Siauvaud",
+        "Deanna Dunagan"
+      ],
+      "trailers": [
+        "IZJ3WxEo-GQ"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P720",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "f860490b-0f9e-4377-a103-9775c4773fe7",
+      "type": "movie",
+      "name": "Tom and Jerry - Forbidden Compass",
+      "enName": "Tom y Jerry: Aventura en el tiempo",
+      "year": 2025,
+      "rating": 6.6,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Animado",
+        "Aventura",
+        "Comedia",
+        "Familiar",
+        "Fantasía"
+      ],
+      "region": "China",
+      "language": "Español",
+      "description": "Tom y Jerry viajan en el tiempo. Tras una loca persecución en el Museo Metropolitan de Nueva York, un portal del tiempo los transporta a una ciudad dorada inspirada en la Antigua China, llena de magia, guerreros y criaturas sorprendentes. Para regresar a casa, viven una increíble aventura repleta de acción y humor, donde deben enfrentarse a nuevos enemigos… ¡y quizás aprender a trabajar juntos!",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/xqEtQuVW6077S6YhMsqhJS1hEJ0.jpg",
+      "cast": [
+        "John Shang",
+        "黑兔子",
+        "Jiang Wen",
+        "顺子",
+        "Lan Long"
+      ],
+      "trailers": [
+        "p7Hru3v9NSw"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P721",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "441ba353-6851-41fe-8da7-e123cf176b1b",
+      "type": "movie",
+      "name": "Yon Lapsi",
+      "enName": "Engendro",
+      "year": 2026,
+      "rating": 6.026,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Terror"
+      ],
+      "region": "Finlandia",
+      "language": "Español",
+      "description": "En el bosque finlandés, Saga y su esposo Jon se embarcan en un nuevo capítulo como padres. La alegría de Saga se ve ensombrecida por las sospechas sobre su bebé, provocando una ruptura mientras ella se enfrenta a la inquietante verdad.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/cVQFWGIt5PNw3p7AcQOq2Eg39G.jpg",
+      "cast": [
+        "Rupert Grint",
+        "Seidi Haarla",
+        "Pamela Tola",
+        "Pirkko Saisio",
+        "Rebecca Lacey"
+      ],
+      "trailers": [
+        "r__a0UQBKdY"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P722",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "b2c7e218-d1ab-4032-a7bb-bdc11844f8c3",
+      "type": "series",
+      "name": "Mare of Easttown",
+      "enName": "Mare of Easttown",
+      "year": 2021,
+      "rating": 8.166,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Crimen",
+        "Drama",
+        "Misterio"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Una detective de un pequeño pueblo de Pensilvania investiga un asesinato local mientras trata de evitar que su vida se desmorone.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/6ZutgKZZfCstXKm3hifLHWz9cWf.jpg",
+      "cast": [
+        "Kate Winslet",
+        "Jean Smart",
+        "Julianne Nicholson",
+        "Angourie Rice",
+        "Evan Peters"
+      ],
+      "trailers": [
+        "Ntc25_YgpXk"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 7,
+      "code": "S160",
       "metadata": {
         "enriched": true,
         "translated": true,
