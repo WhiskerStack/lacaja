@@ -4,7 +4,7 @@ import preact from '@astrojs/preact';
 import tailwind from '@astrojs/tailwind';
 import AstroPWA from '@vite-pwa/astro';
 
-const SITE = process.env.SITE ?? 'https://dahem.example';
+const SITE = process.env.SITE ?? 'https://WhiskerStack.github.io/lacaja';
 
 // https://astro.build/config
 export default defineConfig({
