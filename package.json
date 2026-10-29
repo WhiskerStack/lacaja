@@ -23,7 +23,10 @@
     "test": "vitest run",
     "test:e2e": "playwright test",
     "test:e2e:update": "playwright test --config=playwright.update.config.ts",
-    "lint": "astro check"
+    "lint": "astro check",
+    "ensure-nojekyll": "node scripts/ensure-nojekyll.mjs",
+    "gh-pages:deploy": "gh-pages -d dist -t",
+    "deploy": "npm run ensure-nojekyll && npm run build && npm run gh-pages:deploy"
   },
   "dependencies": {
     "@dicebear/collection": "^9.4.2",
@@ -48,6 +51,7 @@
     "daisyui": "^4.12.23",
     "dotenv": "^17.4.2",
     "fast-levenshtein": "^3.0.0",
+    "gh-pages": "^6.3.0",
     "sharp": "^0.33.5",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.2",
