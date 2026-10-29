@@ -1,0 +1,47 @@
+# dependencies
+node_modules/
+.pnpm-store/
+dataset/
+
+# builds
+dist/
+dist-new/
+build/
+.output/
+.astro/
+.vite/
+*.tsbuildinfo
+
+# env
+.env
+.env.*
+!.env.example
+
+# logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# claude code local settings (per-machine permissions, not project config)
+.claude/settings.local.json
+
+# os / editor
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# test / coverage
+coverage/
+.nyc_output/
+
+# astro generated images cache
+.astro
+
+# mkctx - generated context
+mkctx/
+
+logs/
+# playwright
+test-results/
+playwright-report/

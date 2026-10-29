@@ -1,0 +1,1 @@
+const e="/lacaja/".replace(/\/$/,"");function t(n){return`${e}${n}`}function a(n){return n.type==="movie"?t(`/p/${n.id}`):t(`/s/${n.id}`)}const i=t("/image-not-found.png");export{i as P,a as d,t as w};
