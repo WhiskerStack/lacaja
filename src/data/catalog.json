@@ -1,5 +1,5 @@
 {
-  "version": 1.6,
+  "version": 1.7,
   "genres": [
     "Acción",
     "Animado",
@@ -24,10 +24,12 @@
     "Política",
     "Robot",
     "Romance",
+    "Sin género",
     "Suspenso",
     "Telenovela",
     "Terror",
     "Thriller",
+    "Tornado",
     "Western"
   ],
   "regions": [
@@ -11117,23 +11119,24 @@
       "name": "Dune",
       "enName": "Duna",
       "year": 2021,
-      "rating": 7.784,
+      "rating": 0,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
         "Aventura",
-        "Ciencia Ficción"
+        "Ciencia Ficción",
+        "Drama"
       ],
       "region": "Estados Unidos",
       "language": "Inglés",
-      "description": "En un lejano futuro, la galaxia conocida es gobernada mediante un sistema feudal de casas nobles bajo el mandato del Emperador. Las alianzas y la política giran entorno a un pequeño planeta, Dune,  del que extrae la 'especia melange', la materia prima que permite los viajes espaciales. La Casa Atreides, bajo el mandato del Duque Leto Atreides recibe el encargo de custodiar el planeta, relevando en la encomienda a sus históricos enemigos, los Harkonnen. Paul Atreides, hijo del duque, se verá atrapado en las intrigas políticas mientras descubre el destino que le deparan los desiertos de Dune.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/szcew6yyjcDvaL0isaPBk2e3nkF.jpg",
+      "description": "Victoria Garmendia está a punto de presentar un ambicioso proyecto profesional a unos inversores cuando su hermana melliza Duna desaparece. Victoria deberá decidir si dedicar todos su esfuerzos a encontrarla, a pesar de poner en riesgo su proyecto.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/iKdPQUYQ6cElMGzGZTnc3mXEd6H.jpg",
       "cast": [
-        "Timothée Chalamet",
-        "Rebecca Ferguson",
-        "Oscar Isaac",
-        "Jason Momoa",
-        "Stellan Skarsgård"
+        "Carmen Navacerrada",
+        "Lidya López",
+        "Álvaro Cañaveras",
+        "Fernando Cornejo",
+        "Xabier Fonseca"
       ],
       "trailers": [
         "kPjOcWHVNGo",
@@ -11146,7 +11149,8 @@
       "metadata": {
         "enriched": true,
         "translated": true,
-        "genresEnriched": true
+        "genresEnriched": true,
+        "titlesChecked": true
       }
     },
     {
@@ -18114,10 +18118,11 @@
       "name": "Moana",
       "enName": "Moana",
       "year": 2026,
-      "rating": 6.139,
+      "rating": 7.565,
       "sizeGb": 0,
       "isPremiere": false,
       "genres": [
+        "Animado",
         "Aventura",
         "Comedia",
         "Familiar",
@@ -18125,18 +18130,17 @@
       ],
       "region": "Estados Unidos",
       "language": "Inglés",
-      "description": "La adolescente Moana responde a la llamada del Océano y, por primera vez, viaja más allá del arrecife de su isla de Motunui con el demigodo infame Maui en un viaje inolvidable para restaurar la prosperidad a su gente.",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/zKVgiv5qHCvCLT4A2ymJi5QeXDH.jpg",
+      "description": "Una gran aventura acerca de una enérgica adolescente que se embarca en una misión audaz para salvar a su pueblo de una antigua y misteriosa amenaza, en un viaje de autodescubrimiento. La acompañará el arrogante semidiós Maui, quien la guiará en su travesía por el océano en un viaje lleno de acción, plagado de temibles criaturas e imposibles desafíos para restaurar el orden perdido.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/y6wkgEH1gTWAafH9Bc7cNNut0Kf.jpg",
       "cast": [
-        "Catherine Lagaʻaia",
+        "Auliʻi Cravalho",
         "Dwayne Johnson",
-        "Rena Owen",
-        "John Tui",
-        "Frankie Adams"
+        "Rachel House",
+        "Temuera Morrison",
+        "Jemaine Clement"
       ],
       "trailers": [
-        "EEz5xbzYPKI",
-        "n7f6hlKsxxo"
+        "tmpTGztGJ8E"
       ],
       "seasons": [],
       "seasonCount": 1,
@@ -33094,6 +33098,1663 @@
       "seasonCount": 1,
       "episodeCount": 7,
       "code": "S160",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "03c31f23-bbd0-49c7-9f26-6a8b7e501036",
+      "type": "movie",
+      "name": "Cada día nace un listo",
+      "enName": "Cada día nace un listo",
+      "year": 2026,
+      "rating": 6,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Comedia"
+      ],
+      "region": "España",
+      "language": "Español",
+      "description": "Toni Lomas alcanzó la fama cuando participó en un exitoso talent show. Ahora no tiene donde caerse muerto. Su situación cambia cuando Malena, un amor del pasado, le pone en contacto con Junior, el hijo de un rico empresario, para que robe un valioso cuadro de la casa familiar. Para llevar a cabo el golpe, Toni buscará dos aliados: la Mari y el Gallego, formando un equipo en el que cada uno persigue sus propios intereses.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/h9MlIuR0HGdmY0T16C9Sy0LJ7l9.jpg",
+      "cast": [
+        "Hugo Silva",
+        "Susi Sánchez",
+        "Dafne Fernández",
+        "Jaime Olías",
+        "Ginés García Millán"
+      ],
+      "trailers": [
+        "67KblsBlfdY"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P723",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "bf887297-3dc4-4bef-9b31-267f0080ae2a",
+      "type": "movie",
+      "name": "Coartadas",
+      "enName": "Coartadas",
+      "year": 2025,
+      "rating": 6,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Comedia",
+        "Romance"
+      ],
+      "region": "España",
+      "language": "Español",
+      "description": "Miguel tiene una empresa que proporciona coartadas imposibles a aquellos clientes que necesitan engañar a sus parejas, padres o jefes. Cuando se enamora de Blanca, una jueza que odia las mentiras, su mundo se pone patas arriba.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/nllCLiirEjiF78efF9pk8XSTm2Z.jpg",
+      "cast": [
+        "Jaime Lorente",
+        "Adriana Torrebejano",
+        "Leo Harlem",
+        "Llum Barrera",
+        "Antón Lofer"
+      ],
+      "trailers": [
+        "mKy1brUfBAw"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P724",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "03871a78-2214-4791-baa9-893aede358be",
+      "type": "movie",
+      "name": "Freelance",
+      "enName": "Freelance",
+      "year": 2023,
+      "rating": 6.402,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Comedia"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Mason Petit (John Cena) es un soldado retirado de las fuerzas especiales que, tras años de paz, tranquilidad y monotonía, decide abandonar su aburrido retiro en los suburbios para volver al trabajo y proteger a la periodista (Alison Brie) mientras entrevista a un cruel dictador (Juan Pablo Raba). En mitad de la entrevista, estallará un golpe militar que hará peligrar sus vidas y les llevará a esconderse en la selva donde deberán emplearse a fondo para sobrevivir.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/60F3uMND6oWzZB716K9r6xBlX6D.jpg",
+      "cast": [
+        "John Cena",
+        "Alison Brie",
+        "Juan Pablo Raba",
+        "Christian Slater",
+        "Alice Eve"
+      ],
+      "trailers": [
+        "zJw85iBH5WQ"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P725",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "b2ce7fca-d3d3-4f5b-95d2-25e4d74d8609",
+      "type": "movie",
+      "name": "Hope",
+      "enName": "Hope: El primer impacto",
+      "year": 2026,
+      "rating": 6.784,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Ciencia Ficción",
+        "Misterio"
+      ],
+      "region": "Corea del Sur",
+      "language": "Español",
+      "description": "Los refuerzos se han desviado para combatir los incendios forestales y se han cortado todas las comunicaciones. El jefe del puesto policial de Hope, Bum-seok, y la agente Sung-ae luchan por defender un pueblo de ancianos, mientras que en las montañas, Sung-ki y los lugareños que se han lanzado a la búsqueda de la bestia se ven, por el contrario, acosados por ella. Lo que comienza como ignorancia siembra la semilla del desastre, que se intensifica a través del conflicto humano hasta convertirse en una tragedia de proporciones cósmicas.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/lkWqvj24NG3vEgu19ZQ9erG3Vj7.jpg",
+      "cast": [
+        "황정민",
+        "조인성",
+        "정호연",
+        "Alicia Vikander",
+        "Michael Fassbender"
+      ],
+      "trailers": [
+        "qPhXb8_f50M"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P726",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true
+      }
+    },
+    {
+      "id": "69fae103-3cf2-40eb-8143-372a4115f396",
+      "type": "movie",
+      "name": "Lo dejamos acá",
+      "enName": "Lo dejamos acá",
+      "year": 2026,
+      "rating": 7.615,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Comedia",
+        "Drama"
+      ],
+      "region": "Argentina",
+      "language": "Español",
+      "description": "Un psicoanalista de prestigio ya no cree en los métodos tradicionales de la terapia. Convencido de que el consultorio no alcanza, empieza a intervenir en secreto en la vida de sus pacientes y a cruzar los límites de la práctica, con resultados que parecen darle la razón. El esquema se complica cuando un escritor con bloqueo creativo llega a su consulta.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/vaok2Dm7suKG2gEY2cKBXL4OMYf.jpg",
+      "cast": [
+        "Ricardo Darín",
+        "Diego Peretti",
+        "Inés Efrón",
+        "Carlos Santamaría",
+        "Miriam Odorico"
+      ],
+      "trailers": [
+        "DgZQwmjdcp8"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P727",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true
+      }
+    },
+    {
+      "id": "b7eb2de7-94b6-48ea-9b4d-260f32bacf5f",
+      "type": "movie",
+      "name": "Love of your life",
+      "enName": "El amor de tu vida",
+      "year": 2026,
+      "rating": 6.741,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Maya, una enfermera de Boston de 26 años, abandona su vida y su matrimonio con Charlie tras la pandemia. Convertida en nómada digital en Portugal, conoce a Felix, con quien se muda a Inglaterra mientras afronta su identidad, sus deseos y la opción de volver a amar.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/nqeDR6qGU8mqguQHRkAUg2ySBZv.jpg",
+      "cast": [
+        "Margaret Qualley",
+        "Gabriel Basso",
+        "Aaron Pierre",
+        "Patrick Schwarzenegger",
+        "Catherine Keener"
+      ],
+      "trailers": [
+        "DgZQwmjdcp8"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P728",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "d773307e-52cb-40e3-8968-b44af2472ba1",
+      "type": "movie",
+      "name": "Nacida para ganar",
+      "enName": "Nacida para ganar",
+      "year": 2016,
+      "rating": 4.267,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Comedia"
+      ],
+      "region": "España",
+      "language": "Español",
+      "description": "Encarna es una mujer de mediana edad, sobrina de las Supremas de Móstoles, un grupo musical formado por tres mujeres de la localidad madrileña homónima. Su trabajo consiste en vender cada día todos los colchones que pueda para poder seguir adelante con su aburrida vida. Durante toda su infancia y adolescencia ha vivido traumatizada por culpa de \"Martes y Trece\". Y ahora, una de sus amigas del pasado vuelve para proponerle su participación en un negocio piramidal de productos dietéticos que tendrá que vender. Ambas son estafadas y juntas deciden planear y llevar a cabo una dura venganza contra los malhechores.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/yYiDhFZNuhRCJenrR9dq2nVpGrA.jpg",
+      "cast": [
+        "Alexandra Jiménez",
+        "Cristina Castaño",
+        "Victoria Abril",
+        "Antonio de la Cruz",
+        "Luisber Santiago"
+      ],
+      "trailers": [
+        "iCmIanp1FNU",
+        "HxYmnwnhiV8"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P729",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "fafd2491-c91a-4b92-9620-20c1f924eaf0",
+      "type": "movie",
+      "name": "Sacrifice",
+      "enName": "Sacrificio",
+      "year": 2026,
+      "rating": 5.295,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Comedia"
+      ],
+      "region": "Reino Unido",
+      "language": "Español",
+      "description": "Durante una gala benéfica repleta de estrellas —entre ellas celebridades, multimillonarios y discursos vacíos—, una estrella de cine inmersa en una crisis existencial es tomada como rehén por una guerrera radical y sus fieles seguidores. A medida que la noche se precipita hacia el caos, se desarrollan simultáneamente un viaje interior y una aventura externa, donde la línea que separa la representación de la creencia, y la salvación del sacrificio, comienza a desdibujarse.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/fRjUuePNJFW2BcL5bXAe5xytGr9.jpg",
+      "cast": [
+        "Chris Evans",
+        "Anya Taylor-Joy",
+        "Vincent Cassel",
+        "Salma Hayek Pinault",
+        "John Malkovich"
+      ],
+      "trailers": [
+        "c7UGbsmJf_E"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P730",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "2560be7b-89db-4e35-8948-cc2764fed025",
+      "type": "movie",
+      "name": "Tenzing",
+      "enName": "Tenzing",
+      "year": 2026,
+      "rating": 8.264,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Histórico"
+      ],
+      "region": "Australia",
+      "language": "Español",
+      "description": "Un hombre se embarca en una arriesgada expedición para, contra todo pronóstico, intentar cumplir el sueño de ser el primero en alcanzar la cima del Everest.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/5i3qw2aDNQP6SWl2hNQaiIoUYHE.jpg",
+      "cast": [
+        "更登彭措",
+        "Tom Hiddleston",
+        "Willem Dafoe",
+        "Samdrup Dorje Lama",
+        "Bhuchung Kata"
+      ],
+      "trailers": [
+        "3otG2x-eK58"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P731",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "2c92138a-2136-4b60-a29f-816d53f06540",
+      "type": "movie",
+      "name": "The Fix",
+      "enName": "Operación Teherán",
+      "year": 2026,
+      "rating": 6.065,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Suspenso"
+      ],
+      "region": "Desconocido",
+      "language": "Español",
+      "description": "Tras el final de la guerra en Afganistán, un grupo de exoperadores de la CIA se han quedado marcados por la violencia, el abandono y la culpa. Sin patria ni propósitos a corto plazo, aceptan una última misión y viajan a Teherán para llevar a cabo un golpe arriesgado e ilegal que podría ser su opción para perdonarse a sí mismos o para acabar del todo. Mientras el pasado los persigue y la desconfianza entre ellos va en aumento, la operación se transforma en una prueba moral en la que tendrán que decidir si ser soldados obedientes o son hombres dispuestos a recuperar el control de sus vidas.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/5uB1PWP3QHEcgMXKChsaYmtTUkQ.jpg",
+      "cast": [
+        "Zachary Levi",
+        "Liam Neeson",
+        "Wes Chatham",
+        "Titus Welliver",
+        "Navid Negahban"
+      ],
+      "trailers": [
+        "C5BqIzjMmJw"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P732",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "10c3ef39-9c58-4fa2-ab65-4ba95df2e72b",
+      "type": "movie",
+      "name": "The Storm",
+      "enName": "La tormenta",
+      "year": null,
+      "rating": 0,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Comedia",
+        "Desastres",
+        "Drama",
+        "Sin género",
+        "Tornado"
+      ],
+      "region": "Suecia",
+      "language": "Español",
+      "description": "Filip celebra sus 45 años invitando a su círculo de amigos a cenar en la lujosa finca que acaba de comprar junto a su mujer, situada en el norte de Suecia. Allí se desata una tormenta feroz e inesperada que deja a los invitados completamente atrapados en el interior.",
+      "imageUrl": "https://tse4.mm.bing.net/th/id/OIP.Wf47-9wFQdoGbkovHOSJeAHaEs?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "cast": [
+        "Aliette Opheim",
+        "Filip Berg",
+        "Josephine Bornebusch"
+      ],
+      "trailers": [
+        "v-CTuLSbm84"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P733",
+      "metadata": {
+        "translated": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "9676e8a4-d999-4e0c-857f-9f3e497eace3",
+      "type": "movie",
+      "name": "Vuelve al Origen",
+      "enName": "VUELVE AL ORIGEN",
+      "year": 2024,
+      "rating": 0,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "\"Vuelve al origen\" de Brossah Leyton es una exploración cautivadora del viaje interior y la búsqueda de la identidad. La película sigue a un joven que regresa a su ciudad natal después de años de ausencia, enfrentándose a los fantasmas de su pasado y redescubriendo sus raíces.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/70LlWCAFzpH7C6AwSJ7h2qE2tdq.jpg",
+      "cast": [
+        "David Leyton",
+        "Isabel Parra Garcia",
+        "Victor Brossah"
+      ],
+      "trailers": [
+        "yR_WlTu0org"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P734",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "a3c9fb95-c812-4f14-9909-6e3cb4512228",
+      "type": "series",
+      "name": "Hotel todo incluido",
+      "enName": "Hotel Todo Incluido",
+      "year": 2026,
+      "rating": 7.1,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Ciencia Ficción",
+        "Comedia",
+        "Fantasía"
+      ],
+      "region": "México",
+      "language": "Español",
+      "description": "Relata la historia de Sebastián, un joven que busca triunfar como gerente del Hotel Amalaya del Río y termina obteniendo el poder mágico de cumplir los deseos de sus huéspedes",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/r7CJuUXoIl8lgISfTwt5zzGWeQG.jpg",
+      "cast": [
+        "Joel Cederberg"
+      ],
+      "trailers": [
+        "2JAQbmYscEU"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 16,
+      "code": "S161",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "7e9e779d-5830-46b6-9660-494a4cd1e47e",
+      "type": "series",
+      "name": "Coven Academy",
+      "enName": "Coven Academy: El hechizo de las brujas",
+      "year": 2026,
+      "rating": 7.552,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Ciencia Ficción",
+        "Drama",
+        "Fantasía",
+        "Misterio"
+      ],
+      "region": "Desconocido",
+      "language": "Español",
+      "description": "En el corazón embrujado de Nueva Orleans, \"Coven Academy: El hechizo de las brujas\" sigue a tres brujas adolescentes y a sus peligrosamente encantadores compañeros brujos en un selecto internado mágico donde el poder es moneda de cambio, los secretos son letales y la atracción es una desventaja. Atrapados entre antiguas guerras sobrenaturales e intereses amorosos prohibidos, el aquelarre debe decidir hasta dónde están dispuestos a llegar para proteger su ciudad y a sí mismos.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/hcmeaEjGZE1mYfPp4KFd8mNgYbO.jpg",
+      "cast": [
+        "Malina Weissman",
+        "Malachi Barton",
+        "Jordan Leftwich",
+        "Ora Duplass",
+        "Louis Thresher"
+      ],
+      "trailers": [
+        "0eg2CdfLyR8",
+        "1HF62i2nX4I"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 10,
+      "code": "S162",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "056adafc-e5bf-4f43-8076-de335adc4185",
+      "type": "series",
+      "name": "Cyberpunk - Edgeruuners",
+      "enName": "Cyberpunk: Edgerunners",
+      "year": 2022,
+      "rating": 8.507,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Animado",
+        "Aventura",
+        "Ciencia Ficción",
+        "Crimen",
+        "Fantasía"
+      ],
+      "region": "Japón",
+      "language": "Español",
+      "description": "En una distopía plagada de corrupción e implantes cibernéticos, un chico prodigioso pero temerario trata de convertirse en un mercenario proscrito: un ‘edgerunner’.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/v3JuB15WybKmxDeT1hWdK3j6eSJ.jpg",
+      "cast": [
+        "Koki Uchiyama",
+        "Momoka Terasawa",
+        "Akari Kito",
+        "Kentaro Tone"
+      ],
+      "trailers": [
+        "W6NhKRY_qmE"
+      ],
+      "seasons": [],
+      "seasonCount": 2,
+      "episodeCount": 20,
+      "code": "S163",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "b75be9cf-06b7-4355-8f6e-174092cfd039",
+      "type": "series",
+      "name": "Tras la Huella",
+      "enName": "",
+      "year": null,
+      "rating": 0,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Sin género"
+      ],
+      "region": "Desconocido",
+      "language": "Español",
+      "description": "",
+      "imageUrl": "https://pics.filmaffinity.com/tras_la_huella-668396395-large.jpg",
+      "cast": [],
+      "trailers": [],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "S164",
+      "metadata": {}
+    },
+    {
+      "id": "ee37048c-dd61-47b2-a4b1-5b15ec7a8f26",
+      "type": "series",
+      "name": "Aida",
+      "enName": "Aída",
+      "year": 2005,
+      "rating": 7.9,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Comedia",
+        "Drama"
+      ],
+      "region": "España",
+      "language": "Español",
+      "description": "Teleserie protagonizada por Carmen Machi en el papel de Aída que surgió como un spin-off (serie que nace de un personaje de otra serie) de la exitosa telecomedia recién terminada \"7 Vidas\", de la que Aída era un popular personaje. La serie comienza cuando Aída hereda la casa de su padre y se muda con sus hijos Lorena y Jonathan a vivir con su madre Eugenia, intentando sacar su familia adelante.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/poEaDSpLbpKeA2OI4n2X6K4udYd.jpg",
+      "cast": [
+        "Paco León",
+        "Melani Olivares",
+        "Pepe Viyuela",
+        "Mariano Peña",
+        "Miren Ibarguren"
+      ],
+      "trailers": [
+        "XvnjqKD2lY0"
+      ],
+      "seasons": [],
+      "seasonCount": 10,
+      "episodeCount": 237,
+      "code": "S165",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "c31410b3-0df0-4c7c-88e9-f0195ae64fba",
+      "type": "series",
+      "name": "El barco",
+      "enName": "El barco",
+      "year": 2011,
+      "rating": 7.853,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Drama",
+        "Misterio"
+      ],
+      "region": "España",
+      "language": "Español",
+      "description": "Una catástrofe mundial provoca un cataclismo que lleva a la desaparición de la tierra firme. Con el planeta inundado de agua, la tripulación y los jóvenes alumnos de un buque escuela parecen ser los únicos supervivientes… Aislados del resto de un mundo que ni siquiera saben si ya existe, los principales responsables de que la nave llegue a puerto son el capitán (Juanjo Artero) y la científica del buque (Irene Montalá). Además de los alumnos está Ulises (Mario Casas), un polizón rebelde y con madera de héroe, y Ainhoa (Blanca Suárez), la hija adolescente del capitán, que se ha embarcado junto a su hermana pequeña Valeria (Patricia Arbues), a raíz del reciente fallecimiento de su madre.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/tfifgKMWPCtEebp7wH9vBKkDpcx.jpg",
+      "cast": [
+        "Juanjo Artero",
+        "Mario Casas",
+        "Blanca Suárez",
+        "Irene Montalà",
+        "Luis Callejo"
+      ],
+      "trailers": [
+        "43sx7PyR8jg"
+      ],
+      "seasons": [],
+      "seasonCount": 3,
+      "episodeCount": 43,
+      "code": "S166",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "574bb00d-f085-4ae4-9630-48e59065ef0c",
+      "type": "movie",
+      "name": "60 Minuten",
+      "enName": "60 minutos",
+      "year": 2024,
+      "rating": 6.737,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Crimen",
+        "Drama",
+        "Suspenso"
+      ],
+      "region": "Alemania",
+      "language": "Español",
+      "description": "Desesperado por no perder la custodia de su hija, un luchador de artes marciales mixtas abandona una pelea y recorre Berlín a todo gas para verla el día de su cumpleaños.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/cND79ZWPFINDtkA8uwmQo1gnPPE.jpg",
+      "cast": [
+        "Emilio Sakraya",
+        "Dennis Mojen",
+        "Marie Mouroum",
+        "Paul Wollin",
+        "Florian Schmidtke"
+      ],
+      "trailers": [
+        "TSPnnQYkjHM"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P735",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "b5957e1a-a9a3-49e2-86a5-c3ba568132a2",
+      "type": "movie",
+      "name": "A ciegas",
+      "enName": "Bird Box",
+      "year": 2018,
+      "rating": 6.815,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Suspenso",
+        "Terror"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Thriller posapocalíptico en el que una mujer y sus dos hijos, estos con los ojos vendados, navegan río abajo tras una sangrienta invasión alienígena de la Tierra intentando evitar a las criaturas extraterrestres. Cuando algo misterioso diezma la población mundial, solo se sabe una cosa: si lo ves, te suicidas. Malorie deberá huir junto a sus dos hijos por un caudaloso y traicionero río, rumbo al único sitio que parece ofrecer refugio. Pero para sobrevivir, deberán completar el peligroso viaje de dos días con los ojos vendados.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/rntHx0Wet69rb5aUIVrcr4MbqAj.jpg",
+      "cast": [
+        "Sandra Bullock",
+        "Trevante Rhodes",
+        "John Malkovich",
+        "Sarah Paulson",
+        "Jacki Weaver"
+      ],
+      "trailers": [
+        "4vFsD_1BFLs"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P736",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "e1d47d42-f931-4c0e-ae49-01fb55771d40",
+      "type": "movie",
+      "name": "Coartada",
+      "enName": "Coartadas",
+      "year": 2025,
+      "rating": 6,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Comedia",
+        "Romance"
+      ],
+      "region": "España",
+      "language": "Español",
+      "description": "Miguel tiene una empresa que proporciona coartadas imposibles a aquellos clientes que necesitan engañar a sus parejas, padres o jefes. Cuando se enamora de Blanca, una jueza que odia las mentiras, su mundo se pone patas arriba.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/nllCLiirEjiF78efF9pk8XSTm2Z.jpg",
+      "cast": [
+        "Jaime Lorente",
+        "Adriana Torrebejano",
+        "Leo Harlem",
+        "Llum Barrera",
+        "Antón Lofer"
+      ],
+      "trailers": [
+        "mKy1brUfBAw"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P737",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "c21a4be3-85e9-4940-b66f-d18761d5ca8f",
+      "type": "movie",
+      "name": "Coco",
+      "enName": "Coco",
+      "year": 2017,
+      "rating": 8.207,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Animado",
+        "Aventura",
+        "Familiar",
+        "Música"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Un joven aspirante a músico llamado Miguel se embarca en un viaje extraordinario a la mágica tierra de sus ancestros. Allí, el encantador embaucador Héctor se convierte en su inesperado amigo y le ayuda a descubrir los misterios detrás de las historias y tradiciones de su familia.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/vwsFGblLYxWBNjg9pdWN1Mm5YfW.jpg",
+      "cast": [
+        "Anthony Gonzalez",
+        "Gael García Bernal",
+        "Benjamin Bratt",
+        "Alanna Ubach",
+        "Renée Victor"
+      ],
+      "trailers": [
+        "4o4ovPKvTOI",
+        "R7wo-0Q0u4g",
+        "DOtdQd_wgjI"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P738",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "3fd9081e-8195-4937-8bb7-f53d3981e009",
+      "type": "movie",
+      "name": "El Grinch",
+      "enName": "The Grinch",
+      "year": 2018,
+      "rating": 6.869,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Animado",
+        "Comedia",
+        "Familiar",
+        "Fantasía"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "El Grinch, la película de animación basada en el popular clásico navideño del Dr. Seuss, cuenta la historia de un cínico cascarrabias que se propone robar la Navidad hasta que el desbordante espíritu navideño de una niña le hace cambiar de opinión. Divertida, enternecedora y visualmente impactante, se trata de una historia universal sobre el indómito poder del optimismo.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/o3b6DOiePNlNOiqLCzCvqvDvHpL.jpg",
+      "cast": [
+        "Benedict Cumberbatch",
+        "Rashida Jones",
+        "Kenan Thompson",
+        "Cameron Seely",
+        "Angela Lansbury"
+      ],
+      "trailers": [
+        "dyFaEFa38-s"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P739",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "401b9615-7f84-4edf-9ca2-296d1c79db5d",
+      "type": "movie",
+      "name": "El Rey León",
+      "enName": "The Lion King",
+      "year": 2019,
+      "rating": 7.089,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Animado",
+        "Aventura",
+        "Drama",
+        "Familiar"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Simba es el hijo del rey de los leones, Mufasa, y heredero de todo el reino. Pero cuando su padre es brutalmente asesinado por su tío Scar, decidirá huir, dejando vía libre para que su tío tome el puesto de su padre como líder de la manada. En su camino, Simba se encuentra con el suricato  Timón y el jabalí Pumba, que le enseñarán a vivir la vida sin preocupaciones. Pero el joven león se verá obligado a decidir entre su vida libre de problemas o su destino como rey .",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/eGfq90BF8QGCMpncF2ag0lGTgKk.jpg",
+      "cast": [
+        "Chiwetel Ejiofor",
+        "John Oliver",
+        "Donald Glover",
+        "James Earl Jones",
+        "John Kani"
+      ],
+      "trailers": [
+        "mb79ctR-E-c"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P740",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true
+      }
+    },
+    {
+      "id": "fe89947a-99ef-445d-bca7-f3322cbade9c",
+      "type": "movie",
+      "name": "El Rey Mono",
+      "enName": "The Monkey King",
+      "year": 2023,
+      "rating": 6.528,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Animado",
+        "Aventura",
+        "Comedia",
+        "Familiar",
+        "Fantasía"
+      ],
+      "region": "China",
+      "language": "Español",
+      "description": "Versión animada de la leyenda mitológica asiática \"Viaje al Oeste\", sigue las aventuras del Rey Mono.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/vJ9MZHG3XQDusXLIbhRAzTlcZ2v.jpg",
+      "cast": [
+        "Jimmy O. Yang",
+        "Bowen Yang",
+        "Jolie Hoang-Rappaport",
+        "Jo Koy",
+        "Ron Yuan"
+      ],
+      "trailers": [
+        "FNSZyhJlm9M"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P741",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "952155b1-b2d9-4dfe-bce2-2e3f6e68763e",
+      "type": "movie",
+      "name": "Elemental",
+      "enName": "Elemental",
+      "year": 2023,
+      "rating": 7.583,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Animado",
+        "Comedia",
+        "Familiar",
+        "Romance"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "En una ciudad donde los residentes del fuego, el agua, la tierra y el aire viven juntos, una joven apasionada y un chico que se deja llevar por la corriente descubrirán algo elemental: cuánto tienen en común.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/d79DeKDCgFOM23O8Dr6MELZVooY.jpg",
+      "cast": [
+        "Leah Lewis",
+        "Mamoudou Athie",
+        "Ronnie del Carmen",
+        "Shila Ommi",
+        "Wendi McLendon-Covey"
+      ],
+      "trailers": [
+        "dJgSXsnrHrw",
+        "Rp20svf0qpA",
+        "JOFKzDL6J90",
+        "NfQbR8LlAfI"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P742",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "4f58619a-5f58-4154-9201-617359ba33f2",
+      "type": "movie",
+      "name": "Emoji La película",
+      "enName": "The Emoji Movie",
+      "year": 2017,
+      "rating": 5.357,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Animado",
+        "Comedia",
+        "Familiar"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Los protagonistas habitarán la misteriosa tierra de Textopolis, donde todos los emojis favoritos de la gente cobran vida, mientras esperan ser seleccionados por el usuario del teléfono. Todos los personajes tienen una sola expresión facial a excepción de Gen, un emoji que nació sin filtro y se llena de múltiples expresiones. Para lograr ser normal, Gen se embarcará en una aventura o “app-ventura”, junto a sus amigos Hi-5 y Jailbreak. Pero pronto, una gran amenaza hará que el destino de estos personajes dependa de los tres amigos, teniendo que salvar su mundo antes que sea borrado por completo.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/3Gsc5NFpeT22l43sEHd7rVZSbXK.jpg",
+      "cast": [
+        "T.J. Miller",
+        "James Corden",
+        "Anna Faris",
+        "Maya Rudolph",
+        "Steven Wright"
+      ],
+      "trailers": [
+        "ptA-yn0NUxw"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P743",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "1e5a0f6c-9f05-402b-b18e-3b772f267d1f",
+      "type": "movie",
+      "name": "Encanto",
+      "enName": "Encanto",
+      "year": 2021,
+      "rating": 7.563,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Animado",
+        "Comedia",
+        "Familiar",
+        "Fantasía"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Los Madrigal son una familia extraordinaria que vive en una casa mágica de un pueblo vibrante en las montañas de Colombia, escondidas en un 'Encanto'. La magia ha bendecido a cada niño de la familia con un don único, desde la superfuerza hasta el poder de sanar. A todos, excepto Mirabel, quien desea ser tan especial como el resto de su familia.  Pero cuando la magia que rodea al Encanto está en peligro, Mirabel decide que ella, la única Madrigal sin ningún tipo de don único, puede ser la única esperanza de su excepcional familia.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/d0ezQ1Jz0lpNsX1skEmIvqRL7mN.jpg",
+      "cast": [
+        "Stephanie Beatriz",
+        "María Cecilia Botero",
+        "John Leguizamo",
+        "Mauro Castillo",
+        "Jess Darrow"
+      ],
+      "trailers": [
+        "SAH_W9q_brE",
+        "a95mklAnsuQ"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P744",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "40d0c74c-9a5d-4696-8fad-8c08897cea94",
+      "type": "movie",
+      "name": "Extraction",
+      "enName": "Tyler Rake",
+      "year": 2020,
+      "rating": 7.275,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Suspenso"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Tyler Rake, un intrépido mercenario que ofrece sus servicios en el mercado negro, emprende una peligrosa misión cuando es contratado para rescatar al hijo secuestrado de un señor del crimen de Bombay.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/cNu6VozUfD9jjQUjGuGBRoMlpYA.jpg",
+      "cast": [
+        "Chris Hemsworth",
+        "Rudhraksh Jaiswal",
+        "Randeep Hooda",
+        "گلشیفته فراهانی",
+        "Pankaj Tripathi"
+      ],
+      "trailers": [
+        "WPQq7fw_XMk"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P745",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "5ad25b98-f470-4e24-b5bf-b52976a76da7",
+      "type": "movie",
+      "name": "Extraction 2",
+      "enName": "Tyler Rake 2",
+      "year": 2023,
+      "rating": 7.375,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Crimen",
+        "Suspenso"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Tras haber estado al borde de la muerte, el agente de élite Tyler Rake emprende una misión de alto riesgo: sacar de la cárcel a la familia de un despiadado gánster.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/jT0Eyfw0VXlnk8sMKfyFiKj8UsK.jpg",
+      "cast": [
+        "Chris Hemsworth",
+        "گلشیفته فراهانی",
+        "Adam Bessa",
+        "თორნიკე გოგრიჭიანი",
+        "თორნიკე ბზიავა"
+      ],
+      "trailers": [
+        "ZXGMlMPeO68"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P746",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "97235f1c-1fe7-4f50-a109-2b09d271d2cf",
+      "type": "movie",
+      "name": "Heart of Stone",
+      "enName": "Heart of Stone",
+      "year": 2023,
+      "rating": 6.68,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Crimen",
+        "Suspenso"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Rachel Stone es una agente de inteligencia, la única mujer que se interpone entre su poderosa organización mundial de mantenimiento de la paz y la pérdida de su activo más valioso y peligroso.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/jCiGfY7D6pHIU1dlVccfixUwtGV.jpg",
+      "cast": [
+        "Gal Gadot",
+        "Jamie Dornan",
+        "आलिया भट्ट",
+        "Sophie Okonedo",
+        "Matthias Schweighöfer"
+      ],
+      "trailers": [
+        "ZXGMlMPeO68"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P747",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "c5974fbf-6904-4f15-aaad-e548de512226",
+      "type": "movie",
+      "name": "Herat of tha Beast",
+      "enName": "En el corazón de la bestia",
+      "year": 2026,
+      "rating": 7.437,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Aventura",
+        "Suspenso"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Tras sobrevivir a un brutal accidente aéreo, el oficial de las Fuerzas Especiales James Belmont y su perro de combate Odín intentarán regresar a la civilización desde un remoto lugar en medio de los parajes salvajes de Alaska.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/ya8iLCNyoVpBO7B7JrNJVj3g7tK.jpg",
+      "cast": [
+        "Brad Pitt",
+        "J.K. Simmons",
+        "Anna Lambe",
+        "Justin Melnick",
+        "Shaun DeZern"
+      ],
+      "trailers": [
+        "HGzLlMvkLnI",
+        "Rh24D89hFMg"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P748",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "b358d778-3143-4a89-9f0f-1021c0118330",
+      "type": "movie",
+      "name": "Jumanji Welcome to the Jungle",
+      "enName": "Jumanji: Bienvenidos a la jungla",
+      "year": 2017,
+      "rating": 6.8,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Aventura",
+        "Comedia",
+        "Fantasía"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Cuatro estudiantes de secundaria se quedan atrapados en la selva dentro de un videojuego, donde viven una aventura convertidos en avatares adultos arquetípicos.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/1uQaSgtHyTN3r2fecL0mSs6geQO.jpg",
+      "cast": [
+        "Dwayne Johnson",
+        "Kevin Hart",
+        "Jack Black",
+        "Karen Gillan",
+        "Rhys Darby"
+      ],
+      "trailers": [
+        "leIrosWRbYQ"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P749",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "03c5ff19-15c1-4eea-bc9d-ae122ef5d728",
+      "type": "movie",
+      "name": "Jungle Cruise",
+      "enName": "Jungle Cruise",
+      "year": 2021,
+      "rating": 7.261,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Aventura",
+        "Comedia",
+        "Fantasía"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Principios del siglo XX. Frank es el carismático capitán de una peculiar embarcación que recorre la selva amazónica. Allí, a pesar de los peligros que el río Amazonas les tiene preparados, Frank llevará en su barco a la científica Lily Houghton y a su hermano McGregor Houghton. Su misión será encontrar un árbol místico que podría tener poderes curativos. Claro que su objetivo no será fácil, y en su aventura se encontrarán con toda clase de dificultades, además de una expedición alemana que busca también este árbol con propiedades curativas. Esta comedia de acción y aventuras está basada en la atracción Jungle Cruise de los parques de ocio de Disney.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/HPEXPFY5B2TWyC1mKoUtz4fNsB.jpg",
+      "cast": [
+        "Dwayne Johnson",
+        "Emily Blunt",
+        "Edgar Ramírez",
+        "Jack Whitehall",
+        "Jesse Plemons"
+      ],
+      "trailers": [
+        "mamwmMsJ_lw",
+        "k3zJZXbAPpE"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P750",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "ada06212-1cfe-481a-a76a-4794610db083",
+      "type": "movie",
+      "name": "Kong - Skull Island",
+      "enName": "Kong. La isla Calavera",
+      "year": 2017,
+      "rating": 6.558,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Fantasía"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "En los años 70, un variopinto grupo de exploradores y soldados es reclutado para viajar a una misteriosa isla del Pacífico. Entre ellos están el capitán James Conrad, el teniente coronel Packard y una foto-periodista. Pero al adentrarse en esta bella pero traicionera isla, los exploradores encontrarán algo absolutamente sorprendente. Sin saberlo, estarán invadiendo los dominios del mítico Kong, el gigante gorila rey de esta isla. Será Marlow, un peculiar habitante del lugar, quien les enseñe los secretos de Isla Calavera, además del resto de seres monstruosos que la habitan.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/myOdovPayRRitZDZSutI07eNANM.jpg",
+      "cast": [
+        "Tom Hiddleston",
+        "Samuel L. Jackson",
+        "John Goodman",
+        "Brie Larson",
+        "Jing Tian"
+      ],
+      "trailers": [
+        "8wP_3OO3Res"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P751",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "6fbc7870-ff6d-4d73-8d42-2807e09a5f18",
+      "type": "movie",
+      "name": "Los indestructibles 4",
+      "enName": "Expend4bles",
+      "year": 2023,
+      "rating": 6,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Suspenso"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Cuarta entrega de la saga Los Mercenarios. El veterano mercenario Barney “Esquizo” Ross y su equipo de estrellas, formado por los hombres más duros, afrontan un nuevo desafío, en una trama cargada de acción. Para superarlo y salir airosos, deberán recurrir a su ingenio, experiencia y a la fuerza bruta que los caracteriza.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/2qxRrkayxSYiib4JCYRM3sasQe0.jpg",
+      "cast": [
+        "Jason Statham",
+        "50 Cent",
+        "Megan Fox",
+        "Dolph Lundgren",
+        "Tony Jaa"
+      ],
+      "trailers": [
+        "4eiLskUYvQc"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P752",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "7cab1b1b-588e-451d-bad4-24d8e0dd8f5b",
+      "type": "movie",
+      "name": "Luther The Fallen Sun",
+      "enName": "Luther: Cae la noche",
+      "year": 2023,
+      "rating": 6.608,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Crimen",
+        "Misterio",
+        "Suspenso"
+      ],
+      "region": "Reino Unido",
+      "language": "Español",
+      "description": "Atormentado por un caso sin resolver, el brillante pero caído en desgracia inspector londinense John Luther se fuga de la cárcel para intentar atrapar a un sádico asesino en serie... Largometraje inspirado en la serie de televisión \"Luther\".",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/eCvBFo3jjKViSuhcsOdVbcsFCq4.jpg",
+      "cast": [
+        "Idris Elba",
+        "Cynthia Erivo",
+        "Andy Serkis",
+        "Dermot Crowley",
+        "Thomas Coombes"
+      ],
+      "trailers": [
+        "DqWbXkUd_jk"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P753",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "488df586-24dd-4594-901d-ecb411c2348a",
+      "type": "movie",
+      "name": "Memory",
+      "enName": "La memoria de un asesino",
+      "year": 2022,
+      "rating": 6.708,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Crimen",
+        "Suspenso"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Alex, un asesino a sueldo, descubre que se ha convertido en un objetivo después de que se niega a completar un trabajo para una peligrosa organización criminal. Con el sindicato del crimen y el FBI persiguiéndolo, Alex tiene las habilidades para mantenerse a la vanguardia, excepto por una cosa: está luchando con una pérdida de memoria severa que afecta todos sus movimientos. Alex debe cuestionar cada una de sus acciones y en quién puede confiar en última instancia.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/zUa7VyFnt4Wj3NYIlh8fn8xkVqq.jpg",
+      "cast": [
+        "Liam Neeson",
+        "Guy Pearce",
+        "Taj Atwal",
+        "Harold Torres",
+        "Ray Fearon"
+      ],
+      "trailers": [
+        "CTZYihyGqss"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P754",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "7248b649-789e-453c-9d92-d3ab39c9c5f0",
+      "type": "movie",
+      "name": "Moana",
+      "enName": "Vaiana",
+      "year": 2026,
+      "rating": 7.445,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Aventura",
+        "Comedia",
+        "Familiar",
+        "Fantasía"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Vaiana (Catherine Lagaʻaia) responde a la llamada del océano y, por primera vez, viaja más allá del arrecife de su isla de Motunui con el semidiós Maui (Dwayne Johnson) en un viaje inolvidable para devolver la prosperidad a su pueblo.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/xUUksaUc30wX5orsYytApurKbX.jpg",
+      "cast": [
+        "Catherine Lagaʻaia",
+        "Dwayne Johnson",
+        "Rena Owen",
+        "John Tui",
+        "Frankie Adams"
+      ],
+      "trailers": [
+        "rSM6CEcvglU"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P755",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "8592656b-c667-4144-92f2-1e0de11b98bf",
+      "type": "movie",
+      "name": "Pídeme lo que quieras",
+      "enName": "Pídeme lo que quieras",
+      "year": 2024,
+      "rating": 6.097,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "region": "España",
+      "language": "Español",
+      "description": "Judith Flores es una chica normal. Tiene un trabajo que le apasiona, muy buenos amigos y un padre encantador. Pero su vida cambia radicalmente cuando conoce a Eric Zimmerman, dueño de la empresa donde ella trabaja. Su relación con Eric está a punto de dinamitar su vida por completo.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/5rtaLwyKAjbceww4J1ro8aA8BNB.jpg",
+      "cast": [
+        "Gabriela Andrada",
+        "Mario Ermito",
+        "Celia Freijeiro",
+        "David Solans",
+        "Alba Ribas"
+      ],
+      "trailers": [
+        "vG89ig5P4g0"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P756",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "02998111-74a1-4528-992d-bc3b23fee20b",
+      "type": "movie",
+      "name": "The Outer Threat",
+      "enName": "The Outer Threat",
+      "year": 2026,
+      "rating": 5.765,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Ciencia Ficción",
+        "Suspenso"
+      ],
+      "region": "Canadá",
+      "language": "Español",
+      "description": "Tras realizar un descubrimiento extraterrestre revolucionario, los astrofísicos Daniel y Michelle se ven obligados a huir de su hogar con su familia, perseguidos por el campo por un agresor implacable y anónimo. A medida que avanza su huida, la línea entre la revelación cósmica y la paranoia humana se difumina, lo que conduce a un enfrentamiento tenso y emotivo que pone a prueba los límites de la comprensión, la ciencia y la supervivencia.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/jspztckSybRKigzz5IFueP8qptV.jpg",
+      "cast": [
+        "Constance Wu",
+        "Mark O'Brien",
+        "William Fichtner",
+        "Isaac Smelcer-Zhang",
+        "Oscar Hsu"
+      ],
+      "trailers": [
+        "gb-dGrwFe3A"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P757",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "dff9c88e-9642-4e5e-8c6e-5b9b9f7fb040",
+      "type": "movie",
+      "name": "Top Gun Maverick",
+      "enName": "Top Gun: Maverick",
+      "year": 2022,
+      "rating": 8.157,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Drama"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Después de más de 30 años de servicio como uno de los mejores aviadores de la Armada, Pete \"Maverick\" Mitchell se encuentra dónde siempre quiso estar, empujando los límites como un valiente piloto de prueba y esquivando el alcance en su rango, que no le dejaría volar emplazándolo en tierra. Cuando se encuentra entrenando a un destacamento de graduados de Top Gun para una misión especializada, Maverick se encuentra allí con el teniente Bradley Bradshaw, el hijo de su difunto amigo \"Goose\".",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/AlWpEpQq0RgZIXVHAHZtFhEvRgd.jpg",
+      "cast": [
+        "Tom Cruise",
+        "Miles Teller",
+        "Jennifer Connelly",
+        "Bashir Salahuddin",
+        "Jon Hamm"
+      ],
+      "trailers": [
+        "zmFdhZ6gyUM"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P758",
+      "metadata": {
+        "enriched": true,
+        "translated": true,
+        "genresEnriched": true,
+        "titlesChecked": true
+      }
+    },
+    {
+      "id": "64aa37b8-0194-4367-8878-d5e6db36b4c3",
+      "type": "movie",
+      "name": "Uncharted Fuera del Mapa",
+      "enName": "Uncharted",
+      "year": 2022,
+      "rating": 6.858,
+      "sizeGb": 0,
+      "isPremiere": false,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Misterio"
+      ],
+      "region": "Estados Unidos",
+      "language": "Español",
+      "description": "Descubre la primera aventura de Nathan Drake, un joven, astuto y carismático cazatesoros, con su ingenioso compañero Victor “Sully” Sullivan. En una aventura de acción que se extiende por todo el mundo, ambos se embarcan en una peligrosa búsqueda de “el mayor tesoro nunca antes encontrado” al tiempo que rastrean las claves que les podrían conducir al hermano de Nathan, perdido hace ya mucho tiempo.",
+      "imageUrl": "https://image.tmdb.org/t/p/w500/8FiWi61YRbkN95xmH668iq5sCo1.jpg",
+      "cast": [
+        "Tom Holland",
+        "Mark Wahlberg",
+        "Sophia Ali",
+        "Tati Gabrielle",
+        "Antonio Banderas"
+      ],
+      "trailers": [
+        "t_uYnyHWOsY",
+        "53bVf9JlqQ4"
+      ],
+      "seasons": [],
+      "seasonCount": 1,
+      "episodeCount": 1,
+      "code": "P759",
       "metadata": {
         "enriched": true,
         "translated": true,
